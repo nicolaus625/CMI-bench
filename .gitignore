@@ -37,6 +37,7 @@ data/ballroom/BallroomAnnotations
 data/ballroom/BallroomData
 data/ballroom/tempo
 data/carnetic/CMR_full_dataset_1.0
+data/Harmonix/harmonix_Youtube_songs.zip
 
 data/MedleyDB/MedleyDB-Melody
 data/chord/references_v2
@@ -47,3 +48,4 @@ data/CBF/audio
 data/Guzheng/Guzheng_Tech99
 
 data/DSing/sing_300x30x2
+data/Jiawen-lyrics/drive-download-20250213T112313Z-001.zip
