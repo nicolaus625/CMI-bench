@@ -177,16 +177,14 @@ class CMIDataset(Dataset):
             "id": id,
         }
 
-    def __getitem__(self, index, sr=None):
-        if sr is None:
-            sr = self.sr
+    def __getitem__(self, index):
         ann = self.annotation[index]
         audio_list = []
         for audio_relative_path in ann["audio_path"]:
             audio_path = os.path.join(self.path, audio_relative_path)
             audio = load_audio(
                     audio_path,
-                    target_sr=sr,
+                    target_sr=self.sr,
                     is_mono=True,
                     is_normalize=True,
                     pad=False,
@@ -204,14 +202,20 @@ class CMIDataset(Dataset):
             "id": ann["uuid"],
         }
         
+    def sr_update(self, sr):
+        self.sr = sr
+        
+
 class MultipleDataset(Dataset):
-    def __init__(self, ann_paths, split="train"):
+    def __init__(self, ann_paths, split="train", sr=24000):
         super().__init__()
-        tmp = glob.glob(f"{ann_paths}/*/CMI_*.jsonl")
+        self.jsonl_list = glob.glob(f"{ann_paths}/*/CMI_*.jsonl")
         dataset_list = []
-        for ann_path in tmp:
+        for ann_path in self.jsonl_list:
             dataset_list.append(CMIDataset(ann_path, split=split)) 
         self.dataset = ConcatDataset(dataset_list)
+        self.sr = sr
+        self.split = split
     
     def __len__(self):
         return len(self.dataset)
@@ -232,17 +236,23 @@ class MultipleDataset(Dataset):
         }
     
     def __getitem__(self, index):
-        return self.dataset[index]    
+        return self.dataset[index] 
+    
+    def sr_update(self, sr):
+        dataset_list = [ CMIDataset(ann_path, split=self.split, sr=sr) for ann_path in self.jsonl_list ]
+        self.dataset = ConcatDataset(dataset_list)
    
  
 if __name__ == "__main__":
     dataset = CMIDataset("data/MTT/CMI_MTT.jsonl", split="test")
     print(len(dataset))
+    dataset.sr_update(44100)
     for idx, data in tqdm.tqdm(enumerate(dataset), total=len(dataset)):
         if idx < 6:
-            print(data)
-            # break
+            print(dataset[idx])
+            break
             
     dataset = MultipleDataset("data")
+    dataset.sr_update(44100)
     print(len(dataset))
     print(dataset[0])
