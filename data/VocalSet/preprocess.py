@@ -67,7 +67,7 @@ def partition(aud, max_ms=3000):
 
 if __name__ == "__main__":
   unzip_dir = 'data/VocalSet/audio/'
-  zip_dir = 'data/VocalSet/VocalSet.zip'
+  zip_dir = 'VocalSet11.zip'
   archive = zipfile.ZipFile(zip_dir)
 
 
