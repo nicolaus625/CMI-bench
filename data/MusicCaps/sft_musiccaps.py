@@ -27,12 +27,12 @@ for split in ["train", "test"]:
                 "domain": "music",
                 "audio_path": ["data/MusicCaps/audio/" + data],
                 "audio_start":0.0, 
-                "audio_end":30.0,
+                "audio_end":10.0,
                 "source": "AudioSet",
                 "other": {"tag":"null"}
             })
 
-with open(f"CMI_VocalSet_tech.jsonl", "w") as f:
+with open(f"CMI_MusicCaps.jsonl", "w") as f:
     for data_sample in data_samples:
         f.write(json.dumps(data_sample) + "\n")
     f.close()
