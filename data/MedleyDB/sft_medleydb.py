@@ -175,7 +175,7 @@ for split in ["test"]:
         ).T  # shape (#intervals ?, times TF inside the intervals or not )
         for offset, label_interval in zip(time_offsets, label_invervals):
             data_samples.append({
-                "instruction": "please the pitch in MIDI number with the timestep of the given audio. The output format should be a list of (time, MIDI number ) tuples ",
+                "instruction": "please estimate the pitch sequnnce in MIDI number with the timestep of the given audio. The output format should be a list of (float:time (second), int:MIDI number) tuples.",
                 "input": f"<|SOA|><AUDIO><|EOA|>",
                 "output": tensor_to_tuple_string(times_labels[label_interval]),
                 "uuid": "",
