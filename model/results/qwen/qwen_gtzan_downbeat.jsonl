@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all downbeats in this audio track are `0.0s,0.54s,1.0ss, 1.58s, 2.12s, 2.66s, 3.20s, 3.74s, 4.28s, 4.82s, 5.36s, 5.90s, 6.44s, 7.08s, 7.62s, 8.16s, 8.70s, 9.24s, 9.78s, 10.32s, 10.86s, 11.40s, 11.94s, 12.48s, 13.02s, 13.56s, 14.10s, 14.64s, 15.18s, 15.72s, 16.26s, 16.80s, 17.34s, 17.88s, 18.42s, 19.06s, 19.60s, 20.14s, 20.68s, 21.22s, 21.76s, 22.30s, 22.84s, 23.38s, 24.02s, 24.56s, 25.10s, 25.64s, 26.18s, 26.72s, 27.26s, 27.80s, 28.34s, 28.88s, 29.42s, 29.96s, 30.50s, 31.04s, 31.58s, 32.12s, 32.66s, 33.20s, 33.74s, 34.28s, 34.82s, 3",
+        "correct_answer": "0.82s,2.15s,3.47s,4.83s,6.16s,7.47s,8.8s,10.12s,11.47s,12.79s,14.1s,15.46s,16.77s,18.07s,19.37s,20.69s,22.02s,23.33s,24.64s,25.97s,27.25s,28.58s,29.88s",
+        "audioid": "../testdata/GTZAN/Data/genres_original/jazz/jazz.00099.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all downbeats in this audio track are `0.0s,0.54s,1.0ss, 1.58s, 2.12s, 2.66s, 3.20s, 3.74s, 4.28s, 4.82s, 5.36s, 5.90s, 6.44s, 7.08s, 7.62s, 8.16s, 8.70s, 9.24s, 9.78s, 10.32s, 10.86s, 11.40s, 11.94s, 12.48s, 13.02s, 13.56s, 14.10s, 14.64s, 15.18s, 15.72s, 16.26s, 16.80s, 17.34s, 17.88s, 18.42s, 18.96s, 19.50s, 20.04s, 20.58s, 21.12s, 21.66s, 22.20s, 22.74s, 23.28s, 23.82s, 24.36s, 24.90s, 25.44s, 26.08s, 26.62s, 27.16s, 27.70s, 28.24s, 28.78s, 29.32s, 29.86s, 30.40s, 30.94s, 31.48s, 32.02s, 32.56s, 33.10s, 33.64s, 34.18s, 34.72s, 3",
+        "correct_answer": "1.1s,5.0s,8.81s,12.62s,16.56s,20.47s,24.29s,28.16s",
+        "audioid": "../testdata/GTZAN/Data/genres_original/jazz/jazz.00076.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all downbeats in this audio track are `0.0s,0.54s,1.0ss, 1.62s, 2.16s, 2.70s, 3.24s, 3.78s, 4.32s, 4.86s, 5.40s, 5.94s, 6.48s, 7.02s, 7.56s, 8.10s, 8.64s, 9.18s, 9.72s, 10.26s, 10.80s, 11.34s, 11.88s, 12.42s, 12.96s, 13.50s, 14.04s, 14.58s, 15.12s, 15.66s, 16.20s, 16.74s, 17.28s, 17.82s, 18.36s, 18.90s, 19.44s, 20.08s, 20.62s, 21.16s, 21.70s, 22.24s, 22.78s, 23.32s, 23.86s, 24.40s, 24.94s, 25.48s, 26.02s, 26.56s, 27.10s, 27.64s, 28.18s, 28.72s, 29.26s, 29.80s, 30.34s, 30.88s, 31.42s, 31.96s, 32.50s, 33.04s, 33.58s, 34.12s, 34.66s, 3",
+        "correct_answer": "1.75s,3.62s,5.5s,7.37s,9.24s,11.1s,12.98s,14.85s,16.71s,18.59s,20.44s,22.3s,24.16s,26.0s,27.86s,29.72s",
+        "audioid": "../testdata/GTZAN/Data/genres_original/jazz/jazz.00088.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all downbeats in this audio track are `0.0s,0.54s,1.0ss, 1.58s, 2.12s, 2.66s, 3.20s, 3.74s, 4.28s, 4.82s, 5.36s, 5.90s, 6.44s, 7.08s, 7.62s, 8.16s, 8.70s, 9.24s, 9.78s, 10.32s, 10.86s, 11.40s, 11.94s, 12.48s, 13.02s, 13.56s, 14.10s, 14.64s, 15.18s, 15.72s, 16.26s, 16.80s, 17.34s, 17.88s, 18.42s, 18.96s, 19.50s, 20.04s, 20.58s, 21.12s, 21.66s, 22.20s, 22.74s, 23.28s, 23.82s, 24.36s, 24.90s, 25.44s, 26.08s, 26.62s, 27.16s, 27.70s, 28.24s, 28.78s, 29.32s, 29.86s, 30.40s, 30.94s, 31.48s, 32.02s, 32.56s, 33.10s, 33.64s, 34.18s, 34.72s, 3",
+        "correct_answer": "1.19s,5.48s,9.79s,14.2s,18.57s,22.82s,27.24s",
+        "audioid": "../testdata/GTZAN/Data/genres_original/jazz/jazz.00089.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all downbeats in this audio track are `0.0s,0.54s,1.0ss, 1.58s, 2.12s, 2.66s, 3.20s, 3.74s, 4.28s, 4.82s, 5.36s, 5.90s, 6.44s, 7.08s, 7.62s, 8.16s, 8.70s, 9.24s, 9.78s, 10.32s, 10.86s, 11.40s, 11.94s, 12.48s, 13.02s, 13.56s, 14.10s, 14.64s, 15.18s, 15.72s, 16.26s, 16.80s, 17.34s, 17.88s, 18.42s, 19.06s, 19.60s, 20.14s, 20.68s, 21.22s, 21.76s, 22.30s, 22.84s, 23.38s, 24.02s, 24.56s, 25.10s, 25.64s, 26.18s, 26.72s, 27.26s, 27.80s, 28.34s, 28.88s, 29.42s, 29.96s, 30.50s, 31.04s, 31.58s, 32.12s, 32.66s, 33.20s, 33.74s, 34.28s, 34.82s, 3",
+        "correct_answer": "0.86s,2.62s,4.36s,6.15s,7.92s,9.66s,11.48s,13.3s,15.09s,16.9s,18.72s,20.52s,22.32s,24.18s,26.0s,27.79s,29.59s",
+        "audioid": "../testdata/GTZAN/Data/genres_original/jazz/jazz.00096.wav",
+        "other": ""
+    }
+]

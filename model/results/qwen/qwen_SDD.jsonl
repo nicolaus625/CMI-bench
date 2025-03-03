@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the description of given song.",
+        "response": "This is a song whose genre is Electronic, and the lyrics are \"The way we love it, oh oh oh\".",
+        "correct_answer": "Electronic music that has a constant melody throughout with accompanying instruments used to supplement the melody which can be heard in possibly a casual setting",
+        "audioid": "../testdata/SDD/audio/audio/34/1004034.2min.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the description of given song.",
+        "response": "A cool guitar track with a driving beat and a moody, contemplative mood.",
+        "correct_answer": "acoustic guitar solo track with consistent rhythm and repeating progression, suitable for a relaxing afternoon tea",
+        "audioid": "../testdata/SDD/audio/audio/74/1007274.2min.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the description of given song.",
+        "response": "This is a song whose genre is Pop, and the lyrics are \"See the magic circle that surrounds my hand We need to touch it when he bites my hand There's a mystical drawing summer's my heart Something about love something higher than you think I'll tell my secret\".",
+        "correct_answer": "A rock song with a country vibe, it has male vocals, drums, and acoustic guitar. It is an upbeat song",
+        "audioid": "../testdata/SDD/audio/audio/71/1009671.2min.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the description of given song.",
+        "response": "This is a song whose genre is Pop, and the lyrics are \"See the magic circle that surrounds me And we need to touch it when he bites my hand There's a mystical drawing Somewhere in my heart And I don't even think I'll tell\".",
+        "correct_answer": "Upbeat fast tempo with a blues rock feel that one can dance",
+        "audioid": "../testdata/SDD/audio/audio/71/1009671.2min.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the description of given song.",
+        "response": "This is a song whose genre is Pop, and the lyrics are \"See the magic circle that we'll need to touch it when he bites my hand And he says that he's my son And I don't even think I'm scared\".",
+        "correct_answer": "A classic chord progression used in a playful way to give sound for sunny day.",
+        "audioid": "../testdata/SDD/audio/audio/71/1009671.2min.mp3",
+        "other": ""
+    }
+]

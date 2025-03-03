@@ -1,0 +1,37 @@
+[
+    {
+        "question": "What is the instrument of given audio. Please choose from bass, brass, flute, guitar, keyboard, mallet, organ, reed, string, synth_lead, vocal",
+        "response": "The instrument of the given audio is the bass.",
+        "correct_answer": "bass",
+        "audioid": "../testdata/NSynth/nsynth-test/audio/bass_synthetic_068-049-025.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the instrument of given audio. Please choose from bass, brass, flute, guitar, keyboard, mallet, organ, reed, string, synth_lead, vocal",
+        "response": "The instrument of the given audio is the keyboard.",
+        "correct_answer": "keyboard",
+        "audioid": "../testdata/NSynth/nsynth-test/audio/keyboard_electronic_001-021-127.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the instrument of given audio. Please choose from bass, brass, flute, guitar, keyboard, mallet, organ, reed, string, synth_lead, vocal",
+        "response": "The instrument of the given audio is the guitar.",
+        "correct_answer": "guitar",
+        "audioid": "../testdata/NSynth/nsynth-test/audio/guitar_acoustic_010-066-100.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the instrument of given audio. Please choose from bass, brass, flute, guitar, keyboard, mallet, organ, reed, string, synth_lead, vocal",
+        "response": "The instrument of the given audio is the bass.",
+        "correct_answer": "reed",
+        "audioid": "../testdata/NSynth/nsynth-test/audio/reed_acoustic_037-068-127.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the instrument of given audio. Please choose from bass, brass, flute, guitar, keyboard, mallet, organ, reed, string, synth_lead, vocal",
+        "response": "The instrument of the given audio is the flute.",
+        "correct_answer": "flute",
+        "audioid": "../testdata/NSynth/nsynth-test/audio/flute_acoustic_002-077-100.wav",
+        "other": ""
+    }
+]

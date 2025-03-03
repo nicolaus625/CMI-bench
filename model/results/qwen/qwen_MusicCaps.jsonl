@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the caption of the given audio.",
+        "response": "The lyrics are \"One day I&apos;ll find you\nI&apos;ll make you mine\nOne day I&apos;ll find you\".",
+        "correct_answer": "The low quality recording features a pop folk song that consists of passionate female vocal singing over repetitive flute licks, stuttering hi hats, groovy piano chords, claps and a riser sweep. It sounds energetic and kind of addictive, thanks to those interesting melodies and a fairly repetitive female vocal.",
+        "audioid": "../testdata/MusicCaps/audio/sIA-IuTI7AY.wav",
+        "other": ""
+    },
+    {
+        "question": "Please provide the caption of the given audio.",
+        "response": "A male singer sings this song. The song is medium tempo with a groovy bass line, steady drumming rhythm, keyboard harmony and background vocals. The song is romantic and emotional. The song is a Hindi film song.",
+        "correct_answer": "The music features a male voice singing and being backed by similar male voices. The rhythm section consists of a busy drum rhythm, a shaker, a bass guitar and the traditional Indian drums - tablas. In the background one can hear an electric guitar playing a repeating note in the first half of the music excerpt and in the second one an electronic sound playing a repeating melody.",
+        "audioid": "../testdata/MusicCaps/audio/CzMNiypg1I8.wav",
+        "other": ""
+    },
+    {
+        "question": "Please provide the caption of the given audio.",
+        "response": "A man sings in a high-pitched voice.",
+        "correct_answer": "An acoustic drum is playing a faster groove along with a walking bassline. An accordion is playing a melody on top of another instrument supported with short rhythmic chords on the offbeat. Male voice samples are used to create a simple melody. This song may be playing in a funny video. This is an amateur recording.",
+        "audioid": "../testdata/MusicCaps/audio/LzSWdj4izHM.wav",
+        "other": ""
+    },
+    {
+        "question": "Please provide the caption of the given audio.",
+        "response": "The audio is of a bird singing.",
+        "correct_answer": "The cinematic music features a violin solo with a light accompaniment by a string section. The solo repeats the same, simple theme several times. There's duck sounds playing in the background. The music sounds like a very old tv show soundtrack.",
+        "audioid": "../testdata/MusicCaps/audio/Th6Tf6kA8RU.wav",
+        "other": ""
+    },
+    {
+        "question": "Please provide the caption of the given audio.",
+        "response": "The lyrics are \"Dame la vida de tu coraz\u00f3n\".",
+        "correct_answer": "The song is an instrumental. The song is medium  tempo with Latin percussions, guitar strumming rhythm, groovy bass line and keyboard percussions. The song is exciting and groovy. The song has poor audio quality.",
+        "audioid": "../testdata/MusicCaps/audio/aT7LGemDB40.wav",
+        "other": ""
+    }
+]

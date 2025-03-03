@@ -1,0 +1,37 @@
+[
+    {
+        "question": "What is the singing technique of the given audio. Please choose from belt, breathy, inhaled, lip_trill, spoken, straight, trill, trillo, vibrato, vocal_fry",
+        "response": "The singing technique of the given audio is breathy.",
+        "correct_answer": "belt",
+        "audioid": "../testdata/VocalSet/audio/belt/f2_arpeggios_belt_a_00.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the singing technique of the given audio. Please choose from belt, breathy, inhaled, lip_trill, spoken, straight, trill, trillo, vibrato, vocal_fry",
+        "response": "The singing technique of the given audio is breathy.",
+        "correct_answer": "belt",
+        "audioid": "../testdata/VocalSet/audio/belt/f2_arpeggios_belt_e_00.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the singing technique of the given audio. Please choose from belt, breathy, inhaled, lip_trill, spoken, straight, trill, trillo, vibrato, vocal_fry",
+        "response": "The singing technique of the given audio is breathy.",
+        "correct_answer": "belt",
+        "audioid": "../testdata/VocalSet/audio/belt/f2_arpeggios_belt_e_01.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the singing technique of the given audio. Please choose from belt, breathy, inhaled, lip_trill, spoken, straight, trill, trillo, vibrato, vocal_fry",
+        "response": "The singing technique of the given audio is breathy.",
+        "correct_answer": "belt",
+        "audioid": "../testdata/VocalSet/audio/belt/f2_arpeggios_belt_i_00.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the singing technique of the given audio. Please choose from belt, breathy, inhaled, lip_trill, spoken, straight, trill, trillo, vibrato, vocal_fry",
+        "response": "The singing technique of the given audio is breathy.",
+        "correct_answer": "belt",
+        "audioid": "../testdata/VocalSet/audio/belt/f2_arpeggios_belt_o_00.wav",
+        "other": ""
+    }
+]

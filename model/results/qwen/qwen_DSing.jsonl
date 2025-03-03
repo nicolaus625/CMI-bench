@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please transcribe the lyrics of the given song.",
+        "response": "The lyrics of the given song are:\"Somethin&apos;s the range\".",
+        "correct_answer": "SOME DAYS I'M RICH",
+        "audioid": "../testdata/DSing/sing_300x30x2/GB/GBVocals/1022289417_2551042-1330592116_1533981558-GB-M-1330592229.m4a",
+        "other": ""
+    },
+    {
+        "question": "Please transcribe the lyrics of the given song.",
+        "response": "The lyrics of the given song are:\"Sums into the range\".",
+        "correct_answer": "SOME DAYS I'M RICH",
+        "audioid": "../testdata/DSing/sing_300x30x2/GB/GBVocals/1022289417_2551042-1330592116_1533981558-GB-M-1330592229.m4a",
+        "other": ""
+    },
+    {
+        "question": "Please transcribe the lyrics of the given song.",
+        "response": "The lyrics of the given song are:\"Don't you want to say mmm\".",
+        "correct_answer": "I SAY WHAT'S ON MY MIND",
+        "audioid": "../testdata/DSing/sing_300x30x2/GB/GBVocals/1022289417_2551042-1330592116_1533981558-GB-M-1330592229.m4a",
+        "other": ""
+    },
+    {
+        "question": "Please transcribe the lyrics of the given song.",
+        "response": "The lyrics of the given song are:\"I keep up with the guys and you see me holding up my middle finger to the world\".",
+        "correct_answer": "I KEEP UP WITH THE GUYS AND YOU SEE ME HOLDING UP MY MIDDLE FINGER TO THE WORLD",
+        "audioid": "../testdata/DSing/sing_300x30x2/GB/GBVocals/1022289417_2551042-754022411_1585810487-GB-F-754025211.m4a",
+        "other": ""
+    },
+    {
+        "question": "Please transcribe the lyrics of the given song.",
+        "response": "The lyrics of the given song are:\"All the same on your computer\".",
+        "correct_answer": "OR A SONG ON YOUR COMPUTER",
+        "audioid": "../testdata/DSing/sing_300x30x2/GB/GBVocals/1022289417_2551042-754022411_1585810487-GB-F-754025211.m4a",
+        "other": ""
+    }
+]

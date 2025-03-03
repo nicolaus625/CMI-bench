@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+        "response": "Based on the audio, I would estimate the arousal score to be around 3.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0003.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+        "response": "The arousal score of the given music is 4.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0012.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+        "response": "Based on the energy, excitement, and emotional content of the music, I would estimate an arousal score of 6 out of 9.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0022.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+        "response": "Based on the audio, I would estimate the arousal score to be around 7 out of 9.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0039.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+        "response": "The arousal score of the given music is 7.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0040.wav",
+        "other": ""
+    }
+]

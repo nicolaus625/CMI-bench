@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the tags of given music.",
+        "response": "The possible tags of this music are: classical, opera.",
+        "correct_answer": "classical, strings, violin, opera",
+        "audioid": "../testdata/MTT/mp3/f/american_bach_soloists-j_s__bach_solo_cantatas-01-bwv54__i_aria-30-59.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the tags of given music.",
+        "response": "The possible tags of this music are: classical, opera.",
+        "correct_answer": "classical, strings, violin, opera, classic",
+        "audioid": "../testdata/MTT/mp3/f/american_bach_soloists-j_s__bach_solo_cantatas-01-bwv54__i_aria-146-175.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the tags of given music.",
+        "response": "The tags of given music are classical, opera.",
+        "correct_answer": "classical, opera, classic",
+        "audioid": "../testdata/MTT/mp3/f/american_bach_soloists-j_s__bach_solo_cantatas-01-bwv54__i_aria-262-291.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the tags of given music.",
+        "response": "The tags of given music are classical, opera.",
+        "correct_answer": "opera, quiet",
+        "audioid": "../testdata/MTT/mp3/f/american_bach_soloists-j_s__bach_solo_cantatas-01-bwv54__i_aria-291-320.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the tags of given music.",
+        "response": "The possible tags of given music are classical, opera.",
+        "correct_answer": "classical, strings, violin, classic",
+        "audioid": "../testdata/MTT/mp3/f/american_bach_soloists-j_s__bach_solo_cantatas-01-bwv54__i_aria-320-349.mp3",
+        "other": ""
+    }
+]

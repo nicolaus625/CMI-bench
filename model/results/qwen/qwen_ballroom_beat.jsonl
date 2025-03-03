@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Identify and list the timestamps of all beats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all beats in this audio track are as follows:\n\n0.0s, 0.54s, 1.0s, 1.56s, 2.10s, 2.64s, 3.18s, 3.72s, 4.26s, 4.80s, 5.34s, 5.88s, 6.42s, 6.96s, 7.50s, 8.04s, 8.58s, 9.12s, 9.66s, 10.20s, 10.74s, 11.28s, 11.82s, 12.36s, 12.90s, 13.44s, 14.08s, 14.62s, 15.16s, 15.70s, 16.24s, 16.78s, 17.32s, 17.86s, 18.40s, 19.04s, 19.58s, 20.12s, 20.66s, 21.20s, 21.74s, 22.28s, 22.82s, 23.36s, 23.90s, 24.44s, 25.08s, 25.62s, 26.16s, 26.70s, 27.24s, 27.78s, 28.32s, 28.86s, 29.40s, 29.94s, 30.48s, 31.02s, 31.56s, 32.10s, 32.64s, 33.18s, 33.72s, 34.26s, 34.80s,",
+        "correct_answer": "1.61s,2.07s,2.52s,2.97s,3.42s,3.87s,4.33s,4.78s,5.25s,5.69s,6.11s,6.58s,7.04s,7.48s,7.94s,8.39s,8.85s,9.29s,9.73s,10.2s,10.65s,11.11s,11.56s,12.01s,12.47s,12.92s,13.37s,13.82s,14.27s,14.73s,15.18s,15.63s,16.08s,16.54s,16.99s,17.44s,17.88s,18.35s,18.79s,19.24s,19.68s,20.15s,20.61s,21.07s,21.5s,21.96s,22.42s,22.87s,23.32s,23.77s,24.23s,24.68s,25.12s,25.58s,26.03s,26.49s,26.94s,27.39s,27.84s,28.29s,28.74s,29.19s,29.65s",
+        "audioid": "../testdata/ballroom/BallroomData/Rumba-American/Albums-AnaBelen_Veneo-13.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all beats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all beats in this audio track are `0.0s,0.54s,1.0ss, 1.62s, 2.16s, 2.70s, 3.24s, 3.78s, 4.32s, 4.86s, 5.40s, 5.94s, 6.48s, 7.02s, 7.56s, 8.10s, 8.64s, 9.18s, 9.72s, 10.26s, 10.80s, 11.34s, 11.88s, 12.42s, 12.96s, 13.50s, 14.04s, 14.58s, 15.12s, 15.66s, 16.20s, 16.74s, 17.28s, 17.82s, 18.36s, 18.90s, 19.44s, 19.98s, 20.52s, 21.06s, 21.60s, 22.14s, 22.68s, 23.22s, 23.76s, 24.30s, 24.84s, 25.38s, 26.02s, 26.56s, 27.10s, 27.64s, 28.18s, 28.72s, 29.26s, 29.80s, 30.34s, 30.88s, 31.42s, 31.96s, 32.50s, 33.04s, 33.58s, 34.12s, 34.66s, 35.",
+        "correct_answer": "0.54s,0.96s,1.37s,1.78s,2.2s,2.64s,3.07s,3.5s,3.94s,4.38s,4.81s,5.24s,5.65s,6.07s,6.48s,6.92s,7.35s,7.78s,8.2s,8.61s,9.04s,9.46s,9.88s,10.3s,10.72s,11.14s,11.56s,11.99s,12.42s,12.86s,13.28s,13.7s,14.13s,14.56s,14.99s,15.41s,15.84s,16.26s,16.7s,17.13s,17.55s,17.99s,18.43s,18.87s,19.3s,19.73s,20.16s,20.59s,21.03s,21.46s,21.89s,22.33s,22.77s,23.2s,23.62s,24.04s,24.47s,24.89s,25.31s,25.74s,26.17s,26.6s,27.03s,27.46s,27.89s,28.32s,28.75s,29.18s,29.6s",
+        "audioid": "../testdata/ballroom/BallroomData/Rumba-American/Albums-Latino_Latino-09.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all beats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all beats in this audio track are `0.0s,0.54s,1.0ss, 1.56s, 2.08s, 2.60s, 3.12s, 3.64s, 4.16s, 4.68s, 5.20s, 5.72s, 6.24s, 6.76s, 7.28s, 7.80s, 8.32s, 8.84s, 9.36s, 9.88s, 10.40s, 10.92s, 11.44s, 11.96s, 12.48s, 13.00s, 13.52s, 14.04s, 14.56s, 15.08s, 15.60s, 16.12s, 16.64s, 17.16s, 17.68s, 18.20s, 18.72s, 19.24s, 19.76s, 20.28s, 20.80s, 21.32s, 21.84s, 22.36s, 22.88s, 23.40s, 23.92s, 24.44s, 24.96s, 25.48s, 26.00s, 26.52s, 27.04s, 27.56s, 28.08s, 28.60s, 29.12s, 29.64s, 30.16s, 30.68s, 31.20s, 31.72s, 32.24s, 32.76s, 33.28s, 33.8",
+        "correct_answer": "0.52s,1.01s,1.42s,1.92s,2.37s,2.84s,3.28s,3.76s,4.23s,4.69s,5.14s,5.62s,6.1s,6.56s,7.04s,7.51s,7.98s,8.45s,8.91s,9.38s,9.85s,10.31s,10.77s,11.24s,11.7s,12.17s,12.63s,13.1s,13.57s,14.04s,14.53s,15.0s,15.47s,15.92s,16.38s,16.84s,17.32s,17.78s,18.26s,18.71s,19.18s,19.63s,20.13s,20.64s,21.08s,21.53s,21.99s,22.45s,22.92s,23.38s,23.83s,24.31s,24.79s,25.25s,25.72s,26.2s,26.66s,27.12s,27.63s,28.07s,28.54s,29.0s,29.48s",
+        "audioid": "../testdata/ballroom/BallroomData/Rumba-American/Albums-I_Like_It2-09.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all beats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all beats in this audio track are `0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s,0.54s,1.0ss,0.0s",
+        "correct_answer": "0.54s,1.1s,1.65s,2.2s,2.75s,3.3s,3.85s,4.38s,4.91s,5.43s,5.98s,6.52s,7.07s,7.61s,8.15s,8.69s,9.22s,9.75s,10.29s,10.82s,11.35s,11.9s,12.44s,12.97s,13.51s,14.05s,14.6s,15.14s,15.68s,16.22s,16.75s,17.32s,17.9s,18.47s,19.0s,19.54s,20.07s,20.61s,21.13s,21.66s,22.19s,22.72s,23.23s,23.76s,24.29s,24.84s,25.38s,25.91s,26.44s,26.97s,27.5s,28.05s,28.58s,29.12s,29.64s",
+        "audioid": "../testdata/ballroom/BallroomData/Rumba-American/Albums-Latino_Latino-05.wav",
+        "other": ""
+    },
+    {
+        "question": "Identify and list the timestamps of all beats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
+        "response": "The timestamps of all beats in this audio track are as follows:\n\n0.0s, 0.54s, 1.0s, 1.56s, 2.10s, 2.64s, 3.18s, 3.72s, 4.26s, 4.80s, 5.34s, 5.88s, 6.42s, 6.96s, 7.50s, 8.04s, 8.58s, 9.12s, 9.66s, 10.20s, 10.74s, 11.28s, 11.82s, 12.36s, 12.90s, 13.44s, 14.08s, 14.62s, 15.16s, 15.70s, 16.24s, 16.78s, 17.32s, 17.86s, 18.40s, 19.04s, 19.58s, 20.12s, 20.66s, 21.20s, 21.74s, 22.28s, 22.82s, 23.36s, 23.90s, 24.44s, 25.08s, 25.62s, 26.16s, 26.70s, 27.24s, 27.78s, 28.32s, 28.86s, 29.40s, 29.94s, 30.48s, 31.02s, 31.56s, 32.10s, 32.64s, 33.18s, 33.72s, 34.26s, 34.80s,",
+        "correct_answer": "0.6s,1.09s,1.58s,2.09s,2.61s,3.13s,3.66s,4.2s,4.74s,5.27s,5.8s,6.33s,6.84s,7.35s,7.85s,8.35s,8.88s,9.34s,9.83s,10.31s,10.83s,11.32s,11.83s,12.32s,12.83s,13.32s,13.82s,14.33s,14.84s,15.35s,15.84s,16.35s,16.85s,17.35s,17.86s,18.37s,18.87s,19.37s,19.88s,20.38s,20.88s,21.38s,21.88s,22.38s,22.88s,23.37s,23.88s,24.38s,24.88s,25.38s,25.88s,26.38s,26.88s,27.38s,27.88s,28.39s,28.89s,29.39s,29.89s",
+        "audioid": "../testdata/ballroom/BallroomData/Rumba-American/Albums-GloriaEstefan_MiTierra-04.wav",
+        "other": ""
+    }
+]

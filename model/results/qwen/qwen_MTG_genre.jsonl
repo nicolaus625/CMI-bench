@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the genre tag(s) of given audio.",
+        "response": "The genre tag(s) of the given audio are electronic, experimental, ambient electronic, ambient.",
+        "correct_answer": "punkrock",
+        "audioid": "../testdata/MTG/audio-low/14/214.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the genre tag(s) of given audio.",
+        "response": "The genre tag(s) of given audio are metal, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/15/215.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the genre tag(s) of given audio.",
+        "response": "The genre tag(s) of given audio are punk, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/16/216.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the genre tag(s) of given audio.",
+        "response": "The genre tag(s) of given audio are metal, hardcore.",
+        "correct_answer": "punkrock",
+        "audioid": "../testdata/MTG/audio-low/17/217.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the genre tag(s) of given audio.",
+        "response": "The genre tag(s) of given audio are punk, power-pop.",
+        "correct_answer": "punkrock",
+        "audioid": "../testdata/MTG/audio-low/18/218.low.mp3",
+        "other": ""
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "question": "What is the pitch of given audio. Note pitches are represented as in the MIDI specification, using integers from 0 (lowest pitch) to 127 (highest pitch) for your answer. While MIDI has a total of 128 pitches (i.e., 10 octaves), the lowest pitch in this dataset is 9 (A_1), and the highest pitch is 119 (C flat 9).",
+        "response": "The pitch of the given audio is 119.",
+        "correct_answer": 49,
+        "audioid": "../testdata/NSynth/nsynth-test/audio/bass_synthetic_068-049-025.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the pitch of given audio. Note pitches are represented as in the MIDI specification, using integers from 0 (lowest pitch) to 127 (highest pitch) for your answer. While MIDI has a total of 128 pitches (i.e., 10 octaves), the lowest pitch in this dataset is 9 (A_1), and the highest pitch is 119 (C flat 9).",
+        "response": "The pitch of the audio is 9.",
+        "correct_answer": 21,
+        "audioid": "../testdata/NSynth/nsynth-test/audio/keyboard_electronic_001-021-127.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the pitch of given audio. Note pitches are represented as in the MIDI specification, using integers from 0 (lowest pitch) to 127 (highest pitch) for your answer. While MIDI has a total of 128 pitches (i.e., 10 octaves), the lowest pitch in this dataset is 9 (A_1), and the highest pitch is 119 (C flat 9).",
+        "response": "The pitch of the given audio is 119.",
+        "correct_answer": 66,
+        "audioid": "../testdata/NSynth/nsynth-test/audio/guitar_acoustic_010-066-100.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the pitch of given audio. Note pitches are represented as in the MIDI specification, using integers from 0 (lowest pitch) to 127 (highest pitch) for your answer. While MIDI has a total of 128 pitches (i.e., 10 octaves), the lowest pitch in this dataset is 9 (A_1), and the highest pitch is 119 (C flat 9).",
+        "response": "The pitch of the audio is 9.",
+        "correct_answer": 68,
+        "audioid": "../testdata/NSynth/nsynth-test/audio/reed_acoustic_037-068-127.wav",
+        "other": ""
+    },
+    {
+        "question": "What is the pitch of given audio. Note pitches are represented as in the MIDI specification, using integers from 0 (lowest pitch) to 127 (highest pitch) for your answer. While MIDI has a total of 128 pitches (i.e., 10 octaves), the lowest pitch in this dataset is 9 (A_1), and the highest pitch is 119 (C flat 9).",
+        "response": "The pitch of the given audio is 103.",
+        "correct_answer": 77,
+        "audioid": "../testdata/NSynth/nsynth-test/audio/flute_acoustic_002-077-100.wav",
+        "other": ""
+    }
+]

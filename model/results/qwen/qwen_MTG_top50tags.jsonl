@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the music tags of given audio? This may include but not limited to instruments, emotions and genres",
+        "response": "The possible music tags of this audio could be metal, hardcore, death-metal.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/15/215.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the music tags of given audio? This may include but not limited to instruments, emotions and genres",
+        "response": "The music tags of given audio are rock, punk, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/16/216.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the music tags of given audio? This may include but not limited to instruments, emotions and genres",
+        "response": "The music tags of given audio are punk, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/19/219.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the music tags of given audio? This may include but not limited to instruments, emotions and genres",
+        "response": "The music tags of given audio are metal, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/23/223.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the music tags of given audio? This may include but not limited to instruments, emotions and genres",
+        "response": "The music tags of given audio are punk, hardcore.",
+        "correct_answer": "metal",
+        "audioid": "../testdata/MTG/audio-low/26/226.low.mp3",
+        "other": ""
+    }
+]

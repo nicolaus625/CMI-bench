@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Please provide the emotion tag(s) of given audio.",
+        "response": "fear, tension, scary, suspense, horror, uneasy, strange, mysterious, unsettling, thrill, jumpy, suspenseful, building, tension, fear, dark,  thriller, cinematic, suspense, evil, creepy, ominous, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror",
+        "correct_answer": "melodic",
+        "audioid": "../testdata/MTG/audio-low/24/3524.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the emotion tag(s) of given audio.",
+        "response": "The emotion tag(s) of given audio are sad.",
+        "correct_answer": "meditative",
+        "audioid": "../testdata/MTG/audio-low/82/4882.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the emotion tag(s) of given audio.",
+        "response": "The emotion tag(s) of given audio are: relaxed, peaceful, soothing.",
+        "correct_answer": "meditative",
+        "audioid": "../testdata/MTG/audio-low/83/4883.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the emotion tag(s) of given audio.",
+        "response": "Positive, optimistic, uplifting, optimistic, inspirational, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive, positive, optimistic, inspirational, motivational, optimistic, inspirational, motivational, uplifting, uplifting, positive",
+        "correct_answer": "meditative",
+        "audioid": "../testdata/MTG/audio-low/84/4884.low.mp3",
+        "other": ""
+    },
+    {
+        "question": "Please provide the emotion tag(s) of given audio.",
+        "response": "Romantic Chinese classical music. A Chinese instrumental music with traditional Chinese instruments. Chinese traditional music for video, film, documentaries, travel, Chinese culture, cooking, food, and other projects.",
+        "correct_answer": "meditative",
+        "audioid": "../testdata/MTG/audio-low/89/4889.low.mp3",
+        "other": ""
+    }
+]
