@@ -1,0 +1,14 @@
+transformers==4.32.0
+accelerate>=0.26.0
+tiktoken
+einops
+transformers_stream_generator==0.0.4
+scipy
+torchvision
+pillow
+tensorboard
+matplotlib
+openpyxl
+gradio_client
+pandas
+torchaudio
