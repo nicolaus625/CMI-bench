@@ -69,8 +69,11 @@ def load_audio(
     #     crop_randomly=crop_randomly, 
     #     pad=pad,
     # )
+    if end == -1:
+        crop_duration_in_sample = waveform.shape[-1] - start * sample_rate
+    else:
+        crop_duration_in_sample = int((end - start) * sample_rate)
     start = int(start * sample_rate)
-    crop_duration_in_sample = int((end - start) * sample_rate)
     if waveform.shape[-1] > start + crop_duration_in_sample:
         waveform = waveform[..., start:start + crop_duration_in_sample]
     elif waveform.shape[-1] < start + crop_duration_in_sample:
@@ -182,6 +185,7 @@ class CMIDataset(Dataset):
         audio_list = []
         for audio_relative_path in ann["audio_path"]:
             audio_path = os.path.join(self.path, audio_relative_path)
+            # print(audio_path, ann["audio_start"], ann["audio_end"])
             audio = load_audio(
                     audio_path,
                     target_sr=self.sr,
@@ -244,15 +248,15 @@ class MultipleDataset(Dataset):
    
  
 if __name__ == "__main__":
-    dataset = CMIDataset("data/MTT/CMI_MTT.jsonl", split="test")
+    dataset = CMIDataset("data/DSing/CMI_DSing.jsonl", split="test")
     print(len(dataset))
     dataset.sr_update(44100)
     for idx, data in tqdm.tqdm(enumerate(dataset), total=len(dataset)):
         if idx < 6:
             print(dataset[idx])
-            break
+            # break
             
-    dataset = MultipleDataset("data")
-    dataset.sr_update(44100)
-    print(len(dataset))
-    print(dataset[0])
+    # dataset = MultipleDataset("data")
+    # dataset.sr_update(44100)
+    # print(len(dataset))
+    # print(dataset[0])
