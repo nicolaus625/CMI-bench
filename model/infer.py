@@ -1,5 +1,5 @@
 import json
-import tqdm
+from tqdm import tqdm
 import os
 import json
 import argparse
@@ -582,7 +582,7 @@ if __name__ == "__main__":
         file.close
         
         count = 0
-        for line in tqdm.tqdm(lines):
+        for line in tqdm(lines):
             data = json.loads(line)
             if data['split'][0] != "test" or count > 4:
                 continue
