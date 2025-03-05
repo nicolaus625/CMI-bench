@@ -158,8 +158,6 @@ def get_musilingo_pred(model, text, audio_path, stopping, length_penalty=1, temp
     audio = load_audio(audio_path, target_sr=24000,
                         is_mono=True,
                         is_normalize=False,
-                        crop_to_length_in_sample_points=int(30*16000)+1,
-                        crop_randomly=True, 
                         pad=False).cuda()    
     processor = Wav2Vec2FeatureExtractor.from_pretrained("m-a-p/MERT-v1-330M",trust_remote_code=True) 
     audio = processor(audio, 
@@ -548,7 +546,7 @@ if __name__ == "__main__":
                            llama_dir, 
                            mert_path=f"{HF_PATH}/MERT-v1-330M", 
                            knn=True, 
-                           knn_dir="MU-LLaMA/ckpt", 
+                           knn_dir="MU_LLaMA/ckpt", 
                            llama_type="7B")
         model.eval()
         model.to("cuda")
