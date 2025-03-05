@@ -16,7 +16,15 @@ for split in ["train", "valid", "test"]:
         audio_path = metadata.iloc[i].item()
         # print(audio_path)
         data_samples.append({
-            "instruction": "Which of the following genres does the given music blong to? blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock.",
+            "instruction": #"Which of the following genres does the given music blong to? blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock.",
+            """Identify the genre of the given music. You must choose exactly one genre from the following list:
+Genres: blues, classical, country, disco, hip-hop, jazz, metal, pop, reggae, rock.
+
+Your response should only contain ONE selected genre.
+
+Example 1: blues
+Example 2: hiphop
+Example 3: jazz""",
             "input": f"<|SOA|><AUDIO><|EOA|>",
             "output": audio_path.split("/")[0] ,
             "uuid": "",

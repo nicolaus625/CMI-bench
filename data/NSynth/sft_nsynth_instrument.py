@@ -17,7 +17,15 @@ for split in ["test"]:
     for i in tqdm.tqdm(range(length), desc=f"Processing {split}"):
         audio_path = metadata[i][0]
         data_samples.append({
-            "instruction": f"What is the instrument of given audio. Please choose from {classes}",
+            "instruction": #f"What is the instrument of given audio. Please choose from {classes}",
+            """Identify the primary instrument in the given audio. You must choose exactly one instrument from the following list:
+Instruments: piano, guitar, violin, cello, trumpet, saxophone, flute, clarinet, drum, bass.
+
+Your response should contain only the selected instrument.
+
+Example 1: violin
+Example 2: trumpet
+Example 3: drum""",
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": metadata[i][1],
             "uuid": "",
