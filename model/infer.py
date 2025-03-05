@@ -546,7 +546,7 @@ if __name__ == "__main__":
                            llama_dir, 
                            mert_path=f"{HF_PATH}/MERT-v1-330M", 
                            knn=True, 
-                           knn_dir="MU_LLaMA/ckpt", 
+                           knn_dir="MU-LLaMA/ckpt", 
                            llama_type="7B")
         model.eval()
         model.to("cuda")

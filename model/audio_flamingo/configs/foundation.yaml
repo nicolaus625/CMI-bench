@@ -1,0 +1,25 @@
+clap_config:
+  method: microsoft-clap
+  audio_embed_dim: 1024
+  config_root: audio_flamingo/my_ms_clap/msclap/configs
+  model_name: 'clapcap'
+  # checkpoint: YOUR_DATA_ROOT_DIR/audio_flamingo-data/clap/clapcap_weights_2023.pth
+  checkpoint: audio_flamingo/my_ms_clap/clapcap_weights_2023.pth
+  # checkpoint: /home/intern-2024-02/dataset/OmniBench/inference/audio_models/audio_flamingo/laion-clap-pretrained/laion_clap/630k-fusion-best.pt
+  window_length: 7.0
+  window_overlap: 5.25
+  max_num_window: 16
+  max_num_fewshot: 1
+
+model_config:
+  cache_dir: audio_flamingo/.cache
+  lang_encoder_path: /map-vepfs/yinghao/huggingface/opt-iml-max-1.3b
+  tokenizer_path: /map-vepfs/yinghao/huggingface/opt-iml-max-1.3b
+  cross_attn_every_n_layers: 1
+  audio_transformer_kwargs: {
+    n_head: 8,
+    n_layers: 3,
+    d_inner: 2048,
+    max_num_media: 128,
+    max_window_per_audio: 16,
+  }
