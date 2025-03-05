@@ -17,7 +17,18 @@ for split in ["train", "valid", "test"]:
     for i in tqdm.tqdm(range(length), desc=f"Processing {split}"):
         audio_path = audio_names_without_ext[i]
         data_samples_arousal.append({
-            "instruction": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+            "instruction": #"Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+            """Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.
+
+            Example 1, when the music is slow and gentle, suggesting a low arousal level:
+            Estimated score: 2.
+
+            Example 2, when the music is energetic and driving, indicating a high arousal level:
+            Estimated score: 8.
+
+            Example 3, when the music has a balanced tempo and moderate intensity:
+            Estimated score: 5.""",
+            
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": str(metadata[audio_path]["y"][0]),
             "uuid": "",
@@ -31,7 +42,19 @@ for split in ["train", "valid", "test"]:
             "other": {"tag":"null"}
         })
         data_samples_valence.append({
-            "instruction": "Estimate the valence score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+            "instruction": #"Estimate the valence score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
+            """Estimate the valence score of the given music on a scale from 1 to 9, where 1 represents the lowest valence level (sad, melancholic) and 9 represents the highest valence level (happy, cheerful). Provide a numerical estimate based on your perception of the music’s emotional positivity.
+
+            Few-Shot Examples:
+            Example 1, when the music is slow and somber, conveying a sense of sadness:
+            Estimated score: 2.
+
+            Example 2, when the music is bright and uplifting, evoking happiness and positivity:
+            Estimated score: 8.
+
+            Example 3, when the music has a neutral or mixed emotional quality, neither too sad nor too happy:
+            Estimated score: 5.""",
+            
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": str(metadata[audio_path]["y"][1]),
             "uuid": "",
