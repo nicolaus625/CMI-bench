@@ -134,7 +134,16 @@ def get_salmonn_pred(text, audio_path, processor, model, cfg):
     audio = load_audio(audio_path, target_sr=16000,
                         is_mono=True,
                         is_normalize=False,
-                        pad=False).squeeze(0).numpy()
+                        pad=False).squeeze(0).numpy().astype(np.float64)
+    # import soundfile as sf
+
+    # audio, sr = sf.read(audio_path)
+    # if len(audio.shape) == 2: # stereo to mono
+    #     audio = audio[:, 0]
+    # if len(audio) < sr: # pad audio to at least 1s
+    #     sil = np.zeros(sr - len(audio), dtype=float)
+    #     audio = np.concatenate((audio, sil), axis=0)
+    # audio = audio[: sr * 30] # truncate audio to at most 30s
     spectrogram = processor(audio, sampling_rate=16000, return_tensors="pt")["input_features"]
     samples = {
         "spectrogram": spectrogram.cuda(),
@@ -576,6 +585,8 @@ if __name__ == "__main__":
         audio_flamingo.to("cuda")
     
     for file_path in jsonl_list:
+        # if "MTG" not in file_path:
+        #     continue
         results = []
         with open(file_path, "r") as file:
             lines = file.readlines()
@@ -605,7 +616,8 @@ if __name__ == "__main__":
                 elif args.model == "salmonn":
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
                     torchaudio.save("tmp.wav", tmp, 16000)
-                    response = get_salmonn_pred("<Speech><SpeechHere></Speech>" + prompt, "tmp.wav", wav_processor, sal, cfg)
+                    response = get_salmonn_pred(f"USER: <Speech><SpeechHere></Speech>{prompt.strip()}\nASSISTANT:",
+                                                "tmp.wav", wav_processor, sal, cfg)
                 elif args.model == "gpt-4o":
                     NotImplementedError
                 elif args.model == "musilingo":
