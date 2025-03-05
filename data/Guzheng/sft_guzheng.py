@@ -24,7 +24,7 @@ def tensor_to_tuple_string(tensor: torch.Tensor) -> str:
     # print(tensor[:, 2].tolist())
     # print([technique[tech] for tech in tensor[:, 2].tolist()[:10]])
     # Format each tuple with time rounded to 2 decimal places and MIDI as an integer
-    formatted_tuples = [(f"{float(start):.4f}",f"{float(end):.4f}", tech) for start, end, tech in zip(time_values, end_values, tech_values) if tech!="boxian"]
+    formatted_tuples = [(f"{float(start):.4f}",f"{float(end):.4f}", tech) for start, end, tech in zip(time_values, end_values, tech_values) if tech!="0"]
     # Convert list to string
     if len(formatted_tuples) == 0:
         formatted_tuples = [("0.0", str(clip_duration), "No Tech")]
@@ -47,7 +47,7 @@ technique = {'chanyin': "Vibrato",
 classes = "Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, Tremolo"
 
 
-for split in ["train", "validation","test"]:
+for split in ["train", "validation", "test"]: #
     # TODO: better to merge the train/valid
     track_names = [os.path.basename(i) for i in glob.glob(f"Guzheng_Tech99/data/label/{split}/*.csv")]
     label_files = [
@@ -69,29 +69,27 @@ for split in ["train", "validation","test"]:
 
         times_labels = np.vectorize(convert_to_tensor)(data)
         times_labels = times_labels[1:] # reduce the fist row/title
-        # times_labels = torch.tensor(times_labels)
-        # print(times_labels.shape, times_labels[:3])
-        # print(times_labels[-1, 0])
-        
-        # time_offsets = torch.arange(
-        #     0, times_labels[-1, 0] + clip_duration, clip_duration
-        # ) #times_labels[-1, 0] is time ends, time_offsets = tensor([  0.,  30.,  60., ...
         time_offsets = np.arange(0, float(times_labels[-1, 0]) + clip_duration, clip_duration)
-        # intervals = torch.vstack((time_offsets[:-1], time_offsets[1:])) # 0-30, 30-60, ...
         intervals = np.vstack((time_offsets[:-1], time_offsets[1:]))  # Shape (2, #intervals)
-        # label_invervals = torch.logical_and(
-        #     times_labels[:, :1] > intervals[0], times_labels[:, :1] < intervals[1]
-        # ).T  # shape (#intervals ?, times TF inside the intervals or not )
-        # print(times_labels[:, :1].shape, intervals.shape)
         label_invervals = np.logical_and(
             torch.tensor(times_labels[:, :1].astype(np.float32)).float() > torch.tensor(intervals[0, :]),
             torch.tensor(times_labels[:, :1].astype(np.float32)).float() < torch.tensor(intervals[1, :])
         ).numpy().T  # Transpose to match expected shape (#intervals, #times)
         for offset, label_interval in zip(time_offsets, label_invervals):
+            indices = np.where(label_interval == 1)[0]
+            new_ann = times_labels[indices]
             data_samples.append({
-                "instruction": f"Please detect the timestep of Guzheng (Chinese Kyoto) techniques of the audio. Such techniques includes:{classes}. The output format should be a list of (start timestep, end time, technique) tuples.",
+                "instruction": # f"Please detect the timestep of Guzheng (Chinese Kyoto) techniques of the audio. Such techniques includes:{classes}. The output format should be a list of (start timestep, end time, technique) tuples.",
+                """Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.
+
+The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].
+
+Example 1:
+\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"
+Example 2:
+\"[('0.0', '10.0', 'No Tech')]\" """,
                 "input": f"<|SOA|><AUDIO><|EOA|>",
-                "output": tensor_to_tuple_string(times_labels[label_interval]),
+                "output": tensor_to_tuple_string(new_ann),
                 "uuid": "",
                 "split": [split if split != "valid" else "dev"],
                 "task_type": {"major": ["seq_multi-class"], "minor": ["technique_detection"]},
