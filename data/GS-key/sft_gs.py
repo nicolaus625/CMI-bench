@@ -21,7 +21,24 @@ for split in ["train", "valid", "test"]:
     for i in tqdm.tqdm(range(length), desc=f"Processing {split}"):
         audio_path = audio_names_without_ext[i]
         data_samples.append({
-            "instruction": f"Estimate the key of the given audio. Please choose from {classes}",
+            "instruction": # f"Estimate the key of the given audio. Please choose from {classes}",
+           """nstruction for Musical Key Estimation
+            Estimate the musical key of the given audio. You must choose exactly one key from the following options:
+
+            C major, Db major, D major, Eb major, E major, F major, Gb major, G major, Ab major, A major, Bb major, B major,
+            C minor, Db minor, D minor, Eb minor, E minor, F minor, Gb minor, G minor, Ab minor, A minor, Bb minor, B minor.
+
+            Your response should only contain ONE selected key.
+
+            Few-Shot Examples
+            Example 1:
+            C major
+
+            Example 2:
+            E minor
+
+            Example 3:
+            Bb major""",
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": metadata[audio_path]['y'],
             "uuid": "",
