@@ -1,0 +1,44 @@
+model:
+  # paths
+  llama_path: "/map-vepfs/yinghao/huggingface/vicuna-13b-v1.1"  # "lmsys/vicuna-13b-v1.1"
+  whisper_path: "/map-vepfs/yinghao/huggingface/whisper-large-v2"  # "openai/whisper-large-v2"
+  beats_path: "SALMONN/models/beats/BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt"
+
+  ckpt: "SALMONN/models/ckpt/salmonn_v1.pth" # if not "", load model from ckpt for training or evaluation
+
+  freeze_whisper: True
+  freeze_beats: True
+
+  # window-level Q-Former
+  use_speech_Qformer: True
+  freeze_speech_QFormer: False
+  window_level_Qformer: True
+  num_speech_query_token: 1
+  second_per_window: 0.333333
+  second_stride: 0.333333
+
+  speech_llama_proj_model: ""
+  freeze_speech_llama_proj: False
+
+  # LoRA
+  lora: True
+  lora_rank: 8
+  lora_alpha: 32
+  lora_dropout: 0.1
+
+  multi_prompt: True
+  prompt_template: "USER: {}\nASSISTANT:"
+  prompt_path: ""
+  test_prompt_path: ""
+  max_txt_len: 300
+  end_sym: "</s>"
+
+generate:
+  max_new_tokens: 200
+  num_beams: 4
+  do_sample: False
+  min_length: 1
+  temperature: 1.0
+  top_p: 0.9
+  repetition_penalty: 1.0
+  length_penalty: 1.0

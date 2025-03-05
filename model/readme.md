@@ -2,24 +2,12 @@
 ## qwen-audio
 pip install -r requirements.txt
 
-inference with image caption and audio
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen 
-inference only with audio
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen --no-image
-inference only with image caption
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen --no-audio
 
 ## qwen2-audio
 pip install git+https://github.com/huggingface/transformers
 
 this environment is conpatable with qwen-audio
 
-inference with image caption and audio
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen2 
-inference only with audio
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen2 --no-image
-inference only with image caption
-> CUDA_VISIBLE_DEVICES=0 python inference/audio_models/infer.py --model qwen2 --no-audio
 
 ## salmonn
 ### setup environment
@@ -31,13 +19,6 @@ if you cannot download this link, use wget https://djf19a.dm.files.1drv.com/y4mw
 
 download salmonn ckpt: wget https://huggingface.co/tsinghua-ee/SALMONN/resolve/main/salmonn_v1.pth
 
-### inference commands
-inference with image caption and audio
-> CUDA_VISIBLE_DEVICES=1 python inference/audio_models/infer.py --model salmonn 
-inference only with audio
-> CUDA_VISIBLE_DEVICES=1 python inference/audio_models/infer.py --model salmonn --no-image
-inference only with image caption
-> CUDA_VISIBLE_DEVICES=1 python inference/audio_models/infer.py --model salmonn --no-audio
 
 ## audio flamingo
 download clapcap_weights_2023.pth from for ms_clap https://huggingface.co/microsoft/msclap/tree/main
@@ -62,8 +43,6 @@ use the same environment with salmon, but run the following command
 > pip install omegaconf==2.3.0
 > pip install nnAudio==0.3.3
 
-inference with image caption and audio
-> CUDA_VISIBLE_DEVICES=1 python inference/audio_models/infer.py --model musilingo 
 
 ## LTU and LTU-AS
 use the same environment of qwen-audio or run the following command

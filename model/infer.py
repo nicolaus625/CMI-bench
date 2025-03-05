@@ -15,6 +15,9 @@ import numpy as np
 
 from data_loader import load_audio
 
+
+HF_PATH = "/map-vepfs/yinghao/huggingface"
+
 def parse_multi_choice_response(response, all_choices, index2ans, default_answer=None):
     """
     Parse the prediction from the generated response.
@@ -113,9 +116,6 @@ def get_qwen2_pred(text, audio_path, processor, model, sr):
                             target_sr=sr,
                             is_mono=True,
                             is_normalize=False,
-                            # crop_to_length_in_sec=31,
-                            crop_to_length_in_sample_points=int(30*sr)+1,
-                            crop_randomly=True, 
                             pad=False,
                         )
                     audio = audio.squeeze(0).numpy()
@@ -123,7 +123,7 @@ def get_qwen2_pred(text, audio_path, processor, model, sr):
     inputs = processor(text=text, audios=audios, return_tensors="pt", padding=True).to("cuda")
     inputs.input_ids = inputs.input_ids.to("cuda")
 
-    generate_ids = model.generate(**inputs, max_length=512)
+    generate_ids = model.generate(**inputs, max_length=1024)
     generate_ids = generate_ids[:, inputs.input_ids.size(1):]
 
     response = processor.batch_decode(generate_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
@@ -134,8 +134,6 @@ def get_salmonn_pred(text, audio_path, processor, model, cfg):
     audio = load_audio(audio_path, target_sr=16000,
                         is_mono=True,
                         is_normalize=False,
-                        crop_to_length_in_sample_points=int(30*16000)+1,
-                        crop_randomly=True, 
                         pad=False).squeeze(0).numpy()
     spectrogram = processor(audio, sampling_rate=16000, return_tensors="pt")["input_features"]
     samples = {
@@ -477,12 +475,12 @@ if __name__ == "__main__":
     jsonl_list = glob.glob("../data/*/CMI*.jsonl")
     if args.model == "qwen":
         from transformers import AutoModelForCausalLM, AutoTokenizer
-        tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen-Audio-Chat", trust_remote_code=True)
-        qwen = AutoModelForCausalLM.from_pretrained("Qwen/Qwen-Audio-Chat", device_map="cuda", trust_remote_code=True).eval()
+        tokenizer = AutoTokenizer.from_pretrained(f"{HF_PATH}/Qwen-Audio-Chat", trust_remote_code=True)
+        qwen = AutoModelForCausalLM.from_pretrained(f"{HF_PATH}/Qwen-Audio-Chat", device_map="cuda", trust_remote_code=True).eval()
     elif args.model == "qwen2":
         from transformers import Qwen2AudioForConditionalGeneration, AutoProcessor
-        processor = AutoProcessor.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct")
-        qwen2 = Qwen2AudioForConditionalGeneration.from_pretrained("Qwen/Qwen2-Audio-7B-Instruct", device_map="cuda", trust_remote_code=True).eval()
+        processor = AutoProcessor.from_pretrained(f"{HF_PATH}/Qwen2-Audio-7B-Instruct")
+        qwen2 = Qwen2AudioForConditionalGeneration.from_pretrained(f"{HF_PATH}/Qwen2-Audio-7B-Instruct", device_map="cuda", trust_remote_code=True).eval()
         sr = processor.feature_extractor.sampling_rate
 
     elif args.model == "salmonn":
@@ -503,10 +501,9 @@ if __name__ == "__main__":
         from transformers import Wav2Vec2FeatureExtractor
         from transformers import StoppingCriteria, StoppingCriteriaList
         from transformers import AutoModel
-        musilingo = AutoModel.from_pretrained("/aifs4su/ziyaz/OmniBench/inference/audio_models/MusiLingo-long-v1", trust_remote_code=True)
+        musilingo = AutoModel.from_pretrained(f"{HF_PATH}/MusiLingo-long-v1", trust_remote_code=True)
         musilingo.to("cuda")
         musilingo.eval()
-        jsonl_list = music_jsonl_list
         
     elif args.model == "ltu":
         # from gradio_client import Client
@@ -545,17 +542,16 @@ if __name__ == "__main__":
         from MU_LLaMA.MU_LLaMA import llama
         from MU_LLaMA.MU_LLaMA.util.misc import *
         from MU_LLaMA.MU_LLaMA.data.utils import load_and_transform_audio_data
-        model_path = "/aifs4su/ziyaz/OmniBench/inference/audio_models/MU_LLaMA/ckpt/checkpoint.pth"
-        llama_dir = "/aifs4su/ziyaz/OmniBench/inference/audio_models/MU_LLaMA/ckpt/LLaMA"
+        model_path = "MU_LLaMA/ckpt/checkpoint.pth"
+        llama_dir = "MU_LLaMA/ckpt/LLaMA"
         model = llama.load(model_path, 
                            llama_dir, 
-                           mert_path="/aifs4su/ziyaz/OmniBench/inference/audio_models/MERT-v1-330M", 
+                           mert_path=f"{HF_PATH}/MERT-v1-330M", 
                            knn=True, 
-                           knn_dir="/aifs4su/ziyaz/OmniBench/inference/audio_models/MU-LLaMA/ckpt", 
+                           knn_dir="MU-LLaMA/ckpt", 
                            llama_type="7B")
         model.eval()
         model.to("cuda")
-        jsonl_list = music_jsonl_list
     elif args.model == "flamingo":
         from transformers import AutoTokenizer, set_seed 
         set_seed(0)
@@ -567,7 +563,7 @@ if __name__ == "__main__":
             "top_p": 0.95,
             "num_return_sequences": 1
         }
-        config_file = '/aifs4su/ziyaz/OmniBench/inference/audio_models/audio_flamingo/configs/foundation.yaml'
+        config_file = 'audio_flamingo/configs/foundation.yaml'
         config = yaml.load(open(config_file), Loader=yaml.FullLoader)
         clap_config = config['clap_config']
         model_config = config['model_config']
@@ -575,7 +571,7 @@ if __name__ == "__main__":
         audio_flamingo = prepare_audio_flamingo(
             model_config=model_config, 
             clap_config=clap_config, 
-            checkpoint_path="/aifs4su/ziyaz/OmniBench/inference/audio_models/audio_flamingo/foundation.pt"
+            checkpoint_path="audio_flamingo/foundation.pt"
             # "/home/intern-2024-02/.cache/huggingface/hub/models--nvidia--audio-flamingo/snapshots/77da4908d6a7edae1f776810ebde708383eaedeb/foundation.pt"
         )
         audio_flamingo.eval()
