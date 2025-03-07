@@ -595,7 +595,7 @@ if __name__ == "__main__":
         count = 0
         for line in tqdm(lines):
             data = json.loads(line)
-            if data['split'][0] != "test" or count > 4:
+            if data['split'][0] != "test":
                 continue
             count += 1
             if len(data['audio_path']) == 1: # input single audio
@@ -607,17 +607,17 @@ if __name__ == "__main__":
                 if args.model == "qwen":
                     # print(start, end, audio_path)
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 16000)
-                    response = get_qwen_pred(prompt, "tmp.wav", tokenizer, qwen)
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 16000)
+                    response = get_qwen_pred(prompt, f"tmp_{args.model}.wav", tokenizer, qwen)
                 elif args.model == "qwen2":
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 16000)
-                    response = get_qwen2_pred(prompt, "tmp.wav", processor, qwen2, sr)
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 16000)
+                    response = get_qwen2_pred(prompt, f"tmp_{args.model}.wav", processor, qwen2, sr)
                 elif args.model == "salmonn":
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 16000)
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 16000)
                     response = get_salmonn_pred(f"USER: <Speech><SpeechHere></Speech>{prompt.strip()}\nASSISTANT:",
-                                                "tmp.wav", wav_processor, sal, cfg)
+                                                f"tmp_{args.model}.wav", wav_processor, sal, cfg)
                 elif args.model == "gpt-4o":
                     NotImplementedError
                 elif args.model == "musilingo":
@@ -633,16 +633,16 @@ if __name__ == "__main__":
                     stopping = StoppingCriteriaList([StoppingCriteriaSub([torch.tensor([835]).cuda(),
                                                     torch.tensor([2277, 29937]).cuda()])])
                     tmp = load_audio(audio_path, target_sr=24000, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 24000)
-                    response = get_musilingo_pred(musilingo.model, prompt, "tmp.wav", stopping, length_penalty=100, temperature=0.1)
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 24000)
+                    response = get_musilingo_pred(musilingo.model, prompt, f"tmp_{args.model}.wav", stopping, length_penalty=100, temperature=0.1)
                 elif args.model == "ltu":
                     NotImplementedError
                 elif args.model == "ltuas":
                     NotImplementedError
                 elif args.model == "mullama":
                     tmp = load_audio(audio_path, target_sr=24000, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 24000)
-                    response = get_mullama_pred(model, prompt, "tmp.wav", 
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 24000)
+                    response = get_mullama_pred(model, prompt, f"tmp_{args.model}.wav", 
                                                 audio_weight=1, cache_size=100, cache_t=20.0, cache_weight=0.0, max_gen_len=1024, gen_t=0.6, top_p=0.8)
                 elif args.model == "flamingo":
                     DataProcessor = AudioTextDataProcessor(
@@ -652,8 +652,8 @@ if __name__ == "__main__":
                             max_tokens=1024,
                             )
                     tmp = load_audio(audio_path, target_sr=44100, start=start, end=end)
-                    torchaudio.save("tmp.wav", tmp, 44100)
-                    item = {'name': "tmp.wav", 'prefix': 'The task is audio QA.', 'prompt': prompt}
+                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 44100)
+                    item = {'name': f"tmp_{args.model}.wav", 'prefix': 'The task is audio QA.', 'prompt': prompt}
                     processed_item = DataProcessor.process(item)
                     response = get_audio_flamingo_pred(
                         audio_flamingo, text_tokenizer, item, processed_item,
