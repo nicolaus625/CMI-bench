@@ -1,27 +1,32 @@
-import json
 import os
 import torch
-import time
-from peft import (
+import torchaudio
+from eval.LTU_AS.peft.src.peft import (
     LoraConfig,
-    get_peft_model,
+    get_peft_model
 )
-from transformers import GenerationConfig, LlamaForCausalLM, LlamaTokenizer, LlamaConfig
-import numpy as np
+from eval.LTU_AS.hf.transformers.src.transformers.generation import GenerationConfig
+from eval.LTU_AS.hf.transformers.src.transformers.models.llama import LlamaForCausalLM, LlamaTokenizer, LlamaConfig
 import datetime
+import time,json
 import re
 import skimage.measure
 import whisper_at
 from whisper.model import Whisper, ModelDimensions
+import json
 import os.path as osp
 from typing import Union
-
-templates_path = "/data/siyou/CMI-bench/res/templates"
+import numpy as np
 
 class Prompter(object):
     __slots__ = ("template", "_verbose")
 
-    def __init__(self, template_name: str = "", verbose: bool = False):
+    def __init__(
+            self, 
+            template_name: str = "", 
+            verbose: bool = False,
+            templates_path = "eval/GAMA/templates"
+            ):
         self._verbose = verbose
         if not template_name:
             # Enforce the default here, so the constructor can be called with '' and will not break.
@@ -70,29 +75,23 @@ def convert_params_to_float32(model):
                 print(f"Converting parameter '{name}' to float32")
                 param.data = param.data.float()
 
-
-
-def load_whisper():
-    mdl_size = 'large-v1'
-    checkpoint_path = '../../pretrained_mdls/{:s}.pt'.format(mdl_size)
-    checkpoint = torch.load(checkpoint_path, map_location='cuda:0')
-    dims = ModelDimensions(**checkpoint["dims"])
-    whisper_feat_model = Whisper(dims)
-    whisper_feat_model.load_state_dict(checkpoint["model_state_dict"], strict=False)
-    whisper_feat_model.to('cuda:0')
-    return whisper_feat_model
-
-class LTUASModel:
-    def __init__(self, base_model, eval_mdl_path, device):
+class LTU_ASModel:
+    def load_whisper(self, whisper_checkpoint_path):
+        checkpoint = torch.load(whisper_checkpoint_path, map_location='cpu')
+        dims = ModelDimensions(**checkpoint["dims"])
+        whisper_feat_model = Whisper(dims)
+        whisper_feat_model.load_state_dict(checkpoint["model_state_dict"], strict=False)
+        whisper_feat_model.to(self.device)
+        return whisper_feat_model
+    
+    def __init__(self, base_model, eval_mdl_path, whisper_checkpoint_path, log_save_path, device):
+        self.device = device
         self.prompter = Prompter('alpaca_short')
         self.tokenizer = LlamaTokenizer.from_pretrained(base_model)
-        if device == 'cuda':
-            self.model = LlamaForCausalLM.from_pretrained(base_model, device_map="auto", torch_dtype=torch.float16)
-        else:
-            self.model = LlamaForCausalLM.from_pretrained(base_model, device_map="auto")
-        convert_params_to_float32(self.model)
-
-        config = LoraConfig(
+        model = LlamaForCausalLM.from_pretrained(base_model, torch_dtype=torch.float32)
+        self.whisper_feat_model = self.load_whisper(whisper_checkpoint_path)
+        self.whisper_text_model = whisper_at.load_model("large-v2", device=self.device)
+        self.config = LoraConfig(
             r=8,
             lora_alpha=16,
             target_modules=["q_proj", "v_proj"],
@@ -101,161 +100,140 @@ class LTUASModel:
             task_type="CAUSAL_LM",
         )
 
-        self.model = get_peft_model(self.model, config)
-
-        temp, top_p, top_k = 0.1, 0.95, 500
-
+        self.model = get_peft_model(model, self.config)
+        # change it to your model path
+        self.temp, self.top_p, self.top_k = 0.1, 0.95, 500
         state_dict = torch.load(eval_mdl_path, map_location='cpu')
-        miss, unexpect = self.model.load_state_dict(state_dict, strict=False)
+        self.model.load_state_dict(state_dict, strict=False)
 
         self.model.is_parallelizable = True
         self.model.model_parallel = True
 
-        # unwind
-device = "cuda" if torch.cuda.is_available() else "cpu"
-whisper_text_model = whisper_at.load_model("large-v2", device='cuda:1')
-whisper_feat_model = load_whisper()
+        # unwind broken decapoda-research config
+        self.model.config.pad_token_id = self.tokenizer.pad_token_id = 0  # unk
+        self.model.config.bos_token_id = 1
+        self.model.config.eos_token_id = 2
 
+        self.model.eval()
+        self.eval_log = []
+        
+        if os.path.exists(log_save_path) == False:
+            os.mkdir(log_save_path)
+        self.log_save_path = log_save_path
 
+        self.SAMPLE_RATE = 16000
+        self.AUDIO_LEN = 1.0
+        
+        self.model.to(device)
+        self.text_cache = {}
 
-tokenizer = LlamaTokenizer.from_pretrained(base_model)
-if device == 'cuda':
-    model = LlamaForCausalLM.from_pretrained(base_model, device_map="auto", torch_dtype=torch.float16)
-else:
-    model = LlamaForCausalLM.from_pretrained(base_model, device_map="auto")
-convert_params_to_float32(model)
+    @staticmethod
+    def remove_thanks_for_watching(text):
+        variations = [
+            "thanks for watching", "Thanks for watching", "THANKS FOR WATCHING",
+            "thanks for watching.", "Thanks for watching.", "THANKS FOR WATCHING.",
+            "thanks for watching!", "Thanks for watching!", "THANKS FOR WATCHING!",
+            "thank you for watching", "Thank you for watching", "THANK YOU FOR WATCHING",
+            "thank you for watching.", "Thank you for watching.", "THANK YOU FOR WATCHING.",
+            "thank you for watching!", "Thank you for watching!", "THANK YOU FOR WATCHING!"
+        ]
+        variations = sorted(variations, key=len, reverse=True)
+        pattern = "|".join(re.escape(var) for var in variations)
+        result = re.sub(pattern, "", text)
+        return result
 
-config = LoraConfig(
-    r=8,
-    lora_alpha=16,
-    target_modules=["q_proj", "v_proj"],
-    lora_dropout=0.05,
-    bias="none",
-    task_type="CAUSAL_LM",
-)
-
-model = get_peft_model(model, config)
-
-temp, top_p, top_k = 0.1, 0.95, 500
-
-state_dict = torch.load(eval_mdl_path, map_location='cpu')
-miss, unexpect = model.load_state_dict(state_dict, strict=False)
-
-model.is_parallelizable = True
-model.model_parallel = True
-
-# unwind broken decapoda-research config
-model.config.pad_token_id = tokenizer.pad_token_id = 0
-model.config.bos_token_id = 1
-model.config.eos_token_id = 2
-
-model.eval()
-
-eval_log = []
-cur_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-log_save_path = './inference_log/'
-if os.path.exists(log_save_path) == False:
-    os.mkdir(log_save_path)
-log_save_path = log_save_path + cur_time + '.json'
-
-def print_parameters(model):
-    for name, param in model.named_parameters():
-        print(f"Parameter name: {name}, Data type: {param.dtype}, device '{param.device}'")
-
-def remove_thanks_for_watching(text):
-    variations = [
-        "thanks for watching", "Thanks for watching", "THANKS FOR WATCHING",
-        "thanks for watching.", "Thanks for watching.", "THANKS FOR WATCHING.",
-        "thanks for watching!", "Thanks for watching!", "THANKS FOR WATCHING!",
-        "thank you for watching", "Thank you for watching", "THANK YOU FOR WATCHING",
-        "thank you for watching.", "Thank you for watching.", "THANK YOU FOR WATCHING.",
-        "thank you for watching!", "Thank you for watching!", "THANK YOU FOR WATCHING!"
-    ]
-    variations = sorted(variations, key=len, reverse=True)
-    pattern = "|".join(re.escape(var) for var in variations)
-    result = re.sub(pattern, "", text)
-    return result
-
-text_cache = {}
-def load_audio_trans(filename):
-    global text_cache
-    if filename not in text_cache:
-        result = whisper_text_model.transcribe(filename)
-        text = remove_thanks_for_watching(result["text"].lstrip())
-        text_cache[filename] = text
-    else:
-        text = text_cache[filename]
-        print('using asr cache')
-    _, audio_feat = whisper_feat_model.transcribe_audio(filename)
-    audio_feat = audio_feat[0]
-    audio_feat = torch.permute(audio_feat, (2, 0, 1)).detach().cpu().numpy()
-    audio_feat = skimage.measure.block_reduce(audio_feat, (1, 20, 1), np.mean)
-    audio_feat = audio_feat[1:]  # skip the first layer
-    audio_feat = torch.FloatTensor(audio_feat)
-    return audio_feat, text
-
-# trim to only keep output
-def trim_string(a):
-    separator = "### Response:\n"
-    trimmed_string = a.partition(separator)[-1]
-    trimmed_string = trimmed_string.strip()
-    return trimmed_string
-
-def predict(audio_path, question):
-    print('audio path, ', audio_path)
-    begin_time = time.time()
-
-    if audio_path != None:
-        cur_audio_input, cur_input = load_audio_trans(audio_path)
-        if torch.cuda.is_available() == False:
-            pass
+    @staticmethod
+    def trim_string(a):
+        separator = "### Response:\n"
+        trimmed_string = a.partition(separator)[-1]
+        trimmed_string = trimmed_string.strip()
+        return trimmed_string
+    
+    def load_audio_trans(self, filename):
+        if filename not in self.text_cache:
+            result = self.whisper_text_model.transcribe(filename)
+            text = self.remove_thanks_for_watching(result["text"].lstrip())
+            self.text_cache[filename] = text
         else:
-            cur_audio_input = cur_audio_input.unsqueeze(0).half().to(device)
+            text = self.text_cache[filename]
+            print('using asr cache')
+        _, audio_feat = self.whisper_feat_model.transcribe_audio(filename)
+        audio_feat = audio_feat[0]
+        audio_feat = torch.permute(audio_feat, (2, 0, 1)).detach().cpu().numpy()
+        audio_feat = skimage.measure.block_reduce(audio_feat, (1, 20, 1), np.mean)
+        audio_feat = audio_feat[1:]  # skip the first layer
+        audio_feat = torch.FloatTensor(audio_feat)
+        return audio_feat, text
 
-    instruction = question
-    prompt = prompter.generate_prompt(instruction, cur_input)
-    print('Input prompt: ', prompt)
-    inputs = tokenizer(prompt, return_tensors="pt")
-    input_ids = inputs["input_ids"].to(device)
+    def predict(self, audio_path, question):
+        print('audio path, ', audio_path)
+        begin_time = time.time()
 
-    generation_config = GenerationConfig(
-        do_sample=True,
-        temperature=temp,
-        top_p=top_p,
-        top_k=top_k,
-        repetition_penalty=1.1,
-        max_new_tokens=500,
-        bos_token_id=model.config.bos_token_id,
-        eos_token_id=model.config.eos_token_id,
-        pad_token_id=model.config.pad_token_id,
-        num_return_sequences=1
-    )
+        if audio_path != None:
+            cur_audio_input, cur_input = self.load_audio_trans(audio_path)
+            if torch.cuda.is_available() == False:
+                pass
+            else:
+                cur_audio_input = cur_audio_input.unsqueeze(0).half().to(device)
 
-    # Without streaming
-    with torch.no_grad():
-        generation_output = model.generate(
-            input_ids=input_ids,
-            audio_input=cur_audio_input,
-            generation_config=generation_config,
-            return_dict_in_generate=True,
-            output_scores=True,
+        instruction = question
+        prompt = self.prompter.generate_prompt(instruction, cur_input)
+        print('Input prompt: ', prompt)
+        inputs = self.tokenizer(prompt, return_tensors="pt")
+        input_ids = inputs["input_ids"].to(device)
+
+        generation_config = GenerationConfig(
+            do_sample=True,
+            temperature=self.temp,
+            top_p=self.top_p,
+            top_k=self.top_k,
+            repetition_penalty=1.1,
             max_new_tokens=500,
+            bos_token_id=model.config.bos_token_id,
+            eos_token_id=model.config.eos_token_id,
+            pad_token_id=model.config.pad_token_id,
+            num_return_sequences=1
         )
-    s = generation_output.sequences[0]
-    output = tokenizer.decode(s)
-    output = output[5:-4]
-    end_time = time.time()
-    print(trim_string(output))
-    cur_res = {'audio_id': audio_path, 'instruction': instruction, 'input': cur_input, 'output': trim_string(output)}
-    eval_log.append(cur_res)
-    with open(log_save_path, 'w') as outfile:
-        json.dump(eval_log, outfile, indent=1)
-    print('eclipse time: ', end_time-begin_time, ' seconds.')
-    return trim_string(output)
+
+        # Without streaming
+        with torch.no_grad():
+            generation_output = model.generate(
+                input_ids=input_ids,
+                audio_input=cur_audio_input,
+                generation_config=generation_config,
+                return_dict_in_generate=True,
+                output_scores=True,
+                max_new_tokens=500,
+            )
+        s = generation_output.sequences[0]
+        output = self.tokenizer.decode(s)
+        output = output[5:-4]
+        end_time = time.time()
+        cur_res = {'audio_id': audio_path, 'instruction': instruction, 'input': cur_input, 'output': self.trim_string(output)}
+        self.eval_log.append(cur_res)
+        cur_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        log_save_path = self.log_save_path + cur_time + '.json'
+        with open(log_save_path, 'w') as outfile:
+            json.dump(self.eval_log, outfile, indent=1)
+        print('eclipse time: ', end_time - begin_time, ' seconds.')
+        return self.trim_string(output)
+
+    @staticmethod
+    def trim_string(a):
+        separator = "### Response:\n"
+        trimmed_string = a.partition(separator)[-1]
+        trimmed_string = trimmed_string.strip()
+        return trimmed_string
 
 if __name__ == '__main__':
-    # do not change this, this will load llm
-    base_model = "../../pretrained_mdls/vicuna_ltuas/"
-    # change this to your checkpoint
-    eval_mdl_path = '../../pretrained_mdls/ltuas_long_noqa_a6.bin'
-    eval_mode = 'joint'
+    device = "cpu"
+    eval_mdl_path = "/data/siyou/CMI-bench/pretrained_models/LTU-AS/ltuas_long_noqa_a6.bin"
+    base_model = "/data/siyou/CMI-bench/pretrained_models/vicuna-7b-v1.1"
+    whisper_checkpoint_path = "/data/siyou/CMI-bench/pretrained_models/LTU-AS/large-v1.pt"
+    log_save_path = "./inference_log/"
+    model = LTU_ASModel(base_model, eval_mdl_path, whisper_checkpoint_path, log_save_path, device)
+    audio_path = '/data/siyou/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
+    question = 'Describe the audio.'
+    audio_info, output = model.predict(audio_path, question)
+    print('audio_info: ', audio_info)
+    print('output: ', output)
