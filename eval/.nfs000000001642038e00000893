@@ -1,0 +1,1 @@
+python -m eval.infer --output-file /import/c4dm-04/siyoul/CMI-bench/eval/output --model pengi

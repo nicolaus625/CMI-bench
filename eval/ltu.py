@@ -108,7 +108,10 @@ class LTUModel:
 
     @staticmethod
     def load_audio(audio_path):
-        waveform, sample_rate = torchaudio.load(audio_path)
+        try:
+            waveform, sample_rate = torchaudio.backend.soundfile_backend.load(audio_path)
+        except Exception as e:
+            waveform, sample_rate = torchaudio.load(audio_path)
         audio_info = 'Original input audio length {:.2f} seconds, number of channels: {:d}, sampling rate: {:d}.'.format(waveform.shape[1]/sample_rate, waveform.shape[0], sample_rate)
         if waveform.shape[0] != 1:
             waveform = waveform[0].unsqueeze(0)
@@ -184,19 +187,19 @@ class LTUModel:
         cur_res = {'audio_id': audio_path, 'input': instruction, 'output': output}
         self.eval_log.append(cur_res)
         cur_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        log_save_path = self.log_save_path + cur_time + '.json'
-        with open(log_save_path, 'w') as outfile:
-            json.dump(self.eval_log, outfile, indent=1)
+        # log_save_path = self.log_save_path + cur_time + '.json'
+        # with open(log_save_path, 'w') as outfile:
+        #     json.dump(self.eval_log, outfile, indent=1)
         print('eclipse time: ', end_time - begin_time, ' seconds.')
         return audio_info, output
 
 if __name__ == '__main__':
-    device = "cpu"
-    eval_mdl_path = "/data/siyou/CMI-bench/pretrained_models/LTU/ltu_ori_paper.bin"
-    base_model = "/data/siyou/CMI-bench/pretrained_models/vicuna-7b-v1.1"
+    device = "cuda:1"
+    eval_mdl_path = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/LTU/ltu_ori_paper.bin"
+    base_model = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/vicuna-7b-v1.1"
     log_save_path = "./inference_log/"
     model = LTUModel(base_model, eval_mdl_path, log_save_path, device)
-    audio_path = '/data/siyou/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
+    audio_path = '/import/c4dm-04/siyoul/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
     question = 'Describe the audio.'
     audio_info, output = model.predict(audio_path, question)
     print('audio_info: ', audio_info)
