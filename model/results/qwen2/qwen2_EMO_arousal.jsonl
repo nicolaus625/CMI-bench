@@ -1,0 +1,877 @@
+[
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0003.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7 out of 9. The music is described as a groovy jazzy instrumental with a chill vibe, which suggests a relaxed and soothing atmosphere. However, the addition of drums indicates a hint of energy and intensity, pushing the score towards the higher end of the spectrum. Overall, it seems like a well-balanced track that should keep listeners engaged without feeling overwhelmed.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0012.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the use of instruments like acoustic guitars and drums suggest a lively and possibly intense atmosphere, which aligns with a higher arousal score. However, the inclusion of strings might temper the intensity slightly, keeping the overall score around 7.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0022.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music seems to have a moderate pace and a powerful beat, which suggests a moderately high level of activity or excitement. However, without hearing the audio itself, my assessment is subject to interpretation and may vary from person to person.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0039.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece is described as a lively rock track with a tempo of around 124 BPM, which suggests a moderately high level of activity and excitement. The use of guitar and drums likely contributes to this sensation, along with the overall mood of the song being uplifting and positive. However, the music isn't overly aggressive or chaotic, maintaining a sense of control and balance throughout.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0040.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and a level of intensity that suggests it would be engaging without being overly stimulating.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0042.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderately fast tempo and a dynamic range of chords which suggests a fairly high level of activity and engagement, although not overly aggressive or chaotic.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0044.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a moderately paced rock track with minimal lyrics and a psychedelic feel, I would estimate the arousal score at around 6. This suggests the music likely has a fairly active pace and could be engaging for listeners who enjoy that kind of rock music.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0049.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a rich chord progression which suggests a moderately elevated level of activity or engagement.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0064.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as around 7. The music likely has a moderate pace and some degree of intensity, which together with the genre suggests it might be considered classic rock or blues. Both genres are known for their energetic performances and can evoke excitement in listeners.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "../testdata/EMO/emomusic/wav/0067.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as being played at a moderate tempo, which suggests a relatively calm pace. However, it also has a strong beat and features distorted guitar, which could contribute to a more lively and intense atmosphere. Overall, I would say that the music falls somewhere between moderately calm and moderately agitated in terms of its arousal level.",
+        "correct_answer": "1.402542057976744",
+        "audioid": "../testdata/EMO/emomusic/wav/0088.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the rich chord progression suggest an energetic and perhaps slightly aggressive mood, which aligns with a higher arousal score. However, the inclusion of a soothing melody played on the acoustic guitar might temper this somewhat, bringing the overall score down towards the middle range of the 1-9 scale.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "../testdata/EMO/emomusic/wav/0095.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as having a medium tempo and a moderate level of loudness, which suggests a moderately arousing state. However, without hearing the music myself, my estimate may be slightly subjective.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0102.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7 out of 9. The music is described as loud and fast-paced with a 'rough' quality, which suggests a higher level of energy and intensity. However, the presence of a melody and complex chord progression might indicate that it isn't overly aggressive or jarring to the ear. Therefore, a score of 7 seems appropriate, reflecting a moderately high level of arousal.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0103.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a slow-paced, smoky folk track with a King Crimson influence and a complex chord progression, I would estimate the music's arousal score as around 4. This suggests a moderately calming yet engaging atmosphere, neither too relaxing nor too stimulating.",
+        "correct_answer": "-0.2568980419200396",
+        "audioid": "../testdata/EMO/emomusic/wav/0116.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the use of bluesy and country-style elements suggest a more lively and possibly emotional tone, which aligns with a higher arousal score. However, without hearing the music myself, this is just a subjective assessment based on the given information.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0121.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a moderately paced rock track with an energetic blues feel, I would estimate the arousal score at around 7. This indicates a fairly high level of activity and engagement but not necessarily uncontrollable or overly intense.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0122.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the rich chord progression suggest a sense of energy and dynamism, which aligns with a higher arousal level. However, the song is also described as mellow and warm, which could temper the overall effect and bring it closer to a neutral or slightly low arousal state.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "../testdata/EMO/emomusic/wav/0124.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "6",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "../testdata/EMO/emomusic/wav/0127.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6, which reflects a moderately elevated state of alertness or energy.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0129.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The music seems to have a moderate pace and intensity, which suggests neither calmness nor extreme excitement but rather a balanced state of alertness.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0134.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The piece is described as being played at a brisk tempo which suggests a higher level of energy and intensity compared to something slow and gentle. However, the music is also described as being uplifting, which could imply a slightly more positive or calming effect rather than something overly stimulating. Overall, it seems to be a moderately arousing piece with a balance between energy and upliftment.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0137.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "6",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0142.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a lively piece with a brisk tempo and an animated piano playing, I would estimate the arousal score to be around 7.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0143.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece sounds lively with a moderate pace and an enthusiastic accordion playing, which suggests a moderately high level of activity or excitement.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0150.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The melody seems catchy and upbeat, which typically indicates a higher arousal level, but the overall feel of the track is mellow and laid-back, suggesting that it's not overly stimulating.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0155.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece sounds dynamic and epic, which typically suggests a higher level of excitement or intensity. However, the presence of a choir and the overall orchestration might temper this feeling slightly, bringing the score down towards the middle range of the 8-point scale.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "../testdata/EMO/emomusic/wav/0161.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the numerical estimate for the given music track.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0172.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "6",
+        "correct_answer": "-1.4112911548917157",
+        "audioid": "../testdata/EMO/emomusic/wav/0178.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given classical piece.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0199.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as around 6, which suggests a moderately elevated level of energy and intensity.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0204.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "6",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0216.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is said to be a moderately paced piece in Db major with a 4/4 time signature, which suggests a steady rhythm and moderate energy level. However, the presence of a chord progression that includes F# major, C# major, and G# minor could add some complexity and interest to the music, potentially increasing its\u5524\u9192\u7a0b\u5ea6.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0224.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderately fast tempo and a dynamic range of notes which contribute to an overall lively feel, suggesting a score closer to 8 than 6. However, the presence of soft elements in the melody might temper the effect slightly, bringing the score down towards 7.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0228.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece is described as lively and quick-moving, which suggests a higher level of energy and excitement. However, it also possesses a rich and full sound that could indicate a more complex emotional landscape than something purely exuberant or chaotic. Overall, my perception points towards an moderately elevated state of arousal.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0234.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music seems to have a moderately paced tempo and a rich chord progression which suggests a moderate level of intensity and excitement. However, without hearing the music itself, this is just a subjective assessment and my estimate may vary from someone else's perception.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0242.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a moderately paced rock track with an 'interesting mix of folk and psychedelic influences,' I would estimate the music's arousal score as around 6, which reflects a moderate level of energy and intensity.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "../testdata/EMO/emomusic/wav/0253.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music likely has an upbeat tempo and a moderate volume, which combined with the country and rockabilly elements, suggests a fairly lively and engaging atmosphere that could be considered moderately arousing.",
+        "correct_answer": "2.051888184023311",
+        "audioid": "../testdata/EMO/emomusic/wav/0257.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music seems to have a moderate pace and a rich chord progression which suggests a moderately elevated level of engagement or excitement without being overly stimulating.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0264.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The brisk tempo and the presence of an organ suggest a more lively and possibly exciting atmosphere, which aligns with a higher arousal score. However, without hearing the audio myself, my assessment may be subject to personal interpretation.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0292.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as having a moderate tempo and a psychedelic vibe which suggests a moderately elevated level of excitement or intensity. However, without specific details about the loudness or type of instruments used, it's difficult to give a precise score.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "../testdata/EMO/emomusic/wav/0293.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0306.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate tempo and a noticeable drive, which suggests a moderately high level of activity or excitement without being overly aggressive or disturbing.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0309.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The tempo seems moderately fast, which suggests a moderately high level of activity or excitement. The use of guitar and percussion also contribute to this feeling, as do the vocals which convey a sense of longing. Overall, the piece feels like it has a steady pulse that keeps the energy level fairly consistent without being overly aggressive or calming.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0312.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and rich string section suggest an energetic and perhaps joyful mood, which aligns with a higher arousal level. However, the presence of mellow fiddle and mandolin could temper this somewhat, keeping the overall feel more balanced than, say, a purely upbeat country or rock track.",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "../testdata/EMO/emomusic/wav/0315.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the rich chord progression suggest an energetic and perhaps joyful mood, which aligns with a higher activation level. However, without hearing the music itself, this is just a subjective assessment based on the given details.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0319.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music track.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0322.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and rich chord progression suggest an energetic and lively atmosphere, which aligns with a higher arousal score. However, without hearing the music myself, my assessment may be subject to personal interpretation.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0336.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and consistent rhythm suggest a moderately high level of activity, which aligns with an estimated score of 7 out of 9. However, without hearing the music myself, this is just a subjective assessment based on the given details.",
+        "correct_answer": "0.248148945005068",
+        "audioid": "../testdata/EMO/emomusic/wav/0355.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the overall loudness suggest a more energetic and possibly intense atmosphere, which aligns with a higher score on the arousal scale. However, without hearing the music myself, my assessment may be subject to personal interpretation.",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "../testdata/EMO/emomusic/wav/0366.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "6",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0367.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The fast pace and the inclusion of heavy drums suggest a higher energy level, which aligns with an arousal score of 7. However, without hearing the music myself, this is just a subjective assessment based on the given information.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0378.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderately paced tempo and a level of intensity that suggests it is neither too calm nor too aggressive in terms of arousing emotions.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0380.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a consistent beat, which suggests a relatively calm and controlled emotional state. However, the inclusion of synth drums and synth bass implies a hint of energy and intensity that brings the score up from a purely calm assessment.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0384.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6, which reflects a moderately elevated level of excitement or intensity.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0390.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The pop track seems to have an upbeat tempo and a complex chord progression which typically contributes to a more engaging and lively atmosphere, although it's not overly aggressive or extremely fast-paced.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "../testdata/EMO/emomusic/wav/0393.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7 out of 9. The music is described as being in a galactic style with ethereal synths, string pads, and drums creating an ambient soundscape that feels like floating in space. This suggests a dreamy, expansive atmosphere which could be perceived as having a moderately high level of excitement or intensity without being overly stimulating.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0410.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The music has a moderate tempo and a steady beat which suggests a calm yet slightly stimulating atmosphere, neither too calm nor too exciting.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "../testdata/EMO/emomusic/wav/0419.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as 'electronic music' with '90s dance beat' and 'synth sounds', along with a 'fast pace' and 'happy and fun', I would estimate the music's arousal score as 8 out of 9.",
+        "correct_answer": "1.6911403362196626",
+        "audioid": "../testdata/EMO/emomusic/wav/0425.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has an electronic chill out vibe which typically has a moderate to low intensity, but the addition of strings and drums suggests a more dynamic and possibly more stimulating sound profile compared to pure chill out music. Therefore, I would place it at 7, which reflects a moderately arousing state.",
+        "correct_answer": "0.3202985145657981",
+        "audioid": "../testdata/EMO/emomusic/wav/0427.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music is moderately paced with a steady tempo, which suggests a relatively calm and controlled emotional state. However, the inclusion of synth drums and synth bass implies a hint of energy and intensity that could contribute to a slightly higher than average arousal score.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0432.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The music has a moderate tempo and includes elements that suggest it could be heard at nightclubs or dance clubs, which typically convey an energetic atmosphere. However, it does not feel overly aggressive or intense like some dance music might.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0436.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music seems to have a moderately fast tempo and a level of intensity that suggests it is likely to be perceived as having a higher than average activation or excitement level. However, without hearing the music myself, this score is only an approximation based on common patterns in music genre and personal perception.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0455.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a steady beat which suggests a calm yet slightly stimulating atmosphere, neither too calm nor too exciting.",
+        "correct_answer": "-0.9783937375273373",
+        "audioid": "../testdata/EMO/emomusic/wav/0458.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as having a complex chord progression and a slow tempo, which suggests a more subdued or contemplative atmosphere. However, the use of distortion and a 6/8 feel could indicate a hint of intensity or energy beneath the surface. Overall, it seems to fall somewhere between calm and energetic on the arousal scale.",
+        "correct_answer": "0.7531959319301763",
+        "audioid": "../testdata/EMO/emomusic/wav/0462.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests neither calmness nor extreme excitement but rather a balanced state of alertness.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0475.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music is moderately paced with a consistent rhythm and a sense of continuity, which suggests a relatively calm yet engaging atmosphere. However, the use of synth drums towards the end could potentially increase the energy and intensity of the track, pushing it closer to an 8 on the arousal scale.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0499.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as lively, which suggests a higher level of energy and excitement, but it's not overly aggressive or chaotic like some music with high scores might be. Instead, it seems to have a steady, rhythmic pace that could be considered moderately stimulating.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0521.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a complex chord progression that suggests a dynamic and engaging atmosphere, which aligns with a higher-than-average arousal level. However, without hearing the audio itself, this is only a rough approximation.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "../testdata/EMO/emomusic/wav/0529.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music seems to have a moderately paced tempo and a level of intensity that suggests it falls somewhere between calm and energetic.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0544.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests a moderately arousing state. However, without hearing the music itself, this score is only an approximation based on the language used to describe it.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0556.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music is said to be upbeat and bouncy, which suggests a higher level of energy and excitement. However, it's also described as having a 'folk' element, which might bring a more earthy or organic feel to it, potentially softening the overall intensity.",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "../testdata/EMO/emomusic/wav/0561.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music has a moderate tempo and a soothing melody which suggests a calm and relaxed atmosphere, but the addition of guitar and strings adds a slightly more intense quality, bringing the score up from a purely calming perspective.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0582.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as a classic rock piece with a bluesy feel in G major, played at a moderate tempo, which suggests a balanced and possibly introspective mood. However, the presence of chord progressions that alternate between major and minor could add some complexity and excitement to the music, potentially pushing it towards a higher score on the arousal scale.",
+        "correct_answer": "-1.6277398635739049",
+        "audioid": "../testdata/EMO/emomusic/wav/0584.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a rich string section that suggests a moderate level of intensity, which combined with the genre of folk and country, likely contributes to an engaging but not overly stimulating atmosphere.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0594.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as moderately paced with an intense drum beat and guitar strumming, which suggests a relatively high level of activity and excitement. However, the presence of a calm flute melody and soft vocals might temper the overall intensity, contributing to a score that is not quite at the highest end of the spectrum but also not particularly low.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0622.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderately fast tempo and a rich chord progression which suggests a level of energy and complexity that could be considered relatively high. However, it is not overly aggressive or intense, so it does not feel overly stimulating. Therefore, I would assign a score of 7, reflecting a balance between calmness and excitement.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0645.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The background information indicates that the music features a mix of genres including easy listening, electronic, jazz, lounge, and world music with a time signature of 4/4 and a tempo of 80.0 bpm, which suggests a calm pace. However, the presence of instruments like an acoustic guitar, bass, drum, piano, synthesizer, and trumpet could add some energy and complexity to the track, making it more interesting and potentially arousing compared to purely instrumental music.",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "../testdata/EMO/emomusic/wav/0647.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the use of instruments like trumpets suggest an energetic and lively atmosphere, which aligns with a higher arousal level. However, the key of G major and a 4/4 time signature indicate a moderately structured composition that may not be overly aggressive or chaotic in its intensity.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0665.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as having a moderate tempo and a complex chord progression which suggests a moderately elevated level of activity or engagement, falling between low and high on the arousal scale.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0667.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate tempo and a relatively upbeat rhythm which suggests a moderately high level of activity or excitement. However, without hearing the music itself, this is just a rough estimate based on the given information.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0668.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as a lively piece in B minor with a brisk tempo, which suggests a higher level of activity and excitement. However, the chord progression includes both major and minor chords, indicating that the overall mood may not be entirely intense or aggressive. Therefore, a score of 7 seems appropriate, reflecting a moderately arousing state.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0684.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music track.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0687.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The music has a moderately paced tempo and likely features an engaging melody or rhythm that could be considered moderately stimulating without being overly intense or overwhelming.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0691.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music seems to have a moderately fast tempo and a groovy rhythm which suggests a moderately high level of activity or movement, while the use of mellow tones and a bluesy feel might indicate a slightly calming influence. Overall, it sounds like a track that could energize without becoming overwhelming.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0698.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description as a 'cheerful and fun' piece with an 'uplifting' feeling, along with a brisk tempo and a major key, I would estimate the music's arousal score to be around 7. This suggests it is moderately stimulating and likely to evoke positive emotions in the listener.",
+        "correct_answer": "-0.4733467506022293",
+        "audioid": "../testdata/EMO/emomusic/wav/0704.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this piece of music as 7. The brisk tempo and dynamic chord progression suggest a level of energy and intensity that falls somewhere between moderate and high.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0710.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal level as 7. The brisk tempo and the use of violins suggest a lively and possibly intense atmosphere, which aligns with a higher arousal score. However, the description also notes that the piece is \"international,\" which could indicate a more complex or nuanced emotional tone that may not be fully captured by a simple arousal score.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0718.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The music likely has a moderately fast tempo and a dynamic chord progression, which suggests a moderately high level of activity and engagement. However, without hearing the audio itself, this is just a rough estimate based on the description.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0721.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is described as having a moderate tempo and a complex chord progression which suggests a moderately elevated level of activity or engagement, falling between low and high on the arousal scale.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0723.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this track as 7. The brisk tempo and the inclusion of brass instruments typically contribute to a more lively and energetic atmosphere, which aligns with a higher arousal score. However, the key of G minor could add a slightly melancholic or introspective quality that might temper the overall energy slightly.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "../testdata/EMO/emomusic/wav/0724.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music in the format of a complete sentence.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0727.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7 out of 9. The music is lively with a fast tempo and features spirited female lead vocals over an enthusiastic instrumental accompaniment, which suggests a high level of excitement or intensity. However, the description also notes that the track is \"never jarring or harsh,\" which might indicate a slightly softer overall sound that could temper the high\u5524\u9192 effect.",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "../testdata/EMO/emomusic/wav/0729.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate tempo and a rich chord progression which suggests a moderately elevated level of activity or engagement.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0743.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide your perception of the music's arousal level as a number between 1 and 9.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "../testdata/EMO/emomusic/wav/0746.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and a loud volume, which typically contributes to a higher level of arousal. However, without hearing the specific audio, this score is only an approximation based on common musical characteristics associated with increased energy and intensity.",
+        "correct_answer": "0.248148945005068",
+        "audioid": "../testdata/EMO/emomusic/wav/0748.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests a moderately elevated state of arousal.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0749.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests a relatively high level of engagement without being overly stimulating or chaotic.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0756.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests a moderately arousing state. However, without hearing the music itself, this score is only an approximation based on the given information.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0758.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0763.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests an average to moderately arousing level. However, without hearing the music myself, this is just a subjective assessment based on the given information.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "../testdata/EMO/emomusic/wav/0784.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The melody seems soft and sweet, which typically indicates a lower arousal level, but the inclusion of guitar and drums suggests a slightly more upbeat and energetic feel compared to pure soft music. Therefore, I would place this track at a moderately elevated level of arousal.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0789.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music is moderately paced with a steady rhythm which suggests a moderate level of intensity. The key of E minor could be perceived as slightly melancholic or introspective, adding a layer of complexity that might contribute to an overall feeling of contemplation or emotional depth.",
+        "correct_answer": "0.10384980588360905",
+        "audioid": "../testdata/EMO/emomusic/wav/0797.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece is described as being fast-paced and loud, which suggests a higher level of energy and intensity. However, it also has a complex chord progression that could indicate a more nuanced emotional tone than simple excitement or agitation. Overall, my perception of the music falls somewhere between moderately energetic and intense.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0810.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a slightly higher pitch which suggests a moderately elevated physical reaction or emotional state.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0818.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece is described as being played at a brisk tempo, which suggests a higher energy level compared to something slow and gentle. However, it's not overly aggressive or intense like some music genres, maintaining a moderate level of excitement throughout.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "../testdata/EMO/emomusic/wav/0824.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. It seems to have a moderate pace and intensity that suggests it falls somewhere between calm and energetic.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0826.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6 out of 9. The music is described as soft and mellow but also has a steady drumbeat which suggests a moderately high level of activity or engagement.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "../testdata/EMO/emomusic/wav/0829.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and intensity, which suggests a moderately arousing state. However, without hearing the music itself, this score is purely speculative and may vary from person to person.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0844.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music based on its description.",
+        "correct_answer": "-1.339141585330986",
+        "audioid": "../testdata/EMO/emomusic/wav/0855.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0886.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as around 6. The music has a moderate tempo and likely carries a positive or uplifting vibe, which suggests a moderately high level of arousal. However, without hearing the music itself, this is just a rough estimate based on the language used to describe it.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0890.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The fast pace and loud volume suggest a higher level of activity and excitement, which aligns with an arousal score of 7. However, without hearing the music myself, this is just a subjective assessment based on the given information.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0893.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The piece is lively with a brisk tempo and features an animated piano which suggests a moderately high level of activity or excitement. However, it doesn't seem overly aggressive or chaotic, maintaining a rhythmic and controlled pace that indicates a balance between calmness and agitation.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0899.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a slightly upbeat rhythm which suggests a moderately high level of activity or excitement. However, without hearing the music itself, this is just a rough estimate based on the given information.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0924.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderate pace and a strong presence, which suggests a moderately high level of arousal. However, without hearing the audio itself, this is just a subjective assessment based on the information given.",
+        "correct_answer": "1.0417942101730955",
+        "audioid": "../testdata/EMO/emomusic/wav/0934.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7 out of 9. The music is described as loud and fast-paced with a psychedelic feel, which suggests a high level of excitement and intensity. However, the presence of chill-out elements like a sitar and flute might temper the overall arousal, keeping it at a moderately high level rather than the highest possible score.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0938.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The brisk tempo and the use of string instruments typically evoke feelings of excitement or intensity, while the chord progression through major and minor suggests a dynamic emotional landscape that could be interpreted as both uplifting and slightly melancholic.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0942.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Please provide the estimated score for the given music.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "../testdata/EMO/emomusic/wav/0945.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The piece is described as having an eerie and haunting quality which suggests a moderately high level of emotional intensity. Additionally, the inclusion of a sad violin melody and electronic drums with heavy reverb contribute to this feeling of unease and intensity. However, the overall tempo is not particularly fast or driving, so it seems to fall into a middle range for arousal.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0955.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the arousal score for this music piece as 7. The brisk tempo and the loud, aggressive style with punk and hardcore elements suggest a higher level of excitement and energy, which aligns with an arousal score of 7. However, without hearing the music myself, my perception may be subjective and open to interpretation.",
+        "correct_answer": "1.9075890449018524",
+        "audioid": "../testdata/EMO/emomusic/wav/0962.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has a moderate tempo and a consistent beat, which suggests a moderately elevated state of alertness rather than being overly energetic or calming.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "../testdata/EMO/emomusic/wav/0970.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 6. The music seems to have a moderately paced tempo and a level of intensity that suggests it falls somewhere between calm and energetic.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0985.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music has an exciting build-up and a strong pulse, which suggests a higher level of excitement or intensity. However, it doesn't feel overly aggressive or stimulating like some high-arousal music might.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0988.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "Based on the description provided, I would estimate the music's arousal score as 7. The music seems to have a moderately paced tempo and a strong presence of drums and guitar, which typically contribute to a more lively and stirring atmosphere, although the overall mood is not particularly aggressive or thrilling.",
+        "correct_answer": "1.7793071102228746",
+        "audioid": "../testdata/EMO/emomusic/wav/1000.wav",
+        "other": ""
+    }
+]
