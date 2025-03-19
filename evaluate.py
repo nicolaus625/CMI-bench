@@ -274,7 +274,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    result = results_json[16]
+    result = results_json[20]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
     with open(result, "r") as f:
@@ -290,8 +290,8 @@ if __name__ == "__main__":
     correct_answers_list = [sample['correct_answer'] for sample in data]
     
     if task == 'GS_key':
-        print(model, task)
-        pass
+        gmean_score = key_ensamble_score(data)
+        print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
     elif task == "MTT":
         # TODO: For each response, calculate t5/bert_score with all 50 tags an calculate the ROC-AUC and PR-AUC
         print(model, task)
@@ -327,9 +327,7 @@ if __name__ == "__main__":
     elif task == "SDD":
         music_captioning(data)
     elif task == "MusicCaps":
-        print(model, task)
         music_captioning(data)
-        pass
     elif task == "DSing":
         print(model, task)
         pass
