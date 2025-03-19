@@ -25,24 +25,61 @@ def normalise(text):
         text = text[0]
     return text.replace("_", "").replace("-", "").replace("#", "\u266f").replace("'", "").replace(" ", "").replace(".", "").lower()
 
+import re
+
+def extract_int(response: str) -> int:
+    """
+    Extracts an integer from the given response string.
+    Raises an error if more than one integer is found.
+
+    Args:
+        response (str): The input string containing a number.
+
+    Returns:
+        int: The extracted integer.
+
+    Raises:
+        ValueError: If more than one integer is found.
+    """
+    numbers = re.findall(r'\d+', response)  # Find all sequences of digits
+    
+    if not numbers:
+        print("response:", response)
+        # raise ValueError("No integer found in the response."
+        print("No integer found in the response.")
+        return -0.5
+    elif len(numbers) > 1:
+        print("response:", response)
+        raise ValueError(f"Multiple integers found: {numbers}. Expected only one.")
+    return int(numbers[0])  # Convert the first number to an integer
+
+
 def get_multiclass_acc(result_list):
     if type(result_list[0]["correct_answer"]) == list:
         answer_list  = set(tmp["correct_answer"][0] for tmp in result_list)
     else:
         answer_list = set(tmp["correct_answer"] for tmp in result_list)
-    length = len(set(answer_list))
-    answer_list = [normalise(answer) for answer in answer_list]
-    assert length == len(set(answer_list))
-    
-    # print(f"{len(answer_list)}-class classification")
-    count = 0.0
-    for tmp in result_list:
-        reponse = normalise(tmp["response"])
-        if normalise(tmp["correct_answer"]) in reponse:
-            # Ensure no other answer is in the response
-            if all(answer not in reponse for answer in answer_list if answer != normalise(tmp["correct_answer"])):
+    if type(data[0]["correct_answer"]) == str:
+        length = len(set(answer_list))
+        answer_list = [normalise(answer) for answer in answer_list]
+        assert length == len(set(answer_list))
+        
+        # print(f"{len(answer_list)}-class classification")
+        count = 0.0
+        for tmp in result_list:
+            reponse = normalise(tmp["response"])
+            if normalise(tmp["correct_answer"]) in reponse:
+                # Ensure no other answer is in the response
+                if all(answer not in reponse for answer in answer_list if answer != normalise(tmp["correct_answer"])):
+                    count += 1
+        return count / len(result_list)
+    elif type(data[0]["correct_answer"]) == int:
+        # print(f"{len(answer_list)}-class classification")
+        count = 0.0
+        for tmp in result_list:
+            if extract_int(tmp['response']) == tmp["correct_answer"]:
                 count += 1
-    return count / len(result_list)
+        return count / len(result_list)
 
 def multi_label_classification(result_list, task="emotion"): # variable should not be called type otherwise it will override the built-in function
     # Prepare answer_list as a flattened list of all possible answers
@@ -277,8 +314,7 @@ if __name__ == "__main__":
         acc = get_multiclass_acc(instrument_list)
         print(f"{model}_{task} Acc: {acc:.4f}")
     elif task == "Nsynth_pitch":
-        pitch_list = [tmp for tmp in data]
-        acc = get_multiclass_acc(pitch_list)
+        acc = get_multiclass_acc(data)
         print(f"{model}_{task} Acc: {acc:.4f}")
     elif task == "ballroom_downbeat":
         beat_tracking(data, task="downbeat_tracking")
