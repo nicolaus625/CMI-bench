@@ -12,7 +12,7 @@ import time,json
 import re
 import skimage.measure
 import whisper_at
-from whisper.model import Whisper, ModelDimensions
+from eval.LTU_AS.whisper.whisper.model import Whisper, ModelDimensions
 import json
 import os.path as osp
 from typing import Union
@@ -212,9 +212,9 @@ class LTU_ASModel:
         cur_res = {'audio_id': audio_path, 'instruction': instruction, 'input': cur_input, 'output': self.trim_string(output)}
         self.eval_log.append(cur_res)
         cur_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        log_save_path = self.log_save_path + cur_time + '.json'
-        with open(log_save_path, 'w') as outfile:
-            json.dump(self.eval_log, outfile, indent=1)
+        # log_save_path = self.log_save_path + cur_time + '.json'
+        # with open(log_save_path, 'w') as outfile:
+        #     json.dump(self.eval_log, outfile, indent=1)
         print('eclipse time: ', end_time - begin_time, ' seconds.')
         return self.trim_string(output)
 
@@ -226,13 +226,13 @@ class LTU_ASModel:
         return trimmed_string
 
 if __name__ == '__main__':
-    device = "cpu"
-    eval_mdl_path = "/data/siyou/CMI-bench/pretrained_models/LTU-AS/ltuas_long_noqa_a6.bin"
-    base_model = "/data/siyou/CMI-bench/pretrained_models/vicuna-7b-v1.1"
-    whisper_checkpoint_path = "/data/siyou/CMI-bench/pretrained_models/LTU-AS/large-v1.pt"
+    device = "cuda:0"
+    eval_mdl_path = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/LTU-AS/ltuas_long_noqa_a6.bin"
+    base_model = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/vicuna-7b-v1.1"
+    whisper_checkpoint_path = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/LTU-AS/large-v1.pt"
     log_save_path = "./inference_log/"
     model = LTU_ASModel(base_model, eval_mdl_path, whisper_checkpoint_path, log_save_path, device)
-    audio_path = '/data/siyou/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
+    audio_path = '/import/c4dm-04/siyoul/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
     question = 'Describe the audio.'
     audio_info, output = model.predict(audio_path, question)
     print('audio_info: ', audio_info)

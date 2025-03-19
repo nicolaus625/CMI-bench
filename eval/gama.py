@@ -109,7 +109,10 @@ class GAMAModel:
 
     @staticmethod
     def load_audio(filename):
-        waveform, sr = torchaudio.load(filename)
+        try:
+            waveform, sr = torchaudio.backend.soundfile_backend.load(filename)
+        except:
+            waveform, sr = torchaudio.load(filename)
         audio_info = 'Original input audio length {:.2f} seconds, number of channels: {:d}, sampling rate: {:d}.'.format(waveform.shape[1]/sr, waveform.shape[0], sr)
         if sr != 16000:
             waveform = torchaudio.functional.resample(waveform=waveform, orig_freq=sr, new_freq=16000)
@@ -179,19 +182,19 @@ class GAMAModel:
         cur_res = {'audio_id': audio_path, 'input': instruction, 'output': output}
         self.eval_log.append(cur_res)
         cur_time = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        log_save_path = self.log_save_path + cur_time + '.json'
-        with open(log_save_path, 'w') as outfile:
-            json.dump(self.eval_log, outfile, indent=1)
+        # log_save_path = self.log_save_path + cur_time + '.json'
+        # with open(log_save_path, 'w') as outfile:
+        #     json.dump(self.eval_log, outfile, indent=1)
         print('eclipse time: ', end_time - begin_time, ' seconds.')
         return audio_info, output
 
 if __name__ == '__main__':
-    device = "cpu"
-    eval_mdl_path = "/data/siyou/CMI-bench/pretrained_models/GAMA/stage4_ckpt/pytorch_model.bin"
-    base_model = "/data/siyou/CMI-bench/pretrained_models/GAMA/Llama-2-7b-chat-hf-qformer/"
+    device = "cuda:1"
+    eval_mdl_path = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/GAMA/stage4_ckpt/pytorch_model.bin"
+    base_model = "/import/c4dm-04/siyoul/CMI-bench/pretrained_models/GAMA/Llama-2-7b-chat-hf-qformer/"
     log_save_path = "./inference_log/"
     model = GAMAModel(base_model, eval_mdl_path, log_save_path, device)
-    audio_path = '/data/siyou/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
+    audio_path = '/import/c4dm-04/siyoul/CMI-bench/res/example/f2_arpeggios_belt_a_00.wav'
     question = 'Describe the audio.'
     audio_info, output = model.predict(audio_path, question)
     print('audio_info: ', audio_info)
