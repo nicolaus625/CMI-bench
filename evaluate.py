@@ -81,17 +81,9 @@ def get_multiclass_acc(result_list):
                 count += 1
         return count / len(result_list)
 
-def multi_label_classification(result_list, task="emotion"): # variable should not be called type otherwise it will override the built-in function
+def multi_label_classification(result_list, answer_list): # variable should not be called type otherwise it will override the built-in function
     # Prepare answer_list as a flattened list of all possible answers
-    answer_list = set()
-    if type(result_list[0]["correct_answer"]) == list:
-       for tmp in result_list:
-           answer_list.update([normalise(ans) for ans in tmp["correct_answer"][0].split(",")])
-    else:
-        for tmp in result_list:
-            answer_list.update([normalise(ans) for ans in tmp["correct_answer"].split(",")])
-    # answer_list = list([normalise(ans) for ans in eval(f"{type}_set")])
-    answer_list = sorted(answer_list)
+    answer_list = sorted([ans.lower().strip() for ans in answer_list])
         
     # Initialize a list to hold response vectors
     y_true = []
@@ -99,17 +91,16 @@ def multi_label_classification(result_list, task="emotion"): # variable should n
 
     for tmp in result_list:
         # Normalize responses and answers
-        response = [i for r in tmp["response"].split(",") for i in r.split(" ")]
-        response = " ".join(response).lower()
+        response = tmp["response"].lower().strip()
         # if task == "emotion":
         try:
-            correct_answers = [normalise(ans) for ans in tmp["correct_answer"][0].split(",")]
+            correct_answers = [normalise(ans) for ans in tmp["correct_answer"].split(",")]
         except:
             correct_answers = []
         
         # Create binary vectors for the true labels and predicted labels
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
-        pred_vector = [1 if answer in normalise(response) else 0 for answer in answer_list]
+        pred_vector = [1 if answer in response else 0 for answer in answer_list]
         
         y_true.append(true_vector)
         y_pred.append(pred_vector)
@@ -334,8 +325,10 @@ if __name__ == "__main__":
         print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
     elif task == "MTT":
         tags = list(np.load("data/MTT/tags.npy"))
+        value = multi_label_classification(data, tags)
+        print(f"{model}_{task} Accurate\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         value = multi_label_bert(data, tags)
-        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     elif task == "EMO_valence":
         print(model, task)
         pass
@@ -377,34 +370,33 @@ if __name__ == "__main__":
         print(model, task)
         pass
     elif task == "MTG_instrument":
-        # TODO: the same with MTT
-        print(model, task)
         tags = list(instrument_set)
+        value = multi_label_classification(data, tags)
+        print(f"{model}_{task} Accurate\n ROC-AUC: {value[0]:.4f}\n PR-AUC: {value[1]:.4f}")
         value = multi_label_bert(data, tags)
-        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
-        pass
     elif task == "MTG_genre":
-        # TODO: the same with MTT
-        print(model, task)
         tags = list(genre_set)
+        value = multi_label_classification(data, tags)
+        print(f"{model}_{task} Accurate\n ROC-AUC: {value[0]:.4f}\n PR-AUC: {value[1]:.4f}")
         value = multi_label_bert(data, tags)
-        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
-        pass
     elif task == "MTG_emotion":
-        # TODO: the same with MTT
-        print(model, task)
         tags = list(emotion_set)
+        value = multi_label_classification(data, tags)
+        print(f"{model}_{task} Accurate\n ROC-AUC: {value[0]:.4f}\n PR-AUC: {value[1]:.4f}")
         value = multi_label_bert(data, tags)
         print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
-        pass
     elif task == "MTG_top50tags":
-        print(model, task)
         tags = ["alternative", "ambient", "atmospheric", "chillout", "classical", "dance", "downtempo", "easylistening", "electronic","experimental", "folk", "funk", "hiphop", "house", "indie", "instrumentalpop", "jazz", "lounge", "metal", "newage","orchestral", "pop", "popfolk", "poprock", "reggae", "rock", "soundtrack", 
                 "techno","trance", "triphop","world", "acousticguitar", "bass", "computer", "drummachine", "drums", "electricguitar", "electricpiano", "guitar", "keyboard", "piano", "strings", "synthesizer", "violin", "voice", "emotional", "energetic", "film", "happy", "relaxing"]
-        pass
+        value = multi_label_classification(data, tags)
+        print(f"{model}_{task} Accurate\n ROC-AUC: {value[0]:.4f}\n PR-AUC: {value[1]:.4f}")
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     else:
         print(model, task)
         print("Task not found")
