@@ -15,8 +15,8 @@ parser.add_argument('--output-file', default="results", type=str, help='the path
 parser.add_argument('--model', default="ltu", type=str, 
                     choices=["ltu", "gama", "gama_it", "ltu_as", "pengi"], 
                     help='the model to use for inference')
-
-device = "cuda:1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+device = "cuda"
 
 
 args = parser.parse_args()
@@ -71,6 +71,7 @@ for file_path in jsonl_list:
                 label = data['output']
                 start = data['audio_start']
                 end = data['audio_end']
+                #info, response = model.predict(audio_path, prompt)
                 try:
                     info, response = model.predict(audio_path, prompt)
                 except Exception as e:

@@ -1,0 +1,877 @@
+[
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is playing and a bass is playing. loop sci-fi loop 03. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: bass guitar, musical instrument, music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0003.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played on a drum machine. music is being played. this audio contains sound events: guitar, folk instrument, musical instrument, music.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0012.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a woman is singing and a man is singing. a song is being played. this audio contains sound events: the sounds of music in the sounds of the sounds of the sounds of the sounds of the sounds of the sounds of the sounds of the sounds of th.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0022.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a group of people are talking to each other. sounds are being played. this audio contains sound events: the sounds of rock, punk, rock, punk.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0039.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "someone is singing a song. a song is being played. this audio contains sound events: speech.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0040.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0042.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a man talks. a music loop is being played. this audio contains sound events: bird song, bird song.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0044.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing, a woman is singing, a man is singing. a song is being played. this audio contains sound events: the sounds of music and maneet, acoustic guitar, nazeem, deepu, maneet, azedine, mohamma.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0049.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: the sounds of music, comic book, comic book, comic book, comic book, comic book, comic book, comic book, comic book, comi.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0064.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is playing. this audio contains sound events: music.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0067.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "1.402542057976744",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0088.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is played over and over. acoustic guitar loop 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: acoustic guitar, guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0095.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "guitar is being played on a guitar. guitar is being played. this audio contains sound events: guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0102.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played over and over. a psychedelic rock band is playing. this audio contains sound events: music.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0103.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song. a song is being played. this audio contains sound events: the sounds of music and instrument.",
+        "correct_answer": "-0.2568980419200396",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0116.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "someone is singing a song. someone is singing a song. this audio contains sound events: singing.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0121.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. music is being played. this audio contains sound events: singing.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0122.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is playing a guitar and a woman is singing. a song is being played. this audio contains sound events: guitar, rock, punk, age band, rock, punk, age band, rock, punk, age band, rock, punk, roc.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0124.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano loop is played on the piano. a piano loop is playing. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0127.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a piano is playing. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music, musical instrument, music.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0129.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "something is being played over and over. loop dreamworld. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: string instrument, musical instrument, music.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0134.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano is being played. a piano is playing. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0137.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano is playing and a piano is playing. a piano is playing. this audio contains sound events: piano, musical instrument, music.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0142.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano is being played on a piano. a piano is being played. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0143.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "an accordion is playing a melody. someone is playing a harmonica. this audio contains sound events: accordion, musical instrument, music.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0150.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played over and over. loop arcade game theme. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experience.this audio contains sound events: music for making and music for liking and disliking, musical instrument, music.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0155.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a choir is playing and a choir is singing. a choir is playing. this audio contains sound events: piano, musical instrument, music.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0161.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano is playing and a piano is playing. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: piano.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0172.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "rain is falling on the ground as raindrops are falling. rain is falling. this audio contains sound events: rain, water.",
+        "correct_answer": "-1.4112911548917157",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0178.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a violin is playing in the background. a violin is being played. this audio contains sound events: musical instrument, musical instrument, music.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0199.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is talking to a woman and a woman is talking to him. a sound is being made. this audio contains sound events: singing, human voice.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0204.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played on a violin and viola. music is being played. this audio contains sound events: music.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0216.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: the sounds of music and pop music.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0224.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a man talks. loop random. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: the sounds of music and puzzle and philosophical elements, musical instrument, music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0228.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a violin is being played. a violin is being played. this audio contains sound events: bowed string instrument, musical instrument, music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0234.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is being played with a delay pedal. guitar is being played. this audio contains sound events: guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0242.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. sounds are being played. this audio contains sound events: the sounds of punk, lo-fi, garage rock, garage punk and garage punk.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0253.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a person is talking. music is being played. this audio contains sound events: the sounds of punk, punk-rock, punk-rock, punk-rock, punk-rock.",
+        "correct_answer": "2.051888184023311",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0257.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "someone is singing a song. someone is singing. this audio contains sound events: singing.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0264.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background while a metal drum is being played. sounds are being recorded. this audio contains sound events: the sounds of punk, punk, metal, punk-rock, punk-rock, punk-rock, punk-rock, punk-punk.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0292.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a drum loop is playing and a guitar is playing. a drum loop is being played. this audio contains sound events: guitar and bass guitar, rock and roll.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0293.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano is playing on a piano. a piano loop is being played. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0306.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is playing and a drum is playing. a rock band is playing. this audio contains sound events: the sounds of music and recording studio, acoustic guitars, bass, electronic drums and electric drums.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0309.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: the sounds of song, acoustic guitar, acoustic guitar, acoustic guitar, acoustic guitar, acoustic guitar, acoustic guitar, acoustic guitar, acoustic guitar, acousti.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0312.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background music is being played. this audio contains sound events: musical instrument, music.",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0315.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is being played on a guitar. a guitar is being played on a guitar. this audio contains sound events: guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0319.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is in the background as a child sings. a song is playing. this audio contains sound events: the sounds of music in general.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0322.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0336.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. singing is being played. this audio contains sound events: singing.",
+        "correct_answer": "0.248148945005068",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0355.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background while a guitar is playing. a song is being played. this audio contains sound events: the sounds of punk-rock, punk-rock, punk-rock.",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0366.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a woman is singing a song. someone is singing a song. this audio contains sound events: piano.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0367.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played on a computer. a synth is being played. this audio contains sound events: the sounds of music and music, musical instrument, music.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0378.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0380.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a beat is being played over and over. a hip hop loop is playing. this audio contains sound events: the sounds of hip hop, hip hop, hip hop, hip hop, hip hop, hip hop, hip hop, hip hop, hip hop.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0384.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experience. loop nothing is going to stop. this audio contains sound events: music.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0390.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "someone is singing a song. a song is being played. this audio contains sound events: the sounds of music and hip hop.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0393.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop with a puzzle and philosophical elements in the background. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: the sounds of music and puzzle and philosophical elements, musical instrument, music.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0410.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "an electronic music loop is being played. a sound is being played. this audio contains sound events: the sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sounds of sound.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0419.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop with some action for creating an adrenaline rush and somewhat adaptive musical experience. loop arcade game experience 02. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experiencethis audio contains sound events: the sounds of music, music, music, music, music, music, music, music, music, music, music, music, music, musi.",
+        "correct_answer": "1.6911403362196626",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0425.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experience. loop nothing is going to stop progress 03. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhatthis audio contains sound events: the sounds of music, music, music, music, music, music, music, music, music, music, music, music, music, musi.",
+        "correct_answer": "0.3202985145657981",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0427.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop with some action for creating an adrenaline rush and somewhat adaptive musical experience. loop computer feeling good 00. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experiencethis audio contains sound events: the sounds of music, music, music, music, music, music, music, music, music, music, music, music, music, musi.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0432.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a person is playing a music loop. a hip-hop loop is being played. this audio contains sound events: drum and percussion, hip hop and hip hop music.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0436.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. loop dreamworld 03. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: crackle and somewhat adaptive musical instrument, music.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0455.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a drum loop is playing and a person is making a beat. a hip hop loop is playing. this audio contains sound events: drum and percussion, musical instrument, music.",
+        "correct_answer": "-0.9783937375273373",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0458.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a band is playing a song. a loop is being played. this audio contains sound events: the sounds of music, punk, rock, hip hop, experimental rock and hip hop, hip hop.",
+        "correct_answer": "0.7531959319301763",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0462.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played, followed by a beat. drum loop drifting. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: drum and percussion, musical instrument, music.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0475.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0499.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a violin is being played and a violin is being played. a violin is being played. this audio contains sound events: string instrument, musical instrument, music.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0521.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while people are talking in the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0529.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. loop none of the above 02. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0544.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "an accordion is playing on a harmonica. accordion1. accordion playing on an accordion this audio contains sound events: accordion, musical instrument, music.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0556.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a man is singing. music is being played. this audio contains sound events: acoustic instrument, musical instrument, music.",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0561.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano playing in the background while a string is being played. loop endlesspossibilities 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music for creating an adrenaline rush and somewhat adaptive musical instrument, musical instrument, music.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0582.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a voice is being played in the background. a ghostly voice is being played. this audio contains sound events: singing, musical instrument, music.",
+        "correct_answer": "-1.6277398635739049",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0584.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing and a woman is singing. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0594.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0622.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played over and over. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: drum and percussion, musical instrument, music.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0645.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a rhythmic rhythm is playing in the background. loop dreamworld 02. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: riff and somewhat adaptive musical instrument, musical instrument, music.",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0647.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a saxophone is playing and a saxophone is playing. a saxophone is playing. this audio contains sound events: wind instrument and woodwind instrument, musical instrument, music.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0665.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a person is playing a guitar. a song is being played. this audio contains sound events: guitar and string instrument, musical instrument, music.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0667.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a drum loop is playing and a beat is being played. a hip hop loop is playing. this audio contains sound events: the sounds of hip hop and hip hop music.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0668.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is playing a guitar while a woman is playing a piano. loop nothing is happening. this audio contains sound events: music for creating an adrenaline rush and somewhat adaptive musical instrument, musical instrument, music.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0684.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0687.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0691.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song and a woman is singing a song. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0698.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a saxophone is playing, and a saxophone is playing. a song is being played. this audio contains sound events: wind instrument, musical instrument, music.",
+        "correct_answer": "-0.4733467506022293",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0704.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a drum is being played and a drum is being played. a drum is being played. this audio contains sound events: drums and percussion, musical instrument, music.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0710.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a song is being played. this audio contains sound events: wind instrument, musical instrument, music.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0718.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played on a guitar. music is being played. this audio contains sound events: guitar, bass, musical instrument, music.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0721.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played over and over. a hip hop loop is playing. this audio contains sound events: drum and bass, hip hop and hip hop music.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0723.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a saxophone is playing in the background while a saxophone is playing in the background. a sax sample is playing. this audio contains sound events: musical instrument, musical instrument, music.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0724.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a piano loop is played on the piano. a piano loop is being played. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0727.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is playing and a voice is coming from the background. a song is being played. this audio contains sound events: music.",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0729.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is singing a song. a song is being played. this audio contains sound events: the sounds of music and hip hop.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0743.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. music is being played. this audio contains sound events: bird.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0746.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is playing, and a man is speaking. sounds are being played. this audio contains sound events: the sounds of music for kids, punk rock, noise-rock, noise-rock.",
+        "correct_answer": "0.248148945005068",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0748.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a musical instrument is being played, and a guitar is being played. a guitar loop is being played. this audio contains sound events: wind instrument, musical instrument, music.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0749.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played, followed by some action for creating an adrenaline rush and somewhat adaptive musical experience. loop arcade game theme 03. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experiencethis audio contains sound events: the sounds of music, music, music, music, music, music, music, music, music, music, music, music, music, musi.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0756.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played, followed by some action for creating an adrenaline rush and somewhat adaptive musical experience. loop sci fi adventure 02. a music loop to be used in fast paced games with tons of action for creating an adrenaline rush and somewhat adaptive musical experiencethis audio contains sound events: music loop.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0758.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played over and over. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0763.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a voice is being spoken in the background. someone is singing a song. this audio contains sound events: singing, human voice.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0784.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man sings a song and a woman sings a song. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0789.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is being played over and over. a guitar is being played. this audio contains sound events: music.",
+        "correct_answer": "0.10384980588360905",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0797.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played. a drum loop is being played. this audio contains sound events: musical instrument, music.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0810.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being used to create an adrenaline rush and somewhat adaptive musical experience. loop nothing to be afraid of 02. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0818.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a loud noise is made by a chip music loop. a loop is being made. this audio contains sound events: champ and chomp, clap.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0824.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a woman is singing and a man is singing. a song is being played. this audio contains sound events: singing.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0826.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is playing and a string is being played. loop noneofdoubt 02. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: drum and percussion, musical instrument, music.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0829.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "the sound of a guitar playing in the background. a soundscape is being created. this audio contains sound events: the sounds of guitar, bass, strum and percussion.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0844.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a man is speaking and a woman is speaking. a voice is being heard. this audio contains sound events: speech, human voice.",
+        "correct_answer": "-1.339141585330986",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0855.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar riff is played over and over. a riff is being played. this audio contains sound events: the sounds of guitar and bass guitar, musical instrument, music.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0886.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played on a guitar. music is being played. this audio contains sound events: music.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0890.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background. a drum loop is being played. this audio contains sound events: the sounds of drum and bass.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0893.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "piano music is played on a piano. a piano is playing. this audio contains sound events: piano, keyboard (musical), musical instrument, music.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0899.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a song is being played over and over. a song is being played. this audio contains sound events: bird.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0924.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played over and over. a rock band is playing. this audio contains sound events: music.",
+        "correct_answer": "1.0417942101730955",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0934.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a guitar is being played on a guitar. guitar is being played. this audio contains sound events: guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0938.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "guitar is being played on a guitar. guitar is being played. this audio contains sound events: guitar, plucked string instrument, musical instrument, music.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0942.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "an instrument is being played, and a person is making a sound. a sound is being played. this audio contains sound events: the sounds of ambient music, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror, horror.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0945.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a music loop is being played with a bass drum. a loop is being played. this audio contains sound events: drum and percussion, musical instrument, music.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0955.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is being played in the background while the wind blows in the background. sounds are being played. this audio contains sound events: the sounds of noise-rock, punk-rock, garage-rock, garage-rock.",
+        "correct_answer": "1.9075890449018524",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0962.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "drum beat drum beat this audio contains sound events: drum beat.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0970.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "a woman is singing in the background and a man is singing in the background. a song is being played. this audio contains sound events: the sounds of music in the sounds of music in the world.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0985.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in a steady rhythm with some action for creating an adrenaline rush and somewhat adaptive musical experience. loop dreamworld 01. a music loop to be used in storydriven and reflective games with puzzle and philosophical elements. this audio contains sound events: music loop, sci-fi musical instrument, music.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/0988.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "music is playing in the background while a person sings. a song is being played. this audio contains sound events: drums and bass.",
+        "correct_answer": "1.7793071102228746",
+        "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/EMO/emomusic/wav/1000.wav",
+        "other": ""
+    }
+]

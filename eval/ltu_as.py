@@ -1,18 +1,18 @@
 import os
 import torch
 import torchaudio
-from eval.LTU_AS.peft.src.peft import (
+from peft import (
     LoraConfig,
     get_peft_model
 )
-from eval.LTU_AS.hf.transformers.src.transformers.generation import GenerationConfig
-from eval.LTU_AS.hf.transformers.src.transformers.models.llama import LlamaForCausalLM, LlamaTokenizer, LlamaConfig
+from transformers.generation import GenerationConfig
+from transformers.models.llama import LlamaForCausalLM, LlamaTokenizer, LlamaConfig
 import datetime
 import time,json
 import re
 import skimage.measure
 import whisper_at
-from eval.LTU_AS.whisper.whisper.model import Whisper, ModelDimensions
+from whisper.model import Whisper, ModelDimensions
 import json
 import os.path as osp
 from typing import Union
@@ -124,7 +124,7 @@ class LTU_ASModel:
         self.SAMPLE_RATE = 16000
         self.AUDIO_LEN = 1.0
         
-        self.model.to(device)
+        self.model.to(self.device)
         self.text_cache = {}
 
     @staticmethod
@@ -174,13 +174,13 @@ class LTU_ASModel:
             if torch.cuda.is_available() == False:
                 pass
             else:
-                cur_audio_input = cur_audio_input.unsqueeze(0).half().to(device)
+                cur_audio_input = cur_audio_input.unsqueeze(0).half().to(self.device)
 
         instruction = question
         prompt = self.prompter.generate_prompt(instruction, cur_input)
         print('Input prompt: ', prompt)
         inputs = self.tokenizer(prompt, return_tensors="pt")
-        input_ids = inputs["input_ids"].to(device)
+        input_ids = inputs["input_ids"].to(self.device)
 
         generation_config = GenerationConfig(
             do_sample=True,
@@ -189,15 +189,15 @@ class LTU_ASModel:
             top_k=self.top_k,
             repetition_penalty=1.1,
             max_new_tokens=500,
-            bos_token_id=model.config.bos_token_id,
-            eos_token_id=model.config.eos_token_id,
-            pad_token_id=model.config.pad_token_id,
+            bos_token_id=self.model.config.bos_token_id,
+            eos_token_id=self.model.config.eos_token_id,
+            pad_token_id=self.model.config.pad_token_id,
             num_return_sequences=1
         )
 
         # Without streaming
-        with torch.no_grad():
-            generation_output = model.generate(
+        with torch.no_grad() and torch.cuda.amp.autocast():
+            generation_output = self.model.generate(
                 input_ids=input_ids,
                 audio_input=cur_audio_input,
                 generation_config=generation_config,
@@ -216,7 +216,7 @@ class LTU_ASModel:
         # with open(log_save_path, 'w') as outfile:
         #     json.dump(self.eval_log, outfile, indent=1)
         print('eclipse time: ', end_time - begin_time, ' seconds.')
-        return self.trim_string(output)
+        return None, self.trim_string(output)
 
     @staticmethod
     def trim_string(a):
