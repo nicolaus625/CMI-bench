@@ -92,13 +92,7 @@ def multi_label_classification(result_list, task="emotion"): # variable should n
             answer_list.update([normalise(ans) for ans in tmp["correct_answer"].split(",")])
     # answer_list = list([normalise(ans) for ans in eval(f"{type}_set")])
     answer_list = sorted(answer_list)
-    # print(f"{len(answer_list)} label classes")
-    # 56 MTG emotion labels: ['action', 'adventure', 'advertising', 'background', 'ballad', 'calm', 'children', 'christmas', 'commercial', 'cool', 'corporate', 'dark', 'deep', 'documentary', 'drama', 'dramatic', 'dream', 'emotional', 'energetic', 'epic', 'fast', 'film', 'fun', 'funny', 'game', 'groovy', 'happy', 'heavy', 'holiday', 'hopeful', 'inspiring', 'love', 'meditative', 'melancholic', 'melodic', 'motivational', 'movie', 'nature', 'party', 'positive', 'powerful', 'relaxing', 'retro', 'romantic', 'sad', 'sexy', 'slow', 'soft', 'soundscape', 'space', 'sport', 'summer', 'trailer', 'travel', 'upbeat', 'uplifting']
-    map = {' punk ':' punkrock ', 'post punk ': 'postrock ', 'Brazilian': 'bossanova', 'punk revival': 'punkrock', 
-               'brash': 'powerful', 'fiery': 'energetic', 'rousing': 'uplifting', 'scary': 'dark', 'nihilistic': 'dark', 'hostile': 'dark', 'cathartic': 'dark', 'dance': 'happy', 'electrifying': 'happy', 'moving': 'happy', 'aggressive': 'dark', 'confrontational': 'dark', 'dynamic': 'energetic', 'captivating': 'inspiring', 'serene': 'calm', 'peaceful': 'relaxing', 'menacing': 'dark', 'visceral': 'dark', 'fresh': 'dream', 'relaxation': 'relaxing', 'meditation': 'meditative', 'ethereal': 'dream', 'intense': 'fast', 'mischievous': 'party', 'rambunctious': 'fun', 'sarcastic': 'funny', 'humorous': 'funny', 'acerbic': 'dark', 'beautiful': 'romantic', 'malevolent': 'dark', 'melancholy': 'melancholic', 'freewheeling': 'fun', 'playful': 'fun', 'edgy': 'emotional', 'reflection': 'meditative', 'catchy': 'emotional', 'laid back': 'relaxing', 'mellow': 'calm', 'infectious': 'upbeat', 'introspection': 'meditative', 'hypnotic': 'meditative', 'pulsating rhythm': 'energetic', 'wistful': 'melancholic', 'poignant': 'emotional', 'bittersweet': 'sad', 'warm': 'soft', 'intimate': 'romantic', 'high-energy': 'energetic', 'noise': 'dark'}
-    # 87 genre labels: ['60s', '70s', '80s', '90s', 'acidjazz', 'alternative', 'alternativerock', 'ambient', 'atmospheric', 'blues', 'bluesrock', 'bossanova', 'breakbeat', 'celtic', 'chanson', 'chillout', 'choir', 'classical', 'classicrock', 'club', 'contemporary', 'country', 'dance', 'darkambient', 'darkwave', 'deephouse', 'disco', 'downtempo', 'drumnbass', 'dub', 'dubstep', 'easylistening', 'edm', 'electronic', 'electronica', 'electropop', 'ethno', 'eurodance', 'experimental', 'folk', 'funk', 'fusion', 'groove', 'grunge', 'hard', 'hardrock', 'hiphop', 'house', 'idm', 'improvisation', 'indie', 'industrial', 'instrumentalpop', 'instrumentalrock', 'jazz', 'jazzfusion', 'latin', 'lounge', 'medieval', 'metal', 'minimal', 'newage', 'newwave', 'orchestral', 'pop', 'popfolk', 'poprock', 'postrock', 'progressive', 'psychedelic', 'punkrock', 'rap', 'reggae', 'rnb', 'rock', 'rocknroll', 'singersongwriter', 'soul', 'soundtrack', 'swing', 'symphonic', 'synthpop', 'techno', 'trance', 'triphop', 'world', 'worldfusion']
-    # 40 instrument labels: ['accordion', 'acousticbassguitar', 'acousticguitar', 'bass', 'beat', 'bell', 'bongo', 'brass', 'cello', 'clarinet', 'classicalguitar', 'computer', 'doublebass', 'drummachine', 'drums', 'electricguitar', 'electricpiano', 'flute', 'guitar', 'harmonica', 'harp', 'horn', 'keyboard', 'oboe', 'orchestra', 'organ', 'pad', 'percussion', 'piano', 'pipeorgan', 'rhodes', 'sampler', 'saxophone', 'strings', 'synthesizer', 'trombone', 'trumpet', 'viola', 'violin', 'voice']
-
+        
     # Initialize a list to hold response vectors
     y_true = []
     y_pred = []
@@ -108,9 +102,10 @@ def multi_label_classification(result_list, task="emotion"): # variable should n
         response = [i for r in tmp["response"].split(",") for i in r.split(" ")]
         response = " ".join(response).lower()
         # if task == "emotion":
-        for k,v in map.items():
-            response = response.replace(k, v)
-        correct_answers = [normalise(ans) for ans in tmp["correct_answer"][0].split(",")]
+        try:
+            correct_answers = [normalise(ans) for ans in tmp["correct_answer"][0].split(",")]
+        except:
+            correct_answers = []
         
         # Create binary vectors for the true labels and predicted labels
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
@@ -129,6 +124,50 @@ def multi_label_classification(result_list, task="emotion"): # variable should n
     pr_auc = average_precision_score(y_true, y_pred, average='macro')
 
     return roc_auc, pr_auc
+
+
+def multi_label_bert(result_list, answer_list, task="emotion"): 
+    # Normalize predefined answer list
+    answer_list = sorted([ans.lower().strip() for ans in answer_list])
+    
+    # Initialize lists to hold response vectors
+    y_true = []
+    y_pred = []
+    
+    for tmp in result_list:
+        response = tmp["response"].lower().strip()
+        correct_answers = tmp["correct_answer"].lower().strip()
+        
+        # Create binary vector for true labels
+        true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
+        y_true.append(true_vector)
+        
+        bert_candidates = []
+        bert_references = []
+        
+        # Store BERTScore inputs
+        bert_candidates = [response] * len(answer_list)
+        bert_references = answer_list
+    
+        # Compute BERTScore similarity
+        P, R, F1 = score(bert_candidates, bert_references, lang="en", verbose=False)
+        bert_scores = R.cpu().numpy()
+    
+        # Normalize BERT scores using softmax
+        y_pred.append(bert_scores)
+    
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
+    
+    # Compute standard ROC-AUC and PR-AUC
+    roc_auc = roc_auc_score(y_true, y_pred, average='macro')
+    pr_auc = average_precision_score(y_true, y_pred, average='macro')
+    
+    return {
+        "ROC-AUC": roc_auc, 
+        "PR-AUC": pr_auc, 
+        "BERT-Score (POC-AUC)": bert_scores.mean()
+    }
 
 
 def music_captioning(result_list):
@@ -274,7 +313,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    result = results_json[20]
+    results_json = [result for result in results_json if "MTG_instrument" in result]
+    result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
     with open(result, "r") as f:
@@ -293,10 +333,9 @@ if __name__ == "__main__":
         gmean_score = key_ensamble_score(data)
         print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
     elif task == "MTT":
-        # TODO: For each response, calculate t5/bert_score with all 50 tags an calculate the ROC-AUC and PR-AUC
-        print(model, task)
         tags = list(np.load("data/MTT/tags.npy"))
-        pass
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     elif task == "EMO_valence":
         print(model, task)
         pass
@@ -341,18 +380,24 @@ if __name__ == "__main__":
         # TODO: the same with MTT
         print(model, task)
         tags = list(instrument_set)
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
         pass
     elif task == "MTG_genre":
         # TODO: the same with MTT
         print(model, task)
         tags = list(genre_set)
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
         pass
     elif task == "MTG_emotion":
         # TODO: the same with MTT
         print(model, task)
         tags = list(emotion_set)
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task}\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
         pass
     elif task == "MTG_top50tags":
