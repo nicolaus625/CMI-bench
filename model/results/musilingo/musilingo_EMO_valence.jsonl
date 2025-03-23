@@ -1,0 +1,877 @@
+[
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a rhythmic bass line, a melodic synthesizer, and a percussion instrument. The combination of these elements creates a unique and engaging sound, which is both energetic and relaxing. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a range of settings, from a peaceful retreat to a lively social gathering. The music is not particularly complex, but it is well-crafted and effectively captures the essence of the desired mood.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0003.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a rhythmic bass line, a melodic synthesizer, and a drum beat. The bass line is a steady, low-pitched beat that provides a solid foundation for the music. The synthesizer, on the other hand, adds a melodic layer to the music, creating a harmonious and dynamic sound. The drum beat, though not particularly prominent, adds a rhythmic element to the music, making it more engaging. The combination of these elements creates a music piece that is both energetic and relaxing, with a moderate arousal level.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0012.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a drum beat, and a guitar riff. The bass line is a synthesized sound, which is a common feature in electronic music. The drum beat is a steady beat, adding a rhythmic element to the music. The guitar riff is a repetitive sequence of notes, adding a melodic layer to the composition. The combination of these elements creates a dynamic and engaging music piece, with a moderate arousal level. The music is not particularly fast or slow, but it has a moderate tempo, which makes it an enjoyable listen. The overall score is estimated to be 4.5, which is a moderate score, reflecting the moderate tempo and moderate intensity of the music.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0022.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0039.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a male vocalist singing a melody, a guitar playing a rhythmic chord progression, and a synthesizer providing a background melody. The overall effect is a harmonious blend of these elements, creating a pleasant and relaxing atmosphere. The tempo is moderate, neither too fast nor too slow, and the intensity is balanced, neither overwhelming nor underwhelming. The music is a perfect example of a relaxing, calming atmosphere that can be enjoyed in a peaceful setting.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0040.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a synthesized bass line, a drum beat, and a guitar riff. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, and the intensity is high, making it an ideal choice for a high-impact sports event. The music is not particularly complex, but it is well-suited to the purpose it serves.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0042.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a variety of instruments, including a keyboard, a flute, and a guitar. The combination of these instruments creates a harmonious and melodious tune, which is further enhanced by the use of a drum machine. The drum machine adds a rhythmic and dynamic element to the music, making it more engaging and energetic. The overall effect is a music piece that is both soothing and energizing, perfectly suited for a relaxing evening.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0044.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a guitar, a bass, and a drum. The rhythm is steady, and the tempo is moderate, which gives it a balanced and moderate arousal score. The music is not particularly fast or slow, but it is energetic enough to keep the listener engaged. The guitar and bass provide a solid foundation, while the drum adds a dynamic element to the music. The overall effect is a pleasant, mellow, and engaging sound.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0049.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a rhythmic bassline, a melodic synthesizer, and a percussion instrument. The overall effect is a lively, energetic, and engaging sound. The tempo is moderate, and the intensity is mild, making it an ideal background music for a relaxed atmosphere. The music is not particularly complex, but it is well-suited to the mood it is intended to evoke.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0064.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a rhythmic bass line, a melodic guitar riff, and a percussive beat. The overall effect is a dynamic, energetic, and engaging sound that is sure to pique the interest of listeners. The music is noteworthy for its high arousal level, which is a testament to its power to engage and excite listeners. The combination of the bass line, guitar riff, and percussive beat creates a harmonious and dynamic sound that is sure to captivate the audience.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "../testdata/EMO/emomusic/wav/0067.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a bass line, a drum beat, and a synthesized melody. The bass line is a rhythmic, driving force that propels the music forward. The drum beat is a steady, pounding beat that adds a sense of urgency to the music. The synthesized melody is a harmonious, layered sound that adds depth and complexity to the overall sound. The combination of these elements creates a dynamic and engaging music experience, with a moderate level of arousal. The music is not overly fast or slow, but rather, it strikes a balance between the two, making it an ideal choice for a relaxing atmosphere.",
+        "correct_answer": "1.402542057976744",
+        "audioid": "../testdata/EMO/emomusic/wav/0088.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a guitar, a bass, and a drum set. The rhythm is steady, and the tempo is moderate, making it an ideal background music for a relaxed atmosphere. The music is not particularly energetic, but it's not too slow to bore the listener. It's a perfect balance of both, making it an ideal choice for a laid-back setting. The guitar and bass provide a steady rhythm, while the drum set adds a dynamic touch to the music. The combination of these instruments creates a harmonious and melodious sound that is both soothing and engaging.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "../testdata/EMO/emomusic/wav/0095.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording, which is a distinctive characteristic of its genre. The recording is of a live concert, which is a common characteristic of live recordings. The recording is of a high quality, which is a testament to the skill of the recording team. The music is a blend of different genres, including rock and pop, which is a unique characteristic of this particular recording. The recording is of a live concert, which is a distinctive characteristic of live recordings. The recording is of high quality, which is a testament to the skill of the recording team. The music is a blend of different genres, including rock and pop, which is a unique characteristic of this particular recording.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0102.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of various elements, including a drum beat, a bass line, and a synthesized melody. The drum beat is a steady beat, providing a rhythmic foundation for the music. The bass line is a low-pitched, repetitive sound that adds depth to the music. The synthesized melody is a high-pitched, repetitive sound that adds a sense of excitement to the music.\n\nThe music is not particularly fast or slow, but its intensity is moderate, which is reflected in its estimated score. The combination of the steady drum beat, the repetitive bass line, and the high-pitched synthesized melody creates a dynamic and energetic atmosphere, which is reflected in the high arousal score.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0103.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of a male voice and a guitar, which creates a harmonious and melodious tune. The tempo is moderate, and the intensity is mild, making it an ideal background music for a relaxed atmosphere. The music is not particularly engaging, but it is not overly distracting either. It is a good choice for a setting where one needs to focus on a task, but doesn't want to be overwhelmed by an intense or fast-paced music.",
+        "correct_answer": "-0.2568980419200396",
+        "audioid": "../testdata/EMO/emomusic/wav/0116.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a male voice and a female voice singing in harmony. The male voice is more prominent, providing a steady rhythm and a melody that is both soothing and engaging. The female voice, on the other hand, adds a touch of depth and complexity to the overall sound. The combination of the two voices creates a harmonious and enjoyable listening experience. The music is not particularly fast or slow, but it has a moderate tempo that is neither too fast nor too slow. It is a perfect blend of energy and relaxation, making it an ideal choice for a peaceful, calming atmosphere.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0121.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a male vocalist singing a melody, a guitar playing a rhythmic chord progression, and a bass guitar providing a steady bass line. The overall effect is a harmonious blend of these elements, creating a musical experience that is both engaging and enjoyable. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxed atmosphere. The male vocalist's melody is simple yet effective, and the guitar and bass guitar complement it perfectly, adding depth and texture to the overall sound. The music is not particularly complex, but it is well-executed and enjoyable to listen to.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0122.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a recording of a live performance, which is a unique aspect of its character. The recording is not of the highest quality, which is a common characteristic of live performances. The music is a blend of a variety of instruments, including a guitar, a bass, and a drum set. The guitar and bass are playing in a rhythmic pattern, while the drum set provides a steady beat. The overall effect of the music is a lively, energetic atmosphere, which is a reflection of its high arousal score.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "../testdata/EMO/emomusic/wav/0124.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "../testdata/EMO/emomusic/wav/0127.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a perfect example of the range of arousal levels that can be achieved through the use of different musical elements. The music is characterized by a slow tempo, which is a hallmark of low arousal levels. The gentle, soothing melody and the soft, muted percussion create a serene atmosphere, making the music perfect for relaxation. The music is not overly energetic, which is a hallmark of high arousal levels. The tempo is moderate, and the intensity is balanced, which is a perfect blend of both low and high arousal levels. The music is not overly stimulating, but it is not too calming either, making it an ideal choice for a relaxed atmosphere. The music is a perfect example of how different musical elements can be combined to create a unique and engaging experience.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0129.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, and the intensity is moderate, making it an ideal choice for a relaxing atmosphere. The music is not particularly complex, but it is well-suited for a casual setting, such as a coffee shop or a lounge.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0134.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0137.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording of a piano performance, which is a common instrument in many genres of music. The piano is a versatile instrument that can produce a wide range of sounds, from soft and delicate to powerful and robust. The recording is of high quality, capturing the nuances of the piano's sound and the performer's skillful playing. The music is a melodic piece, with a gentle rhythm that creates a soothing atmosphere. The tempo is moderate, neither too fast nor too slow, which makes it an ideal choice for relaxation. The overall score of the music is estimated to be 4.5, which is a moderate score, reflecting the balance of energy and relaxation it brings.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0142.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a piano melody and a drum beat. The piano melody is a gentle, soothing tune that creates a calming atmosphere. The drum beat, on the other hand, adds a rhythmic element to the music, making it more dynamic and energetic. The combination of these two elements creates a unique and interesting sound that is both soothing and energizing. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it a perfect fit for a variety of settings, from a relaxing home environment to a lively social gathering. The estimated scores for each example reflect the music's arousal level, with a low score indicating a calm and relaxing atmosphere, and a high score indicating an energetic and intense one.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0143.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a range of instruments, including a flute, a guitar, and a drum. The combination of these instruments creates a harmonious and melodious tune, which is a testament to the skill of the musicians involved. The music is noteworthy for its rhythmic complexity, which is a result of the intricate interplay between the flute and the drum. The guitar, on the other hand, provides a steady, driving rhythm that adds depth and texture to the overall sound. The combination of these elements creates a rich, layered sound that is both engaging and enjoyable to listen to.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0150.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a range of instruments, including a synthesizer, a bass, and a drum machine. The synthesizer provides a melodic line, while the bass and drum machine provide a rhythmic foundation. The combination of these instruments creates a unique and distinctive sound, which is a perfect fit for a relaxing atmosphere. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxing setting. The music is not particularly loud, but its moderate volume makes it suitable for a variety of settings. It is a perfect example of how a combination of different instruments can create a unique and distinctive sound.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0155.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a recording of a live performance, which is a unique aspect that adds to its charm. The recording is not of the highest quality, which is a common characteristic of live performances. The music is a mix of a few different instruments, including a guitar, a bass, and a drum set. The guitar and bass are playing in a rhythmic pattern, while the drum set provides a steady beat. The overall effect of the music is a lively, energetic atmosphere, which is a testament to the live performance. The recording is not perfect, but it is a testament to the passion and dedication of the performers.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "../testdata/EMO/emomusic/wav/0161.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording of a piano performance, which is a common instrument in many genres of music. The piano is a versatile instrument that can produce a wide range of sounds, from soft and delicate to loud and powerful. The recording is of a high quality, capturing the nuances of the piano's sound. The tempo is moderate, neither too fast nor too slow, which allows the listener to appreciate the intricacies of the music. The overall arousal level is moderate, neither too calm nor too intense, making it suitable for a range of settings, from a relaxing atmosphere to a more energetic one.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0172.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of two distinct elements, one of which is a melodic instrument, and the other is a percussive instrument. The melodic instrument is a flute, which is known for its soothing and calming tones. The percussive instrument is a drum, which is known for its rhythmic and energetic nature. The combination of these two instruments creates a unique and interesting sound, which is a blend of both melody and rhythm. This unique sound is what gives the music its distinct character and arousal level. The estimated scores are based on the listener's perception of the music's arousal level, which is a subjective measure. The flute's soothing tones and the drum's rhythmic beats create a harmonious blend that is both calming and energizing. The music is a perfect example of how different instruments can be combined to create a unique and engaging sound.",
+        "correct_answer": "-1.4112911548917157",
+        "audioid": "../testdata/EMO/emomusic/wav/0178.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0199.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a recording of a live performance, which is characterized by a distinctive sound quality. The recording is of a live concert, which is a unique aspect that adds to the overall charm of the music. The music is a blend of various instruments, including a guitar, bass, and drums. The guitar and bass are the primary instruments, while the drums provide a rhythmic backdrop. The music is a mix of rock and pop, which is a genre that is known for its high-energy and upbeat nature. The tempo of the music is moderate, which is a key factor in its overall arousal score. The music is not particularly slow or fast, which makes it an ideal choice for a relaxed atmosphere. The recording is of a live performance, which adds a unique touch to the music, making it a memorable experience for the listener.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0204.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a piano, a flute, and a violin. The piano provides a melodic foundation, while the flute and violin add a touch of complexity and depth to the overall sound. The combination of these instruments creates a harmonious and engaging musical experience. The music is not particularly fast or slow, but its moderate tempo and moderate arousal level make it an ideal choice for a relaxing atmosphere. The music is not particularly loud, but its moderate volume level makes it suitable for a variety of settings, including a peaceful home setting or a serene outdoor environment.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0216.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a rhythmic beat, a melody, and a harmony. The rhythmic beat is provided by a drum set, which is a common instrument in many genres of music. The melody is a simple, repetitive sequence of notes, which is played by a keyboard. The harmony is a combination of the melody and the rhythm, which creates a cohesive and engaging sound. The music is not particularly fast or slow, but it has a moderate tempo, which is a common characteristic of many genres of music. The overall score of the music is estimated to be 4.5, which is a moderate score, reflecting the moderate tempo and moderate intensity of the music.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0224.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a guitar, a bass, and a drum set. The guitar provides a rhythmic and melodic foundation, while the bass and drum set add depth and texture to the overall sound. The music is characterized by a slow tempo, which is a key factor in its calming and relaxing nature. The gentle and soothing tones of the guitar and bass, combined with the steady beat of the drum set, create a serene and peaceful atmosphere. The music is not overly energetic, but it is not too slow, making it an ideal choice for a relaxing atmosphere. The estimated scores for the music are based on the listener's perception of the arousal level, which is a subjective measure. The music's arousal level is not explicitly defined, but it can be inferred from the listener's perception of the music's tempo and intensity. The estimated scores are a reflection of the listener's perception of the music's arousal level, which can vary from person to person.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0228.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a piano, a flute, and a violin. The piano provides a melodic foundation, while the flute and violin add a touch of complexity and depth to the overall sound. The combination of these instruments creates a harmonious and engaging musical experience. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an enjoyable and relaxing experience. The music is not particularly arousing, but it is a pleasant and soothing experience. The score of 5, as estimated, reflects the moderate nature of the music, neither too energetic nor too calming.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0234.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a variety of instruments, including a synthesizer, a bass, and a drum machine. The synthesizer provides a melodic line, while the bass and drum machine provide a rhythmic foundation. The overall effect is a dynamic, energetic, and engaging composition. The music is not particularly slow or fast, but its intensity is moderate, making it an ideal choice for a relaxing yet energizing atmosphere.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0242.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a recording of a live performance, which is a unique aspect that adds to its charm. The recording is of a high quality, capturing the vibrant energy of the live performance. The music is a blend of various instruments, including a guitar, a bass, and a drum set. The rhythm is steady, with a driving beat that is both energetic and engaging. The overall effect is a lively, upbeat atmosphere that is sure to get you moving.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "../testdata/EMO/emomusic/wav/0253.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a rhythmic bassline, a melodic synthesizer, and a vocal melody. The overall effect is a lively, energetic, and engaging sound. The tempo is moderate, neither too fast nor too slow, and the intensity is moderate, neither too high nor too low. The combination of these factors creates a score of 5, which is a moderate arousal level.",
+        "correct_answer": "2.051888184023311",
+        "audioid": "../testdata/EMO/emomusic/wav/0257.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a recording of a live performance, which is characterized by a male vocalist singing a song. The recording is of a low quality, which is evident from the background noise and the somewhat muffled sound of the vocalist's voice. The song itself is a melodic composition, with a rhythmic beat that is not particularly fast or slow. The overall arousal level of the music is moderate, with a score of 5.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0264.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a rhythmic bass line, a melodic guitar riff, and a vocal melody. The overall effect is a harmonious blend of these elements, creating a musical experience that is both engaging and enjoyable. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxed atmosphere. The music is not particularly loud, but its audible quality is sufficient to create an immersive experience. The combination of these factors makes it a suitable choice for a variety of settings, from a casual gathering to a more formal event.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0292.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a rhythmic bass line, a melodic synthesizer, and a drum beat. The combination of these elements creates a unique and engaging sound, which is likely to be enjoyed by a wide range of audiences. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an enjoyable and engaging listen. The bass line and the drum beat provide a steady rhythm, while the synthesizer adds a melodic layer to the music. The overall effect is a dynamic and engaging sound that is likely to be enjoyed by a wide range of audiences.",
+        "correct_answer": "1.113943779733825",
+        "audioid": "../testdata/EMO/emomusic/wav/0293.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0306.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a variety of instruments, including a bass drum, snare, and hi-hat cymbals. The rhythm is a 4/4 beat, which is a common time signature in pop music. The tempo is moderate, and the overall arousal level is estimated to be 4.5. This score is a reflection of the music's moderate tempo and its ability to create a sense of rhythm and energy, making it an ideal choice for a lively atmosphere.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0309.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a male voice singing, a guitar playing, and a drum set being played. The music is not particularly fast or slow, but it has a moderate tempo. The overall arousal level is estimated to be 4.5, which is a moderate level of excitement. The music is not particularly engaging, but it is not boring either. It is a decent background music that can be used for a variety of purposes.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0312.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "../testdata/EMO/emomusic/wav/0315.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a guitar, a bass, and a drum. The guitar provides a rhythmic and melodic foundation, while the bass and drum complement it with a driving rhythm. The overall effect is a dynamic and energetic piece of music, which is likely to arouse the listener. The estimated score of 8 on the arousal scale is a reflection of the high energy and intensity of the music.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0319.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a variety of instruments, including a guitar, a bass, and a drum set. The rhythm is a mix of a steady beat and a more dynamic, upbeat rhythm. The tempo is moderate, neither too fast nor too slow, and the overall arousal level is estimated to be medium. The music is not particularly fast-paced, but it is engaging and energetic, making it an ideal choice for a lively atmosphere.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0322.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a male vocalist singing a melody and a rhythmic percussion section. The melody is a simple, repetitive tune that is sung in a monotone voice, adding a sense of calmness to the overall composition. The percussion section, on the other hand, provides a rhythmic drive, adding a sense of energy to the music. The combination of these two elements creates a unique and interesting sound that is both soothing and energizing. The music is not particularly complex, but it is engaging and enjoyable to listen to.",
+        "correct_answer": "0.9696446406123653",
+        "audioid": "../testdata/EMO/emomusic/wav/0336.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "0.248148945005068",
+        "audioid": "../testdata/EMO/emomusic/wav/0355.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a rhythmic bass line, a melodic guitar riff, and a vocal melody. The overall effect is a harmonious blend of these elements, creating a lively and engaging atmosphere. The music is not particularly fast or slow, but its moderate tempo and moderate intensity contribute to a balanced and enjoyable listening experience. The score of 5 on the arousal scale reflects this balance, suggesting a moderate level of excitement and engagement.",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "../testdata/EMO/emomusic/wav/0366.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a male voice and a piano, which creates a harmonious and melodious tune. The piano is the primary instrument, providing the rhythm and the melody, while the male voice adds a touch of depth and emotion to the composition. The music is slow, gentle, and calming, making it an ideal choice for a relaxing atmosphere. The score is estimated to be 2, which is a reflection of the music's low arousal level.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0367.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The bass line and drum beat work together to create a driving beat, while the keyboard melody adds a touch of complexity and depth to the music. The combination of these elements creates a score that is moderately arousing, with a score of 5.",
+        "correct_answer": "0.5367472232479872",
+        "audioid": "../testdata/EMO/emomusic/wav/0378.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, neither too fast nor too slow, and the intensity is moderate, neither too high nor too low. The combination of these factors creates a score of 5, which is a moderate arousal level.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0380.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect example of the range of arousal levels that can be achieved through the use of different musical elements. The low arousal score of 2 in the first example is a testament to the calming and relaxing nature of the music, while the high arousal score of 8 in the second example showcases the energetic and intense nature of the music. The third example, with a balanced tempo and moderate intensity, falls in between these two extremes, offering a more balanced and moderate experience. The music's range of arousal levels is a testament to its versatility and adaptability, making it a versatile and versatile tool for a variety of purposes.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0384.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a variety of settings, including a sports event or a dance party.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0390.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a variety of settings, including a dance club or a casual party. The score of 5.5 is a reflection of the music's moderate arousal level, which is neither too calm nor too intense, making it an ideal choice for a relaxed atmosphere.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "../testdata/EMO/emomusic/wav/0393.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a keyboard, a bass, and a drum machine. The rhythm is steady and the tempo is moderate, making it an ideal background music for a relaxing atmosphere. The music is not particularly engaging, but it does not detract from the overall ambiance. It is a good choice for a background score, but it lacks the intensity and energy to be a standout piece.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0410.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a rhythmic drum beat, and a melodic sequence. The synthesized bass line is a prominent feature of the music, providing a solid foundation for the other elements. The drum beat is a steady, driving beat that adds to the overall energy of the music. The melodic sequence is a series of notes that are played in a repetitive manner, adding a sense of continuity to the music. The combination of these elements creates a unique and engaging sound that is both energetic and relaxing. The music is a perfect example of how a blend of different elements can create a harmonious and enjoyable sound.",
+        "correct_answer": "-1.050543307088067",
+        "audioid": "../testdata/EMO/emomusic/wav/0419.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect blend of a fast-paced rhythm and a moderate intensity, making it an ideal choice for a dance party. The tempo is moderate, and the rhythm is fast, which creates an energetic and lively atmosphere. The music is also well-produced, with a clear and crisp sound quality that enhances the overall experience. The combination of these factors makes it an ideal choice for a dance party, where people can enjoy the music and dance along.",
+        "correct_answer": "1.6911403362196626",
+        "audioid": "../testdata/EMO/emomusic/wav/0425.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a rhythmic drum beat, and a melodic sequence. The bass line is a synthesized sound, which is a digital representation of a bass guitar. The drum beat is a rhythmic pattern that is played on a drum set. The melodic sequence is a series of notes that are played on a synthesizer. The combination of these elements creates a unique and engaging sound. The music is not particularly fast or slow, but it has a moderate tempo, which is a perfect balance for a relaxing atmosphere. The estimated arousal score of the music is 4, which is a moderate level of excitement.",
+        "correct_answer": "0.3202985145657981",
+        "audioid": "../testdata/EMO/emomusic/wav/0427.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect blend of a range of instruments, including a synthesizer, a bass, and a drum machine. The synthesizer provides a melodic line, while the bass and drum machine create a rhythmic foundation. The combination of these instruments creates a unique and engaging sound that is both dynamic and energetic. The music is a perfect example of how a combination of different instruments can create a harmonious and engaging sound. The music is not only enjoyable to listen to but also has the potential to arouse the listener. The music is a perfect example of how a combination of different instruments can create a harmonious and engaging sound. The music is not only enjoyable to listen to but also has the potential to arouse the listener.",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0432.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, and the intensity is mild, making it an ideal background music for a relaxed atmosphere. The music is not particularly complex, but it is well-suited for a casual setting, such as a coffee shop or a lounge.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0436.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a rhythmic drum beat, and a melodic sequence. The overall effect is a dynamic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a dance club setting, where it can create an upbeat and lively atmosphere. The music is not particularly innovative, but it is well-executed and well-suited to its purpose.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0455.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect blend of a fast-paced rhythm and a moderate intensity, making it an ideal choice for a relaxing atmosphere. The music is not too fast, nor too slow, but strikes a perfect balance between the two, providing a soothing and calming experience. The music is also a perfect example of how a low arousal level can be achieved through a combination of a slow tempo and a gentle rhythm. The music is not too loud, but it is not too soft either, making it an ideal choice for a relaxing environment. The music is also a perfect example of how a moderate intensity can be achieved through a combination of a moderate tempo and a moderate rhythm. The music is not too fast, nor too slow, but strikes a perfect balance between the two, providing a soothing and calming experience. The music is also a perfect example of how a low arousal level can be achieved through a combination of a slow tempo and a gentle rhythm. The music is not too loud, but it is not too soft either, making it an ideal choice for a relaxing environment. The music is also a perfect example of how a moderate intensity can be achieved through a combination of a moderate tempo and a moderate rhythm. The music is not too fast, nor too slow, but strikes a perfect balance between the two, providing a soothing and calming experience.",
+        "correct_answer": "-0.9783937375273373",
+        "audioid": "../testdata/EMO/emomusic/wav/0458.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a flute. The overall effect is a rhythmic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a relaxing atmosphere, and its arousal score is estimated to be 4.5.",
+        "correct_answer": "0.7531959319301763",
+        "audioid": "../testdata/EMO/emomusic/wav/0462.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The bass line and drum beat work together to create a driving beat, while the keyboard melody adds a touch of complexity and depth to the music. The combination of these elements creates a unique and dynamic sound that is sure to pique the interest of listeners.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0475.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a male voice and a female voice, which creates a harmonious and melodious tune. The male voice is a bit more prominent, providing a solid foundation for the female voice to build upon. The music is characterized by a steady rhythm, which is a hallmark of the genre. The tempo is moderate, neither too fast nor too slow, and the overall intensity is mild, making it an enjoyable and relaxing experience. The music is a perfect blend of the male and female voices, which creates a harmonious and melodious tune. The tempo is moderate, neither too fast nor too slow, and the overall intensity is mild, making it an enjoyable and relaxing experience. The music is a perfect blend of the male and female voices, which creates a harmonious and melodious tune. The tempo is moderate, neither too fast nor too slow, and the overall intensity is mild, making it an enjoyable and relaxing experience.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0499.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording, which is a distinctive characteristic of its genre. The recording is not of the highest quality, which is a common characteristic of live recordings. The recording is not professionally mastered, which is a drawback. However, the music itself is quite enjoyable, with a lively and energetic rhythm that is sure to get you moving. The music is a blend of different instruments, including a guitar, a bass, and a drum set, which creates a harmonious and engaging sound. The recording is a live performance, which adds a unique and authentic touch to the music. The recording is not of the highest quality, but it is still an enjoyable experience.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0521.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a rhythmic bass line, a melodic guitar riff, and a percussion section that adds a dynamic touch. The overall effect is a harmonious blend of these elements, creating a musical experience that is both engaging and enjoyable. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxed, yet energizing atmosphere.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "../testdata/EMO/emomusic/wav/0529.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a variety of instruments, including a synthesizer, a bass, and a drum machine. The synthesizer provides a melodic line, while the bass and drum machine provide a rhythmic foundation. The overall effect is a dynamic, energetic, and engaging composition. The music is not particularly slow or fast, but its intensity is moderate, making it an ideal choice for a relaxing yet energizing atmosphere.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0544.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of different elements, including a mix of instruments, a rhythmic pattern, and a tempo that is neither too fast nor too slow. The music is a perfect representation of the middle ground between the low and high arousal levels, making it an ideal choice for a relaxing atmosphere. The mix of instruments, including the piano, violin, and flute, creates a harmonious melody that is both soothing and engaging. The rhythmic pattern, which is a combination of a steady beat and a slightly faster beat, adds a dynamic element to the music, making it more interesting. The tempo is moderate, neither too fast nor too slow, which makes it an ideal choice for a relaxing atmosphere. The music is a perfect representation of the middle ground between the low and high arousal levels, making it an ideal choice for a relaxing atmosphere. The mix of instruments, including the piano, violin, and flute, creates a harmonious melody that is both soothing and engaging. The rhythmic pattern, which is a combination of a steady beat and a slightly faster beat, adds a dynamic element to the music, making it more interesting. The tempo is moderate, neither too fast nor too slow, which makes it an ideal choice for a relaxing atmosphere.",
+        "correct_answer": "0.6088967928087167",
+        "audioid": "../testdata/EMO/emomusic/wav/0556.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "1.5468411970982037",
+        "audioid": "../testdata/EMO/emomusic/wav/0561.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a piano melody, a bass line, and a drum beat. The piano melody is a gentle, soothing tune that adds a touch of serenity to the overall composition. The bass line, on the other hand, is a rhythmic, driving beat that adds a sense of energy to the piece. The drum beat, though not as prominent as the piano melody or bass line, adds a rhythmic structure to the music. The combination of these elements creates a harmonious and engaging musical experience. The tempo is moderate, neither too fast nor too slow, which makes it an ideal background music for a relaxing atmosphere. The estimated arousal score for this music piece is 5, which suggests a moderate level of arousal, neither too calm nor too energetic.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0582.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a recording of a live performance, which is not of the highest quality. The recording is not clear, and the sound quality is not optimal. The music is a blend of a live performance and a recording, which creates a unique and interesting experience. The recording is not of the best quality, which is a drawback, but the live performance aspect adds a certain charm to the music. The music is a mix of a live performance and a recording, which creates a unique and interesting experience. The recording quality is not optimal, but the live performance aspect adds a certain charm to the music.",
+        "correct_answer": "-1.6277398635739049",
+        "audioid": "../testdata/EMO/emomusic/wav/0584.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a male vocalist singing a melody, a guitar playing a rhythmic chord progression, and a synthesizer providing a harmonic background. The overall effect is a harmonious blend of these elements, creating a musical experience that is both engaging and enjoyable. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxing atmosphere. The male vocalist's melody is gentle and soothing, adding to the overall calming effect of the music. The guitar chords provide a rhythmic backbone, while the synthesizer adds a layer of depth and richness to the overall sound. The combination of these elements creates a musical experience that is both enjoyable and relaxing, making it an ideal choice for a peaceful setting.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0594.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a rhythmic bass line, a melodic synthesizer, and a drum set. The combination of these elements creates a unique and engaging sound, which is a perfect fit for a high-energy, fast-paced environment. The music is not only energetic but also dynamic, with a range of tones and rhythms that keep the listener engaged. The bass line is particularly noteworthy, providing a solid foundation for the rest of the music to build upon. The synthesizer adds a layer of depth and complexity, while the drum set provides a driving force that propels the music forward. Overall, the music is a perfect representation of the high-energy, fast-paced environment it was designed for.",
+        "correct_answer": "-0.18474847235931013",
+        "audioid": "../testdata/EMO/emomusic/wav/0622.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a rhythmic bassline, a melodic synthesizer, and a drum beat. The overall effect is a moderate, energetic, and engaging sound. The tempo is moderate, neither too fast nor too slow, and the intensity is moderate, neither too high nor too low. The combination of these factors creates a score of 5, which is a moderate arousal level.",
+        "correct_answer": "-0.11259890279858066",
+        "audioid": "../testdata/EMO/emomusic/wav/0645.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect example of the range of arousal levels that can be achieved through the use of different tempos and intensities. The music is a blend of both high and low arousal levels, making it a versatile piece that can be enjoyed in different settings. The music is a perfect example of how a music piece can be tailored to fit the desired mood or atmosphere. The range of arousal levels in this music piece is a testament to the composer's ability to create a dynamic and engaging music experience.",
+        "correct_answer": "-1.266992015770256",
+        "audioid": "../testdata/EMO/emomusic/wav/0647.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "The music in the given examples is a blend of different elements, including a rhythmic bass line, a melodic line that is played on a flute, and a harmonic background that is created by a combination of instruments. The music is characterized by a moderate tempo and moderate intensity, which is reflected in the estimated scores. The flute melody is the most prominent, adding a sense of depth and richness to the overall sound. The bass line provides a steady rhythm, while the harmonic background adds a layer of complexity and depth to the music. The combination of these elements creates a unique and engaging sound that is both soothing and energizing. The estimated scores reflect the varying levels of arousal that the music elicits, with the slow and gentle music having a lower arousal score, and the energetic and driving music having a higher arousal score.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0665.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording, which is a distinctive characteristic of its genre. The recording is of a live concert, which is a unique aspect that adds to the authenticity of the music. The recording is of a high quality, which is a testament to the skill of the recording team. The music is a blend of different genres, including rock and pop, which is a unique combination that sets it apart from other music pieces. The music is performed by a group of musicians, which adds to the richness of the overall sound. The music is a cover of a song, which is a testament to the creativity of the performers. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The song is a cover of a song that was originally written by a famous artist, which adds to the significance of the music piece. The",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0667.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect blend of a range of instruments, including a bass drum, a snare, and a hi-hat cymbal. The rhythm is a steady beat, with the bass drum and snare creating a solid foundation. The hi-hat cymbal adds a dynamic touch, creating a sense of movement and rhythm. The overall effect is a smooth, steady, and energetic rhythm, which is a perfect fit for a high-impact sports event. The music is designed to pump up the adrenaline, to create an exciting and engaging atmosphere. It is a perfect example of how music can be used to enhance the experience of a sports event.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0668.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a flute. The combination of these elements creates a unique and intriguing sound, which is both engaging and enjoyable. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a relaxing atmosphere. The flute melody adds a touch of sweetness and depth to the overall sound, making it a perfect background music for a movie or a TV show.",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0684.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0687.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a male vocalist singing a melody, a guitar playing a rhythmic chord progression, and a bass guitar providing a steady bass line. The overall effect is a harmonious blend of these elements, creating a relaxing and soothing atmosphere. The music is not particularly fast or slow, but its moderate tempo and gentle intensity make it a perfect fit for a relaxing ambiance. The male vocalist's melody is soft and soothing, adding to the overall calming effect of the music. The guitar and bass guitar complement the vocal melody, creating a harmonious blend of sounds. The music is not particularly energetic, but it is engaging and enjoyable, making it a great choice for a relaxing atmosphere.",
+        "correct_answer": "0.17599937544433852",
+        "audioid": "../testdata/EMO/emomusic/wav/0691.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of a male and female voice, which creates a harmonious blend. The male voice is more prominent, providing a steady rhythm and a melody that is both soothing and engaging. The female voice, on the other hand, adds a touch of depth and a subtle variation to the melody. The overall effect is a music piece that is both relaxing and invigorating, making it an ideal choice for a variety of settings.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0698.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a unique blend of a range of instruments, including a piano, a guitar, and a flute. The piano provides a melodic foundation, while the guitar and flute add a harmonious layer of sound. The combination of these instruments creates a rich and dynamic sound, which is further enhanced by the use of a drum set. The drum set adds a rhythmic element to the music, making it more engaging and dynamic. The music is noteworthy for its ability to evoke a range of emotions, from peacefulness to excitement, making it a versatile and versatile piece of music.",
+        "correct_answer": "-0.4733467506022293",
+        "audioid": "../testdata/EMO/emomusic/wav/0704.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a mix of different elements, including a drum set, a bass, and a synthesizer. The drum set provides a steady rhythm, while the bass and synthesizer add a dynamic and energetic touch. The overall effect is a lively, upbeat, and energetic music piece. The score of 5.5 on the arousal scale reflects the moderate level of intensity and the balanced tempo, making it an enjoyable and engaging experience for the listener.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0710.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "The music in the given examples is a blend of different elements, including a rhythmic bass line, a melodic line that is played on a flute, and a percussion section that adds a dynamic touch to the overall composition. The music is characterized by a moderate tempo and moderate intensity, which makes it a perfect fit for a relaxing atmosphere. The flute melody adds a gentle touch to the composition, while the rhythmic bass line and percussion section provide a steady beat that keeps the music moving forward. The overall effect is a soothing, calming experience that is perfect for a relaxing atmosphere.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0718.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a rhythmic bass line, a melodic synthesizer, and a drum set. The bass line is a steady, low-pitched beat that provides a solid foundation for the music. The synthesizer, on the other hand, adds a melodic layer to the music, creating a harmonious and dynamic sound. The drum set, with its steady beat, adds a rhythmic element to the music, making it more engaging and energetic. The combination of these elements creates a unique and interesting sound that is both dynamic and harmonious. The estimated arousal score of the music is 5, which suggests a moderate level of arousal, neither too calm nor too intense.",
+        "correct_answer": "0.6810463623694468",
+        "audioid": "../testdata/EMO/emomusic/wav/0721.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a rhythmic bassline, a melodic synthesizer, and a drum beat. The bassline is a steady, low-pitched beat that provides a solid foundation for the music. The synthesizer melody is a harmonious, rhythmic sequence of notes that adds depth and complexity to the overall sound. The drum beat is a steady, energetic beat that adds a driving force to the music. The combination of these elements creates a dynamic and engaging atmosphere, with a moderate level of arousal. The estimated score of 5 is a reflection of the music's moderate tempo and moderate intensity.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0723.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various instruments, including a bass drum, snare, and hi-hat cymbals. The rhythm is a 4/4 beat, which is a common time signature in popular music. The tempo is moderate, and the overall arousal level is estimated to be 5. The music is a mix of both fast and slow rhythms, which creates a dynamic and engaging experience for the listener. The bass drum and snare create a steady beat, while the hi-hat cymbals add a dynamic touch to the rhythm. The combination of these elements creates a unique and interesting sound that is both engaging and enjoyable. The music is a perfect example of how a mix of different instruments can create a harmonious and enjoyable sound.",
+        "correct_answer": "0.8974950710516358",
+        "audioid": "../testdata/EMO/emomusic/wav/0724.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "\u200b",
+        "correct_answer": "-0.3290476114807697",
+        "audioid": "../testdata/EMO/emomusic/wav/0727.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a drum set, a bass guitar, and a guitar. The drum set provides a steady rhythm, while the bass guitar and guitar add a melodic layer to the music. The music is not particularly fast or slow, but its intensity is moderate, making it a suitable background music for a relaxed atmosphere. The music is not particularly complex, but it is engaging and enjoyable to listen to.",
+        "correct_answer": "1.1860933492945551",
+        "audioid": "../testdata/EMO/emomusic/wav/0729.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of various elements, including a rhythmic bassline, a melodic synthesizer, and a drum beat. The bassline is a steady, low-pitched beat that provides a solid foundation for the music. The synthesizer melody is a harmonious, flowing sequence of notes that adds depth and complexity to the overall sound. The drum beat is a steady, driving beat that adds a sense of energy and rhythm to the music. The combination of these elements creates a dynamic and engaging atmosphere, which is reflected in the music's high arousal score. The music's moderate intensity and balanced tempo make it an ideal choice for a range of settings, from a relaxing atmosphere to an energetic dance party.",
+        "correct_answer": "-1.1948424462095264",
+        "audioid": "../testdata/EMO/emomusic/wav/0743.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a male vocalist singing a melody, accompanied by a female vocalist singing a harmony. The music is characterized by a rhythmic beat, which is a combination of a drum and a bass guitar. The melody is played by a guitar, while the harmony is sung by the female vocalist. The overall effect of the music is a soothing, calming, and relaxing experience. The music is not particularly fast or slow, but its moderate tempo and gentle intensity make it an ideal choice for a peaceful, meditative atmosphere. The combination of the male and female vocals, the rhythmic beat, and the melody and harmony, all contribute to the overall calming effect of the music.",
+        "correct_answer": "-0.7619450288451479",
+        "audioid": "../testdata/EMO/emomusic/wav/0746.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, neither too fast nor too slow, and the intensity is moderate, neither too high nor too low. This combination of factors creates a score of 5, which is a moderate arousal level.",
+        "correct_answer": "0.248148945005068",
+        "audioid": "../testdata/EMO/emomusic/wav/0748.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a live recording, which is a unique characteristic that adds to its charm. The recording is not perfect, but it is still an enjoyable experience. The music is a blend of various instruments, including a guitar, a bass, and a drum set. The rhythm is steady, and the tempo is moderate, making it an ideal background music for a relaxed atmosphere. The music is not overly loud, and the sound quality is clear, which is a testament to the quality of the recording. The recording is not perfect, but it is still an enjoyable experience. The music is a blend of various instruments, including a guitar, a bass, and a drum set. The rhythm is steady, and the tempo is moderate, making it an ideal background music for a relaxed atmosphere. The music is not overly loud, and the sound quality is clear, which is a testament to the quality of the recording.",
+        "correct_answer": "-0.4011971810414992",
+        "audioid": "../testdata/EMO/emomusic/wav/0749.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect example of a score that is neither too high nor too low, but rather, it strikes a balance between the two. It is a medium-paced, moderately energetic music that is designed to create a sense of balance and harmony. The music is characterized by a steady beat, which is a hallmark of its rhythm. The tempo is moderate, and the music is not too fast or slow, which makes it an ideal choice for a relaxing atmosphere. The music is also designed to be engaging, and it has a moderate level of intensity that is neither too high nor too low, making it an ideal choice for a variety of settings. It is a perfect example of how a music can be both engaging and soothing, and this is what makes it a unique and interesting piece of music.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0756.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The tempo is moderate, and the intensity is high, making it an ideal choice for a high-energy environment. The music is not particularly complex, but it is well-suited to the purpose it serves.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0758.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a drum beat, and a guitar riff. The bass line is a synthesized sound, which is a common feature in electronic music. The drum beat is a steady beat, which is a typical characteristic of electronic music. The guitar riff is a repetitive sequence of notes, which is a common feature in rock music. The combination of these three elements creates a unique and interesting sound. The music is not particularly fast or slow, but it has a moderate tempo, which is a characteristic of many rock music pieces. The overall arousal level of the music is moderate, which is reflected in the estimated scores. The music is not particularly energetic, but it is not particularly calming either, which is why it falls in between the two scores.",
+        "correct_answer": "-0.9062441679666075",
+        "audioid": "../testdata/EMO/emomusic/wav/0763.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a drum set, a bass, and a synthesizer. The drum set provides a steady rhythm, while the bass and synthesizer add a dynamic and energetic touch. The combination of these elements creates a unique and engaging sound, which is likely to evoke a range of emotions in the listener. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an enjoyable and engaging experience.",
+        "correct_answer": "-0.04044933323785054",
+        "audioid": "../testdata/EMO/emomusic/wav/0784.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a male vocalist singing a melody with a rhythmic beat. The melody is a simple, repetitive tune that is easy to follow and catchy. The rhythm is a steady beat that is not particularly fast or slow, but it is energetic enough to keep the listener engaged. The overall effect is a mellow, yet upbeat, musical experience that is suitable for a variety of settings.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0789.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a drum beat, and a melody played on a flute. The combination of these elements creates a unique and interesting sound, which is further enhanced by the use of a synthesizer to add a layer of depth to the music. The overall effect is a dynamic and engaging composition that is sure to captivate the listener.",
+        "correct_answer": "0.10384980588360905",
+        "audioid": "../testdata/EMO/emomusic/wav/0797.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a range of settings, from a casual party to a more formal event. It is a perfect example of how a simple composition can be elevated by the right combination of instruments.",
+        "correct_answer": "1.2582429188552846",
+        "audioid": "../testdata/EMO/emomusic/wav/0810.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a rhythmic bass line, a melodic synthesizer, and a percussive beat. The combination of these elements creates a unique and engaging sound, which is both energetic and relaxing. The music is a perfect representation of the dynamic range of human emotions, ranging from a calm and peaceful state to an intense and energetic state. The music is a perfect example of how a combination of different elements can create a harmonious and engaging sound.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0818.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The music is not particularly complex, but it is well-suited to a fast-paced, high-impact environment. It is designed to be an energetic and exciting addition to a sports event or a high-impact gaming scenario.",
+        "correct_answer": "1.7632899057803928",
+        "audioid": "../testdata/EMO/emomusic/wav/0824.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a unique blend of a range of instruments, including a guitar, a bass, and a drum set. The rhythm is steady and the tempo is moderate, making it an ideal background music for a relaxing atmosphere. The music is not particularly engaging, but it is not intended to be so. It is designed to provide a gentle, calming ambiance, which is why it scores low on the arousal scale.",
+        "correct_answer": "-0.5454963201629588",
+        "audioid": "../testdata/EMO/emomusic/wav/0826.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a variety of instruments, including a guitar, a bass, and a drum set. The rhythm is steady, and the tempo is moderate, making it a perfect background music for a relaxing atmosphere. The music is not particularly engaging, but it is not meant to be. It is designed to provide a gentle, calming ambiance, which is why it scores low on the arousal scale.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "../testdata/EMO/emomusic/wav/0829.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect example of the range of arousal levels that can be achieved through the use of different musical elements. The music is a blend of a variety of sounds, including a synthesized bass line, a drum beat, and a melody played on a flute. The combination of these sounds creates a unique and engaging atmosphere, which is both calming and energizing. The music is a perfect example of how different musical elements can be combined to create a rich and dynamic soundscape.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0844.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is noteworthy for its unique and distinctive sound, which is characterized by a distinctive bass line. The bass line is a prominent feature of the music, and it is the driving force behind the overall rhythm. The music is noteworthy for its ability to evoke a sense of energy and excitement, which is a hallmark of high arousal levels. This is a unique and distinctive piece of music, and it is a testament to the creativity and skill of the musician who created it.",
+        "correct_answer": "-1.339141585330986",
+        "audioid": "../testdata/EMO/emomusic/wav/0855.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a guitar, a bass, and a drum set. The guitar and bass are playing in a rhythmic pattern, creating a harmonious melody. The drum set, on the other hand, adds a dynamic element to the music, providing a steady beat that drives the rhythm forward. The combination of these elements creates a unique and engaging sound that is both energetic and relaxing. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an ideal choice for a range of settings, from a peaceful retreat to a lively social gathering.",
+        "correct_answer": "0.8253455014909064",
+        "audioid": "../testdata/EMO/emomusic/wav/0886.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a guitar, a bass, and a drum set. The guitar and bass are playing in a rhythmic pattern, creating a steady beat. The drum set, on the other hand, is providing a more dynamic and energetic touch to the music. The combination of these elements creates a unique and engaging sound that is both energetic and relaxing. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an enjoyable listen. The overall score is estimated to be 5, which is a moderate arousal level.",
+        "correct_answer": "-0.8340945984058776",
+        "audioid": "../testdata/EMO/emomusic/wav/0890.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a drum beat, and a melody played on a keyboard. The overall effect is a rhythmic, energetic, and engaging composition. The bass line and drum beat create a driving force, while the keyboard melody adds a touch of complexity and depth. The combination of these elements creates a unique and dynamic sound that is sure to engage the listener. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it an enjoyable and engaging experience. The estimated score of 5 is a reflection of the music's moderate arousal level, which is a perfect balance between calmness and intensity.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0893.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "",
+        "correct_answer": "0.3924480841265276",
+        "audioid": "../testdata/EMO/emomusic/wav/0899.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a rhythmic bass line, a melodic synthesizer, and a percussion instrument. The rhythm is a steady beat, which is a common characteristic of music that is designed to be energetic. The synthesizer and percussion instrument add a dynamic layer to the music, making it more engaging and energetic. The overall effect of this music is a moderate level of arousal, which is a perfect fit for a relaxing atmosphere.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0924.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of different elements, including a rhythmic bass line, a melodic guitar riff, and a vocal melody. The overall effect is a moderate, energetic, and engaging sound. The bass line is a driving force, while the guitar riff adds a melodic layer to the music. The vocal melody, though not particularly prominent, adds a harmonious touch to the overall composition. The music is not particularly slow or fast, but its moderate tempo and moderate intensity make it an enjoyable and engaging listen.",
+        "correct_answer": "1.0417942101730955",
+        "audioid": "../testdata/EMO/emomusic/wav/0934.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of two distinct elements, a male voice and a guitar. The male voice is a low-pitched, monotonous voice that delivers a single line of lyrics. The guitar, on the other hand, is a high-pitched, rhythmic instrument that provides a melody. The combination of these two elements creates a unique and interesting sound, which is not particularly arousing but still engaging. The music is not particularly fast or slow, neither is it particularly energetic or calm, making it a moderate, balanced piece.",
+        "correct_answer": "1.8354394753411223",
+        "audioid": "../testdata/EMO/emomusic/wav/0938.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a guitar, a bass, and a drum. The guitar and bass are playing in a rhythmic pattern, while the drum is providing a steady beat. The overall effect of this combination is a moderate level of arousal, which is estimated to be 5. This score is a reflection of the music's moderate tempo and moderate intensity, which is neither too slow nor too fast, nor too intense nor too mellow.",
+        "correct_answer": "0.03170023632287893",
+        "audioid": "../testdata/EMO/emomusic/wav/0942.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a perfect example of a balanced composition, with a moderate tempo and moderate intensity. It is neither too slow nor too fast, nor too intense nor too mellow. The music is a perfect blend of both, providing a harmonious and soothing experience to the listener. The score of 5, as estimated, is a reflection of the music's balanced nature, neither too high nor too low. It is a perfect representation of the music's ability to create a harmonious and peaceful atmosphere.",
+        "correct_answer": "-1.7720390026953645",
+        "audioid": "../testdata/EMO/emomusic/wav/0945.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a perfect example of the range of arousal levels that can be achieved through the use of different tempos and intensities. The music is designed to evoke a range of emotions, from calm and relaxing to energetic and intense. The music is a perfect example of how a music piece can be tailored to cater to different moods and emotions. The music is a testament to the power of music to evoke emotions and create a unique experience for the listener.",
+        "correct_answer": "-0.6897954592844184",
+        "audioid": "../testdata/EMO/emomusic/wav/0955.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a mix of different elements, including a drum set, a bass guitar, and a guitar. The drum set provides a steady rhythm, while the bass guitar and guitar add a melodic layer to the music. The overall effect is a dynamic, energetic, and engaging composition.",
+        "correct_answer": "1.9075890449018524",
+        "audioid": "../testdata/EMO/emomusic/wav/0962.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a rhythmic bass line, a melodic line that is played on a flute, and a percussion section that adds a dynamic touch to the overall composition. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it a suitable choice for a relaxing atmosphere. The music is not particularly arousing, but it is not intended to be so. It is a simple, straightforward composition that is designed to create a mellow, soothing ambiance.",
+        "correct_answer": "1.330392488416014",
+        "audioid": "../testdata/EMO/emomusic/wav/0970.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of a variety of instruments, including a keyboard, a guitar, and a drum set. The keyboard provides a melodic backdrop, while the guitar and drum set contribute to the rhythm. The overall effect is a harmonious blend of sounds that creates a relaxing atmosphere. The music is not particularly fast or slow, but its moderate tempo and moderate intensity make it a suitable choice for a relaxing ambiance. The music is not particularly engaging, but it is not intended to be so. It is designed to create a peaceful and calming atmosphere, which it does effectively.",
+        "correct_answer": "-0.6176458897236886",
+        "audioid": "../testdata/EMO/emomusic/wav/0985.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music piece is a blend of different elements, including a synthesized bass line, a rhythmic drum beat, and a melodic sequence. The bass line is a synthesized sound, which is a digital representation of a bass guitar. The drum beat is a steady beat, which is a rhythmic pattern that is commonly used in electronic music. The melodic sequence is a series of notes that are played in a particular order, adding a harmonic depth to the music. The combination of these elements creates a unique and engaging sound that is both energetic and relaxing. The music is a perfect blend of the two, making it an ideal choice for a variety of settings, from a peaceful meditation to an intense workout.",
+        "correct_answer": "0.4645976536872577",
+        "audioid": "../testdata/EMO/emomusic/wav/0988.wav",
+        "other": ""
+    },
+    {
+        "question": "Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.\n\nExample 1, when the music is slow and gentle, suggesting a low arousal level:\nEstimated score: 2.\n\nExample 2, when the music is energetic and driving, indicating a high arousal level:\nEstimated score: 8.\n\nExample 3, when the music has a balanced tempo and moderate intensity:\nEstimated score: 5.",
+        "response": "This music is a blend of various elements, including a synthesized bass line, a rhythmic drum beat, and a melodic guitar riff. The overall effect is a lively, energetic, and engaging sound that is sure to pique the interest of listeners. The music is not particularly complex, but it is well-suited to the mood of a lively, energetic atmosphere. The combination of the bass line, drum beat, and guitar riff creates a harmonious and dynamic sound that is sure to be appreciated by a wide range of audiences.",
+        "correct_answer": "1.7793071102228746",
+        "audioid": "../testdata/EMO/emomusic/wav/1000.wav",
+        "other": ""
+    }
+]

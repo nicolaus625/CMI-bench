@@ -592,12 +592,17 @@ if __name__ == "__main__":
             lines = file.readlines()
         file.close
         
-        count = 0
+        filename = f"{args.output_file}/{args.model}/{args.model}_{os.path.basename(file_path)[4:]}"
+        if os.path.exists(filename):
+            continue
+        print(f"Processing {file_path}")
+        
+        if "MTG_instrument" not in filename:
+            continue
+        
+        lines = [line for line in lines if json.loads(line)['split'][0] == "test"]
         for line in tqdm(lines):
             data = json.loads(line)
-            if data['split'][0] != "test":
-                continue
-            count += 1
             if len(data['audio_path']) == 1: # input single audio
                 prompt = data['instruction']
                 audio_path = "../test" + data['audio_path'][0]
