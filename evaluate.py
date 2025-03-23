@@ -17,7 +17,7 @@ from bert_score import score
 import argparse
 
 import mir_eval
-
+from torchmetrics import R2Score
 
  
 def normalise(text):
@@ -80,6 +80,30 @@ def get_multiclass_acc(result_list):
             if extract_int(tmp['response']) == tmp["correct_answer"]:
                 count += 1
         return count / len(result_list)
+    
+def cal_r2(result_list):
+    answer_list = set(tmp["correct_answer"] for tmp in result_list)
+    answer_list = [float(answer) for answer in answer_list]
+
+    # exception "score is 5 out of 9" -> 5
+    response = [extract_int(re.sub(r'out of 9', '', tmp['response'])) 
+                for tmp in result_list]
+
+    response_2 = [x for x in response if x != -0.5]
+    
+    mean = np.mean(response_2)
+    std = np.std(response_2)
+    if std == 0:
+        raise ValueError("Standard deviation is zero. Normalization not possible.")
+    
+    a = 1 / std
+    b = -mean / std
+    
+    response_3 = [5 if x == -0.5 else x for x in response]
+    normalised_response_3 = [(a * x + b) for x in response_3]
+
+    r2score = R2Score()
+    return r2score(torch.tensor(normalised_response_3), torch.tensor(answer_list))
 
 def multi_label_classification(result_list, answer_list): # variable should not be called type otherwise it will override the built-in function
     # Prepare answer_list as a flattened list of all possible answers
@@ -141,7 +165,7 @@ def multi_label_bert(result_list, answer_list, task="emotion"):
         bert_references = answer_list
     
         # Compute BERTScore similarity
-        P, R, F1 = score(bert_candidates, bert_references, lang="en", verbose=False)
+        P, R, F1 = score(bert_candidates, bert_references, lang="en-sci", verbose=False)
         bert_scores = R.cpu().numpy()
     
         # Normalize BERT scores using softmax
@@ -304,7 +328,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "MTG_instrument" in result]
+    results_json = [result for result in results_json if "EMO" in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
@@ -330,11 +354,11 @@ if __name__ == "__main__":
         value = multi_label_bert(data, tags)
         print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     elif task == "EMO_valence":
-        print(model, task)
-        pass
+        r2 = cal_r2(data)
+        print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
     elif task == "EMO_arousal":
-        print(model, task)
-        pass
+        r2 = cal_r2(data)
+        print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
     elif task == "GTZAN":
         acc = get_multiclass_acc(data)
         print(f"{model}_{task} genre Acc: {acc:.4f}")
