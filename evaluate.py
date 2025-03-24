@@ -4,8 +4,8 @@ import re
 import argparse
 import json
 import os
-import torch
 import string
+import torch
 
 import tqdm
 import numpy as np
@@ -16,11 +16,11 @@ from nltk.translate.bleu_score import sentence_bleu
 from nltk.translate.meteor_score import meteor_score as meteor_scorer
 from nltk.tokenize import wordpunct_tokenize
 from bert_score import score
-import argparse
 
 import mir_eval
 from torchmetrics import R2Score
 import jiwer
+import pretty_midi
 
  
 def normalise(text):
@@ -354,6 +354,84 @@ def batch_wer_cer(result_list):
     return np.mean(wer_scores), np.mean(cer_scores)
 
 
+def process_midi_sequence(input_string):
+    # Step 1: Check if input is a valid string and parse it
+    if not isinstance(input_string, str):
+        return None, None
+        # raise ValueError("Input is not a string")
+    if "{" in input_string or "}" in input_string:
+        return None, None
+        # raise ValueError("Invalid characters in input string")
+
+    try:
+        midi_sequence = eval(input_string)
+    except SyntaxError as e:
+        if 'unterminated string literal' in str(e):
+            last_paren = input_string.rfind(')')
+            fixed_string = input_string[:last_paren] + ")]"
+            try:
+                midi_sequence = eval(fixed_string)
+            except Exception as inner_e:
+                raise ValueError(f"Failed to evaluate fixed string: {inner_e}")
+        elif "'[' was never closed" in str(e):
+            try:
+                midi_sequence = eval( input_string + "]")
+            except Exception as inner_e:
+                raise ValueError(f"Failed to evaluate fixed string: {inner_e}")
+    
+    if not isinstance(midi_sequence, list) or not all(isinstance(item, tuple) and len(item) == 2 for item in midi_sequence):
+        return None, None
+        # raise ValueError("Invalid format after eval")
+    
+    midi_array = np.array(midi_sequence, dtype=object)
+    midi_array[:, 0] = np.array([float(x) % 10 for x in midi_array[:, 0]])
+
+    # Step 4: Convert note names to MIDI numbers
+    for i, note in enumerate(midi_array[:, 1]):
+        if note != '':  # If it's a note name, convert it
+            if isinstance(note, str):  # If it's a note name, convert it
+                try:
+                    midi_array[i, 1] = float(midi_array[i, 1])
+                except:
+                    midi_array[i, 1] = pretty_midi.note_name_to_number(note)
+                    # raise ValueError(f"Invalid MIDI note name '{note}': {e}")
+            midi_array[i, 1] = pretty_midi.note_number_to_hz(midi_array[i, 1])
+        else:  # 0Hz, not midi_num=0
+            midi_array[i, 1] = 0.0
+
+    # Convert dtype to float after processing
+    midi_array = midi_array.astype(float)
+    time = midi_array[:, 0]
+    frequency = midi_array[:, 1]
+
+    return time, frequency
+
+
+def melody_evaluation(result_list):
+    # Initialize lists to hold response vectors
+    overall_accuracy = []
+
+    for tmp in result_list:
+        # Normalize responses and answers
+        response = tmp["response"]
+        correct_answers = tmp["correct_answer"]
+
+        # Process MIDI sequences
+        response_time, response_freq = process_midi_sequence(response)
+        correct_time, correct_freq = process_midi_sequence(correct_answers)
+        
+        if response_time is None or correct_time is None:
+            overall_accuracy.append(0)
+            continue
+        
+        overall_accuracy.append(
+            mir_eval.melody.evaluate(correct_time, correct_freq, 
+                                    response_time, response_freq)['Overall Accuracy']
+        )
+
+    return np.mean(overall_accuracy)
+
+
 genre_set = {'singersongwriter', 'instrumentalrock', 'edm', 'newage', '70s', 'metal', 'alternative', 'punkrock', 'improvisation', 'worldfusion', 'country', 'progressive', 'rap', 'darkwave', 'house', 'alternativerock', 'rocknroll', 'lounge', 'grunge', 'bluesrock', 'orchestral', 'world', 'postrock', 'instrumentalpop', 'idm', 'folk', 'drumnbass', 'club', 'contemporary', 'chanson', 'deephouse', 'rnb', 'blues', 'popfolk', 'eurodance', 'electronica', 'electropop', 'latin', 'hardrock', 'celtic', 'easylistening', 'groove', 'trance', 'dubstep', 'soul', 'jazzfusion', 'atmospheric', 'downtempo', 'techno', 'hard', 'chillout', 'classicrock', 'darkambient', 'acidjazz', 'newwave', 'breakbeat', 'ethno', 'indie', '90s', 'electronic', 'dub', 'hiphop', 'bossanova', 'choir', 'minimal', 'soundtrack', 'triphop', 'synthpop', 'medieval', 'industrial', 'pop', 'swing', '80s', 'jazz', 'symphonic', 'psychedelic', 'dance', 'ambient', 'experimental', 'fusion', 'poprock', 'reggae', 'disco', '60s', 'rock', 'classical', 'funk'}
 instrument_set = {'acousticguitar', 'saxophone', 'cello', 'strings', 'bass', 'bell', 'synthesizer', 'horn', 'keyboard', 'brass', 'harmonica', 'electricguitar', 'voice', 'bongo', 'guitar', 'harp', 'viola', 'pad', 'violin', 'drummachine', 'computer', 'orchestra', 'organ', 'drums', 'doublebass', 'percussion', 'acousticbassguitar', 'clarinet', 'trombone', 'accordion', 'rhodes', 'classicalguitar', 'trumpet', 'piano', 'oboe', 'flute', 'electricpiano', 'beat', 'sampler', 'pipeorgan'}
 emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad', 'sexy', 'children', 'adventure', 'trailer', 'nature', 'christmas', 'energetic', 'fun', 'uplifting', 'inspiring', 'cool', 'party', 'relaxing', 'ballad', 'melancholic', 'drama', 'sport', 'film', 'romantic', 'commercial', 'love', 'dark', 'soundscape', 'background', 'summer', 'game', 'soft', 'epic', 'travel', 'slow', 'upbeat', 'positive', 'dramatic', 'space', 'deep', 'meditative', 'retro', 'documentary', 'calm', 'happy', 'emotional', 'dream', 'holiday', 'hopeful', 'groovy', 'melodic', 'fast', 'corporate', 'action', 'movie'}
@@ -368,7 +446,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "DSing" in result]
+    results_json = [result for result in results_json if "MedleyDB" in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
@@ -381,8 +459,6 @@ if __name__ == "__main__":
         print("sample", sample)
         break
         # 'response', 'correct_answer'
-    response_list = [sample['response'] for sample in data]
-    correct_answers_list = [sample['correct_answer'] for sample in data]
     
     if task == 'GS_key':
         gmean_score = key_ensamble_score(data)
@@ -432,8 +508,8 @@ if __name__ == "__main__":
         print(model, task)
         pass
     elif task == "MedleyDB":
-        print(model, task)
-        pass
+        accuracy = melody_evaluation(data)
+        print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
     elif task == "MTG_instrument":
         tags = list(instrument_set)
         value = multi_label_classification(data, tags)
