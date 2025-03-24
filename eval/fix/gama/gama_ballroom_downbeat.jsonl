@@ -8,7 +8,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Snare drum; Musical instrumentation; Drum sound; Percussion section; Bass drum; Musical instrument and percussion; Drum",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Snare drum; Musical instrumentation; Drum sound; Percussion section; Bass drum; Musical instrument and Drum",
         "correct_answer": "0.54s,2.2s,3.94s,5.65s,7.35s,9.04s,10.72s,12.42s,14.13s,15.84s,17.55s,19.3s,21.03s,22.77s,24.47s,26.17s,27.89s,29.6s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-American/Albums-Latino_Latino-09.wav",
         "other": ""
@@ -29,14 +29,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Musical instrument; Percussion",
+        "response": "Labels: Human voice; Singing; Musical instrument; Music; Percussion",
         "correct_answer": "0.6s,2.61s,4.74s,6.84s,8.88s,10.83s,12.83s,14.84s,16.85s,18.87s,20.88s,22.88s,24.88s,26.88s,28.89s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-American/Albums-GloriaEstefan_MiTierra-04.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Musical instrument: [0.0s-10.0s]; Wind instrument and woodwind instrument: [0.0s-10.0s]; Full-bodied and dynamic -> Organ",
+        "response": "Labels: Musical instrument; Music; Organ",
         "correct_answer": "1.16s,2.97s,4.77s,6.59s,8.41s,10.2s,12.01s,13.82s,15.63s,17.42s,19.25s,21.05s,22.87s,24.7s,26.48s,28.28s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-American/Albums-GloriaEstefan_MiTierra-06.wav",
         "other": ""
@@ -57,21 +57,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
+        "response": "Labels: Drum kit; Drum; Percussion; Musical instrument; Music; Bass drum; Bass drum (musical); Musical instrument; Drum sound; Percussion section; Bass drum (musical); Music; Bass drum",
         "correct_answer": "0.05s,1.44s,2.85s,4.24s,5.63s,7.03s,8.42s,9.81s,11.21s,12.6s,14.0s,15.4s,16.8s,18.19s,19.59s,20.98s,22.38s,23.77s,25.17s,26.56s,27.96s,29.35s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-104117.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Accordion, saxophone",
+        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Saxophone; Brass instrument; Woodwind instrument; Wind instrument and woodwind group; Musical instrument; Accordion and saxophone",
         "correct_answer": "0.38s,1.79s,3.19s,4.58s,5.98s,7.37s,8.76s,10.15s,11.55s,12.94s,14.32s,15.72s,17.11s,18.5s,19.9s,21.3s,22.69s,24.09s,25.49s,26.89s,28.29s,29.67s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-106116.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: jazz, fast, horn, piano",
+        "response": "Labels: jazz, fast, horn, piano, upbeat, fast",
         "correct_answer": "0.3s,1.68s,3.06s,4.41s,5.77s,7.13s,8.5s,9.85s,11.22s,12.59s,13.95s,15.31s,16.7s,18.03s,19.4s,20.78s,22.14s,23.51s,24.87s,26.22s,27.59s,28.96s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Macumba-15.wav",
         "other": ""
@@ -113,7 +113,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Percussion; Musical instrument",
+        "response": "Labels: Piano; Keyboard (musical); Percussion; Musical instrument; Music; Keyboard; Percussion",
         "correct_answer": "0.43s,1.88s,3.26s,4.66s,6.07s,7.44s,8.84s,10.24s,11.63s,13.05s,14.45s,15.82s,17.2s,18.63s,20.03s,21.43s,22.82s,24.22s,25.6s,27.01s,28.38s,29.78s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-104119.wav",
         "other": ""
@@ -155,7 +155,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Accordion, fiddle",
+        "response": "Labels: Musical instrument; Music; Percussion; Accordion, piano, harmonica; Brass instrument; Guitar; Drum; Saxophone",
         "correct_answer": "0.49s,1.87s,3.25s,4.59s,5.96s,7.32s,8.69s,10.06s,11.43s,12.79s,14.16s,15.53s,16.9s,18.26s,19.63s,20.99s,22.36s,23.73s,25.09s,26.46s,27.83s,29.2s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Latin_Jam4-05.wav",
         "other": ""
@@ -169,14 +169,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with acoustic features: Smooth and rich -> Funk; Rich and full -> Singing; Rich and full -> Music; Bright and upbeat -> Pop music; Bright and dynamic -> Female singing; Bright and upbeat -> Pop music; Smooth and soulful -> Funk; Bright and energetic -> Slap bass",
+        "response": "Labels: Female vocal and singing",
         "correct_answer": "1.29s,2.69s,4.09s,5.49s,6.89s,8.29s,9.69s,11.09s,12.48s,13.88s,15.28s,16.68s,18.07s,19.47s,20.87s,22.27s,23.67s,25.07s,26.47s,27.87s,29.26s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Pais_Tropical-15.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
+        "response": "Labels: Keyboard (musical)",
         "correct_answer": "0.07s,1.44s,2.8s,4.17s,5.54s,6.91s,8.27s,9.64s,11.01s,12.38s,13.75s,15.11s,16.47s,17.84s,19.21s,20.57s,21.95s,23.31s,24.67s,26.05s,27.42s,28.78s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Latin_Jam4-10.wav",
         "other": ""
@@ -204,21 +204,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing",
+        "response": "Labels: Male singing; Singing; Music; Human voice; Male speech and man speaking; Male vocal and singing",
         "correct_answer": "1.18s,2.58s,3.97s,5.35s,6.74s,8.12s,9.49s,10.85s,12.19s,13.58s,14.95s,16.32s,17.69s,19.05s,20.41s,21.76s,23.13s,24.5s,25.87s,27.23s,28.59s,29.93s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-103517.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Singing; Accordion",
+        "response": "Labels: Musical instrument; Music; Percussion; Accordion; Bell",
         "correct_answer": "2.37s,3.77s,5.16s,6.56s,7.95s,9.35s,10.74s,12.14s,13.53s,14.93s,16.33s,17.72s,19.12s,20.51s,21.91s,23.31s,24.7s,26.09s,27.49s,28.88s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-106017.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Slap and smack; Skateboard; Skateboarding",
+        "response": "Labels: Slam; Skateboard; Skateboarding; Wheels; Vehicle; Sports car; Car; Motor vehicle (road)",
         "correct_answer": "0.51s,1.99s,3.48s,4.96s,6.44s,7.93s,9.41s,10.89s,12.38s,13.86s,15.33s,16.79s,18.26s,19.74s,21.23s,22.71s,24.2s,25.68s,27.17s,28.66s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Commitments-08.wav",
         "other": ""
@@ -232,7 +232,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Jazz",
+        "response": "Labels: Jazz; Music; Saxophone; Wind instrument; Musical instrument; Wind; Accordion; Fiddle",
         "correct_answer": "0.03s,1.41s,2.78s,4.15s,5.51s,6.9s,8.25s,9.62s,10.97s,12.33s,13.71s,15.11s,16.47s,17.84s,19.19s,20.56s,21.9s,23.32s,24.7s,26.05s,27.41s,28.79s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-103612.wav",
         "other": ""
@@ -281,21 +281,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: foreign, fast, loud, male, vocal, spanish, pop, male, male, vocal, singer, spanish, fast, male, beat",
+        "response": "Label: foreign, fast, loud, male, vocal, spanish, pop, male, male, vocal, male, singer, spanish, fast, male, vocal, male, spanish",
         "correct_answer": "0.39s,1.79s,3.18s,4.58s,5.98s,7.36s,8.76s,10.16s,11.55s,12.95s,14.35s,15.73s,17.13s,18.53s,19.93s,21.32s,22.68s,24.11s,25.51s,26.9s,28.3s,29.68s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Macumba-14.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Singing; Drum kit; Percussion; Drum; Brass instrument",
+        "response": "Labels: Musical instrument; Music; Singing; Drum kit; Percussion; Drum; Singer",
         "correct_answer": "0.45s,2.01s,3.52s,5.04s,6.53s,8.05s,9.54s,11.06s,12.54s,14.03s,15.53s,17.03s,18.52s,20.02s,21.51s,23.04s,24.54s,26.03s,27.53s,29.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-103515.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
         "correct_answer": "0.06s,1.56s,2.95s,4.38s,5.81s,7.24s,8.67s,10.11s,11.54s,12.97s,14.4s,15.83s,17.27s,18.7s,20.13s,21.57s,22.99s,24.43s,25.86s,27.29s,28.73s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Pais_Tropical-13.wav",
         "other": ""
@@ -309,7 +309,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Singing; Bell; Human voice; Plucked string instrument; Guitar",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Singing; Brass instrument; Human voice",
         "correct_answer": "0.05s,1.88s,3.7s,5.52s,7.34s,9.13s,10.99s,12.81s,14.62s,16.45s,18.26s,20.08s,21.88s,23.74s,25.56s,27.38s,29.19s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-103819.wav",
         "other": ""
@@ -323,21 +323,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing; Jazz; Music; Funk; Musical instrument; Music; Percussion; Drum kit; Drum; Bass drum; Drum beat; Slap bass; Shouting; Male vocal",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
         "correct_answer": "1.55s,2.97s,4.39s,5.82s,7.26s,8.69s,10.12s,11.54s,12.98s,14.41s,15.83s,17.26s,18.69s,20.1s,21.52s,22.96s,24.4s,25.82s,27.25s,28.67s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-106015.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Drum kit; Drum; Percussion; Bass drum; Musical instrument; Music; Drum; Bass drum; Snare drum; Drum sound; Percussion instrument; Musical instrument",
+        "response": "Labels: Drum kit; Drum; Percussion; Musical instrument; Music; Drum; Bass drum; Snare drum; Drum beat; Bass drum; Percussion instrument; Musical instrument",
         "correct_answer": "1.74s,3.14s,4.54s,5.93s,7.33s,8.73s,10.12s,11.51s,12.91s,14.32s,15.69s,17.09s,18.48s,19.88s,21.28s,22.67s,24.06s,25.46s,26.85s,28.25s,29.64s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-103614.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with acoustic features: Rich and full -> Vocal; Rich and full bodied -> Singing; Rich and full -> Music; Bright and sharp -> Percussion; Rich and full -> Musical instrument; Full of various frequencies -> Music; Bright and percussive -> Keyboard (musical)",
+        "response": "Labels with acoustic features: Rich and full -> Vocal; Rich and full bodied -> Singing; Rich and full -> Music; Bright and sharp -> Percussion; Rich and full -> Musical instrument; Full of various frequencies -> Music; Bright and percussive -> Percussion",
         "correct_answer": "0.57s,1.92s,3.29s,4.65s,6.01s,7.37s,8.74s,10.1s,11.45s,12.83s,14.19s,15.56s,16.92s,18.28s,19.64s,21.01s,22.37s,23.73s,25.1s,26.46s,27.82s,29.18s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Albums-Latin_Jam3-12.wav",
         "other": ""
@@ -414,7 +414,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Percussion; Drum; Bass drum; Drum kit",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Wind instrument and woodwind instrument",
         "correct_answer": "0.05s,1.44s,2.85s,4.25s,5.67s,7.06s,8.45s,9.86s,11.26s,12.65s,14.05s,15.45s,16.85s,18.26s,19.65s,21.06s,22.46s,23.85s,25.26s,26.65s,28.05s,29.47s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-104017.wav",
         "other": ""
@@ -449,7 +449,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
+        "response": "Labels: Human voice; Rattle",
         "correct_answer": "1.19s,2.59s,4.01s,5.41s,6.81s,8.22s,9.62s,11.02s,12.42s,13.82s,15.22s,16.63s,18.03s,19.44s,20.84s,22.24s,23.65s,25.05s,26.45s,27.86s,29.26s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Jive/Media-104016.wav",
         "other": ""
@@ -477,14 +477,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Accordion; Keyboard (musical); Musical instrument; Speech; Male speech and man speaking; Female speech and woman speaking; Human sounds; Choir; Male singing",
+        "response": "Labels: Human voice; Singing; Music; Accordion; Keyboard (musical); Musical instrument; Speech; Human sounds; Choir",
         "correct_answer": "0.06s,1.26s,2.43s,3.62s,4.79s,5.96s,7.13s,8.31s,9.47s,10.66s,11.82s,12.94s,14.1s,15.27s,16.43s,17.55s,18.71s,19.84s,20.99s,22.15s,23.3s,24.45s,25.61s,26.77s,27.88s,29.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104315.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: guitar, drum, no singer, no singer, flute, flamenco, guitar, flamenco",
+        "response": "Label: guitar, drum, no singer, no singer, flute, flamenco, guitar, flamenco, no singer, pop, flamenco",
         "correct_answer": "0.42s,1.54s,2.68s,3.81s,4.92s,6.05s,7.2s,8.31s,9.45s,10.61s,11.73s,12.84s,13.99s,15.12s,16.25s,17.39s,18.52s,19.66s,20.79s,21.92s,23.05s,24.18s,25.31s,26.45s,27.58s,28.71s,29.83s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-100614.wav",
         "other": ""
@@ -498,35 +498,35 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing; Music; Human voice; Musical instrument; Song; Male vocal and instrumental",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Male vocal and singing",
         "correct_answer": "0.05s,1.26s,2.42s,3.58s,4.74s,5.91s,7.03s,8.16s,9.3s,10.49s,11.6s,12.78s,13.94s,15.12s,16.24s,17.42s,18.54s,19.69s,20.84s,22.0s,23.17s,24.35s,25.5s,26.67s,27.84s,28.98s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104417.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Drum kit; Percussion; Musical instrument; Music; Drum; Idiom; Instrument",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Accordion; Wind instrument; Brass instrument; Woodwind instrument; Wind instrument and woodwind instrument; Male singing",
         "correct_answer": "0.15s,1.33s,2.51s,3.69s,4.87s,6.07s,7.25s,8.43s,9.6s,10.76s,11.92s,13.14s,14.32s,15.5s,16.69s,17.86s,19.03s,20.22s,21.4s,22.6s,23.77s,24.95s,26.14s,27.31s,28.49s,29.67s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105120.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Speech; Human voice; Domestic sounds and home sounds; Animal",
+        "response": "Labels: Domestic animals and pets; Animal; Cat; Domestic animals",
         "correct_answer": "0.45s,1.62s,2.81s,3.95s,5.09s,6.25s,7.41s,8.56s,9.74s,10.94s,12.06s,13.22s,14.36s,15.5s,16.68s,17.82s,19.0s,20.14s,21.28s,22.44s,23.56s,24.73s,25.87s,27.04s,28.23s,29.4s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104416.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Piano; Female singing; Female speech",
+        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Musical instrument; Piano; Wind; Wind noise (microphone); Human sounds; Breathing; Female singing; Female singing (high and soft); Female singing (high and soft)",
         "correct_answer": "1.29s,2.52s,3.75s,4.97s,6.19s,7.41s,8.64s,9.87s,11.06s,12.28s,13.48s,14.7s,15.9s,17.13s,18.35s,19.56s,20.76s,22.0s,23.21s,24.44s,25.64s,26.84s,28.06s,29.28s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105914.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with timestamps: Musical instrument: [0.0s-10.0s, 10.0s-10.0s]; Music: [0.0s-10.0s]",
+        "response": "Labels with timestamps: Musical instrument: [0.0s-10.0s, 0.0s-10.0s]",
         "correct_answer": "0.06s,1.22s,2.36s,3.51s,4.7s,5.9s,7.07s,8.26s,9.44s,10.63s,11.81s,12.99s,14.15s,15.32s,16.5s,17.68s,18.86s,20.03s,21.21s,22.38s,23.54s,24.72s,25.9s,27.09s,28.26s,29.43s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104916.wav",
         "other": ""
@@ -540,7 +540,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Musical performance; Wind instrument and woodwind group; Accordion and diatonic harmonium; Accordion and harmonium; Harmonica; Musical instrument and orchestra",
+        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Musical performance; Wind instrument and woodwind group; Brass instrument; Percussion; Drum kit; Drum; Snare drum; Bass drum; Percussion section; Musical instrument and orchestra",
         "correct_answer": "0.04s,1.28s,2.45s,3.64s,4.83s,6.01s,7.18s,8.34s,9.48s,10.67s,11.83s,13.0s,14.17s,15.34s,16.5s,17.66s,18.83s,20.02s,21.19s,22.36s,23.52s,24.69s,25.86s,27.05s,28.21s,29.37s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105913.wav",
         "other": ""
@@ -554,7 +554,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Wind instrument; Accordion; Musical instrumentation; Drum; Percussion section",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
         "correct_answer": "0.04s,1.22s,2.43s,3.62s,4.82s,6.03s,7.22s,8.43s,9.64s,10.83s,12.03s,13.23s,14.42s,15.64s,16.82s,18.0s,19.22s,20.44s,21.62s,22.83s,24.04s,25.24s,26.43s,27.6s,28.82s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-103312.wav",
         "other": ""
@@ -610,7 +610,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Singing (rich and full); Male singing; Female singing; Opera; Male speech and man speaking; Female speech and woman speaking; Child speech and kid speaking",
+        "response": "Labels: Human voice; Singing; Musical instrument; Music; Singing (rich and full); Male singing; Female singing; Opera; Human voice; Male singing; Female singing; Female vocal and male vocal; Female singing and male singing; Female singing",
         "correct_answer": "0.11s,1.33s,2.57s,3.8s,5.01s,6.19s,7.35s,8.52s,9.75s,10.92s,12.1s,13.28s,14.43s,15.62s,16.8s,17.94s,19.13s,20.32s,21.5s,22.67s,23.81s,24.98s,26.13s,27.31s,28.43s,29.57s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104618.wav",
         "other": ""
@@ -638,14 +638,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Domestic sounds and home sounds; Squeak; Squeal",
+        "response": "Labels: Slap and smack; Domestic sounds and home sounds; Door; Door opening and closing; Wood; Door; Slap",
         "correct_answer": "0.93s,2.12s,3.34s,4.54s,5.76s,6.96s,8.17s,9.38s,10.54s,11.73s,12.89s,14.08s,15.27s,16.46s,17.66s,18.88s,20.13s,21.32s,22.57s,23.75s,24.97s,26.13s,27.5s,28.63s,29.84s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Albums-Chrisanne1-12.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Wind instrument and woodwind instrument; Brass instrument; Saxophone; Wind instrument and woodwind instrument (wood)",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Saxophone; Wind instrument and woodwind instrument; Brass instrument; Wind instrument and woodwind instrument (wood)",
         "correct_answer": "1.16s,2.38s,3.59s,4.79s,6.02s,7.21s,8.4s,9.59s,10.8s,12.01s,13.2s,14.4s,15.62s,16.8s,18.0s,19.21s,20.41s,21.61s,22.81s,23.99s,25.22s,26.42s,27.61s,28.81s,30.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105516.wav",
         "other": ""
@@ -659,7 +659,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Singing; Percussion; Human voice; Singing (music); Bell; Choir; Neigh, whinny",
+        "response": "Labels: Musical instrument; Music; Singing; Percussion; Human voice; Singing (music); Bell; Choir; Neutral accent",
         "correct_answer": "0.09s,1.27s,2.43s,3.61s,4.78s,5.96s,7.13s,8.31s,9.48s,10.65s,11.82s,13.0s,14.15s,15.32s,16.5s,17.67s,18.82s,20.0s,21.16s,22.33s,23.48s,24.65s,25.8s,26.96s,28.11s,29.25s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104415.wav",
         "other": ""
@@ -687,7 +687,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Rain; Traffic; Music; Rain on surface; Male singing; Motor vehicle (road); Water; Vehicle",
+        "response": "Labels: Human voice; Singing; Rain; Traffic noise and roadway noise; Music; Rain on surface; Motor vehicle (road); Vehicle",
         "correct_answer": "0.07s,1.24s,2.4s,3.54s,4.68s,5.82s,6.95s,8.06s,9.19s,10.29s,11.41s,12.53s,13.65s,14.75s,15.86s,16.96s,18.07s,19.21s,20.34s,21.5s,22.63s,23.75s,24.85s,25.96s,27.08s,28.18s,29.29s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105207.wav",
         "other": ""
@@ -715,28 +715,28 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Bell; Music",
+        "response": "Labels: Human voice; Frequency modulation; Male singing; Music; Human voice; Singing; Male speech and man speaking; Speech; Human voice",
         "correct_answer": "0.07s,1.28s,2.44s,3.6s,4.74s,5.91s,7.08s,8.22s,9.4s,10.57s,11.67s,12.87s,14.02s,15.18s,16.3s,17.47s,18.62s,19.78s,20.91s,22.09s,23.23s,24.4s,25.52s,26.73s,27.87s,29.01s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105122.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Male singing",
+        "response": "Labels: Musical instrument; Music; Male singing; Human voice; Singing",
         "correct_answer": "0.04s,1.23s,2.41s,3.58s,4.76s,5.95s,7.13s,8.29s,9.46s,10.63s,11.81s,12.98s,14.16s,15.35s,16.51s,17.67s,18.85s,20.03s,21.2s,22.38s,23.57s,24.75s,25.96s,27.14s,28.32s,29.48s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104617.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Jazz; Brass instrument; Musical instrument; Music; Trumpet; Saxophone; Wind instrument; Musical instrument; Accordion; Trumpet (instrument); Musical performance; Jazz",
+        "response": "Labels: Jazz; Brass instrument; Musical instrument; Music; Trumpet; Saxophone; Wind instrument; Musical instrument; Accordion; Brass instrument; Orchestra; Trumpet (instrument)",
         "correct_answer": "0.3s,1.48s,2.7s,3.86s,5.07s,6.23s,7.41s,8.59s,9.78s,10.95s,12.14s,13.36s,14.51s,15.72s,16.89s,18.09s,19.26s,20.46s,21.61s,22.8s,24.0s,25.17s,26.36s,27.55s,28.72s,29.92s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Albums-Ballroom_Classics4-20.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: drum, guitar, drum, jazz",
+        "response": "Labels: guitar, drum, jazz, fast, no singer, no singer, upbeat, fast, horn, jazz, no singer, no female singer",
         "correct_answer": "0.29s,1.43s,2.58s,3.72s,4.89s,6.07s,7.22s,8.37s,9.53s,10.68s,11.84s,12.99s,14.14s,15.28s,16.44s,17.61s,18.77s,19.92s,21.07s,22.23s,23.38s,24.53s,25.68s,26.83s,27.99s,29.14s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-100616.wav",
         "other": ""
@@ -764,14 +764,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Drum kit; Percussion; Musical instrument; Music; Bass drum; Drum; Snare drum",
+        "response": "Labels: Drum kit; Percussion; Musical instrument; Music; Drum; Bass drum; Snare drum",
         "correct_answer": "0.08s,1.24s,2.39s,3.62s,4.82s,6.02s,7.21s,8.4s,9.57s,10.79s,11.94s,13.14s,14.32s,15.52s,16.7s,17.9s,19.09s,20.29s,21.43s,22.64s,23.83s,25.03s,26.21s,27.39s,28.53s,29.73s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-103314.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing; Music; Fiddle; Musical instrument; Accordion; Percussion; Rhythm and beat; Human voice; Male vocal and harmonizing vocals; Choir; Male singing (operatic)",
+        "response": "Labels: Male singing; Singing; Musical instrument; Music; Accordion",
         "correct_answer": "0.49s,1.75s,2.98s,4.21s,5.43s,6.7s,7.86s,9.13s,10.27s,11.43s,12.58s,13.78s,14.98s,16.12s,17.31s,18.49s,19.63s,20.81s,21.97s,23.18s,24.32s,25.56s,26.74s,27.91s,29.05s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104917.wav",
         "other": ""
@@ -785,14 +785,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Brass instrument; Trombone; Trumpet; Saxophone; Musical instrumentation; Percussion; Drum; Drum kit; Snare drum",
+        "response": "Labels: Musical instrument; Music; Brass instrument; Trumpet; Trombone; Saxophone; Musical performance",
         "correct_answer": "2.34s,3.51s,4.68s,5.84s,7.0s,8.14s,9.3s,10.46s,11.59s,12.74s,13.9s,15.05s,16.2s,17.34s,18.49s,19.62s,20.76s,21.93s,23.11s,24.27s,25.44s,26.6s,27.76s,28.93s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104515.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
+        "response": "Labels: Brass instrument; Trumpet; Musical instrument; Music; Wind instrument and woodwind instrument; Percussion",
         "correct_answer": "0.6s,1.79s,2.99s,4.22s,5.39s,6.61s,7.81s,8.99s,10.18s,11.4s,12.6s,13.8s,15.0s,16.2s,17.39s,18.58s,19.79s,21.0s,22.2s,23.39s,24.6s,25.79s,27.0s,28.2s,29.41s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105518.wav",
         "other": ""
@@ -820,14 +820,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "0.0s,0.54s,1.0ss,1.54s,2.04s,2.54s,3.04s,3.54s,4.04s,4.54s,5.04s,5.54s,6.04s,6.54s,7.04s,7.54s,8.04s,8.54s,9.04s,9.54s",
+        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Percussion",
         "correct_answer": "0.06s,1.24s,2.39s,3.57s,4.77s,5.96s,7.14s,8.32s,9.49s,10.67s,11.82s,13.01s,14.2s,15.39s,16.58s,17.76s,18.94s,20.12s,21.28s,22.44s,23.62s,24.83s,26.01s,27.18s,28.36s,29.53s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Albums-Ballroom_Magic-16.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Domestic animals and pets; Animal; Cat; Dog; Wild animals; Dog barking; Bark; Domestic sounds and home sounds",
+        "response": "Labels: Domestic sounds and home sounds; Singing; Bell; Music",
         "correct_answer": "0.07s,1.27s,2.44s,3.67s,4.92s,6.1s,7.25s,8.41s,9.56s,10.74s,11.91s,13.06s,14.24s,15.4s,16.56s,17.74s,18.88s,20.05s,21.24s,22.39s,23.56s,24.76s,25.9s,27.11s,28.26s,29.42s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105017.wav",
         "other": ""
@@ -841,7 +841,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Male speech and man speaking; Male singing",
+        "response": "Labels: Human voice; Speech; Male speech and man speaking; Conversation; Male speech and man speaking",
         "correct_answer": "8.96s,10.13s,11.25s,12.41s,13.56s,14.71s,15.85s,17.03s,18.17s,19.33s,20.47s,21.66s,22.78s,23.95s,25.08s,26.24s,27.37s,28.54s,29.71s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104816.wav",
         "other": ""
@@ -855,21 +855,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Alarm; Alarm clock; Fire alarm; Emergency alarm; Siren; Police car (siren); Vehicle; Car",
+        "response": "Labels: Alarm; Alarm clock; Fire alarm; Emergency alarm; Siren; Squeak; Buzzer; Beep and bleep",
         "correct_answer": "0.07s,1.31s,2.59s,3.85s,5.06s,6.26s,7.47s,8.67s,9.85s,11.04s,12.22s,13.39s,14.56s,15.73s,16.91s,18.1s,19.28s,20.46s,21.66s,22.87s,24.09s,25.3s,26.51s,27.71s,28.91s,30.12s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105121.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: jazz, female vocal, female, vocal, flute, female, flamenco, female, spanish",
+        "response": "Label: jazz, female vocal, female, female, vocal, flute, pop, female, flamenco, female",
         "correct_answer": "0.27s,1.43s,2.61s,3.77s,4.94s,6.1s,7.31s,8.48s,9.66s,10.85s,12.03s,13.21s,14.38s,15.55s,16.69s,17.89s,19.07s,20.26s,21.43s,22.62s,23.77s,24.94s,26.13s,27.31s,28.49s,29.67s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-100615.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Bass drum; Drum; Snare drum",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Bass drum; Drum; Snare drum; Cymbal; Bass drum; Percussion; Drum sound; Musical instrument; Accordion; Keyboard (musical); Keyboard (musical); Keyboard (musical)",
         "correct_answer": "0.04s,1.19s,2.33s,3.48s,4.65s,5.81s,6.97s,8.12s,9.28s,10.42s,11.58s,12.73s,13.91s,15.05s,16.21s,17.36s,18.56s,19.7s,20.83s,22.0s,23.16s,24.31s,25.46s,26.62s,27.79s,28.94s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Albums-Ballroom_Magic-15.wav",
         "other": ""
@@ -890,7 +890,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Wind instrument and woodwind instrument",
+        "response": "Labels: Musical instrument; Music; Wind instrument and woodwind instrument",
         "correct_answer": "0.44s,1.62s,2.8s,3.96s,5.12s,6.3s,7.46s,8.63s,9.83s,11.02s,12.2s,13.38s,14.56s,15.74s,16.92s,18.09s,19.26s,20.44s,21.62s,22.8s,23.97s,25.15s,26.33s,27.5s,28.66s,29.84s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105715.wav",
         "other": ""
@@ -925,7 +925,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Accordion; Musical instrument; Music; Percussion; Drum kit; Drum; Snare drum; Bass drum; Percussion",
+        "response": "Labels: Accordion; Musical instrument; Music; Percussion; Drum kit; Drum; Snare drum; Musical instrument; Human voice",
         "correct_answer": "0.13s,1.28s,2.46s,3.63s,4.81s,6.02s,7.21s,8.39s,9.61s,10.79s,11.97s,13.16s,14.34s,15.53s,16.73s,17.92s,19.1s,20.27s,21.42s,22.6s,23.8s,24.98s,26.16s,27.33s,28.5s,29.7s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104918.wav",
         "other": ""
@@ -939,14 +939,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Brass instrument; Wind instrument; Saxophone",
+        "response": "Labels: Brass instrument; Trumpet; Wind instrument; Musical instrument; Music",
         "correct_answer": "0.07s,1.28s,2.44s,3.6s,4.79s,5.96s,7.12s,8.32s,9.48s,10.64s,11.81s,13.0s,14.16s,15.34s,16.49s,17.67s,18.83s,19.99s,21.16s,22.34s,23.52s,24.7s,25.88s,27.04s,28.23s,29.41s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-103313.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Male singing; Human sounds; Breathing; Choir; Chorus; Female vocal",
+        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Male singing; Human sounds; Breathing; Male speech and man speaking; Tap",
         "correct_answer": "0.02s,1.21s,2.41s,3.61s,4.79s,6.0s,7.2s,8.41s,9.61s,10.81s,12.02s,13.27s,14.42s,15.61s,16.81s,18.01s,19.21s,20.42s,21.61s,22.82s,24.01s,25.21s,26.41s,27.62s,28.83s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105314.wav",
         "other": ""
@@ -960,7 +960,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Accordion; Musical instrument; Music; Percussion; Wind instrument",
+        "response": "Labels: Musical instrument; Music; Accordion; Percussion; Wind instrument",
         "correct_answer": "0.41s,1.56s,2.71s,3.87s,5.02s,6.18s,7.34s,8.51s,9.66s,10.8s,11.97s,13.11s,14.27s,15.43s,16.59s,17.73s,18.88s,20.05s,21.21s,22.36s,23.51s,24.68s,25.82s,26.97s,28.14s,29.29s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104514.wav",
         "other": ""
@@ -988,7 +988,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Female singing; Female speech and woman speaking; Music; Musical instrument; Female singing; Human sounds; Singing voice; Female vocal and female singing; Female singing; Female singing; Female singing; Female vocal and female singing",
+        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Female singing",
         "correct_answer": "0.08s,1.25s,2.4s,3.55s,4.7s,5.87s,7.02s,8.15s,9.31s,10.46s,11.61s,12.77s,13.93s,15.06s,16.24s,17.38s,18.54s,19.69s,20.84s,22.02s,23.16s,24.34s,25.5s,26.64s,27.81s,28.95s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104316.wav",
         "other": ""
@@ -1002,7 +1002,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Accordion; Wind instrument and woodwind instrument; Percussion; Drum kit; Brass instrument; Clarinet",
+        "response": "Labels: Accordion; Musical instrument; Music; Percussion; Drum kit; Drum; Bass drum",
         "correct_answer": "0.07s,1.25s,2.43s,3.6s,4.77s,5.93s,7.09s,8.26s,9.41s,10.58s,11.74s,12.9s,14.06s,15.23s,16.42s,17.58s,18.76s,19.94s,21.11s,22.22s,23.42s,24.63s,25.8s,26.96s,28.12s,29.29s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105020.wav",
         "other": ""
@@ -1023,14 +1023,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Bell; Musical instrument; Plucked string instrument; Guitar; Human sounds; Human voice; Female singing; Female speech and woman speaking",
+        "response": "Labels: Human voice; Singing; Bell; Music; Musical instrument; Plucked string instrument; Guitar; Human sounds; Human voice; Female singing; Female speech and woman speaking",
         "correct_answer": "0.07s,1.23s,2.42s,3.58s,4.73s,5.91s,7.07s,8.24s,9.44s,10.61s,11.79s,12.94s,14.11s,15.27s,16.42s,17.58s,18.75s,19.91s,21.07s,22.21s,23.35s,24.49s,25.7s,26.86s,28.04s,29.17s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-104418.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "0.0s,0.54s,1.0ss, ...",
+        "response": "0.0s,0.54s,1.0ss,1.54s,2.04s,2.54s,3.04s,3.54s,4.04s,4.54s,5.04s,5.54s,6.04s,6.54s,7.04s,7.54s,8.04s,8.54s,9.04s,9.54s",
         "correct_answer": "0.05s,1.25s,2.46s,3.65s,4.85s,6.04s,7.23s,8.42s,9.58s,10.77s,11.95s,13.14s,14.31s,15.49s,16.68s,17.85s,19.03s,20.2s,21.36s,22.53s,23.7s,24.87s,26.04s,27.22s,28.37s,29.53s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Quickstep/Media-105119.wav",
         "other": ""
@@ -1058,7 +1058,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music; Mechanisms; Music of Latin America and Caribbean",
+        "response": "Labels: Music; Mechanisms; Music of Asia; Music of Europe and North America; Music of the world; Human sounds; Human voice; Singing",
         "correct_answer": "0.05s,2.36s,4.68s,6.99s,9.3s,11.62s,13.93s,16.24s,18.55s,20.86s,23.18s,25.49s,27.81s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam5-12.wav",
         "other": ""
@@ -1079,35 +1079,35 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum; Percussion; Singing; Male singing; Music of Latin America; Salsa; Male vocal; Vocal music; Music of Africa; African music; Afro-Latin music; Music of Africa; African music; Slow music",
+        "response": "Labels: Musical instrument; Music; Drum; Percussion; Singing; Male singing; Music of Latin America; Salsa; Male vocal; Vocal music; Music of Africa; African music; Music; Song; A capella; Singing; Male vocal singing",
         "correct_answer": "0.87s,3.18s,5.5s,7.81s,10.13s,12.45s,14.75s,17.08s,19.39s,21.7s,24.01s,26.29s,28.65s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam5-03.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: guitar, spanish, no singer",
+        "response": "Label: guitar, no singer, spanish",
         "correct_answer": "0.92s,3.42s,5.92s,8.42s,10.92s,13.42s,15.92s,18.42s,20.92s,23.42s,25.92s,28.42s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Macumba-09.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Music; Acoustic guitar; Sitar; Percussion; Alarm",
+        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Music; Acoustic guitar; Sitar; Percussion; Musical instrument",
         "correct_answer": "0.41s,2.39s,4.39s,6.4s,8.41s,10.41s,12.42s,14.42s,16.42s,18.43s,20.45s,22.46s,24.46s,26.47s,28.47s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-AnaBelen_Veneo-03.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Music",
+        "response": "Labels: Guitar; Musical instrument",
         "correct_answer": "1.76s,4.07s,6.38s,8.68s,10.99s,13.3s,15.61s,17.92s,20.21s,22.53s,24.84s,27.15s,29.44s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Media-105614.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Slap and tick; Musical instrument; Music; Plucked string instrument; Human voice; Singing; Speech; A capella",
+        "response": "Labels: Guitar; Slap and pop; Musical instrument; Music; Plucked string instrument; Human voice; Singing; Speech; Chorus effect; A capella; Vocal music; Music; Female singing",
         "correct_answer": "0.13s,2.43s,4.74s,7.04s,9.35s,11.66s,13.97s,16.27s,18.58s,20.88s,23.19s,25.5s,27.81s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam3-08.wav",
         "other": ""
@@ -1135,7 +1135,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Acoustic guitar; Plucked string instrument; Guitar; Music; Strum; Percussion; Drum kit; Bass guitar; Plucked string instrument",
+        "response": "Label with timestamps: Musical instrument: [0.0s-10.0s]; Plucked string instrument: [0.0s-10.0s]; Guitar: [0.0s-10.0s]; Music: [0.0s-10.0s]",
         "correct_answer": "1.01s,3.67s,6.29s,8.97s,11.64s,14.34s,17.04s,19.72s,22.41s,25.14s,27.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-GloriaEstefan_MiTierra-08.wav",
         "other": ""
@@ -1163,7 +1163,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Male singing; Music; Male singing; Human sounds; Resonance; Human voice; Male vocal and male singing",
+        "response": "Labels: Human voice; Singing; Male singing; Music; Male singing",
         "correct_answer": "1.56s,4.29s,7.11s,9.91s,12.69s,15.49s,18.29s,21.07s,23.89s,26.69s,29.48s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-GloriaEstefan_MiTierra-01.wav",
         "other": ""
@@ -1226,7 +1226,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music; Human sounds; Vehicle; Car; Engine starting",
+        "response": "Labels: Music; Vehicle horn, car horn, honking; Music",
         "correct_answer": "0.35s,2.66s,4.97s,7.28s,9.59s,11.91s,14.22s,16.53s,18.85s,21.16s,23.48s,25.79s,28.1s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam4-03.wav",
         "other": ""
@@ -1261,7 +1261,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music; Piano; Musical instrument; Chime; Choir; Human voice; Speech; Child speech and kid speaking; Children; Child singing",
+        "response": "Labels: Musical instrument; Music; Piano; Keyboard (musical)",
         "correct_answer": "2.13s,4.44s,6.76s,9.07s,11.38s,13.7s,16.01s,18.32s,20.64s,22.95s,25.26s,27.58s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam5-08.wav",
         "other": ""
@@ -1289,7 +1289,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music; Orchestra; Musical instrument",
+        "response": "Labels: Musical instrument; Music; Brass instrument; Trumpet; Wind instrument and woodwind instrument; Accordion",
         "correct_answer": "0.13s,2.53s,4.97s,7.34s,9.75s,12.15s,14.56s,16.97s,19.4s,21.78s,24.19s,26.59s,29.0s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Pais_Tropical-12.wav",
         "other": ""
@@ -1324,7 +1324,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Water; Human sounds",
+        "response": "Labels: Human voice; Singing; Musical instrument; Music; Guitar",
         "correct_answer": "0.43s,2.83s,5.23s,7.62s,10.02s,12.43s,14.82s,17.21s,19.58s,21.98s,24.4s,26.8s,29.21s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Media-106112.wav",
         "other": ""
@@ -1338,7 +1338,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Sitar; Musical instrument sound",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
         "correct_answer": "1.28s,3.58s,5.89s,8.18s,10.5s,12.81s,15.12s,17.42s,19.73s,22.03s,24.34s,26.65s,28.96s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam3-09.wav",
         "other": ""
@@ -1359,56 +1359,56 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Acoustic guitar; Plucked string instrument; Guitar; Music; Slow music; Soft rock; Soft and mellow",
+        "response": "Labels: Acoustic guitar; Plucked string instrument; Guitar; Musical instrument; Music; Alarm; Alarm clock; Tick",
         "correct_answer": "1.56s,3.97s,6.38s,8.78s,11.19s,13.59s,16.0s,18.41s,20.81s,23.22s,25.62s,28.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Pais_Tropical-10.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Loudspeaker; Drum kit; Slap and tick",
+        "response": "Labels: Musical instrument; Music; Percussion; Loudspeaker; Speech; Human voice; Squeak",
         "correct_answer": "0.61s,2.92s,5.23s,7.54s,9.86s,12.16s,14.48s,16.79s,19.11s,21.42s,23.74s,26.04s,28.36s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-International/Albums-Latin_Jam4-08.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Funk; Rhythm and beat; Jazz",
+        "response": "Labels: Musical instrument; Music; Funk; Jazz; Rhythm; Percussion; Drum; Bass drum; Slap bass; Bass guitar; Keyboard; Drum kit; Percussion; Music; Rock music; Funk music; Jazz music; Rhythm and blues; Ska",
         "correct_answer": "0.06s,2.37s,4.69s,7.0s,9.32s,11.62s,13.94s,16.25s,18.57s,20.87s,23.2s,25.5s,27.82s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam2-03.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Beat; Funk; Techno; Dance music; Music",
+        "response": "Labels: Beat; Funk; House; Techno; Dance music",
         "correct_answer": "1.05s,3.4s,5.75s,8.11s,10.45s,12.8s,15.15s,17.5s,19.85s,22.21s,24.56s,26.93s,29.29s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-106004.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Male vocal: [0.0s-1.0s, 1.5s-2.5s, 3.0s-4.0s, 4.5s-5.5s, 6.0s-7.0s, 7.5s-8.5s, 9.0s-10.0s]",
+        "response": "Labels: Male vocal; Funk; Jazz; Music; Chorus; Male singing; Singing; Trumpet; Brass instrument; Percussion; Drum; Shout; Male vocal",
         "correct_answer": "0.97s,3.7s,6.45s,9.16s,11.87s,14.58s,17.29s,20.01s,22.72s,25.43s,28.14s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103618.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with acoustic features: Vibrant and rhythmic -> Dance; Vibrant and rhythmic -> Music of Africa; Vibrant and rhythmic -> Reggae",
+        "response": "Labels with acoustic features: Vibrant and rhythmic -> Reggae; Rich and full of texture -> Music; Vibrant and rhythmic -> Dance music; Characterized by strong rhythmic beats -> Pop music; Vibrant and rhythmic -> Salsa",
         "correct_answer": "0.06s,2.48s,4.88s,7.28s,9.69s,12.11s,14.51s,16.93s,19.33s,21.73s,24.16s,26.57s,28.98s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103902.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Guitar; Plucked string instrument; Musical instrument; Chord; Guitar (acoustic); Strum",
+        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Chord; Acoustic guitar; Strum; Slide guitar; Fingerpicking; Strum; Percussion; Drum; Bass guitar; Electric guitar; Musical instrument; Plucked string instrument and Guitar",
         "correct_answer": "0.0s,2.39s,4.79s,7.19s,9.6s,12.0s,14.4s,16.81s,19.21s,21.62s,24.02s,26.42s,28.83s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-105402.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Male vocal: [0.0s-1.0s, 1.4s-2.4s, 3.0s-4.0s, 4.5s-5.5s, 6.0s-7.0s, 7.5s-8.5s, 9.0s-10.0s]",
+        "response": "Label with timestamps: Male vocal: [0.0s-1.0s, 1.5s-2.5s, 3.0s-4.0s, 4.5s-5.5s, 6.0s-7.0s, 7.5s-8.5s, 9.0s-10.0s]",
         "correct_answer": "0.39s,2.75s,5.1s,7.47s,9.82s,12.18s,14.53s,16.89s,19.24s,21.6s,23.95s,26.31s,28.66s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-106109.wav",
         "other": ""
@@ -1422,7 +1422,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Music: [0.0s-8.6s, 9.0s-10.0s]; Salsa: [0.0s-8.6s, 9.0s-10.0s]",
+        "response": "Label with timestamps: Music: [0.0s-8.7s, 9.0s-10.0s]; Salsa: [0.0s-8.7s, 9.0s-10.0s]",
         "correct_answer": "0.08s,2.41s,4.72s,7.04s,9.35s,11.67s,13.98s,16.29s,18.6s,20.92s,23.23s,25.55s,27.86s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam4-02.wav",
         "other": ""
@@ -1464,21 +1464,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Male singing; Vocal music; Music",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Vocal",
         "correct_answer": "0.05s,2.33s,4.64s,7.02s,9.34s,11.67s,14.05s,16.45s,18.82s,21.19s,23.6s,25.98s,28.37s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103504.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Musical instrument; Plucked string instrument; Guitar; Music; Choir",
+        "response": "Labels: Human voice; Guitar; Musical instrument; Music; Plucked string instrument; Human group actions; Choir; Male speech and man speaking; Speech; Human voice; Human group actions; Human voice (singing)",
         "correct_answer": "4.9s,7.3s,9.69s,12.09s,14.49s,16.89s,19.28s,21.67s,24.07s,26.46s,28.86s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Cafe_Paradiso-02.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with acoustic features: A loud, exotic and unique sound -> Fusion; Rich in frequency modulation -> Speech; Echoing and reverberant -> Inside, large room or hall",
+        "response": "Labels with acoustic features: A loud, high-pitched, pulsating noise -> Siren; High-pitched and repetitive -> Animal; High-pitched and repetitive -> Animal; High-pitched and repetitive -> Chirp and tweet",
         "correct_answer": "4.04s,6.4s,8.76s,11.11s,13.46s,15.82s,18.18s,20.54s,22.9s,25.26s,27.61s,29.97s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Cafe_Paradiso-03.wav",
         "other": ""
@@ -1492,14 +1492,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bass guitar; Guitar; Acoustic guitar; Musical instrument; Music; Guitar synth; Plucked string instrument; Musical instrument synthesizer; Slap bass; Bass",
+        "response": "Labels: Bass guitar; Guitar; Acoustic guitar; Musical instrument; Music; Guitar synth; Plucked string instrument; Musical instrument; Slap bass; Bass guitar synthesizer",
         "correct_answer": "0.09s,2.71s,5.46s,8.17s,10.91s,13.66s,16.38s,19.13s,21.84s,24.58s,27.33s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-105416.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Female vocal and female singing",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
         "correct_answer": "2.63s,5.03s,7.43s,9.84s,12.25s,14.64s,17.06s,19.47s,21.85s,24.27s,26.68s,29.04s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-AnaBelen_Veneo-02.wav",
         "other": ""
@@ -1520,14 +1520,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Singing; Percussion; Drum kit; Drum; Singing",
+        "response": "Labels: Musical instrument; Music; Singing; Percussion; Drum kit; Drum; Singer",
         "correct_answer": "0.11s,2.51s,4.92s,7.33s,9.73s,12.14s,14.55s,16.95s,19.35s,21.76s,24.17s,26.58s,28.98s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Cafe_Paradiso-04.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Plucked string instrument; Guitar; Percussion; Brass instrument; Human voice; Resonance; Human voice",
+        "response": "Labels: Guitar; Plucked string instrument; Musical instrument; Music",
         "correct_answer": "0.06s,2.48s,4.88s,7.28s,9.69s,12.09s,14.49s,16.9s,19.31s,21.72s,24.12s,26.53s,28.93s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Pais_Tropical-02.wav",
         "other": ""
@@ -1576,7 +1576,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Salsa; Music; Funk; Dance music; Music of Latin America; Samba; Music of Africa; Dance music genres; Slow music; Upbeat music; Music of Europe; Pop music; Rock music; Pop music; Rock and roll",
+        "response": "Labels: Music; Salsa; Funk; Music of the Americas",
         "correct_answer": "0.75s,3.15s,5.55s,7.95s,10.35s,12.75s,15.15s,17.55s,19.95s,22.35s,24.75s,27.16s,29.56s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-105607.wav",
         "other": ""
@@ -1597,21 +1597,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Conversation; Music; Female singing; Female speech and female singing",
+        "response": "Labels: Human voice; Speech; Conversation; Female singing; Male singing; Music; Female singing",
         "correct_answer": "0.04s,2.48s,4.88s,7.29s,9.66s,12.08s,14.49s,16.89s,19.29s,21.69s,24.1s,26.5s,28.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103505.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
+        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
         "correct_answer": "0.07s,2.47s,4.88s,7.3s,9.72s,12.15s,14.57s,17.0s,19.42s,21.84s,24.26s,26.69s,29.12s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-104104.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: male, male, male, vocal, rap, male, male, singer, male, male, male",
+        "response": "Labels: male, male, male, male, male, male, male, male, male, male, male",
         "correct_answer": "3.1s,5.49s,7.9s,10.3s,12.7s,15.09s,17.5s,19.9s,22.29s,24.7s,27.1s,29.53s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Macumba-05.wav",
         "other": ""
@@ -1653,7 +1653,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Drum, drum kit: 0.0s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s.",
         "correct_answer": "1.55s,3.91s,6.26s,8.62s,10.97s,13.32s,15.68s,18.04s,20.4s,22.75s,25.11s,27.46s,29.82s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103808.wav",
         "other": ""
@@ -1667,14 +1667,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male vocal; Funk; Vocal; Rhythm and beat; Music; Rap; Male singing; Singing; Human voice; Vocal",
+        "response": "Labels: Male singing; Vocal; Funk; Rhythm and beat; Music; Rap; Male vocal; Vocal; Human voice; Singing",
         "correct_answer": "3.56s,5.92s,8.27s,10.62s,12.97s,15.3s,17.68s,20.02s,22.38s,24.72s,27.09s,29.44s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-106002.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: drum, drum, beat, beat, drum, beat, beat",
+        "response": "Labels: drum, drum, beat",
         "correct_answer": "1.69s,4.09s,6.49s,8.89s,11.3s,13.7s,16.09s,18.49s,20.89s,23.29s,25.7s,28.09s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Macumba-07.wav",
         "other": ""
@@ -1702,7 +1702,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Percussion: [0.0s-0.5s, 1.0s-1.5s, 2.0s-2.5s, 3.0s-3.5s, 4.0s-4.5s, 5.0s-5.5s, 6.0s-6.5s, 7.0s-7.5s, 8.0s-8.5s, 9.0s-9.5s]",
+        "response": "Label with timestamps: Percussion: [0.0s-0.3s, 0.5s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s, 6.7s-7.0s, 7.2s-7.5s, 7.7s-8.0s, 8.2s-8.5s, 8.7s-9.0s, 9.2s-9.5s, 9.7s-10.0s]\n\n### Response:\nLabel: Percussion",
         "correct_answer": "1.09s,3.47s,5.85s,8.23s,10.61s,12.99s,15.36s,17.75s,20.14s,22.51s,24.89s,27.27s,29.66s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-104101.wav",
         "other": ""
@@ -1723,7 +1723,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: 0.0s-0.5s, 0.54s-1.0s, 1.0s-1.5s, 1.5s-2.0s, 2.0s-2.5s, 2.5s-3.0s, 3.0s-3.5s, 3.5s-4.0s, 4.0s-4.5s, 4.5s-5.0s, 5.0s-5.5s, 5.5s-6.0s, 6.0s-6.5s, 6.5s-7.0s, 7.0s-7.5s, 7.5s-8.0s, 8.0s-8.5s, 8.5s-9.0s, 9.0s-9.5s, 9.5s-10.0s",
+        "response": "Label with timestamps: 0.0s-0.5s, 0.5s-1.0s, 1.0s-1.5s, 1.5s-2.0s, 2.0s-2.5s, 2.5s-3.0s, 3.0s-3.5s, 3.5s-4.0s, 4.0s-4.5s, 4.5s-5.0s, 5.0s-5.5s, 5.5s-6.0s, 6.0s-6.5s, 6.5s-7.0s, 7.0s-7.5s, 7.5s-8.0s, 8.0s-8.5s, 8.5s-9.0s, 9.0s-9.5s, 9.5s-10.0s",
         "correct_answer": "1.55s,3.94s,6.35s,8.75s,11.14s,13.55s,15.95s,18.35s,20.75s,23.15s,25.55s,27.95s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Macumba-06.wav",
         "other": ""
@@ -1751,14 +1751,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Bell; Percussion; Rapping; Female singing",
         "correct_answer": "1.23s,3.59s,5.94s,8.29s,10.65s,13.0s,15.35s,17.7s,20.06s,22.41s,24.77s,27.12s,29.47s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103806.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Guitar; Plucked string instrument; Human voice; Chord; Plucked string; Resonance; Sounds; Harmonic; Chord progression; Musical instrument synthesizer",
+        "response": "Labels: Musical instrument; Music; Guitar; Plucked string instrument; Human voice; Chord; Plucked string; Resonance; Sounds of playing an instrument; Strum",
         "correct_answer": "0.07s,2.49s,4.9s,7.33s,9.74s,12.15s,14.54s,16.94s,19.34s,21.75s,24.14s,26.55s,28.94s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103503.wav",
         "other": ""
@@ -1772,7 +1772,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Female singing; Singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
         "correct_answer": "1.08s,3.46s,5.81s,8.16s,10.52s,12.87s,15.22s,17.58s,19.89s,22.25s,24.61s,26.97s,29.32s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-105403.wav",
         "other": ""
@@ -1786,7 +1786,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Salsa; Dance music; Music; Latin music; Flamenco; Percussion; Rhythm; Alarm; Alarm clock; Alarm; Alarm clock; Alarm",
+        "response": "Labels: Salsa; Latin music; Music; Dance; Flamenco",
         "correct_answer": "0.06s,2.37s,4.68s,7.0s,9.31s,11.62s,13.93s,16.25s,18.56s,20.87s,23.19s,25.5s,27.81s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam4-12.wav",
         "other": ""
@@ -1828,14 +1828,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Male singing; Accordion",
+        "response": "Labels: Musical instrument; Music; Percussion; Flute; Musical instrumentation",
         "correct_answer": "0.04s,2.41s,4.76s,7.12s,9.48s,11.84s,14.21s,16.57s,18.93s,21.29s,23.64s,25.99s,28.35s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam2-01.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Percussion; Musical instrument; Music; Drum; Rattle (instrument); Rattle (drum)",
+        "response": "Labels: Percussion; Musical instrument; Music; Drum; Rattle (instrument); Rattle; Drum kit; Snare drum; Bass drum; Percussion; Musical instrument",
         "correct_answer": "0.13s,2.44s,4.75s,7.07s,9.37s,11.7s,14.01s,16.31s,18.6s,20.92s,23.22s,25.54s,27.84s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Fire-15.wav",
         "other": ""
@@ -1849,7 +1849,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Vocal; Human voice; Singer; Music; Male singing; Singing; Rhythm and blues",
+        "response": "Labels: Vocal; Human voice; Singer; Music; Male singing; Rhythm and blues; Screaming; Shout; Scat singing",
         "correct_answer": "0.3s,2.72s,5.11s,7.52s,9.93s,12.33s,14.74s,17.14s,19.55s,21.95s,24.36s,26.76s,29.17s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam5-01.wav",
         "other": ""
@@ -1870,7 +1870,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels with acoustic features: Rich and full of frequencies -> Music; Deep, resonant, and distinctive -> Male singing; Rhythmic and percussive -> Rapping; Deep and resonant -> Male singing; Characterized by its loudness, pitch, and timbre -> Speech",
+        "response": "Labels with acoustic features: Rich and full of frequencies -> Music; Deep, resonant, and distinctive -> Male singing; Rhythmic and percussive -> Reggae; Deep and resonant -> Male singing; Characterized by its timbre -> Musical instrument; Loud and dynamic -> Exciting music",
         "correct_answer": "1.13s,3.47s,5.84s,8.21s,10.56s,12.93s,15.28s,17.63s,19.99s,22.34s,24.69s,27.04s,29.39s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-106003.wav",
         "other": ""
@@ -1884,14 +1884,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Male singing; Female singing; Human sounds; Male speech and man speaking; Female speech and woman speaking; Human voice; Male vocal and singer; Human voice and singer",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
         "correct_answer": "0.06s,2.42s,4.82s,7.22s,9.62s,12.05s,14.44s,16.86s,19.27s,21.67s,24.08s,26.5s,28.89s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103904.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Drum, Drum, Percussion, Dance, Fast, Jump, Percussion, Drum, Fast, Dance, Jump, Percussion",
+        "response": "Labels: Drum, Drum, Percussion, Dance, Slap",
         "correct_answer": "0.08s,2.48s,4.88s,7.29s,9.7s,12.1s,14.52s,16.92s,19.32s,21.73s,24.13s,26.54s,28.94s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Latin_Jam5-06.wav",
         "other": ""
@@ -1919,21 +1919,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Musical instrument",
+        "response": "Label with timestamps: Musical instrument: [0.0s-10.0s]",
         "correct_answer": "1.27s,3.62s,6.04s,8.44s,10.83s,13.24s,15.63s,18.01s,20.44s,22.84s,25.23s,27.62s,29.94s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-103502.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Musical instrument:  [0.0s-10.0s]; Music:  [0.0s-10.0s]; Salsa music:  [0.0s-10.0s]; Dance music:  [0.0s-10.0s]",
+        "response": "Label with timestamps: Musical instrument:  [0.0s-10.0s]; Salsa music:  [0.0s-10.0s]; Dance music:  [0.0s-10.0s]; Music:  [0.0s-10.0s]",
         "correct_answer": "0.19s,2.59s,5.0s,7.41s,9.82s,12.22s,14.63s,17.03s,19.44s,21.84s,24.25s,26.66s,29.06s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Albums-Pais_Tropical-04.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Bass drum; Drum; Musical instrument sound",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Bass drum; Snare drum; Drum",
         "correct_answer": "0.07s,2.43s,4.8s,7.16s,9.52s,11.89s,14.25s,16.61s,18.98s,21.34s,23.7s,26.06s,28.44s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Samba/Media-104105.wav",
         "other": ""
@@ -1961,7 +1961,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Brass instrument; Trumpet",
+        "response": "Labels: Musical instrument; Music; Brass instrument; Trumpet; Wind instrument",
         "correct_answer": "1.35s,4.0s,6.65s,9.31s,11.92s,14.6s,17.27s,20.03s,22.88s,25.6s,28.25s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103912.wav",
         "other": ""
@@ -1975,7 +1975,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Keyboard (musical); Piano; Bass drum; Drum; Rattle; Slam (door); Human voice",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Keyboard (musical); Piano; Bass drum; Drum; Snare drum; Rattle (drum)",
         "correct_answer": "1.22s,3.63s,6.03s,8.43s,10.83s,13.23s,15.63s,18.03s,20.43s,22.83s,25.23s,27.63s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103812.wav",
         "other": ""
@@ -2024,7 +2024,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Acoustic guitar; Slap and pop; Strum; Percussion; Piano; Slap bass; Musical instrument (general); Marimba",
+        "response": "Labels: Guitar; Musical instrument; Music; Plucked string instrument; Sitar; Acoustic guitar; Percussion; String instrument; Musical instrument",
         "correct_answer": "1.68s,4.08s,6.48s,8.88s,11.28s,13.68s,16.09s,18.5s,20.89s,23.31s,25.7s,28.1s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-104006.wav",
         "other": ""
@@ -2038,7 +2038,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Organ; Keyboard (musical); Musical instrument; Music; Wind instrument and woodwind instrument; Piano",
+        "response": "Labels: Organ; Keyboard (musical); Musical instrument; Music; Wind instrument and woodwind instrument; Wind; Piano; Chord; Harp",
         "correct_answer": "0.01s,2.62s,5.27s,7.84s,10.48s,13.08s,15.71s,18.27s,20.85s,23.5s,26.15s,28.75s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-105408.wav",
         "other": ""
@@ -2122,7 +2122,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "abel with timestamps: Music: [0.0s-10.0s]; Squeak: [0.3s-0.5s, 0.7s-0.9s, 1.1s-1.3s, 1.5s-1.7s, 1.9s-2.1s, 2.3s-2.5s, 2.7s-2.9s, 3.1s-3.3s, 3.5s-3.7s, 3.9s-4.1s, 4.3s-4.5s, 4.7s-4.9s, 5.1s-5.3s, 5.5s-5.7s, 5.9s-6.1s, 6.3s-6.5s, 6.7s-6.9s, 7.1s-7.3s, 7.5s-7.7s, 7.9s-8.1s, 8.3s-8.5s, 8.7s-8.9s, 9.1s-9.3s, 9.5s-9.7s, 9.9s-10.0s]; Squeak: [0.0s-0.3s, 0.5s-0.7s, 0.9s-1.1s, 1.3s-1.5s, 1.7s-1.9s, 2.1s-2.3s, 2.5s-2.7s, 2.9s-3.1s, 3.3",
+        "response": "Label with timestamps: Music: [0.0s-10.0s]; Squeak: [0.3s-0.5s, 0.7s-0.9s, 1.1s-1.3s, 1.5s-1.7s, 1.9s-2.1s, 2.3s-2.5s, 2.7s-2.9s, 3.1s-3.3s, 3.5s-3.7s, 3.9s-4.1s, 4.3s-4.5s, 4.7s-4.9s, 5.1s-5.3s, 5.5s-5.7s, 5.9s-6.1s, 6.3s-6.5s, 6.7s-6.9s, 7.1s-7.3s, 7.5s-7.7s, 7.9s-8.1s, 8.3s-8.5s, 8.7s-8.9s, 9.1s-9.3s, 9.5s-9.7s, 9.9s-10.0s]",
         "correct_answer": "1.56s,3.98s,6.41s,8.79s,11.26s,13.67s,16.1s,18.51s,20.94s,23.37s,25.79s,28.21s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103608.wav",
         "other": ""
@@ -2143,7 +2143,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Human voice; Singing; Male singing; Female singing; Child singing; Human voice; Child speech and kid speaking; Child singing; Human voice (singing); Human sounds; Child speech and kid speaking",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Human voice; Singing; Male singing; Female singing; Human voice; Male speech and man speaking; Child speech and kid speaking; Child singing",
         "correct_answer": "2.36s,5.61s,8.59s,11.63s,14.58s,17.48s,20.39s,23.27s,26.19s,29.22s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-105209.wav",
         "other": ""
@@ -2157,21 +2157,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Drum; Bass drum; Snare drum",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Drum; Bass drum; Drum beat",
         "correct_answer": "1.75s,4.16s,6.55s,8.97s,11.36s,13.77s,16.2s,18.61s,21.1s,23.58s,25.98s,28.4s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103914.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Wind: [0.0s-0.3s, 0.5s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s]",
+        "response": "Label with timestamps: Wind: [0.0s-0.3s, 0.5s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s, 6.7s-7.0s, 7.2s-7.5s, 7.7s-8.0s, 8.2s-8.5s, 8.7s-9.0s, 9.2s-9.5s, 9.7s-10.0s]",
         "correct_answer": "1.01s,3.5s,6.01s,8.51s,11.01s,13.5s,16.01s,18.5s,21.01s,23.51s,26.01s,28.51s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103710.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Trombone; Wind instrument; Flute",
+        "response": "Labels: Brass instrument; Drum; Musical instrument; Music; Drum kit; Snare drum; Cymbal; Bass drum; Percussion",
         "correct_answer": "11.48s,13.91s,16.31s,18.73s,21.17s,23.55s,25.96s,28.36s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-104008.wav",
         "other": ""
@@ -2185,7 +2185,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Acoustic guitar; Guitar; Plucked string instrument; Musical instrument; Music; Strum; Strumming; Chord; Fingerpicking; Acoustic",
+        "response": "Labels: Acoustic guitar; Guitar; Plucked string instrument; Musical instrument; Music; Strum; Strumming; Chord; Fingerpicking; Guitar tuning; Acoustic",
         "correct_answer": "0.97s,3.38s,5.8s,8.17s,10.56s,12.95s,15.34s,17.75s,20.14s,22.52s,24.85s,27.32s,29.72s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-103711.wav",
         "other": ""
@@ -2206,7 +2206,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Acoustic guitar; Musical instrument; Music; Plucked string instrument; Harmonica; Singing; Chord; Song",
+        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Harmonica; Acoustic guitar; Fingerpicking (guitar)",
         "correct_answer": "1.96s,4.36s,6.77s,9.17s,11.58s,13.97s,16.38s,18.78s,21.18s,23.55s,25.98s,28.39s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-105412.wav",
         "other": ""
@@ -2220,7 +2220,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Male singing; Male vocal and singing; Male singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Female singing; Musical instrument; Drum kit; Keyboard (musical); Percussion",
         "correct_answer": "0.01s,2.61s,5.22s,7.82s,10.42s,13.03s,15.63s,18.23s,20.83s,23.44s,26.04s,28.64s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Rumba-Misc/Media-105409.wav",
         "other": ""
@@ -2255,7 +2255,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bowed string instrument; String instrument and violin family; Musical instrument; Music; Drum kit",
+        "response": "abel with timestamps: Bowed string instrument: [0.0s-0.4s, 0.7s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s, 6.7s-7.0s, 7.2s-7.5s, 7.7s-8.0s, 8.2s-8.5s, 8.7s-9.0s, 9.2s-9.5s, 9.7s-10.0s]\n\n### Response:\nThe timestamps of all downbeats in this audio track are: 0.0s-0.4s, 0.7s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s",
         "correct_answer": "1.13s,2.98s,4.85s,6.7s,8.59s,10.42s,12.25s,14.08s,15.92s,17.76s,19.6s,21.42s,23.26s,25.08s,26.92s,28.8s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-103306.wav",
         "other": ""
@@ -2269,7 +2269,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bowed string instrument; Musical instrument; Music; String instrument; Orchestra",
+        "response": "Labels: Bowed string instrument; Musical instrument; Music; Bowed string instrument",
         "correct_answer": "0.03s,1.99s,3.9s,5.8s,7.7s,9.6s,11.53s,13.4s,15.26s,17.07s,18.92s,20.78s,22.63s,24.49s,26.37s,28.31s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-104709.wav",
         "other": ""
@@ -2297,7 +2297,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Domestic animals and pets; Bowed string instrument; Musical instrument; Music; Dog; Dog barking; Bowed string instrument (musical); Animal; Bowed instrument",
+        "response": "Labels: Domestic sounds and home sounds; Wind; Wind instrument and woodwind instrument; Musical instrument; Music; Bowed string instrument; Violin and fiddle",
         "correct_answer": "0.7s,2.57s,4.44s,6.34s,8.18s,10.07s,11.95s,13.83s,15.69s,17.56s,19.46s,21.33s,23.21s,25.07s,26.95s,28.83s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-105508.wav",
         "other": ""
@@ -2360,14 +2360,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Violin, fiddle; Bowed string instrument; Fiddle; Musical instrument; Music; Bowed string instrument; Orchestra; String instrument; Musical instrumentation; Bowed instruments; Orchestra musicians; Bowed woodwind instrument",
+        "response": "Labels: Violin, fiddle; Bowed string instrument; Fiddle; Musical instrument; Music; Bowed string instrument; Orchestra; String instrument; Musical instrumentation; Bowed instruments; Orchestra musicians; Musical instrumentation (instrumental)",
         "correct_answer": "0.02s,1.91s,3.79s,5.64s,7.47s,9.39s,11.26s,13.17s,15.03s,16.91s,18.76s,20.65s,22.53s,24.4s,26.29s,28.13s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-105506.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s",
+        "response": "Label with timestamps: Violin: 0.0s-1.0s, 1.5s-2.5s, 3.0s-4.0s, 4.5s-5.5s, 6.0s-7.0s, 7.5s-8.5s, 9.0s-10.0s; Violin: 0.0s-1.0s, 1.5s-2.5s, 3.0s-4.0s, 4.5s-5.5s, 6.0s-7.0s, 7.5s-8.5s, 9.0s-10.0s",
         "correct_answer": "0.32s,2.2s,4.07s,5.95s,7.84s,9.69s,11.57s,13.44s,15.32s,17.16s,19.07s,20.94s,22.82s,24.7s,26.57s,28.44s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-100607.wav",
         "other": ""
@@ -2388,7 +2388,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Wind instrument",
+        "response": "Labels: Brass instrument; Wind instrument and woodwind instrument; Musical instrument; Music; Wind instrument and woodwind group",
         "correct_answer": "0.21s,2.1s,3.96s,5.81s,7.63s,9.51s,11.38s,13.23s,15.1s,16.99s,18.84s,20.71s,22.58s,24.45s,26.31s,28.19s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-104506.wav",
         "other": ""
@@ -2416,14 +2416,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Violin, fiddle; Musical instrument; Music; Bowed string instrument",
+        "response": "Labels: String section; Brass instrument",
         "correct_answer": "0.02s,2.05s,4.03s,6.04s,8.07s,9.97s,11.84s,13.71s,15.58s,17.42s,19.26s,21.14s,23.08s,24.96s,26.83s,28.68s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-105306.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music",
+        "response": "Labels: Bowed string instrument; Musical instrument; Music; Violin, fiddle",
         "correct_answer": "1.51s,3.56s,5.6s,7.58s,9.62s,11.66s,13.68s,15.72s,17.81s,19.82s,21.84s,23.86s,25.9s,27.88s,29.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Albums-StrictlyDancing_Tango-06.wav",
         "other": ""
@@ -2570,7 +2570,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: guitar, no singer, no singer",
+        "response": "Label: guitar, folk, no singer, no singer, no singer, piano",
         "correct_answer": "0.32s,2.19s,4.08s,5.96s,7.85s,9.71s,11.6s,13.47s,15.35s,17.22s,19.08s,20.95s,22.83s,24.71s,26.58s,28.45s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-100605.wav",
         "other": ""
@@ -2675,7 +2675,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Wind instrument and woodwind instrument; Accordion; Saxophone; Wind instrument and woodwind instrument (flute)",
+        "response": "Labels: Musical instrument; Music; Drum kit; Percussion; Wind instrument and woodwind instrument; Saxophone; Wind instrument and woodwind instrument",
         "correct_answer": "0.68s,2.56s,4.45s,6.31s,8.18s,10.07s,11.94s,13.82s,15.69s,17.57s,19.45s,21.31s,23.19s,25.09s,26.93s,28.8s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-105707.wav",
         "other": ""
@@ -2696,7 +2696,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Piano: [0.0s-0.4s, 0.7s-1.0s, 1.3s-1.6s, 1.9s-2.2s, 2.5s-2.8s, 3.1s-3.4s, 3.7s-4.0s, 4.3s-4.6s, 4.9s-5.2s, 5.5s-5.8s, 6.1s-6.4s, 6.7s-7.0s, 7.3s-7.6s, 7.9s-8.2s, 8.5s-8.8s, 9.1s-9.4s, 9.7s-10.0s]",
+        "response": "Label with timestamps: Piano: [0.0s-0.5s, 1.0s-1.5s, 2.0s-2.5s, 3.0s-3.5s, 4.0s-4.5s, 5.0s-5.5s, 6.0s-6.5s, 7.0s-7.5s, 8.0s-8.5s, 9.0s-9.5s]",
         "correct_answer": "0.08s,1.95s,3.83s,5.69s,7.56s,9.45s,11.31s,13.2s,15.13s,17.04s,18.92s,20.76s,22.59s,24.45s,26.32s,28.17s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-103305.wav",
         "other": ""
@@ -2738,7 +2738,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Musical instrument and orchestra; Wind instrument; Accordion and accordion music; Orchestra; Musical instrument",
+        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Musical instrument and orchestra; Wind instrument; Accordion and accordion music; Orchestra; Percussion",
         "correct_answer": "0.36s,2.24s,4.11s,5.97s,7.87s,9.76s,11.64s,13.52s,15.38s,17.25s,19.14s,21.02s,22.88s,24.76s,26.64s,28.49s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Albums-Ballroom_Classics4-09.wav",
         "other": ""
@@ -2766,7 +2766,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: classical, violin, piano, fast, fiddle, baroque, fast, cello, violin, piano, fast, flute, flute, violin, piano, baroque, fast, flute, violin, piano, baroque, fast",
+        "response": "Label: classical, violin, piano, fast, fiddle, baroque",
         "correct_answer": "0.72s,2.54s,4.35s,6.17s,8.02s,9.87s,11.74s,13.59s,15.41s,17.25s,19.1s,20.92s,22.78s,24.66s,26.57s,28.45s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Tango/Media-105905.wav",
         "other": ""
@@ -2843,21 +2843,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Piano; Keyboard (musical)",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music",
         "correct_answer": "0.67s,2.71s,4.73s,6.82s,8.9s,10.98s,13.06s,15.12s,17.17s,19.25s,21.32s,23.39s,25.46s,27.52s,29.59s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104204.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Bowed string instrument; Musical instrument; Music; Violin and fiddle; Bowed string; Single-note instrument; String instrument; Musical performance; Bowed string instrument (fiddle)",
+        "response": "Labels: Human voice; Singing; Bowed string instrument; Musical instrument; Music; Violin and fiddle; Bowed string; Fiddle; Musical performance",
         "correct_answer": "0.83s,2.93s,5.0s,7.1s,9.21s,11.35s,13.42s,15.54s,17.63s,19.73s,21.82s,23.92s,26.02s,28.14s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104403.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Wind instrument and woodwind instrument",
+        "response": "Labels: Musical instrument; Music; Percussion; Wind instrument and woodwind instrument",
         "correct_answer": "1.31s,3.44s,5.52s,7.54s,9.62s,11.71s,13.67s,15.83s,17.93s,19.99s,22.09s,24.15s,26.2s,28.28s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Ballroom_Classics4-02.wav",
         "other": ""
@@ -2885,7 +2885,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Human sounds; Human voice",
         "correct_answer": "0.5s,2.56s,4.61s,6.67s,8.76s,10.86s,12.94s,15.04s,17.1s,19.1s,21.1s,23.22s,25.31s,27.36s,29.4s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105702.wav",
         "other": ""
@@ -2906,14 +2906,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Speech; Male singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Male singing; Human voice",
         "correct_answer": "0.07s,2.22s,4.28s,6.34s,8.5s,10.51s,12.62s,14.68s,16.76s,18.82s,20.93s,23.0s,25.09s,27.16s,29.26s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104402.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Brass instrument and trumpet",
+        "response": "0.0s,0.54s,1.0ss,1.54s,2.04s,2.54s,3.04s,3.54s,4.04s,4.54s,5.04s,5.54s,6.04s,6.54s,7.04s,7.54s,8.04s,8.54s,9.04s,9.54s",
         "correct_answer": "4.49s,6.67s,8.84s,10.97s,13.13s,15.2s,17.37s,19.48s,21.61s,23.8s,25.94s,28.07s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105001.wav",
         "other": ""
@@ -2948,7 +2948,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male vocal and singing; Female singing; Female singing; Singing; Musical instrument; Human sounds; Female speech and woman speaking; Male singing and singing; Male singing and singing; Male and female singing",
         "correct_answer": "1.25s,3.28s,5.3s,7.33s,9.36s,11.38s,13.4s,15.44s,17.47s,19.47s,21.52s,23.55s,25.58s,27.61s,29.6s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Fire-13.wav",
         "other": ""
@@ -2983,7 +2983,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument",
+        "response": "Labels: Brass instrument; Musical instrument; Music; Brass; Organ",
         "correct_answer": "0.09s,2.22s,4.32s,6.42s,8.49s,10.58s,12.66s,14.71s,16.79s,18.84s,20.87s,22.93s,25.0s,27.1s,29.18s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104803.wav",
         "other": ""
@@ -3053,14 +3053,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: vocal, slow, vocal, soft",
+        "response": "Label: vocal, slow, soft, vocal",
         "correct_answer": "0.47s,2.55s,4.62s,6.7s,8.75s,10.83s,12.94s,15.01s,17.03s,19.1s,21.17s,23.23s,25.32s,27.39s,29.45s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-100603.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
+        "response": "Labels: Bowed string instrument; Musical instrument; Music; Violin and fiddle",
         "correct_answer": "0.13s,2.29s,4.42s,6.48s,8.49s,10.57s,12.7s,14.79s,16.84s,18.94s,21.06s,23.17s,25.24s,27.32s,29.41s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105007.wav",
         "other": ""
@@ -3074,7 +3074,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Bowed string instrument",
+        "response": "Labels: Musical instrument; Music; Piano; Keyboard (musical)",
         "correct_answer": "0.23s,2.31s,4.37s,6.45s,8.51s,10.57s,12.64s,14.71s,16.78s,18.85s,20.92s,22.99s,25.05s,27.13s,29.19s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105503.wav",
         "other": ""
@@ -3109,7 +3109,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "abel with timestamps: Chime: 0.0s-0.4s, 0.6s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s; Chime: 0.0s-0.4s, 0.6s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s; Chime: 0.0s",
+        "response": "abel with timestamps: Chimes, bells: 0.0s-0.3s, 0.5s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s, 6.7s-7.0s, 7.2s-7.5s, 7.7s-8.0s, 8.2s-8.5s, 8.7s-9.0s, 9.2s-9.5s, 9.7s-10.0s; Chime: 0.0s-0.3s, 0.5s-1.0s, 1.2s-1.5s, 1.7s-2.0s, 2.2s-2.5s, 2.7s-3.0s, 3.2s-3.5s, 3.7s-4.0s, 4.2s-4.5s, 4.7s-5.0s, 5.2s-5.5s, 5.7s-6.0s, 6.2s-6.5s, 6.7s-7.0s, 7.2s-",
         "correct_answer": "0.37s,2.48s,4.57s,6.62s,8.68s,10.79s,12.82s,14.91s,16.98s,18.98s,21.12s,23.2s,25.28s,27.37s,29.44s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-100604.wav",
         "other": ""
@@ -3130,14 +3130,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Harp; Piano; Musical instrument; Music; Plucked string instrument; Keyboard (musical); Musical instrument; Plucked string instrument",
+        "response": "Labels: Harp; Piano; Musical instrument; Music; Plucked string instrument; Keyboard (musical); Musical instrument; Harp and piano",
         "correct_answer": "0.02s,2.17s,4.3s,6.4s,8.5s,10.6s,12.7s,14.77s,16.91s,19.03s,21.15s,23.26s,25.36s,27.49s,29.57s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Chrisanne2-02.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Music: [0.0s-10.0s]; Pizzicato: [0.0s-10.0s]; Bowed string instrument: [0.0s-10.0s]; Violin: [0.0s-10.0s]",
+        "response": "Label with timestamps: Music: [0.0s-10.0s]; Piano: [0.1s-1.0s, 1.2s-2.0s, 2.2s-3.0s, 3.2s-4.0s, 4.2s-5.0s, 5.2s-6.0s, 6.2s-7.0s, 7.2s-8.0s, 8.2s-9.0s, 9.2s-10.0s]",
         "correct_answer": "0.13s,2.24s,4.42s,6.56s,8.73s,10.84s,12.98s,15.07s,17.17s,19.33s,21.53s,23.62s,25.75s,27.92s,30.14s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Chrisanne3-01.wav",
         "other": ""
@@ -3158,7 +3158,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Accordion; Musical instrument; Music; Wind instrument and woodwind instrument; Orchestra; Alarm clock; Musical performance; Wind; Accordion and button accordion; Musical instrument and orchestra",
+        "response": "Labels: Musical instrument; Music; Accordion; Wind instrument; Flute",
         "correct_answer": "0.05s,2.17s,4.34s,6.49s,8.62s,10.8s,12.93s,15.11s,17.24s,19.41s,21.54s,23.68s,25.86s,27.96s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105105.wav",
         "other": ""
@@ -3200,14 +3200,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Male speech and man speaking; Conversation; Male speech and man talking; Speech; Domestic sounds and home sounds; Chatter; Motor vehicle (road); Vehicle; Car",
+        "response": "Labels: Human voice; Speech; Male speech and man speaking; Conversation; Male speech and man talking; Speech; Male vocal and male singing",
         "correct_answer": "0.05s,2.17s,4.3s,6.42s,8.55s,10.69s,12.83s,14.97s,17.09s,19.19s,21.29s,23.38s,25.5s,27.62s,29.76s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104501.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male vocal and singing; Vocal; Resonance",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male vocal and singing; Vocal harmony; Musical instrument; Bowed string instrument; Brass instrument; Flute; Wind instrument; Human sounds; Male singing (operatic); Opera; Female singing; Female vocal and singing",
         "correct_answer": "0.08s,2.24s,4.42s,6.57s,8.75s,10.86s,13.02s,15.2s,17.37s,19.49s,21.59s,23.75s,25.84s,28.04s,29.92s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104301.wav",
         "other": ""
@@ -3221,7 +3221,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Keyboard (musical)",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music",
         "correct_answer": "0.71s,2.86s,4.94s,7.11s,9.24s,11.41s,13.56s,15.7s,17.84s,19.97s,22.11s,24.26s,26.39s,28.55s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105704.wav",
         "other": ""
@@ -3235,14 +3235,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Harp; Musical instrument; Music; Plucked string instrument; Bowed string instrument; Wind instrument and woodwind instrument; Musical instrument; Flute; Percussion; Harp (instrument); Human voice; Female singing; Female vocal and flute",
+        "response": "Labels: Harp; Musical instrument; Music; Plucked string instrument; Bowed string instrument; Wind instrument and woodwind instrument; Musical instrument; Harp and piano; Piano; Plucked string instrument and harp",
         "correct_answer": "0.11s,2.27s,4.38s,6.43s,8.56s,10.71s,12.8s,14.91s,17.02s,19.13s,21.27s,23.34s,25.45s,27.62s,29.74s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105902.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bell; Chime; Ding-dong; Gong; Rattle; Tinkle; Gong (mallet percussion); Percussion; Musical instrument; Music; Piano; Human voice; Child speech and kid speaking; Child speech and kid speaking",
+        "response": "Labels: Bell; Chime; Ding-dong; Gong; Rattle; Tinkle; Gong (mallet percussion); Percussion; Musical instrument; Music; Piano; Resonance; Human voice",
         "correct_answer": "0.03s,2.04s,4.04s,6.04s,8.05s,10.04s,12.06s,14.07s,16.07s,18.08s,20.08s,22.09s,24.13s,26.15s,28.1s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Ballroom_Magic-03.wav",
         "other": ""
@@ -3284,7 +3284,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing",
+        "response": "Labels: Human voice; Singing; Bowed string instrument; Musical instrument; Music; Bowed string instrument; Violin and fiddle; Fiddle; Bowed string; Human voice; Singing bowl; Bowed string instrument",
         "correct_answer": "1.32s,3.52s,5.75s,7.87s,10.02s,12.17s,14.27s,16.44s,18.6s,20.79s,22.85s,24.96s,27.11s,29.26s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Chrisanne1-01.wav",
         "other": ""
@@ -3305,7 +3305,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music",
+        "response": "Labels: Musical instrument; Music; Piano; Keyboard (musical)",
         "correct_answer": "0.04s,2.13s,4.22s,6.31s,8.34s,10.41s,12.48s,14.54s,16.61s,18.67s,20.74s,22.79s,24.89s,26.95s,29.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104201.wav",
         "other": ""
@@ -3319,7 +3319,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Female singing; Music; Female singing; Female vocal and music",
+        "response": "Labels: Human voice; Singing; Female singing; Music; Female singing; Female speech and woman speaking",
         "correct_answer": "0.48s,2.7s,4.79s,6.87s,10.22s,12.41s,14.56s,16.71s,18.96s,21.05s,23.11s,25.21s,27.4s,29.49s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105214.wav",
         "other": ""
@@ -3368,7 +3368,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Human sounds; Singing voice; Male vocal and guitar; Guitar; Musical instrument; Plucked string instrument; Human voice (speaking); Male singing; Male singing; Male vocal",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Human sounds; Singing voice; Male vocal and guitar; Guitar; Musical instrument; Plucked string instrument; Human voice (speaking); Male singing; Male singing; Singing",
         "correct_answer": "0.12s,2.36s,4.49s,6.64s,8.84s,11.0s,13.11s,15.25s,17.39s,19.48s,21.57s,23.73s,25.95s,28.0s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105103.wav",
         "other": ""
@@ -3396,7 +3396,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Music; Strum; Percussion",
+        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Music; Strum and pick strum",
         "correct_answer": "0.14s,2.25s,4.27s,6.3s,8.23s,10.37s,12.37s,14.37s,16.4s,18.48s,20.54s,22.65s,24.8s,26.91s,29.03s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Albums-Chrisanne3-03.wav",
         "other": ""
@@ -3417,7 +3417,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Harmonica; Musical instrument; Music; Accordion; Musical performance",
+        "response": "Labels: Harmonica; Musical instrument; Music; Accordion; Breathing; Human voice; Singing",
         "correct_answer": "0.04s,2.21s,4.39s,6.52s,8.62s,10.77s,12.99s,15.18s,17.29s,19.42s,21.61s,23.67s,25.83s,27.95s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105304.wav",
         "other": ""
@@ -3438,7 +3438,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: string, violin, slow, violin, slow, string, irish, fiddle, slow, sad",
+        "response": "Label: string, violin, slow, violin, slow, irish",
         "correct_answer": "2.46s,4.53s,6.59s,8.67s,10.73s,12.77s,14.87s,16.94s,19.02s,21.05s,23.14s,25.22s,27.27s,29.32s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-100602.wav",
         "other": ""
@@ -3452,14 +3452,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Harmonica",
+        "response": "Labels: Harmonica; Musical instrument; Music; Wind instrument and woodwind instrument",
         "correct_answer": "6.91s,9.0s,10.97s,13.02s,15.05s,17.1s,19.16s,21.14s,23.2s,25.24s,27.26s,29.28s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104601.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Organ; Keyboard (musical)",
         "correct_answer": "0.02s,2.02s,4.08s,6.21s,8.22s,10.33s,12.4s,14.45s,16.53s,18.58s,20.66s,22.73s,24.8s,26.87s,28.93s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105502.wav",
         "other": ""
@@ -3473,7 +3473,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
         "correct_answer": "0.05s,2.32s,4.59s,6.84s,9.06s,11.23s,13.43s,15.62s,17.79s,19.93s,22.07s,24.16s,26.24s,28.34s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104703.wav",
         "other": ""
@@ -3557,7 +3557,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Accordion; Wind instrument and woodwind",
+        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
         "correct_answer": "0.08s,2.25s,4.39s,6.52s,8.65s,10.76s,12.88s,14.99s,17.13s,19.18s,21.23s,23.31s,25.41s,27.42s,29.58s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-105005.wav",
         "other": ""
@@ -3585,21 +3585,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Wind instrument and woodwind instrument",
+        "response": "Label with timestamps: Wind instrument and woodwind instrument: [0.0s-10.0s]",
         "correct_answer": "0.05s,2.34s,4.64s,6.88s,9.13s,11.39s,13.62s,15.82s,18.05s,20.23s,22.3s,24.7s,27.0s,29.21s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/Waltz/Media-104704.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.0s, 2.54s, 3.0s, 3.54s, 4.0s, 4.54s, 5.0s, 5.54s, 6.0s, 6.54s, 7.0s, 7.54s, 8.0s, 8.54s, 9.0s, 9.54s, 10.0s.",
         "correct_answer": "0.07s,1.95s,3.82s,5.7s,7.58s,9.47s,11.34s,13.23s,15.1s,16.98s,18.86s,20.74s,22.62s,24.51s,26.38s,28.26s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latin_Jam2-06.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: guitar, drum, jazz, piano, no singer, no singer",
+        "response": "Labels: jazz, drum, guitar, piano, jazz, pop, upbeat, fast, horn, jazz, no singer, no singer, pop",
         "correct_answer": "0.28s,2.22s,4.15s,6.09s,8.03s,9.96s,11.9s,13.83s,15.77s,17.71s,19.64s,21.57s,23.51s,25.45s,27.38s,29.32s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Macumba-04.wav",
         "other": ""
@@ -3613,7 +3613,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Drum kit; Saxophone; Wind instrument and woodwind instrument; Musical instrument and drum kit; Wind instrument",
+        "response": "Labels: Musical instrument; Music; Drum kit; Saxophone; Wind instrument and woodwind instrument; Musical instrument and drum kit; Brass instrument; Wind instrument and woodwind instrument",
         "correct_answer": "0.01s,1.95s,3.88s,5.83s,7.75s,9.69s,11.63s,13.56s,15.5s,17.44s,19.37s,21.31s,23.24s,25.18s,27.11s,29.03s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-105605.wav",
         "other": ""
@@ -3641,28 +3641,28 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Salsa; Percussion; Drum kit; Music; Latin music; Funk; Percussion",
+        "response": "Labels: Salsa; Percussion; Drum kit; Music; Latin music; Funk; Samba",
         "correct_answer": "0.11s,2.05s,3.99s,5.92s,7.86s,9.79s,11.73s,13.66s,15.6s,17.54s,19.47s,21.41s,23.35s,25.28s,27.22s,29.15s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-105602.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Salsa music; Musical instrumentation; Drum sound; Percussion section; Snare drum; Musical instrument and Percussion family; Drumclap; Accordion; Saxophone",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Salsa music; Drum; Musical instrument and Percussion; Drum sound",
         "correct_answer": "0.57s,2.58s,4.56s,6.54s,8.52s,10.49s,12.46s,14.4s,16.3s,18.27s,20.22s,22.19s,24.13s,26.1s,28.04s,30.0s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103507.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Human voice: [0.0s-0.3s, 0.5s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s]",
+        "response": "Label with timestamps: Human voice: [0.0s-0.2s, 0.4s-0.7s, 1.0s-1.3s, 1.5s-1.8s, 2.0s-2.3s, 2.5s-2.8s, 3.0s-3.3s, 3.5s-3.8s, 4.0s-4.3s, 4.5s-4.8s, 5.0s-5.3s, 5.5s-5.8s, 6.0s-6.3s, 6.5s-6.8s, 7.0s-7.3s, 7.5s-7.8s, 8.0s-8.3s, 8.5s-8.8s, 9.0s-9.3s, 9.5s-9.8s, 10.0s-10.3s]",
         "correct_answer": "0.06s,2.13s,4.17s,6.25s,8.29s,10.35s,12.45s,14.51s,16.58s,18.64s,20.71s,22.75s,24.82s,26.91s,28.97s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103804.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Guitar; Percussion; Alarm; Human voice; Sounds of animals",
+        "response": "Labels: Musical instrument; Music; Guitar; Percussion; Alarm; Human voice; Sounds of animals; Animal; Wild animals; Bird",
         "correct_answer": "1.11s,3.05s,4.99s,6.94s,8.88s,10.81s,12.76s,14.69s,16.63s,18.57s,20.51s,22.45s,24.39s,26.33s,28.27s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latin_Jam4-01.wav",
         "other": ""
@@ -3683,14 +3683,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0ss, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
+        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
         "correct_answer": "0.3s,2.2s,4.12s,6.02s,7.94s,9.84s,11.75s,13.66s,15.57s,17.48s,19.39s,21.3s,23.21s,25.12s,27.02s,28.93s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Cafe_Paradiso-05.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Keyboard (musical); Musical instrument; Music; Percussion",
+        "response": "Labels: Keyboard (musical)",
         "correct_answer": "0.43s,2.71s,4.97s,7.27s,9.52s,11.82s,14.12s,16.39s,18.65s,20.93s,23.19s,25.44s,27.69s,29.94s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latino_Latino-06.wav",
         "other": ""
@@ -3725,7 +3725,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Accordion; Keyboard (musical); Latin music; Salsa; Dance music; Musical instrument (general); Human voice; Female singing; Singing; Male singing",
+        "response": "Labels: Alarm; Alarm clock; Bell; Musical instrument; Music; Percussion; Latin music; Salsa; Dance music; Music; Percussion; Spanish music; Latin American music",
         "correct_answer": "0.86s,2.81s,4.73s,6.67s,8.61s,10.56s,12.48s,14.42s,16.37s,18.28s,20.23s,22.15s,24.1s,26.03s,27.94s,29.88s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103409.wav",
         "other": ""
@@ -3774,7 +3774,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Musical instrument; Music; Drum kit; Percussion; Bass drum; Drum; Musical instrument and percussion; Drum roll; Slap bass; Bass guitar",
+        "response": "Labels: Musical instrument; Music; Drum; Percussion; Bass drum; Musical instrumentation; Drum kit",
         "correct_answer": "0.78s,2.57s,4.36s,6.14s,7.91s,9.69s,11.48s,13.26s,15.04s,16.83s,18.62s,20.4s,22.16s,23.95s,25.74s,27.52s,29.29s,31.09s,32.88s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-I_Like_It2-01.wav",
         "other": ""
@@ -3795,7 +3795,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s.",
+        "response": "Labels: Human voice; Singing; Guitar; Laughter; Strum; Strumming; Music",
         "correct_answer": "0.29s,2.18s,4.1s,6.01s,7.92s,9.82s,11.73s,13.63s,15.53s,17.45s,19.36s,21.26s,23.15s,25.06s,26.97s,28.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-104010.wav",
         "other": ""
@@ -3823,28 +3823,28 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Accordion and saxophone; Orchestra; Keyboard (musical); Brass instrument; Wind instrument; Woodwind instrument; Saxophone; Musical instrument selection; Accordion",
+        "response": "Labels: Musical instrument; Music; Percussion; Accordion and saxophone; Orchestra; Keyboard (musical); Brass instrument; Wind instrument; Woodwind instrument; Saxophone; Musical instrument selection; Orchestra (musical)",
         "correct_answer": "0.88s,2.81s,4.75s,6.69s,8.62s,10.56s,12.49s,14.43s,16.36s,18.3s,20.23s,22.17s,24.1s,26.04s,27.97s,29.91s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-106008.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Percussion; Drum kit; Drum; Bass drum; Drum kit",
+        "response": "Labels: Piano; Keyboard (musical); Musical instrument; Music; Percussion; Mallet percussion; Drum kit; Drum",
         "correct_answer": "0.65s,2.54s,4.41s,6.29s,8.18s,10.05s,11.93s,13.81s,15.69s,17.57s,19.45s,21.33s,23.22s,25.09s,26.97s,28.85s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latin_Jam4-06.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human group actions; Applause; Cheering; Human voice; Music; Choir; Singing; Human voice; Clapping; Musical instrument",
+        "response": "Labels: Human voice; Applause",
         "correct_answer": "5.64s,7.55s,9.52s,11.45s,13.39s,15.32s,17.25s,19.19s,21.12s,23.06s,25.0s,26.93s,28.87s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-104012.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Bass drum; Drum kit; Bass drum; Drum; Percussion; Bass drum; Drum",
+        "response": "Labels: Musical instrument; Music; Percussion; Bass drum; Drum kit; Bass drum; Drum; Percussion; Bass drum; Kick (drum)",
         "correct_answer": "0.06s,2.12s,4.19s,6.25s,8.3s,10.36s,12.42s,14.48s,16.54s,18.6s,20.66s,22.72s,24.77s,26.84s,28.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103601.wav",
         "other": ""
@@ -3858,7 +3858,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Marimba and xylophone; Alarm; Alarm clock; Musical instrument sound; Alarm clock and buzzer; Alarm",
+        "response": "Labels: Musical instrument; Music; Percussion; Accordion",
         "correct_answer": "0.67s,2.54s,4.42s,6.3s,8.19s,10.06s,11.93s,13.81s,15.71s,17.57s,19.45s,21.33s,23.21s,25.09s,26.97s,28.85s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latin_Jam4-11.wav",
         "other": ""
@@ -3879,14 +3879,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Female singing",
+        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Male singing",
         "correct_answer": "0.05s,1.98s,3.9s,5.83s,7.75s,9.67s,11.59s,13.51s,15.45s,17.35s,19.28s,21.19s,23.13s,25.05s,26.96s,28.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103604.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Female speech and woman speaking; Conversation; Child speech and kid speaking",
+        "response": "Labels: Human voice; Speech; Female speech and woman speaking; Conversation; Female singing; Singing; Music; Speech; Child speech and kid speaking; Child singing",
         "correct_answer": "2.02s,3.95s,5.89s,7.82s,9.76s,11.69s,13.63s,15.57s,17.5s,19.44s,21.37s,23.31s,25.25s,27.18s,29.12s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103413.wav",
         "other": ""
@@ -3921,14 +3921,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Salsa; Keyboard (musical); Orchestra; Guitar; Accordion; Musical instrumentation",
+        "response": "Labels: Musical instrument; Music; Percussion; Salsa; Keyboard (musical); Orchestra; Guitar; Accordion; Musical instrument (general); Human voice; Singing",
         "correct_answer": "1.3s,3.24s,5.18s,7.12s,9.06s,11.0s,12.94s,14.88s,16.82s,18.76s,20.7s,22.64s,24.58s,26.52s,28.47s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Pais_Tropical-07.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Electric guitar; Music; Singing; Singer",
+        "response": "Labels: Guitar; Music; Singing; Electric guitar; Plucked string instrument; Human voice; Singer",
         "correct_answer": "0.06s,2.08s,4.06s,6.1s,8.09s,10.1s,12.12s,14.12s,16.13s,18.14s,20.15s,22.16s,24.17s,26.18s,28.18s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103704.wav",
         "other": ""
@@ -3942,7 +3942,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Clapping; Applause; Hands; Percussion; Music; Singing; Musical instrument; Keyboard (musical)",
+        "response": "Labels: Human group actions; Clapping",
         "correct_answer": "0.45s,2.46s,4.53s,6.63s,8.7s,10.76s,12.8s,14.82s,16.87s,18.89s,20.93s,22.98s,25.02s,27.07s,29.11s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latino_Latino-04.wav",
         "other": ""
@@ -3977,7 +3977,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Bell; Music; Female singing; Female vocal and female singing; Female speech and woman speaking; Male singing",
+        "response": "Labels: Human voice; Singing; Bell; Music; Female singing; Female vocal and female singing",
         "correct_answer": "1.36s,3.3s,5.24s,7.17s,9.12s,11.06s,12.98s,14.92s,16.85s,18.79s,20.72s,22.66s,24.59s,26.53s,28.46s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-106006.wav",
         "other": ""
@@ -3991,14 +3991,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "The timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.54s, 2.04s, 2.54s, 3.04s, 3.54s, 4.04s, 4.54s, 5.04s, 5.54s, 6.04s, 6.54s, 7.04s, 7.54s, 8.04s, 8.54s, 9.04s, 9.54s, 10.04s.",
+        "response": "Labels: Musical instrument; Music; Percussion; Wind instrument and woodwind instrument",
         "correct_answer": "0.07s,2.01s,3.94s,5.88s,7.77s,9.71s,11.64s,13.58s,15.51s,17.45s,19.38s,21.32s,23.25s,25.2s,27.12s,29.07s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-104109.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Brass instrument; Musical instrument; Music; Alarm; Alarm clock; Keyboard (musical)",
+        "response": "Labels: Brass instrument; Musical instrument; Music; Trumpet; Musical genres; Brass; Alarm; Alarm clock; Keyboard (musical); Accordion; Percussion",
         "correct_answer": "1.56s,3.5s,5.44s,7.37s,9.32s,11.25s,13.19s,15.14s,17.08s,19.01s,20.95s,22.89s,24.83s,26.77s,28.72s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Pais_Tropical-05.wav",
         "other": ""
@@ -4012,7 +4012,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Keyboard (musical); Wind instrument; Accordion; Saxophone; Woodwind instrument; Wind instrument and woodwind instrument; Musical instrument and Music",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Keyboard (musical); Wind instrument; Accordion; Woodwind instrument; Wind instrument and woodwind instrument; Musical instrument and Music; Alarm; Alarm clock; Domestic sounds and home sounds",
         "correct_answer": "0.79s,2.75s,4.7s,6.63s,8.57s,10.51s,12.45s,14.39s,16.34s,18.27s,20.21s,22.14s,24.09s,26.04s,27.95s,29.9s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103909.wav",
         "other": ""
@@ -4075,28 +4075,28 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: drum, drum, pop, beat, dance, pop, beat",
+        "response": "Labels: drum, drum, pop, dance, beat, pop, beat",
         "correct_answer": "1.99s,3.93s,5.86s,7.8s,9.73s,11.66s,13.6s,15.54s,17.48s,19.41s,21.35s,23.28s,25.22s,27.15s,29.09s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Macumba-03.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Singing; Music; Male speech, man speaking; Female speech, woman speaking; Female singing; Male singing",
+        "response": "Labels: Human voice; Speech; Singing; Music; Female singing",
         "correct_answer": "0.06s,2.14s,4.23s,6.31s,8.4s,10.49s,12.58s,14.66s,16.75s,18.84s,20.93s,23.02s,25.1s,27.19s,29.28s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103716.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: funky, guitar, drum, funky, no singer, spanish",
+        "response": "Label: funky, guitar, drum, funky, flute, spanish",
         "correct_answer": "1.49s,3.43s,5.36s,7.3s,9.23s,11.17s,13.11s,15.04s,16.97s,18.91s,20.85s,22.79s,24.72s,26.65s,28.59s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Macumba-02.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Human sounds; Singing voice; Male vocal and harmonic",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male speech and man speaking; Human sounds; Singing voice; Rapping; Human voice; Male vocal and singing; Male singing",
         "correct_answer": "3.15s,5.09s,7.03s,8.97s,10.91s,12.83s,14.78s,16.71s,18.64s,20.57s,22.51s,24.45s,26.38s,28.32s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103907.wav",
         "other": ""
@@ -4124,14 +4124,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Salsa; Drum; Musical instrument and Music; Drum; Percussion",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Salsa; Musical instrument (general)",
         "correct_answer": "0.06s,1.99s,3.92s,5.86s,7.8s,9.73s,11.67s,13.61s,15.54s,17.48s,19.42s,21.35s,23.28s,25.22s,27.16s,29.08s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103403.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Female singing; Chatter; Chatter (food); Female speech and woman speaking; Speech; Conversation; Human sounds; Child speech and kid speaking; Child singing; Human voice; Child singing; Human voice (microphone)",
+        "response": "Labels: Human voice; Female singing",
         "correct_answer": "0.72s,3.12s,5.48s,7.83s,10.16s,12.49s,14.78s,17.1s,19.43s,21.8s,24.12s,26.46s,28.79s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Mambo_Kings-10.wav",
         "other": ""
@@ -4145,21 +4145,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music, percussion, beat",
+        "response": "Labels: Music, Music genres, Pop music, Rock music, Pop",
         "correct_answer": "0.56s,2.5s,4.44s,6.38s,8.32s,10.26s,12.2s,14.14s,16.08s,18.02s,19.96s,21.9s,23.84s,25.78s,27.72s,29.66s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Albums-Latin_Jam5-11.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Alarm; Alarm clock; Chirp and tweet; Bird vocalization and bird call and bird song; Bird; Animal; Wild animals",
+        "response": "Labels: Accordion; Keyboard (musical); Musical instrument; Music; Alarm; Alarm clock; Keyboard; Alarm; Musical instrument",
         "correct_answer": "5.84s,7.94s,9.97s,12.03s,14.07s,16.12s,18.16s,20.2s,22.27s,24.33s,26.35s,28.43s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-104009.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Rhythm and groove; Musical instrument; Music; Rap; Human sounds; Male singing; Male speech and man speaking",
+        "response": "Labels: Human voice; Singing; Rhythm and beat; Rap; Music",
         "correct_answer": "1.93s,3.86s,5.8s,7.73s,9.66s,11.6s,13.54s,15.47s,17.41s,19.35s,21.28s,23.21s,25.14s,27.08s,29.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-106102.wav",
         "other": ""
@@ -4194,7 +4194,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Male singing; Music; Male singing",
+        "response": "Labels: Human voice; Singing; Music; Male singing; Male vocal and singing; Speech; Male singing",
         "correct_answer": "0.03s,1.97s,3.9s,5.84s,7.73s,9.67s,11.61s,13.54s,15.48s,17.41s,19.35s,21.29s,23.22s,25.15s,27.09s,29.02s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103803.wav",
         "other": ""
@@ -4208,7 +4208,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: trumpet, saxophone, flute, clarinet, piano, trumpet, saxophone, flute, clarinet, piano, trumpet",
+        "response": "Labels: trumpet, flute, horn, piano, saxophone, trumpet, trumpet, trumpet, trumpet, trumpet, trumpet, trumpet, trumpet, trumpet, trumpet",
         "correct_answer": "0.04s,1.99s,3.93s,5.85s,7.81s,9.74s,11.68s,13.63s,15.56s,17.49s,19.43s,21.37s,23.3s,25.24s,27.19s,29.12s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103509.wav",
         "other": ""
@@ -4222,7 +4222,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Speech; Conversation; Rattle; Chatter; Gargling; Human sounds",
+        "response": "Labels: Human voice; Rattle; Speech; Conversation; Human voice; Chatter; Gargling",
         "correct_answer": "3.51s,5.43s,7.38s,9.31s,11.25s,13.19s,15.12s,17.05s,18.99s,20.92s,22.85s,24.78s,26.7s,28.66s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-104110.wav",
         "other": ""
@@ -4243,7 +4243,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Acoustic guitar; Resonance",
+        "response": "Labels: Guitar; Music; Plucked string instrument; Musical instrument; Acoustic guitar; Strum",
         "correct_answer": "3.74s,5.68s,7.63s,9.57s,11.51s,13.45s,15.38s,17.32s,19.26s,21.19s,23.13s,25.07s,27.01s,28.95s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-106104.wav",
         "other": ""
@@ -4292,7 +4292,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum; Bass drum; Alarm; Alarm clock; Squeak; Alarm clock (tick); Alarm; Alarm clock (tick); Alarm; Alarm clock (tick)",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum; Bass drum; Percussion instrument; Drum kit",
         "correct_answer": "0.07s,2.02s,3.96s,5.89s,7.82s,9.76s,11.69s,13.63s,15.57s,17.5s,19.44s,21.38s,23.31s,25.24s,27.18s,29.12s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103412.wav",
         "other": ""
@@ -4313,7 +4313,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Musical instrument and music; Drum; Percussion; Maraca",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Bass drum; Musical instrument and percussion; Drum; Percussion",
         "correct_answer": "0.01s,1.94s,3.88s,5.82s,7.76s,9.69s,11.62s,13.56s,15.5s,17.43s,19.39s,21.3s,23.24s,25.18s,27.12s,29.04s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-105601.wav",
         "other": ""
@@ -4327,7 +4327,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Domestic sounds and home sounds; Human voice; Percussion; Drum kit; Music; Beat; Drum; Percussion; Slap bass",
+        "response": "Labels: Human voice; Bell; Percussion; Music; Male speech and man speaking; Male singing; Female singing",
         "correct_answer": "0.07s,2.01s,3.95s,5.88s,7.82s,9.75s,11.69s,13.63s,15.56s,17.5s,19.44s,21.37s,23.31s,25.24s,27.18s,29.11s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/ChaChaCha/Media-103404.wav",
         "other": ""
@@ -4341,21 +4341,21 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Wind instrument and woodwind instrument",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit; Drum; Snare drum; Acoustic guitar; Guitar; Fingerpicking; Plucked string instrument",
         "correct_answer": "0.06s,1.13s,2.17s,3.21s,4.23s,5.26s,6.28s,7.31s,8.34s,9.37s,10.43s,11.46s,12.52s,13.55s,14.57s,15.61s,16.64s,17.66s,18.7s,19.74s,20.77s,21.83s,22.87s,23.86s,24.92s,25.96s,27.01s,28.04s,29.08s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Albums-Chrisanne2-07.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label with timestamps: Human voice: [0.0s-0.3s, 0.5s-1.0s, 1.2s-1.6s, 1.8s-2.2s, 2.4s-2.8s, 3.0s-3.4s, 3.6s-4.0s, 4.2s-4.6s, 4.8s-5.2s, 5.4s-5.8s, 6.0s-6.4s, 6.6s-7.0s, 7.2s-7.6s, 7.8s-8.2s, 8.4s-8.8s, 9.0s-9.4s, 9.6s-10.0s]",
+        "response": "Labels: Human voice; Singing; Bell; Music; Musical instrument; Percussion; Drum kit; Drum; Bass drum; Snare drum",
         "correct_answer": "0.13s,1.18s,2.19s,3.19s,4.21s,5.25s,6.28s,7.3s,8.31s,9.33s,10.35s,11.36s,12.37s,13.4s,14.41s,15.42s,16.45s,17.46s,18.45s,19.47s,20.5s,21.51s,22.54s,23.54s,24.54s,25.55s,26.54s,27.56s,28.56s,29.58s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-104508.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Brass instrument",
+        "response": "Labels: Musical instrument; Music; Percussion; Drum kit",
         "correct_answer": "0.36s,1.41s,2.44s,3.45s,4.51s,5.54s,6.56s,7.59s,8.62s,9.64s,10.67s,11.72s,12.77s,13.79s,14.82s,15.85s,16.87s,17.88s,18.94s,20.01s,21.04s,22.1s,23.1s,24.14s,25.15s,26.16s,27.22s,28.28s,29.29s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Albums-Ballroom_Classics4-14.wav",
         "other": ""
@@ -4376,7 +4376,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Vehicle; Motor vehicle (road); Car; Car passing in the distance; Vehicle horn and car horn and honking; Engine; Engine starting and revving; Motorcycle",
+        "response": "Labels: Vehicle; Motor vehicle (road); Car; Car passing in the distance; Motorbike; Bicycle; Bus; Truck; Train; Motorcycle; Scooter",
         "correct_answer": "0.02s,1.01s,2.01s,2.99s,3.97s,4.95s,5.95s,6.98s,8.05s,9.11s,10.12s,11.13s,12.12s,13.12s,14.11s,15.12s,16.12s,17.14s,18.16s,19.16s,20.17s,21.17s,22.16s,23.14s,24.12s,25.12s,26.15s,27.14s,28.14s,29.17s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Albums-Chrisanne1-07.wav",
         "other": ""
@@ -4397,7 +4397,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Music; Choir; Singing; Human voice; Bell; Children singing; Child speech and kid speaking; Child singing; Human voice; Child singing",
+        "response": "Labels: Music; Singing; Human voice; Choir; Bell; Children singing; Child speech and kid speaking; Child singing; Human voice; Child singing",
         "correct_answer": "0.1s,1.13s,2.14s,3.11s,4.09s,5.08s,6.1s,7.11s,8.1s,9.1s,10.08s,11.09s,12.1s,13.09s,14.1s,15.09s,16.08s,17.07s,18.05s,19.08s,20.08s,21.08s,22.06s,23.04s,24.02s,25.04s,26.0s,27.01s,28.01s,29.0s,30.0s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-104609.wav",
         "other": ""
@@ -4432,7 +4432,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Electric guitar; Guitar; Plucked string instrument; Musical instrument; Music; Acoustic guitar; Choir; Human voice; Singing",
+        "response": "Labels: Bee and wasp; Insect; Animal; Wild animals; Domestic animals and pets; Bird",
         "correct_answer": "0.06s,1.1s,2.15s,3.18s,4.22s,5.26s,6.31s,7.35s,8.42s,9.46s,10.54s,11.53s,12.52s,13.53s,14.55s,15.58s,16.58s,17.62s,18.6s,19.63s,20.67s,21.66s,22.7s,23.73s,24.73s,25.78s,26.79s,27.79s,28.81s,29.85s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-103308.wav",
         "other": ""
@@ -4460,7 +4460,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bowed string instrument; Musical instrument; Music; Violin and fiddle",
+        "response": "Labels: Bowed string instrument; Musical instrument; Music; Bowed string instrument",
         "correct_answer": "0.05s,1.08s,2.1s,3.1s,4.1s,5.07s,6.07s,7.09s,8.08s,9.08s,10.08s,11.08s,12.07s,13.07s,14.07s,15.04s,16.04s,17.06s,18.05s,19.03s,20.03s,21.0s,22.01s,23.05s,24.04s,25.05s,26.08s,27.07s,28.05s,29.05s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-104811.wav",
         "other": ""
@@ -4474,7 +4474,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Percussion; Mallet percussion; Drum kit; Wind instrument and woodwind instrument; Marimba and xylophone; Musical instrument; Single-lensed camera; Squeak",
+        "response": "Labels: Musical instrument; Music; Percussion; Mallet percussion; Marimba and xylophone",
         "correct_answer": "4.11s,5.13s,6.15s,7.16s,8.18s,9.19s,10.22s,11.24s,12.25s,13.27s,14.28s,15.3s,16.31s,17.29s,18.35s,19.37s,20.38s,21.4s,22.42s,23.44s,24.44s,25.45s,26.5s,27.51s,28.52s,29.54s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105509.wav",
         "other": ""
@@ -4495,7 +4495,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bell; Bell ringing; Music; Musical instrument; Percussion",
+        "response": "Labels: Bell; Bell ringing; Music; Percussion; Musical instrument; Singing; Male singing; Male vocal",
         "correct_answer": "0.13s,1.1s,2.11s,3.08s,4.07s,5.08s,6.07s,7.06s,8.07s,9.07s,10.05s,11.05s,12.09s,13.09s,14.08s,15.09s,16.1s,17.11s,18.11s,19.11s,20.14s,21.16s,22.18s,23.2s,24.21s,25.21s,26.22s,27.21s,28.22s,29.23s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-104309.wav",
         "other": ""
@@ -4509,7 +4509,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Male singing; Male vocal and singing",
+        "response": "Labels: Human voice; Singing",
         "correct_answer": "0.07s,1.08s,2.09s,3.1s,4.09s,5.1s,6.13s,7.13s,8.16s,9.17s,10.17s,11.2s,12.22s,13.23s,14.22s,15.24s,16.25s,17.23s,18.25s,19.23s,20.2s,21.24s,22.24s,23.28s,24.31s,25.33s,26.34s,27.33s,28.32s,29.31s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Albums-Chrisanne3-09.wav",
         "other": ""
@@ -4530,7 +4530,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Male singing",
+        "response": "Labels: Human voice; Singing; Musical instrument; Music; Bell; Male singing; Singing; Human sounds",
         "correct_answer": "0.08s,1.12s,2.14s,3.15s,4.17s,5.18s,6.2s,7.25s,8.24s,9.2s,10.24s,11.25s,12.24s,13.25s,14.3s,15.32s,16.34s,17.27s,18.31s,19.32s,20.31s,21.33s,22.37s,23.37s,24.37s,25.37s,26.37s,27.39s,28.4s,29.43s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105112.wav",
         "other": ""
@@ -4544,7 +4544,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Musical instrument; Music; Bowed string instrument; Orchestra; Violin and piano",
+        "response": "Labels: Human voice; Singing; Musical instrument; Music; Bowed string instrument; Orchestra; Violin and fiddle",
         "correct_answer": "0.02s,1.03s,2.06s,3.07s,4.07s,5.09s,6.1s,7.11s,8.13s,9.15s,10.16s,11.19s,12.17s,13.18s,14.2s,15.24s,16.25s,17.27s,18.31s,19.34s,20.34s,21.36s,22.33s,23.37s,24.38s,25.41s,26.41s,27.45s,28.47s,29.49s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105307.wav",
         "other": ""
@@ -4572,7 +4572,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "he timestamps of all downbeats in this audio track are: 0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s, 10.5s, 11.0s, 11.5s, 12.0s, 12.5s, 13.0s, 13.5s, 14.0s, 14.5s, 15.0s, 15.5s, 16.0s, 16.5s, 17.0s, 17.5s, 18.0s, 18.5s, 19.0s, 19.5s, 20.0s, 20.5s, 21.0s, 21.5s, 22.0s, 22.5s, 23.0s, 23.5s, 24.0s, 24.5s, 25.0s, 25.5s, 26.0s, 26.5s, 27.0s, 27.5s, 28.0s, ",
+        "response": "0.0s, 0.54s, 1.0s, 1.5s, 2.0s, 2.5s, 3.0s, 3.5s, 4.0s, 4.5s, 5.0s, 5.5s, 6.0s, 6.5s, 7.0s, 7.5s, 8.0s, 8.5s, 9.0s, 9.5s, 10.0s",
         "correct_answer": "0.05s,1.14s,2.13s,3.14s,4.17s,5.19s,6.2s,7.22s,8.21s,9.19s,10.22s,11.26s,12.27s,13.3s,14.29s,15.32s,16.33s,17.34s,18.35s,19.35s,20.34s,21.35s,22.38s,23.39s,24.4s,25.42s,26.47s,27.48s,28.47s,29.51s,30.54s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105318.wav",
         "other": ""
@@ -4593,14 +4593,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Bowed string instrument; Fiddle; Musical instrument; Music; Violin and fiddle; Drum kit; Percussion; Drum; Snare drum; Drumkit; Bass drum; Snare drum; Drum sound",
+        "response": "Labels: Bowed string instrument; Fiddle; Musical instrument; Music; Violin and fiddle; Drum kit; Percussion; Drum; Snare drum; Drumkit; Bass drum; Drum sound; Music",
         "correct_answer": "0.06s,1.1s,2.09s,3.09s,4.08s,5.1s,6.09s,7.1s,8.09s,9.09s,10.09s,11.07s,12.05s,13.07s,14.09s,15.08s,16.09s,17.09s,18.08s,19.09s,20.08s,21.1s,22.11s,23.08s,24.06s,25.1s,26.07s,27.05s,28.06s,29.09s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105010.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Female singing",
+        "response": "Labels: Human voice; Singing; Music; Female singing; Female speech and woman speaking; Musical instrument",
         "correct_answer": "0.82s,1.87s,2.92s,3.97s,5.0s,6.04s,7.12s,8.19s,9.22s,10.21s,11.26s,12.32s,13.39s,14.44s,15.47s,16.45s,17.44s,18.46s,19.48s,20.53s,21.62s,22.68s,23.68s,24.68s,25.7s,26.71s,27.76s,28.8s,29.85s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105812.wav",
         "other": ""
@@ -4649,14 +4649,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Vehicle; Vehicle engine; Car; Motor vehicle (road); Engine; Car passing; Accelerating and revving and vroom",
+        "response": "Label with timestamps: Musical instrument: Generic: Echoing and reverberant -> Accordion, fiddle; Music; Musical instrument; Accordion",
         "correct_answer": "0.15s,1.15s,2.16s,3.19s,4.18s,5.19s,6.19s,7.18s,8.15s,9.15s,10.16s,11.15s,12.17s,13.18s,14.17s,15.17s,16.19s,17.19s,18.17s,19.18s,20.18s,21.18s,22.18s,23.17s,24.17s,25.17s,26.14s,27.14s,28.16s,29.18s,30.17s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105011.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Musical instrument; Music; Female singing; Female vocal and guitar",
+        "response": "Labels: Musical instrument; Music; Female singing; Song; Flute; Female vocal and flute",
         "correct_answer": "0.04s,1.06s,2.1s,3.14s,4.18s,5.22s,6.25s,7.28s,8.32s,9.35s,10.38s,11.42s,12.46s,13.49s,14.52s,15.56s,16.59s,17.63s,18.67s,19.69s,20.73s,21.76s,22.8s,23.84s,24.87s,25.91s,26.94s,27.96s,28.98s,29.96s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-105810.wav",
         "other": ""
@@ -4684,7 +4684,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing; Music; Piano; Keyboard (musical); Human voice; Male vocal; Female singing; Female singing",
+        "response": "Labels: Male singing; Singing; Music; Piano; Keyboard (musical); Human voice; Male vocal; Singer; Male vocal; Vocal",
         "correct_answer": "0.29s,1.29s,2.29s,3.3s,4.29s,5.28s,6.3s,7.29s,8.3s,9.3s,10.3s,11.3s,12.3s,13.29s,14.3s,15.29s,16.29s,17.29s,18.3s,19.3s,20.3s,21.3s,22.3s,23.3s,24.28s,25.3s,26.3s,27.3s,28.3s,29.3s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-100608.wav",
         "other": ""
@@ -4712,7 +4712,7 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Male singing; Singing; Male vocal and singing; Vocal",
+        "response": "Labels: Male singing; Singing; Male vocal; Vocal; Male vocal",
         "correct_answer": "0.06s,1.1s,2.14s,3.16s,4.19s,5.24s,6.27s,7.31s,8.33s,9.37s,10.34s,11.43s,12.43s,13.42s,14.44s,15.44s,16.45s,17.43s,18.41s,19.46s,20.47s,21.5s,22.53s,23.58s,24.62s,25.68s,26.68s,27.74s,28.74s,29.75s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-104608.wav",
         "other": ""
@@ -4761,14 +4761,14 @@
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Labels: Human voice; Singing; Bell; Music; Musical instrument; Song",
+        "response": "Labels: Human voice; Singing; Bell; Music; Song; Male singing",
         "correct_answer": "0.17s,1.21s,2.22s,3.29s,4.35s,5.38s,6.4s,7.45s,8.46s,9.45s,10.45s,11.43s,12.45s,13.45s,14.43s,15.41s,16.41s,17.4s,18.4s,19.41s,20.4s,21.37s,22.37s,23.31s,24.29s,25.26s,26.25s,27.25s,28.24s,29.21s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-103315.wav",
         "other": ""
     },
     {
         "question": "Identify and list the timestamps of all downbeats in this audio track. Use the format of `0.0s,0.54s,1.0ss, ...`",
-        "response": "Label: female, female, female vocal, female, female, female, female, female, female, female, female",
+        "response": "Label: vocal, female, female, female, female, female, female, female, female, female, female, female",
         "correct_answer": "0.31s,1.34s,2.38s,3.41s,4.45s,5.48s,6.52s,7.55s,8.58s,9.62s,10.66s,11.69s,12.73s,13.76s,14.8s,15.83s,16.86s,17.9s,18.93s,19.96s,21.01s,22.04s,23.07s,24.12s,25.16s,26.18s,27.22s,28.26s,29.32s",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/ballroom/BallroomData/VienneseWaltz/Media-100609.wav",
         "other": ""

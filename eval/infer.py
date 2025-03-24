@@ -97,7 +97,7 @@ def split_and_save_audio(
     
     if return_start:
         return waveform, start
-    path = os.path.join(cache_path, args.model+ "_" + os.path.basename(file_path))
+    path = os.path.join(cache_path, args.model+ "_" + "temp.wav")
     torchaudio.save(path, waveform, sample_rate)
     return path
 

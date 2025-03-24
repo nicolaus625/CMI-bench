@@ -127,7 +127,7 @@
     },
     {
         "question": "Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.\n\nThe output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].\n\nExample 1:\n\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"\nExample 2:\n\"[('0.0', '10.0', 'No Tech')]\" ",
-        "response": "[('0.0', '10.0', 'No Tech')]",
+        "response": "The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].",
         "correct_answer": "[('31.6836', '32.0203', 'Upward Portamento'), ('32.0203', '32.3338', 'Downward Portamento'), ('32.6937', '33.3322', 'Upward Portamento'), ('33.3322', '33.9824', 'Upward Portamento'), ('35.9793', '36.6411', 'Upward Portamento'), ('38.6148', '39.3578', 'Upward Portamento')]",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/Guzheng/Guzheng_Tech99/data/audio/test/17.flac",
         "other": ""
@@ -148,7 +148,7 @@
     },
     {
         "question": "Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.\n\nThe output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].\n\nExample 1:\n\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"\nExample 2:\n\"[('0.0', '10.0', 'No Tech')]\" ",
-        "response": "[('0.0', '10.0', 'No Tech')]",
+        "response": "The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].",
         "correct_answer": "[('61.8347', '62.4849', 'Vibrato'), ('63.1699', '64.0522', 'Vibrato'), ('63.1699', '64.0522', 'Downward Portamento'), ('65.6660', '66.3278', 'Upward Portamento'), ('66.3278', '66.9547', 'Upward Portamento'), ('68.2667', '68.9052', 'Vibrato'), ('69.6134', '70.6235', 'Vibrato'), ('69.6134', '70.6235', 'Upward Portamento')]",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/Guzheng/Guzheng_Tech99/data/audio/test/17.flac",
         "other": ""
@@ -302,14 +302,14 @@
     },
     {
         "question": "Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.\n\nThe output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].\n\nExample 1:\n\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"\nExample 2:\n\"[('0.0', '10.0', 'No Tech')]\" ",
-        "response": "The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].",
+        "response": "[('0.0', '10.0', 'No Tech')]",
         "correct_answer": "[('20.4916', '21.1998', 'Vibrato'), ('21.9196', '22.6511', 'Vibrato'), ('23.3709', '24.0559', 'Vibrato'), ('24.7525', '25.5071', 'Vibrato'), ('26.9235', '27.5969', 'Vibrato'), ('28.3051', '29.0133', 'Vibrato'), ('29.7099', '30.4065', 'Vibrato')]",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/Guzheng/Guzheng_Tech99/data/audio/test/7.flac",
         "other": ""
     },
     {
         "question": "Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.\n\nThe output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].\n\nExample 1:\n\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"\nExample 2:\n\"[('0.0', '10.0', 'No Tech')]\" ",
-        "response": "[('0.0', '10.0', 'No Tech')]",
+        "response": "The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].",
         "correct_answer": "[('31.8113', '32.4963', 'Vibrato')]",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/Guzheng/Guzheng_Tech99/data/audio/test/7.flac",
         "other": ""
@@ -442,7 +442,7 @@
     },
     {
         "question": "Detect the timestep occurrences of Guzheng (Chinese zither) playing techniques in the given audio. The possible techniques include: Vibrato, Point Note, Upward Portamento, Downward Portamento, Plucks, Glissando, and Tremolo.\n\nThe output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].\n\nExample 1:\n\"[('5.5035', '6.0724', 'Upward Portamento'), ('7.0708', '8.0809', 'Upward Portamento'), ('9.6947', '10.0', 'Upward Portamento')]\"\nExample 2:\n\"[('0.0', '10.0', 'No Tech')]\" ",
-        "response": "The output format should be a Python string representation of a list containing tuples of (start time second, end time second, technique). If no technique is detected, return [('start_time', 'end_time', 'No Tech')].",
+        "response": "[('0.0', '10.0', 'No Tech')]",
         "correct_answer": "[('10.1007', '10.5186', 'Vibrato'), ('11.7725', '12.1905', 'Vibrato'), ('12.6433', '14.3732', 'Upward Portamento'), ('15.6038', '16.0798', 'Vibrato'), ('16.6371', '16.7184', 'Glissando'), ('16.7184', '16.7996', 'Glissando'), ('16.7996', '16.8925', 'Glissando'), ('16.8925', '16.9506', 'Glissando'), ('17.7749', '18.7269', 'Vibrato'), ('17.7749', '18.7269', 'Upward Portamento'), ('18.7269', '19.5976', 'Vibrato')]",
         "audioid": "/import/c4dm-04/siyoul/CMI-bench/data/Guzheng/Guzheng_Tech99/data/audio/test/14.flac",
         "other": ""
