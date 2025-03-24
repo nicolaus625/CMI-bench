@@ -432,6 +432,91 @@ def melody_evaluation(result_list):
     return np.mean(overall_accuracy)
 
 
+from sklearn.metrics import f1_score
+
+CLASSES = ['Vibrato', 'Point Note', 'Upward Portamento', 'Downward Portamento', 'Plucks', 'Glissando', 'Tremolo']
+CLASSES = [normalise(i) for i in CLASSES]
+TOLERANCE = 0.05  # 50 ms onset tolerance
+
+def convert_to_frame_labels(events, sr=100):
+    """
+    Convert a list of (start_time, end_time, class) events into frame-based labels.
+    Args:
+        events: list of (start_time, end_time, class) tuples
+        sr: frame rate in Hz (default = 100 for 10 ms frame step)
+    Returns:
+        frame_labels: np.ndarray of shape (num_frames, num_classes)
+    """
+    event_str = events[events.find('['): events.rfind(']')] + "]"
+    events = eval(event_str)
+    if isinstance(events, list) and isinstance(events[0], dict):
+        events = [(float(e['start']), float(e['end']), e['technique']) for e in events]
+    elif isinstance(events, list) and all(isinstance(e, tuple) and len(e) == 3 for e in events):
+        events = [(float(e[0]), float(e[1]), str(e[2])) for e in events]
+    events = [(start %10, end %10, normalise(label)) for start, end, label in events]
+
+    max_time = 10 #max(float(event[1]) for event in events) if events else 0
+    num_frames = int(np.ceil(max_time * sr))
+    frame_labels = np.zeros((num_frames, len(CLASSES)))
+    if len(events) == 1 and normalise(events[0][-1]) == "notech":
+        return frame_labels
+    
+    for event in events:
+        start_frame = int(float(event[0]) * sr)
+        end_frame = int(float(event[1]) * sr)
+        label_idx = CLASSES.index(normalise(event[2]))
+        frame_labels[start_frame:end_frame, label_idx] = 1
+        
+    return frame_labels
+
+
+def calculate_frame_f1(result_list, sr=100):
+    total_tp = 0
+    total_fp = 0
+    total_fn = 0
+    total_tn = 0
+    
+    tp_per_class = np.zeros(len(CLASSES))
+    fp_per_class = np.zeros(len(CLASSES))
+    fn_per_class = np.zeros(len(CLASSES))
+    
+    for tmp in result_list:
+        true_events = tmp["correct_answer"]
+        pred_events = tmp["response"]
+
+        y_true = convert_to_frame_labels(true_events, sr)
+        y_pred = convert_to_frame_labels(pred_events, sr)
+
+        # Accumulate micro F1 components
+        total_tp += ((y_true == 1) & (y_pred == 1)).sum()
+        total_fp += ((y_true == 0) & (y_pred == 1)).sum()
+        total_fn += ((y_true == 1) & (y_pred == 0)).sum()
+        total_tn += ((y_true == 0) & (y_pred == 0)).sum()
+
+        # Accumulate per-class components for macro-F1
+        for i in range(len(CLASSES)):
+            tp_per_class[i] += ((y_true[:, i] == 1) & (y_pred[:, i] == 1)).sum()
+            fp_per_class[i] += ((y_true[:, i] == 0) & (y_pred[:, i] == 1)).sum()
+            fn_per_class[i] += ((y_true[:, i] == 1) & (y_pred[:, i] == 0)).sum()
+
+    # Micro-F1 calculation
+    micro_precision = total_tp / (total_tp + total_fp) if (total_tp + total_fp) > 0 else 0
+    micro_recall = total_tp / (total_tp + total_fn) if (total_tp + total_fn) > 0 else 0
+    micro_f1 = 2 * micro_precision * micro_recall / (micro_precision + micro_recall) if (micro_precision + micro_recall) > 0 else 0
+
+    # Macro-F1 calculation
+    class_f1 = []
+    for i in range(len(CLASSES)):
+        precision = tp_per_class[i] / (tp_per_class[i] + fp_per_class[i]) if (tp_per_class[i] + fp_per_class[i]) > 0 else 0
+        recall = tp_per_class[i] / (tp_per_class[i] + fn_per_class[i]) if (tp_per_class[i] + fn_per_class[i]) > 0 else 0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+        class_f1.append(f1)
+    
+    macro_f1 = np.mean(class_f1)
+
+    return micro_f1, macro_f1
+
+
 genre_set = {'singersongwriter', 'instrumentalrock', 'edm', 'newage', '70s', 'metal', 'alternative', 'punkrock', 'improvisation', 'worldfusion', 'country', 'progressive', 'rap', 'darkwave', 'house', 'alternativerock', 'rocknroll', 'lounge', 'grunge', 'bluesrock', 'orchestral', 'world', 'postrock', 'instrumentalpop', 'idm', 'folk', 'drumnbass', 'club', 'contemporary', 'chanson', 'deephouse', 'rnb', 'blues', 'popfolk', 'eurodance', 'electronica', 'electropop', 'latin', 'hardrock', 'celtic', 'easylistening', 'groove', 'trance', 'dubstep', 'soul', 'jazzfusion', 'atmospheric', 'downtempo', 'techno', 'hard', 'chillout', 'classicrock', 'darkambient', 'acidjazz', 'newwave', 'breakbeat', 'ethno', 'indie', '90s', 'electronic', 'dub', 'hiphop', 'bossanova', 'choir', 'minimal', 'soundtrack', 'triphop', 'synthpop', 'medieval', 'industrial', 'pop', 'swing', '80s', 'jazz', 'symphonic', 'psychedelic', 'dance', 'ambient', 'experimental', 'fusion', 'poprock', 'reggae', 'disco', '60s', 'rock', 'classical', 'funk'}
 instrument_set = {'acousticguitar', 'saxophone', 'cello', 'strings', 'bass', 'bell', 'synthesizer', 'horn', 'keyboard', 'brass', 'harmonica', 'electricguitar', 'voice', 'bongo', 'guitar', 'harp', 'viola', 'pad', 'violin', 'drummachine', 'computer', 'orchestra', 'organ', 'drums', 'doublebass', 'percussion', 'acousticbassguitar', 'clarinet', 'trombone', 'accordion', 'rhodes', 'classicalguitar', 'trumpet', 'piano', 'oboe', 'flute', 'electricpiano', 'beat', 'sampler', 'pipeorgan'}
 emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad', 'sexy', 'children', 'adventure', 'trailer', 'nature', 'christmas', 'energetic', 'fun', 'uplifting', 'inspiring', 'cool', 'party', 'relaxing', 'ballad', 'melancholic', 'drama', 'sport', 'film', 'romantic', 'commercial', 'love', 'dark', 'soundscape', 'background', 'summer', 'game', 'soft', 'epic', 'travel', 'slow', 'upbeat', 'positive', 'dramatic', 'space', 'deep', 'meditative', 'retro', 'documentary', 'calm', 'happy', 'emotional', 'dream', 'holiday', 'hopeful', 'groovy', 'melodic', 'fast', 'corporate', 'action', 'movie'}
@@ -445,8 +530,8 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     model = args.model 
-    results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "MedleyDB" in result]
+    results_json = glob.glob(f"model/results/{model}/{model}*.jsonl")
+    results_json = [result for result in results_json if "Guzheng_Tech" in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
@@ -505,8 +590,9 @@ if __name__ == "__main__":
         print(f"{model}_{task} WER: {wer:.4f}")
         print(f"{model}_{task} CER: {cer:.4f}")
     elif task == "Guzheng_Tech":
-        print(model, task)
-        pass
+        marco_f1, micro_f1 = calculate_frame_f1(data)
+        print(f"{model}_{task} Marco F1: {marco_f1:.4f}")
+        print(f"{model}_{task} Micro F1: {micro_f1:.4f}")
     elif task == "MedleyDB":
         accuracy = melody_evaluation(data)
         print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
