@@ -1,9 +1,11 @@
 import glob
 
+import re
 import argparse
 import json
 import os
 import torch
+import string
 
 import tqdm
 import numpy as np
@@ -18,6 +20,7 @@ import argparse
 
 import mir_eval
 from torchmetrics import R2Score
+import jiwer
 
  
 def normalise(text):
@@ -25,7 +28,6 @@ def normalise(text):
         text = text[0]
     return text.replace("_", "").replace("-", "").replace("#", "\u266f").replace("'", "").replace(" ", "").replace(".", "").lower()
 
-import re
 
 def extract_int(response: str) -> int:
     """
@@ -314,6 +316,44 @@ def beat_tracking(result_list, task="beat_tracking"):
     print(f"Average AMLt: {avg_AML_t}")
 
 
+def compute_wer_cer(prediction, reference):
+    # Clean the prediction (remove prefix)
+    patterns = [
+        r".*? lyrics .*?are.*?:",
+        r".*? content .*?is.*?:",
+        r".*? transcription .*?is.*?:",
+        r".*? text .*?is.*?:"
+    ]
+    for pattern in patterns:
+        prediction = re.sub(pattern, '', prediction).strip()
+
+    def clean_string(text):
+        text = text.translate(str.maketrans('', '', string.punctuation))
+        text = text.lower()
+        return text
+    prediction = clean_string(prediction)
+    reference = clean_string(reference)
+    
+    # Compute WER and CER using jiwer
+    wer = jiwer.wer(reference, prediction)
+    cer = jiwer.cer(reference, prediction)
+    
+    return wer, cer
+
+def batch_wer_cer(result_list):
+    predictions = [tmp["response"] for tmp in result_list]
+    references = [tmp["correct_answer"] for tmp in result_list]
+    wer_scores = []
+    cer_scores = []
+    
+    for prediction, reference in zip(predictions, references):
+        wer, cer = compute_wer_cer(prediction, reference)
+        wer_scores.append(wer)
+        cer_scores.append(cer)
+    
+    return np.mean(wer_scores), np.mean(cer_scores)
+
+
 genre_set = {'singersongwriter', 'instrumentalrock', 'edm', 'newage', '70s', 'metal', 'alternative', 'punkrock', 'improvisation', 'worldfusion', 'country', 'progressive', 'rap', 'darkwave', 'house', 'alternativerock', 'rocknroll', 'lounge', 'grunge', 'bluesrock', 'orchestral', 'world', 'postrock', 'instrumentalpop', 'idm', 'folk', 'drumnbass', 'club', 'contemporary', 'chanson', 'deephouse', 'rnb', 'blues', 'popfolk', 'eurodance', 'electronica', 'electropop', 'latin', 'hardrock', 'celtic', 'easylistening', 'groove', 'trance', 'dubstep', 'soul', 'jazzfusion', 'atmospheric', 'downtempo', 'techno', 'hard', 'chillout', 'classicrock', 'darkambient', 'acidjazz', 'newwave', 'breakbeat', 'ethno', 'indie', '90s', 'electronic', 'dub', 'hiphop', 'bossanova', 'choir', 'minimal', 'soundtrack', 'triphop', 'synthpop', 'medieval', 'industrial', 'pop', 'swing', '80s', 'jazz', 'symphonic', 'psychedelic', 'dance', 'ambient', 'experimental', 'fusion', 'poprock', 'reggae', 'disco', '60s', 'rock', 'classical', 'funk'}
 instrument_set = {'acousticguitar', 'saxophone', 'cello', 'strings', 'bass', 'bell', 'synthesizer', 'horn', 'keyboard', 'brass', 'harmonica', 'electricguitar', 'voice', 'bongo', 'guitar', 'harp', 'viola', 'pad', 'violin', 'drummachine', 'computer', 'orchestra', 'organ', 'drums', 'doublebass', 'percussion', 'acousticbassguitar', 'clarinet', 'trombone', 'accordion', 'rhodes', 'classicalguitar', 'trumpet', 'piano', 'oboe', 'flute', 'electricpiano', 'beat', 'sampler', 'pipeorgan'}
 emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad', 'sexy', 'children', 'adventure', 'trailer', 'nature', 'christmas', 'energetic', 'fun', 'uplifting', 'inspiring', 'cool', 'party', 'relaxing', 'ballad', 'melancholic', 'drama', 'sport', 'film', 'romantic', 'commercial', 'love', 'dark', 'soundscape', 'background', 'summer', 'game', 'soft', 'epic', 'travel', 'slow', 'upbeat', 'positive', 'dramatic', 'space', 'deep', 'meditative', 'retro', 'documentary', 'calm', 'happy', 'emotional', 'dream', 'holiday', 'hopeful', 'groovy', 'melodic', 'fast', 'corporate', 'action', 'movie'}
@@ -328,7 +368,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results_test/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "EMO" in result]
+    results_json = [result for result in results_json if "DSing" in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
@@ -385,8 +425,9 @@ if __name__ == "__main__":
     elif task == "MusicCaps":
         music_captioning(data)
     elif task == "DSing":
-        print(model, task)
-        pass
+        wer, cer = batch_wer_cer(data)
+        print(f"{model}_{task} WER: {wer:.4f}")
+        print(f"{model}_{task} CER: {cer:.4f}")
     elif task == "Guzheng_Tech":
         print(model, task)
         pass
