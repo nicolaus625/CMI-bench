@@ -7,7 +7,7 @@ import os
 import string
 import torch
 
-import tqdm
+from tqdm import tqdm
 import numpy as np
 from sklearn.metrics import roc_auc_score, average_precision_score
 
@@ -21,6 +21,8 @@ import mir_eval
 from torchmetrics import R2Score
 import jiwer
 import pretty_midi
+from FlagEmbedding import FlagAutoModel
+from torch.nn import functional as F
 
  
 def normalise(text):
@@ -151,7 +153,13 @@ def multi_label_bert(result_list, answer_list, task="emotion"):
     y_true = []
     y_pred = []
     
-    for tmp in result_list:
+    model = FlagAutoModel.from_finetuned(
+        "/map-vepfs/yinghao/huggingface/bge-large-en-v1.5",
+        query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
+        devices="cuda:0",   # if not specified, will use all available gpus or cpu when no gpu available
+    )
+    
+    for tmp in tqdm(result_list):
         response = tmp["response"].lower().strip()
         correct_answers = tmp["correct_answer"].lower().strip()
         
@@ -159,19 +167,24 @@ def multi_label_bert(result_list, answer_list, task="emotion"):
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
         y_true.append(true_vector)
         
-        bert_candidates = []
-        bert_references = []
-        
-        # Store BERTScore inputs
-        bert_candidates = [response] * len(answer_list)
-        bert_references = answer_list
-    
-        # Compute BERTScore similarity
-        P, R, F1 = score(bert_candidates, bert_references, lang="en-sci", verbose=False)
-        bert_scores = R.cpu().numpy()
+        # bert_candidates = []
+        # bert_references = []
+        # # Store BERTScore inputs
+        # bert_candidates = [response] * len(answer_list)
+        # bert_references = answer_list
+        # # Compute BERTScore similarity
+        # P, R, F1 = score(bert_candidates, bert_references, lang="en-sci", verbose=False)
+        # bert_scores = R.cpu().numpy()
+
+        response_embed = torch.from_numpy(model.encode([response]))[0].view(1, -1)
+        embeddings = torch.from_numpy(model.encode(answer_list))
+        bge_cos = [
+            F.cosine_similarity(response_embed,  embeddings[i].view(1, -1)).item()
+            for i, andser in enumerate(answer_list)
+        ]
     
         # Normalize BERT scores using softmax
-        y_pred.append(bert_scores)
+        y_pred.append(bge_cos)
     
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
@@ -183,7 +196,7 @@ def multi_label_bert(result_list, answer_list, task="emotion"):
     return {
         "ROC-AUC": roc_auc, 
         "PR-AUC": pr_auc, 
-        "BERT-Score (POC-AUC)": bert_scores.mean()
+        # "BERT-Score (POC-AUC)": bert_scores.mean()
     }
 
 
@@ -329,7 +342,7 @@ def compute_wer_cer(prediction, reference):
 
     def clean_string(text):
         text = text.translate(str.maketrans('', '', string.punctuation))
-        text = text.lower()
+        text = text.lower().replace("\n", " ").replace("-", "")
         return text
     prediction = clean_string(prediction)
     reference = clean_string(reference)
@@ -531,7 +544,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     results_json = glob.glob(f"model/results/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "Guzheng_Tech" in result]
+    results_json = [result for result in results_json if "MTG_instrument" in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
