@@ -74,28 +74,29 @@ def get_multiclass_acc(result_list):
     if type(result_list[0]["correct_answer"]) == list:
         answer_list  = set(tmp["correct_answer"][0] for tmp in result_list)
     else:
-        answer_list = set(tmp["correct_answer"] for tmp in result_list)
-    if type(data[0]["correct_answer"]) == str:
-        length = len(set(answer_list))
-        answer_list = [normalise(answer) for answer in answer_list]
-        assert length == len(set(answer_list))
+        answer_list = set(str(tmp["correct_answer"]) for tmp in result_list)
+    # if type(data[0]["correct_answer"]) == str:
+    length = len(set(answer_list))
+    answer_list = [normalise(answer) for answer in answer_list]
+    assert length == len(set(answer_list))
         
-        # print(f"{len(answer_list)}-class classification")
-        count = 0.0
-        for tmp in result_list:
-            reponse = normalise(tmp["response"])
-            if normalise(tmp["correct_answer"]) in reponse:
-                # Ensure no other answer is in the response
-                if all(answer not in reponse for answer in answer_list if answer != normalise(tmp["correct_answer"])):
-                    count += 1
-        return count / len(result_list)
-    elif type(data[0]["correct_answer"]) == int:
-        # print(f"{len(answer_list)}-class classification")
-        count = 0.0
-        for tmp in result_list:
-            if extract_int(tmp['response']) == tmp["correct_answer"]:
+    # print(f"{len(answer_list)}-class classification")
+    count = 0.0
+    for tmp in result_list:
+        reponse = normalise(tmp["response"])
+        correct_answer = str(tmp["correct_answer"])
+        if normalise(correct_answer) in reponse:
+            # Ensure no other answer is in the response
+            if all(answer not in reponse for answer in answer_list if answer != normalise(correct_answer)):
                 count += 1
-        return count / len(result_list)
+    return count / len(result_list)
+    # elif type(data[0]["correct_answer"]) == int:
+    #     # print(f"{len(answer_list)}-class classification")
+    #     count = 0.0
+    #     for tmp in result_list:
+    #         if extract_int(tmp['response']) == tmp["correct_answer"]:
+    #             count += 1
+    #     return count / len(result_list)
     
 def cal_r2(result_list):
     answer_list = [float(tmp["correct_answer"]) for tmp in result_list]
@@ -185,7 +186,7 @@ def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"):
             bert_candidates = [response] * len(answer_list)
             bert_references = answer_list
             # Compute BERTScore similarity
-            P, R, F1 = score(bert_candidates, bert_references, lang="en-sci", verbose=False)
+            P, R, F1 = score(bert_candidates, bert_references, lang="en", verbose=False)
             bert_scores = R.cpu().numpy()
             y_pred.append(bert_scores)
         elif embed == "bge":
@@ -574,11 +575,15 @@ if __name__ == "__main__":
     parser.add_argument('--model', default="qwen2", type=str, 
                         choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltu_as", "mullama", "flamingo", "gama", "gama_it", "pengi"], 
                         help='the model to use for inference')
-    
+    parser.add_argument('--task', default="MTT", type=str, 
+                        choices=["all", "MTT", "EMO_valence", "EMO_arousal", "GTZAN", "VocalSet_tech", "Nsynth_instrument", "Nsynth_pitch", "ballroom_downbeat", "gtzan_beat", "ballroom_beat", "gtzan_downbeat", "SDD", "MusicCaps", "DSing", "Guzheng_Tech", "MedleyDB", "MTG_instrument", "MTG_genre", "GS_key", "MTG_emotion", "MTG_top50tags"], 
+                        help='the task to evaluate')
     args = parser.parse_args()
     model = args.model 
+    task = args.task
     results_json = glob.glob(f"model/results/{model}/{model}*.jsonl")
-    results_json = [result for result in results_json if "MTT" in result]
+    if task != "all":
+        results_json = [result for result in results_json if task in result]
     result = results_json[0]
     task = os.path.basename(result)[len(model)+1:-6]
     # load jsonl
@@ -601,8 +606,8 @@ if __name__ == "__main__":
         print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
         value = multi_label_bert(data, tags)
         print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags, embed="bert")
+        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     elif task == "EMO_valence":
         r2 = cal_r2(data)
         print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
@@ -660,15 +665,17 @@ if __name__ == "__main__":
         print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
         value = multi_label_bert(data, tags)
         print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags, embed="bert")
+        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
     elif task == "MTG_emotion":
         tags = list(emotion_set)
         roc_auc, pr_auc = multi_label_classification(data, tags)
         print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags, embed="bert")
+        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags)
+        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
     elif task == "MTG_top50tags":
         tags = ["alternative", "ambient", "atmospheric", "chillout", "classical", "dance", "downtempo", "easylistening", "electronic","experimental", "folk", "funk", "hiphop", "house", "indie", "instrumentalpop", "jazz", "lounge", "metal", "newage","orchestral", "pop", "popfolk", "poprock", "reggae", "rock", "soundtrack", 
@@ -677,8 +684,8 @@ if __name__ == "__main__":
         print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
         value = multi_label_bert(data, tags)
         print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags, embed="bert")
+        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     else:
         print(model, task)
         print("Task not found")
