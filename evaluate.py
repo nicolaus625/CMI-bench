@@ -351,9 +351,9 @@ def beat_tracking(result_list, task="beat_tracking"):
     avg_CML_t = np.mean(CML_t_values)
     avg_AML_t = np.mean(AML_t_values)
     
-    print(f"{task.upper()} F1: {f1_measure}")
-    print(f"Average CMLt: {avg_CML_t}")
-    print(f"Average AMLt: {avg_AML_t}")
+    print(f"{task.upper()} F1: {f1_measure*100:.2f}")
+    print(f"Average CMLt: {avg_CML_t*100:.2f}")
+    print(f"Average AMLt: {avg_AML_t*100:.2f}")
 
 def convert_digits_to_words(words):
     for i, word in enumerate(words):
@@ -367,7 +367,9 @@ def compute_wer_cer(prediction, reference):
         r".*? lyrics .*?are.*?:",
         r".*? content .*?is.*?:",
         r".*? transcription .*?is.*?:",
-        r".*? text .*?is.*?:"
+        r".*? text .*?is.*?:",
+        "<s>",
+        "</s>"
     ]
     for pattern in patterns:
         prediction = re.sub(pattern, '', prediction).strip()
@@ -408,15 +410,28 @@ def process_midi_sequence(input_string):
         return None, None
         # raise ValueError("Input is not a string")
     if "{" in input_string or "}" in input_string:
+        input_string = re.sub(r"{'time':", "(", input_string)
+        input_string = re.sub(r"'MIDI_number':", "", input_string)
+        input_string = re.sub(r"}", ")", input_string)
+    if "{" in input_string or "}" in input_string:
         return None, None
         # raise ValueError("Invalid characters in input string")
-
+    
+    input_string = input_string.replace("♯","#")
+    input_string = input_string.replace("♭","b")
+    if len(input_string) < 2:
+        return None, None
+        # raise ValueError("Empty input string")
+    input_string = input_string[:-1] if input_string[-2]=="]" else input_string  #punctuation after "[]"
     try:
         midi_sequence = eval(input_string)
-    except SyntaxError as e:
+    except (SyntaxError, NameError, TypeError) as e:
         if 'unterminated string literal' in str(e):
             last_paren = input_string.rfind(')')
-            fixed_string = input_string[:last_paren] + ")]"
+            start_paren = input_string.find('[', 0, last_paren)
+            if start_paren == -1:
+                return None, None
+            fixed_string = input_string[start_paren:last_paren] + ")]"
             try:
                 midi_sequence = eval(fixed_string)
             except Exception as inner_e:
@@ -426,13 +441,52 @@ def process_midi_sequence(input_string):
                 midi_sequence = eval( input_string + "]")
             except Exception as inner_e:
                 raise ValueError(f"Failed to evaluate fixed string: {inner_e}")
+        else:
+            # input_str = '[(0.52, ), (0.67, 德音), (0.83, 음7), (1.00, C♯6), (1.14, D7), (1.30, F7)]'
+            matches = re.findall(r'\(([^)]+)\)', input_string)
+            try:
+                midi_sequence = [(match.split(",")[0], match.split(",")[1]) for match in matches]
+            except:
+                # print(input_string)
+                return None, None
     
     if not isinstance(midi_sequence, list) or not all(isinstance(item, tuple) and len(item) == 2 for item in midi_sequence):
         return None, None
         # raise ValueError("Invalid format after eval")
     
+    for idx, item in enumerate(midi_sequence):
+        if isinstance(item[0], float):
+            continue
+        # exception:2:43, '0.00'
+        if item[0].startswith("\'") and item[0].endswith("\'"):
+            midi_sequence[idx] = (item[1:-1], item[1])
+        if ":" in str(item[0]):
+            try:
+                midi_sequence[idx] = (float(item[0].split(":")[1]) + float(item[0].split(":")[0]) * 60, item[1])
+            except:
+                # print(midi_sequence)  "time:"
+                return None, None
+    try:
+        midi_sequence = [(float(x[0]), x[1]) for x in midi_sequence]
+    except:
+        # print(midi_sequence)  [('7766 / 1000', ' 10')]
+        return None, None
+    midi_sequence = sorted(midi_sequence, key=lambda x: x[0])
+    seen = {}
+    for item in midi_sequence:
+        if item[0] not in seen:
+            seen[item[0]] = item
+    try:
+        midi_sequence = sorted(seen.values(), key=lambda x: float(x[0])) # str/formula to float
+    except:
+        # print(midi_sequence)
+        return None, None
+    if len(midi_sequence) == 0:
+        return None, None
+    
     midi_array = np.array(midi_sequence, dtype=object)
-    midi_array[:, 0] = np.array([float(x) % 10 for x in midi_array[:, 0]])
+    shift = float(midi_array[0, 0]) // 10 * 10
+    midi_array[:, 0] = np.array([float(x) - shift for x in midi_array[:, 0]])
 
     # Step 4: Convert note names to MIDI numbers
     for i, note in enumerate(midi_array[:, 1]):
@@ -441,8 +495,11 @@ def process_midi_sequence(input_string):
                 try:
                     midi_array[i, 1] = float(midi_array[i, 1])
                 except:
-                    midi_array[i, 1] = pretty_midi.note_name_to_number(note)
-                    # raise ValueError(f"Invalid MIDI note name '{note}': {e}")
+                    try:
+                        midi_array[i, 1] = pretty_midi.note_name_to_number(note)
+                        # raise ValueError(f"Invalid MIDI note name '{note}': {e}")
+                    except:  # note might be a string with Chinese characters which is not a midi name
+                        midi_array[i, 1] = 0
             midi_array[i, 1] = pretty_midi.note_number_to_hz(midi_array[i, 1])
         else:  # 0Hz, not midi_num=0
             midi_array[i, 1] = 0.0
@@ -472,10 +529,13 @@ def melody_evaluation(result_list):
             overall_accuracy.append(0)
             continue
         
-        overall_accuracy.append(
-            mir_eval.melody.evaluate(correct_time, correct_freq, 
-                                    response_time, response_freq)['Overall Accuracy']
-        )
+        try:
+            overall_accuracy.append(
+                mir_eval.melody.evaluate(correct_time, correct_freq, 
+                                        response_time, response_freq)['Overall Accuracy']
+            )
+        except:
+            print(tmp)
 
     return np.mean(overall_accuracy)
 
@@ -572,10 +632,10 @@ emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', default="qwen2", type=str, 
+    parser.add_argument('--model', default="qwen", type=str, 
                         choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltu_as", "mullama", "flamingo", "gama", "gama_it", "pengi"], 
                         help='the model to use for inference')
-    parser.add_argument('--task', default="MTT", type=str, 
+    parser.add_argument('--task', default="MedleyDB", type=str, 
                         choices=["all", "MTT", "EMO_valence", "EMO_arousal", "GTZAN", "VocalSet_tech", "Nsynth_instrument", "Nsynth_pitch", "ballroom_downbeat", "gtzan_beat", "ballroom_beat", "gtzan_downbeat", "SDD", "MusicCaps", "DSing", "Guzheng_Tech", "MedleyDB", "MTG_instrument", "MTG_genre", "GS_key", "MTG_emotion", "MTG_top50tags"], 
                         help='the task to evaluate')
     args = parser.parse_args()
@@ -628,10 +688,12 @@ if __name__ == "__main__":
         acc = get_multiclass_acc(data)
         print(f"{model}_{task} Acc: {acc:.4f}")
     elif task == "ballroom_downbeat":
+        print(f"{model}_{task}")
         beat_tracking(data, task="downbeat_tracking")
     elif task == 'gtzan_beat':
         beat_tracking(data)
     elif task == "ballroom_beat":
+        print(f"{model}_{task}")
         beat_tracking(data)
     elif task == "gtzan_downbeat":
         beat_tracking(data, task="downbeat_tracking")
@@ -641,8 +703,8 @@ if __name__ == "__main__":
         music_captioning(data)
     elif task == "DSing":
         wer, cer = batch_wer_cer(data)
-        print(f"{model}_{task} WER: {wer:.4f}")
-        print(f"{model}_{task} CER: {cer:.4f}")
+        print(f"{model}_{task} WER: {wer*100:.2f}")
+        print(f"{model}_{task} CER: {cer*100:.2f}")
     elif task == "Guzheng_Tech":
         marco_f1, micro_f1 = calculate_frame_f1(data)
         print(f"{model}_{task} Marco F1: {marco_f1:.4f}")
@@ -656,8 +718,8 @@ if __name__ == "__main__":
         print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
         value = multi_label_bert(data, tags)
         print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags, embed="bert")
+        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
     elif task == "MTG_genre":
         tags = list(genre_set)
