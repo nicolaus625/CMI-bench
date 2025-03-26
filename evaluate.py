@@ -555,13 +555,32 @@ def convert_to_frame_labels(events, sr=100):
     Returns:
         frame_labels: np.ndarray of shape (num_frames, num_classes)
     """
-    event_str = events[events.find('['): events.rfind(']')] + "]"
-    events = eval(event_str)
+    start, end = events.find('['), events.find(')')
+    if start == -1 or start >= end:
+        events = [('0','10','No Tech')]
+    else:
+        # should only have one "]" if following instruction
+        try:
+            events_string = events[start:end ] + ")]"
+            if events_string.startswith("[\"["):
+                events_string = events_string[2:]
+            events = eval(events_string)
+        except:
+            print(events)
+    if len(events) == 0:
+        events = [('0','10','No Tech')]
     if isinstance(events, list) and isinstance(events[0], dict):
         events = [(float(e['start']), float(e['end']), e['technique']) for e in events]
     elif isinstance(events, list) and all(isinstance(e, tuple) and len(e) == 3 for e in events):
-        events = [(float(e[0]), float(e[1]), str(e[2])) for e in events]
-    events = [(start %10, end %10, normalise(label)) for start, end, label in events]
+        try:
+            events = [(float(e[0]), float(e[1]), str(e[2])) for e in events if e[0][0].isdigit()]
+            events = [(0,10,'No Tech')] if len(events)==0 else events
+        except:
+            print(events)
+    try:
+        events = [(start %10, (end -1e-4) %10 + 1e-4, normalise(label)) for start, end, label in events]
+    except:
+        print(events)
 
     max_time = 10 #max(float(event[1]) for event in events) if events else 0
     num_frames = int(np.ceil(max_time * sr))
@@ -632,10 +651,10 @@ emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', default="qwen", type=str, 
+    parser.add_argument('--model', default="ltu_as", type=str, 
                         choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltu_as", "mullama", "flamingo", "gama", "gama_it", "pengi"], 
                         help='the model to use for inference')
-    parser.add_argument('--task', default="MedleyDB", type=str, 
+    parser.add_argument('--task', default="MTT", type=str, 
                         choices=["all", "MTT", "EMO_valence", "EMO_arousal", "GTZAN", "VocalSet_tech", "Nsynth_instrument", "Nsynth_pitch", "ballroom_downbeat", "gtzan_beat", "ballroom_beat", "gtzan_downbeat", "SDD", "MusicCaps", "DSing", "Guzheng_Tech", "MedleyDB", "MTG_instrument", "MTG_genre", "GS_key", "MTG_emotion", "MTG_top50tags"], 
                         help='the task to evaluate')
     args = parser.parse_args()
@@ -707,8 +726,8 @@ if __name__ == "__main__":
         print(f"{model}_{task} CER: {cer*100:.2f}")
     elif task == "Guzheng_Tech":
         marco_f1, micro_f1 = calculate_frame_f1(data)
-        print(f"{model}_{task} Marco F1: {marco_f1:.4f}")
-        print(f"{model}_{task} Micro F1: {micro_f1:.4f}")
+        print(f"{model}_{task} Marco F1: {marco_f1*100:.2f}")
+        print(f"{model}_{task} Micro F1: {micro_f1*100:.2f}")
     elif task == "MedleyDB":
         accuracy = melody_evaluation(data)
         print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
