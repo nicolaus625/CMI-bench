@@ -1,6 +1,8 @@
 # CMI-Bench: A Comprehensive Benchmark for Evaluating Music Instruction Following
 
-**Paper:** [CMI-BENCH: A COMPREHENSIVE BENCHMARK FOR EVALUATING MUSIC INSTRUCTION FOLLOWING](https://arxiv.org/abs/2506.12285v1)
+
+[![PWC](https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red)](https://arxiv.org/abs/2506.12285v1)
+[![PWC](https://img.shields.io/badge/HuggingFace-Demo-Green)]()
 
 **Authors:** Yinghao Ma, Siyou Li, Juntao Yu, Emmanouil Benetos, Akira Maezawa
 
