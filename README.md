@@ -6,6 +6,8 @@
 
 **Authors:** Yinghao Ma, Siyou Li, Juntao Yu, Emmanouil Benetos, Akira Maezawa
 
+🎉🎉🎉 Paper accepted by the 26th conference of the International Society for Music Information Retrieval (ISMIR). See you in Daejeon, Korea from September 21-25, 2025.
+
 -----
 
 ## Abstract
