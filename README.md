@@ -2,7 +2,7 @@
 
 
 [![PWC](https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red)](https://arxiv.org/abs/2506.12285v1)
-[![PWC](https://img.shields.io/badge/HuggingFace-Demo-Green)]()
+[![PWC](https://img.shields.io/badge/HuggingFace-Demo-Green)](https://huggingface.co/datasets/nicolaus625/CMI-bench/)
 
 **Authors:** Yinghao Ma, Siyou Li, Juntao Yu, Emmanouil Benetos, Akira Maezawa
 
@@ -43,19 +43,31 @@ CMI-Bench encompasses 14 tasks evaluated across 20 different datasets, covering 
 
 ## 🤖 Models Evaluated
 
-Our study benchmarks 11 publicly available audio-text LLMs, covering a wide spectrum of model architectures and training paradigms.
+Here is a revised version of the README section that improves clarity, structure, and consistency with the accompanying table:
 
-  * Qwen2-Audio
-  * Qwen-Audio
-  * SALMONN-Audio
-  * MusiLingo
-  * LTU
-  * LTU-AS
-  * MU-LLaMA
-  * Audio-Flamingo
-  * GAMA
-  * GAMA-IT
-  * Pengi
+---
+
+### Evaluated Models
+
+We benchmark **11 publicly available audio-text large language models (LLMs)**, representing a diverse range of architectures and training paradigms. These models vary in scale, input modality coverage (sound, speech, music), and design choices across encoders and decoders.
+
+A summary of each evaluated model’s capabilities is shown below:
+
+| Model                      | #Params | Sound | Music | Speech | 
+| -------------------------- | ------- | ----- | ----- | ------ | 
+| Pengi                      | 323M    | ✓     | ✓     | ✗      |  
+| Audio-Flamingo             | 2.2B    | ✓     | ✓     | ✗      |  
+| LTU                        | 7B      | ✓     | ✓     | ✗      |  
+| LTU-AS                     | 7B      | ✓     | ✓     | ✓      |  
+| MusiLingo-long             | 7B      | ✗     | ✓     | ✗      |  
+| MuLLaMA                    | 7B      | ✗     | ✓     | ✗      |  
+| GAMA                       | 7B      | ✓     | ✓     | ✗      |  
+| GAMA-IT                    | 7B      | ✓     | ✓     | ✗      |  
+| Qwen-Audio-Chat            | 8.4B    | ✓     | ✗     | ✗      |  
+| Qwen2-Audio-Instruct       | 8.4B    | ✓     | ✓     | ✓      |  
+| SALMONN-Audio              | 13B     | ✓     | ✓     | ✓      |  
+
+> Note: "Sound" refers to general non-speech audio; "Music" and "Speech" indicate support for those modalities in both input understanding and reasoning tasks.
 
 ## 📊 Key Findings
 
@@ -68,46 +80,98 @@ Our study benchmarks 11 publicly available audio-text LLMs, covering a wide spec
 ## 🛠️ Getting Started with the Toolkit
 
 The CMI-Bench evaluation toolkit is designed for easy and standardized evaluation of audio-text LLMs on MIR tasks.
+This section guides you through preparing datasets, running inference with audio-text LLMs, and evaluating results using the **CMI-Bench** toolkit.
 
-*(This is a hypothetical example of how the toolkit might be used, based on the paper's description.)*
+### 🛠️ **0. Installation**
 
-**1. Installation**
+To install model-specific environments (e.g., Qwen-audio, Qwen2-audio, Audio-Flamingo, Mu-LLaMA, MusiLingo, LTU, LTU-AS), please refer to:
 
-```bash
-git clone https://github.com/nicolaus625/CMI-bench
-cd cmi-bench
-pip install -r requirements.txt
-```
+📄 [`CMI-bench/model/README.md`](./model/README.md)
 
-**2. Prepare Your Data**
+Each model has its own setup instructions and pre-trained checkpoints.
 
-Download the required datasets and place them in the `./data` directory following the prescribed structure.
+### 🛠️ **1. Prepare the Dataset**
 
-**3. Configure Your Model**
+#### 🛠️ **1.1 Download Test Audio**
 
-Add your model's configuration to `models.yaml`, specifying the model name, path to weights, and class for inference.
-
-```yaml
-- name: "YourAwesomeAudioLLM"
-  path: "/path/to/your/weights"
-  class: "YourModelWrapper"
-```
-
-**4. Run Evaluation**
-
-Use the `evaluate.py` script to run the benchmark on a specific task or all tasks.
+Download test-set audio from Hugging Face:
 
 ```bash
-# Evaluate a single model on the key detection task
-python evaluate.py --model YourAwesomeAudioLLM --task key_detection
-
-# Evaluate all models on all tasks
-python evaluate.py --model all --task all
+wget https://huggingface.co/datasets/nicolaus625/CMI-bench/resolve/main/test_Data.zip
+unzip test_Data.zip -d CMI-bench/data
 ```
 
-**5. View Results**
+#### 🛠️ **1.2 Generate JSONL Annotation Files**
 
-Results will be saved in the `results/` directory in a structured format, ready for analysis.
+To create instruction-following data pairs in `.jsonl` format:
+
+```bash
+# Example: Generate beat tracking data
+python CMI-bench/data/Beat-Transformer/sft_beat.py
+```
+
+This creates files like:
+
+```
+CMI-bench/data/Beat-Transformer/CMI_ballroom_beat.jsonl
+```
+
+Repeat similarly for other tasks by running `sft_*.py` scripts in `CMI-bench/data/*/`.
+
+### 🛠️ **2. Inference the Model**
+
+Run inference using:
+
+```bash
+python model/infer.py \
+  --model qwen2 \
+  --output-file results
+```
+
+This command will:
+
+* Load the specified model
+* Process each input audio and instruction under `~/CMI-bench/data/*/CMI*.jsonl`
+* Save predictions to `model/results/{model}/{model}_{task}.jsonl`
+
+Available models:
+`qwen`, `qwen2`, `salmonn`, `musilingo`, `ltu`, `ltu_as`, `mullama`, `flamingo`, etc.
+
+### 🛠️ **3. Configure Your Own Model**
+
+To add your own model:
+
+1. Extend `infer.py` with a new `--model` option.
+2. Implement a `get_{model_name}_pred()` function that takes:
+
+   * `text` (instruction)
+   * `audio_path` (test audio path)
+   * any required processors or tokenizers
+3. Place output JSONL results in `model/results/{model}/`.
+
+### 🛠️ **4. Run Evaluation**
+
+To evaluate model outputs using task-specific metrics:
+
+```bash
+python evaluate.py \
+  --model qwen2 \
+  --task ballroom_beat
+```
+
+You can replace `--task` with:
+
+* A specific dataset (e.g., `GTZAN`, `MusicCaps`, `MTG_emotion`)
+* Or `--task all` to run evaluation for all available tasks
+
+Results include metrics like:
+
+* ROC-AUC / PR-AUC (for multi-label tasks)
+* WER / CER (for lyrics transcription)
+* Accuracy (for multi-class classification )
+* R² (for emotion regression)
+* F1 (for structured outputs like beat tracking or techinique detection)
+* BLEU / BERTScore (for music captioning)
 
 ## 📜 Citation
 
