@@ -171,6 +171,10 @@ def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"):
         devices="cuda:0",   # if not specified, will use all available gpus or cpu when no gpu available
     )
     
+    from sentence_transformers import SentenceTransformer
+    gte = SentenceTransformer("/map-vepfs/yinghao/huggingface/gte-Qwen2-7B-instruct", trust_remote_code=True)
+    gte.max_seq_length = 8192
+    
     for tmp in tqdm(result_list):
         response = tmp["response"].lower().strip()
         correct_answers = tmp["correct_answer"].lower().strip()
@@ -200,18 +204,13 @@ def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"):
             # Normalize BERT scores using softmax
             y_pred.append(bge_cos)
         elif embed == "gte":
-            from sentence_transformers import SentenceTransformer
-
-            model = SentenceTransformer("/import/c4dm-04/siyoul/CMI-bench/pretrained_models/gte-Qwen2-7B-instruct", trust_remote_code=True)
-            model.max_seq_length = 8192
-
             queries = [response]
             documents = answer_list
-            query_embeddings = model.encode(queries, prompt_name="query")
-            document_embeddings = model.encode(documents)
+            query_embeddings = gte.encode(queries, prompt_name="query")
+            document_embeddings = gte.encode(documents)
 
             scores = (query_embeddings @ document_embeddings.T) * 100
-            y_pred.append(scores.tolist())
+            y_pred.append(scores[0].tolist())
     
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
@@ -651,7 +650,7 @@ emotion_set = {'heavy', 'powerful', 'advertising', 'funny', 'motivational', 'sad
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', default="ltu_as", type=str, 
+    parser.add_argument('--model', default="qwen2", type=str, 
                         choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltu_as", "mullama", "flamingo", "gama", "gama_it", "pengi"], 
                         help='the model to use for inference')
     parser.add_argument('--task', default="MTT", type=str, 
@@ -681,12 +680,14 @@ if __name__ == "__main__":
         print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
     elif task == "MTT":
         tags = list(np.load("data/MTT/tags.npy"))
-        roc_auc, pr_auc = multi_label_classification(data, tags)
-        print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags)
-        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # value = multi_label_bert(data, tags, embed="bert")
-        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # roc_auc, pr_auc = multi_label_classification(data, tags)
+        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+        # value = multi_label_bert(data, tags)
+        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="gte")
+        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="bert")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     elif task == "EMO_valence":
         r2 = cal_r2(data)
         print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
@@ -733,40 +734,48 @@ if __name__ == "__main__":
         print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
     elif task == "MTG_instrument":
         tags = list(instrument_set)
-        roc_auc, pr_auc = multi_label_classification(data, tags)
-        print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags)
-        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # value = multi_label_bert(data, tags, embed="bert")
-        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # roc_auc, pr_auc = multi_label_classification(data, tags)
+        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+        # value = multi_label_bert(data, tags)
+        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="bert")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="gte")
+        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
     elif task == "MTG_genre":
         tags = list(genre_set)
-        roc_auc, pr_auc = multi_label_classification(data, tags)
-        print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags)
-        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # value = multi_label_bert(data, tags, embed="bert")
-        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # roc_auc, pr_auc = multi_label_classification(data, tags)
+        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+        # value = multi_label_bert(data, tags)
+        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="gte")
+        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="bert")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
     elif task == "MTG_emotion":
         tags = list(emotion_set)
-        roc_auc, pr_auc = multi_label_classification(data, tags)
-        print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        # value = multi_label_bert(data, tags, embed="bert")
-        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags)
-        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # roc_auc, pr_auc = multi_label_classification(data, tags)
+        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+        value = multi_label_bert(data, tags, embed="gte")
+        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="bert")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # value = multi_label_bert(data, tags)
+        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
         # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
     elif task == "MTG_top50tags":
         tags = ["alternative", "ambient", "atmospheric", "chillout", "classical", "dance", "downtempo", "easylistening", "electronic","experimental", "folk", "funk", "hiphop", "house", "indie", "instrumentalpop", "jazz", "lounge", "metal", "newage","orchestral", "pop", "popfolk", "poprock", "reggae", "rock", "soundtrack", 
                 "techno","trance", "triphop","world", "acousticguitar", "bass", "computer", "drummachine", "drums", "electricguitar", "electricpiano", "guitar", "keyboard", "piano", "strings", "synthesizer", "violin", "voice", "emotional", "energetic", "film", "happy", "relaxing"]
-        roc_auc, pr_auc = multi_label_classification(data, tags)
-        print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags)
-        print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # value = multi_label_bert(data, tags, embed="bert")
-        # print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        # roc_auc, pr_auc = multi_label_classification(data, tags)
+        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+        # value = multi_label_bert(data, tags)
+        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="bert")
+        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        value = multi_label_bert(data, tags, embed="gte")
+        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
     else:
         print(model, task)
         print("Task not found")
