@@ -459,7 +459,7 @@ if __name__ == "__main__":
     parser.add_argument('--output-file', default="results", type=str, help='the path to save the output json file')
     
     parser.add_argument('--model', default="qwen2", type=str, 
-                        choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltuas", "mullama", "flamingo"], 
+                        choices=["qwen", "qwen2", "salmonn", "gpt-4o", "musilingo", "ltu", "ltu_as", "mullama", "flamingo"], 
                         help='the model to use for inference')
     parser.add_argument("--cfg-path", type=str, default="SALMONN/decode_config.yaml", help='path to configuration file')
     parser.add_argument(
@@ -597,8 +597,8 @@ if __name__ == "__main__":
             continue
         print(f"Processing {file_path}")
         
-        if "MTG_instrument" not in filename:
-            continue
+        # if "MTG" in filename:
+        #     continue
         
         lines = [line for line in lines if json.loads(line)['split'][0] == "test"]
         for line in tqdm(lines):
@@ -612,8 +612,8 @@ if __name__ == "__main__":
                 if args.model == "qwen":
                     # print(start, end, audio_path)
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
-                    torchaudio.save(f"tmp_{args.model}.wav", tmp, 16000)
-                    response = get_qwen_pred(prompt, f"tmp_{args.model}.wav", tokenizer, qwen)
+                    torchaudio.save(f"tmp_{args.model}_3.wav", tmp, 16000)
+                    response = get_qwen_pred(prompt, f"tmp_{args.model}_3.wav", tokenizer, qwen)
                 elif args.model == "qwen2":
                     tmp = load_audio(audio_path, target_sr=16000, start=start, end=end)
                     torchaudio.save(f"tmp_{args.model}.wav", tmp, 16000)
