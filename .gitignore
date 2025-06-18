@@ -49,3 +49,26 @@ data/Guzheng/Guzheng_Tech99
 
 data/DSing/sing_300x30x2
 data/Jiawen-lyrics/drive-download-20250213T112313Z-001.zip
+
+__pycache__
+.vscode
+testdata
+test_Data.zip
+
+model/MU_LLaMA/ckpt
+model/MU-LLaMA/ckpt/knn.index
+
+model/SALMONN/models/ckpt/*.pth
+model/SALMONN/models/beats/BEATs_iter3_plus_AS2M_finetuned_on_AS2M_cpt2.pt
+
+model/audio_flamingo/foundation.pt
+model/audio_flamingo/my_ms_clap/clapcap_weights_2023.pth
+model/audio_flamingo/my_laion_clap/630k-fusion-best.pt?download=true
+model/audio_flamingo/__pycache__
+
+model/*.wav
+model/results_test
+model/result
+
+*.log
+*.sh
