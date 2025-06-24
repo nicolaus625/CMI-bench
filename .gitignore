@@ -71,6 +71,7 @@ model/audio_flamingo/__pycache__
 model/*.wav
 model/results_test
 model/result
+model/results/expanded_lab
 
 *.log
 *.sh
