@@ -18,17 +18,11 @@ for split in ["train", "valid", "test"]:
         audio_path = audio_names_without_ext[i]
         data_samples_arousal.append({
             "instruction": #"Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
-            """Estimate the arousal score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level (calm, relaxing) and 9 represents the highest arousal level (energetic, intense). Provide a numerical estimate based on your perception of the music.
-
-Example 1, when the music is slow and gentle, suggesting a low arousal level:
-Estimated score: 2.
-
-Example 2, when the music is energetic and driving, indicating a high arousal level:
-Estimated score: 8.
-
-Example 3, when the music has a balanced tempo and moderate intensity:
-Estimated score: 5.""",
-            
+            """Arousal refers to the level of physiological or psychological activation a piece of music induces in a listener. It reflects how calming or energizing the music feels.
+You are given a piece of music. Estimate its arousal level on a scale from 1 (very calm/soothing) to 9 (very intense/energetic).
+Low arousal: Relaxing, calm, sleepy, or soothing music
+High arousal: Exciting, intense, energetic, or stimulating music
+Return a single number between 1 and 9 representing the perceived arousal level.""",
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": str(metadata[audio_path]["y"][0]),
             "uuid": "",
@@ -43,18 +37,11 @@ Estimated score: 5.""",
         })
         data_samples_valence.append({
             "instruction": #"Estimate the valence score of the given music on a scale from 1 to 9, where 1 represents the lowest arousal level and 9 represents the highest.",
-            """Estimate the valence score of the given music on a scale from 1 to 9, where 1 represents the lowest valence level (sad, melancholic) and 9 represents the highest valence level (happy, cheerful). Provide a numerical estimate based on your perception of the music’s emotional positivity.
-
-Few-Shot Examples:
-Example 1, when the music is slow and somber, conveying a sense of sadness:
-Estimated score: 2.
-
-Example 2, when the music is bright and uplifting, evoking happiness and positivity:
-Estimated score: 8.
-
-Example 3, when the music has a neutral or mixed emotional quality, neither too sad nor too happy:
-Estimated score: 5.""",
-            
+            """Valence refers to the emotional quality or pleasantness of the emotion experienced, whether the emotion is positive or negative.
+You are given a piece of music. Estimate its valence level on a scale from 1 (very sad/melancholic) to 9 (very happy/cheerful).
+Positive valence : Happy, joyful, content.
+Negative valence : Sad, angry, anxious.
+Return a single number between 1 and 9 representing the perceived Valence level.""",
             "input": "<|SOA|><AUDIO><|EOA|>",
             "output": str(metadata[audio_path]["y"][1]),
             "uuid": "",
@@ -75,6 +62,6 @@ with open(f"CMI_EMO_arousal.jsonl", "w") as f:
     f.close()
     
 with open(f"CMI_EMO_valence.jsonl", "w") as f:
-    for data_sample in data_samples_arousal:
+    for data_sample in data_samples_valence:
         f.write(json.dumps(data_sample) + "\n")
     f.close()

@@ -50,6 +50,8 @@ data/Guzheng/Guzheng_Tech99
 data/DSing/sing_300x30x2
 data/Jiawen-lyrics/drive-download-20250213T112313Z-001.zip
 
+data/*/old_CMI*.jsonl
+
 __pycache__
 .vscode
 testdata
