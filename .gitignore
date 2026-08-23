@@ -74,4 +74,32 @@ model/result
 model/results/expanded_lab
 
 *.log
-*.sh
+/*.sh
+
+# Local scheduler and experiment outputs
+*.out
+*.err
+*.e[0-9]*
+*.o[0-9]*
+tmp_*.wav
+/eval_logs/
+/eval_res/
+/model/results/*/
+/model/results_closed_remaining_sample_plan/
+/model/results_sampled_min_n/
+
+# Large local payloads for the extended datasets
+/data/lyra/.cache/
+/data/lyra/audio
+/data/lyra/mel-spectrograms
+/data/lyra/download_failed.tsv
+/data/lyra/missing_audio_test.tsv
+/data/songformer/.cache/
+/data/songformer/data
+/data/songformer/utils
+/data/arab_andalusian/documents
+
+# Generated manuscript and metric artifacts kept outside the repository
+/*.tex
+/*metrics*.csv
+/IEEE_TASLP_CMI_bench2.pdf

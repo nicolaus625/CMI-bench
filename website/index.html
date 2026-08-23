@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Can Audio LLMs Understand Music? Evidence from a Comprehensive MIR Benchmark</title>
+    <meta
+      name="description"
+      content="Project page for Can Audio LLMs Understand Music? Evidence from a Comprehensive MIR Benchmark."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="#top">Audio LLMs for Music</a>
+        <div class="nav-links">
+          <a href="#introduction">Introduction</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#evaluation">Evaluation</a>
+          <a href="#results">Results</a>
+          <a href="#figures">Figures</a>
+          <a href="#tables">Tables</a>
+          <a href="#bibtex">BibTeX</a>
+          <a href="assets/paper.pdf">Paper</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <h1>Can Audio LLMs Understand Music?</h1>
+          <p class="subtitle">Evidence from a Comprehensive MIR Benchmark</p>
+          <p class="hero-summary">
+            A comprehensive instruction-following benchmark for evaluating audio-text LLMs
+            on real music information retrieval tasks, spanning 17 task
+            types and 29 datasets with task-specific MIR evaluation metrics.
+          </p>
+          <p class="authors">
+            Yinghao Ma, Weixiong Chen, Siyou Li, Juntao Yu, Emmanouil Benetos, Akira Maezawa
+          </p>
+          <div class="button-row">
+            <a class="project-button" href="assets/paper.pdf">Paper</a>
+            <a class="project-button" href="../README.md">Code</a>
+            <a class="project-button" href="https://huggingface.co/datasets/nicolaus625/CMI-bench/">Dataset</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview">
+        <div class="container">
+          <div class="stats-grid" aria-label="Benchmark summary statistics">
+            <div class="stat">
+              <strong>17</strong>
+              <span>Task Types</span>
+            </div>
+            <div class="stat">
+              <strong>29</strong>
+              <span>Datasets</span>
+            </div>
+            <div class="stat">
+              <strong>61K+</strong>
+              <span>Test Examples</span>
+            </div>
+            <div class="stat">
+              <strong>23</strong>
+              <span>Evaluated Systems</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="teaser">
+        <div class="container narrow">
+          <figure class="plain-figure small">
+            <img src="assets/paper-figures/fig-1.png" alt="Instruction-following format data">
+            <figcaption>Fig. 1: Instruction-following format data.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="introduction" class="section">
+        <div class="container text-container">
+          <h2>Introduction</h2>
+          <p>
+            Recent audio-text large language models can follow natural language prompts,
+            describe music, and answer music-related questions. However, many existing
+            evaluations remain narrow: they focus on a small set of music tasks, convert
+            answers into multiple-choice formats, or use ad-hoc text metrics that do not
+            match established Music Information Retrieval (MIR) practice.
+          </p>
+          <p>
+            This paper asks a more direct question: can audio LLMs solve the kinds of MIR
+            problems that music researchers have studied for decades? CMI-Bench answers this
+            by turning traditional MIR annotations into instruction-following prompts while
+            keeping the original task-specific metrics. As a result, audio LLMs can be compared
+            not only with each other, but also against specialized supervised MIR systems.
+          </p>
+          <p>
+            The benchmark is designed around the observation that music understanding is not
+            a single ability. A model may describe a song fluently while still failing to
+            estimate pitch, align beats, transcribe lyrics, identify culturally specific forms,
+            or produce a valid list of timestamped events. CMI-Bench therefore separates
+            high-level semantic tasks from fine-grained, continuous, and sequential MIR tasks.
+          </p>
+          <div class="takeaway-box">
+            <strong>Core idea:</strong>
+            CMI-Bench bridges natural-language interaction and MIR evaluation. Models receive
+            audio plus an instruction, but their answers are judged with metrics appropriate
+            for the underlying music task.
+          </div>
+        </div>
+      </section>
+
+      <section id="benchmark" class="section muted-section">
+        <div class="container">
+          <h2>Benchmark Composition</h2>
+          <p class="section-lead">
+            CMI-Bench reformulates established MIR annotations into natural-language
+            instruction-response pairs while preserving task-specific evaluation protocols.
+          </p>
+          <div class="process-row">
+            <div>
+              <span>1</span>
+              <h3>Collect MIR Tasks</h3>
+              <p>Start from widely used MIR datasets covering tags, pitch, key, rhythm, captions, lyrics, emotion, and culturally specific taxonomies.</p>
+            </div>
+            <div>
+              <span>2</span>
+              <h3>Write Instructions</h3>
+              <p>Represent each task as an audio-conditioned natural language instruction with examples or formatting constraints when needed.</p>
+            </div>
+            <div>
+              <span>3</span>
+              <h3>Parse Outputs</h3>
+              <p>Normalize free-form model responses into labels, scores, timestamps, tuples, segments, or text strings.</p>
+            </div>
+            <div>
+              <span>4</span>
+              <h3>Use MIR Metrics</h3>
+              <p>Evaluate with standard MIR/NLP metrics such as ROC-AUC, PR-AUC, R2, F-measure, melody accuracy, WER, and BERTScore.</p>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="info-card">
+              <h3>Clip-level Understanding</h3>
+              <p>
+                Key detection, genre classification, emotion tagging, instrument recognition,
+                pitch estimation, and continuous arousal/valence regression.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Language-facing Music Tasks</h3>
+              <p>
+                Music captioning and lyrics transcription are evaluated with text generation
+                metrics such as BLEU, METEOR, ROUGE, BERTScore, WER, and CER.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>Sequential MIR</h3>
+              <p>
+                Melody extraction, beat tracking, downbeat tracking, structure segmentation,
+                and playing-technique detection test time-aligned musical reasoning.
+              </p>
+            </article>
+            <article class="info-card">
+              <h3>World-music Coverage</h3>
+              <p>
+                Lyra and Arab-Andalusian tasks probe cultural and regional music understanding
+                beyond common Western pop-centered evaluation settings.
+              </p>
+            </article>
+          </div>
+          <div class="method-grid">
+            <article>
+              <h3>Instruction Format</h3>
+              <p>
+                Each example pairs an audio input placeholder with a task-specific prompt.
+                Prompts may include allowed labels, numeric ranges, examples, or required
+                output structures such as timestamp lists and segment intervals.
+              </p>
+            </article>
+            <article>
+              <h3>Output Normalization</h3>
+              <p>
+                Since LLM responses are free-form, outputs are normalized before scoring:
+                labels are cleaned, numbers are constrained, invalid tuples are filtered,
+                timestamps are sorted, and missing predictions are handled consistently.
+              </p>
+            </article>
+            <article>
+              <h3>Task Breadth</h3>
+              <p>
+                The benchmark combines classic MIR datasets with newer music-language and
+                world-music tasks, producing a testbed that stresses both common acoustic
+                recognition and less represented musical concepts.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="evaluation" class="section">
+        <div class="container text-container">
+          <h2>Evaluation Protocol</h2>
+          <p>
+            Rather than converting music understanding into multiple-choice questions,
+            CMI-Bench asks models to produce open-ended answers and post-processes those
+            answers into formats compatible with established MIR metrics and toolkits.
+          </p>
+          <p>
+            Multi-class tasks are evaluated with strict normalized label matching. Multi-label
+            tagging tasks use semantic matching with a retrieval encoder for large tag spaces,
+            while Lyra labels are parsed directly into explicit label sets. Key detection uses
+            weighted key scores from <code>mir_eval</code>; emotion regression constrains and
+            normalizes 1-to-9 scalar outputs before computing R2; captioning uses BLEU, METEOR,
+            ROUGE, and BERTScore.
+          </p>
+          <p>
+            Sequential tasks require additional output control. Lyrics are scored with WER and
+            CER. Beat and downbeat predictions are parsed as time points and evaluated with a
+            20 ms F-measure tolerance. Melody extraction uses frame-level pitch accuracy, and
+            song structure segmentation parses interval lists into section boundaries for
+            segmentation metrics.
+          </p>
+          <p>
+            For proprietary models, the paper further introduces a dataset-adaptive sampling
+            strategy. Subset sizes are selected by measuring rank-correlation agreement with
+            full-test model rankings, allowing API-based systems to be evaluated efficiently
+            while preserving reliable comparisons.
+          </p>
+          <p>
+            This sampling protocol is important because the full benchmark contains more than
+            61,000 examples and many audio clips. The sampled proprietary evaluation keeps
+            11,289 examples, or 18.3% of the full set, while targeting Kendall's τ ≥ 0.90
+            and Spearman's ρ ≥ 0.95 against full-set rankings. In other words, the paper
+            tries to reduce cost without changing the conclusions about relative model order.
+          </p>
+        </div>
+      </section>
+
+      <section id="models" class="section muted-section">
+        <div class="container text-container">
+          <h2>Model Suite</h2>
+          <p>
+            The evaluation covers 23 systems, including open-source audio-text LLMs,
+            omni-modal models, reasoning-oriented audio models, and proprietary systems.
+            The suite spans small systems such as Pengi, 7B-scale music/audio models such as
+            LTU, GAMA, Audio-Flamingo, MusiLingo, and Music Flamingo, larger systems such as
+            SALMONN and Baichuan-Omni, and newer omni models including Qwen2.5-Omni,
+            Qwen3-Omni, GPT Audio, Gemini 3.1 Pro, and Gemini 3.5 Flash.
+          </p>
+          <p>
+            Table IV summarizes whether each model is reported to cover general sound, music,
+            and speech. This distinction matters because strong general audio or speech
+            capability does not automatically imply strong music reasoning, especially for
+            fine-grained and temporally structured MIR tasks.
+          </p>
+          <p>
+            The comparison also separates music-specialized models from broad audio models
+            and newer omni-modal systems. This makes it possible to ask whether scale, speech
+            support, music-focused training, or proprietary model quality leads to more robust
+            MIR behavior. The answer is mixed: some new systems improve selected tasks, but
+            no model is consistently strong across the whole benchmark.
+          </p>
+        </div>
+      </section>
+
+      <section id="figures" class="section muted-section">
+        <div class="container">
+          <h2>Figures</h2>
+          <div class="figure-stack">
+            <figure class="plain-figure">
+              <img src="assets/paper-figures/fig-2.png" alt="Rank-correlation analysis for dataset-adaptive test set sampling">
+              <figcaption>Fig. 2: Rank-correlation analysis for dataset-adaptive test set sampling.</figcaption>
+            </figure>
+            <figure class="plain-figure">
+              <img src="assets/paper-figures/fig-3.png" alt="Fine-grained tag-classification evaluation">
+              <figcaption>Fig. 3: Fine-grained tag-classification evaluation.</figcaption>
+            </figure>
+            <figure class="plain-figure small">
+              <img src="assets/paper-figures/fig-4.png" alt="Prompt-sensitivity ablation study">
+              <figcaption>Fig. 4: Prompt-sensitivity ablation study.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section">
+        <div class="container">
+          <h2>Results and Discussion</h2>
+          <p class="section-lead">
+            The results show that current audio LLMs are promising on some semantic music
+            tasks, but they are not yet reliable replacements for specialized MIR systems.
+          </p>
+          <div class="finding-list rich">
+            <div class="finding">
+              <span>01</span>
+              <p><strong>Specialized MIR baselines still lead.</strong> Most evaluated audio LLMs remain behind task-specific supervised systems on standard MIR metrics, especially for note pitch, melody extraction, beat/downbeat tracking, and fine-grained classification.</p>
+            </div>
+            <div class="finding">
+              <span>02</span>
+              <p><strong>Semantic tasks are the relative bright spot.</strong> Some models are competitive on music captioning and GTZAN genre classification, showing that high-level music semantics are closer to current model strengths.</p>
+            </div>
+            <div class="finding">
+              <span>03</span>
+              <p><strong>Training-set alignment matters.</strong> Peak performance often appears on datasets or task families that are likely close to a model's training distribution, revealing limited generalization to unseen MIR settings.</p>
+            </div>
+            <div class="finding">
+              <span>04</span>
+              <p><strong>Lyrics transcription is surprisingly weak.</strong> Even models with speech-capable encoders struggle on DSing, suggesting that ASR capability alone is not enough for lyric-specific transcription.</p>
+            </div>
+            <div class="finding">
+              <span>05</span>
+              <p><strong>Prompt format can change performance.</strong> The ablation in Fig. 4 shows that models can be sensitive to task wording and output constraints, especially for regression and classification tasks.</p>
+            </div>
+            <div class="finding">
+              <span>06</span>
+              <p><strong>Sequential MIR remains a bottleneck.</strong> Dense timestamped outputs, interval boundaries, and tuple formats are brittle for current instruction-following audio models.</p>
+            </div>
+          </div>
+          <div class="result-summary">
+            <p>
+              Overall, CMI-Bench suggests that current audio-text LLMs have learned useful
+              high-level associations between music and language, but still lack the precision,
+              calibration, and output discipline required by MIR. The gap is especially visible
+              when answers must be numeric, frame-level, time-aligned, or constrained to
+              culturally specific labels.
+            </p>
+            <p>
+              The paper argues that future music foundation models will need stronger
+              MIR-specific post-training, better output-format control, broader music coverage,
+              and evaluation setups that preserve the structure of real MIR tasks instead of
+              flattening them into generic question answering.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tables" class="section">
+        <div class="container">
+          <h2>Tables</h2>
+          <div class="table-stack">
+            <article class="table-card">
+              <h3>Table I: Tasks, datasets, metrics, and test samples</h3>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Task</th>
+                      <th>Dataset</th>
+                      <th>Metrics</th>
+                      <th>#Test Samples</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Key Detection</td><td>GS</td><td>G-Mean Score</td><td>2406</td></tr>
+                    <tr><td>Emotion Regression</td><td>EMO</td><td>R2</td><td>125</td></tr>
+                    <tr><td>Music Tagging</td><td>MagnaTagATune / MTG-Top50</td><td>ROC-AUC, PR-AUC</td><td>5329 / 11356</td></tr>
+                    <tr><td>Instrument Classification</td><td>MTG-Instrument / NSynth-Instrument</td><td>ROC-AUC, PR-AUC / Accuracy</td><td>5115 / 4096</td></tr>
+                    <tr><td>Genre Classification</td><td>MTG-Genre / GTZAN</td><td>ROC-AUC, PR-AUC / Accuracy</td><td>11479 / 290</td></tr>
+                    <tr><td>Emotion Tagging</td><td>MTG-Emotion</td><td>ROC-AUC, PR-AUC</td><td>4231</td></tr>
+                    <tr><td>Pitch Estimation</td><td>NSynth-Pitch</td><td>Accuracy</td><td>4096</td></tr>
+                    <tr><td>Singing Technique Classification</td><td>VocalSet</td><td>Accuracy</td><td>1140</td></tr>
+                    <tr><td>Music Captioning</td><td>SDD / MusicCaps</td><td>BLEU, METEOR, ROUGE, BERTScore</td><td>1106 / 2813</td></tr>
+                    <tr><td>Lyrics Transcription</td><td>DSing</td><td>WER, CER</td><td>482</td></tr>
+                    <tr><td>Beat / Downbeat Tracking</td><td>GTZAN-Rhythm / Ballroom</td><td>F-Measure</td><td>290 / 685</td></tr>
+                    <tr><td>Melody Extraction</td><td>MedleyDB v2</td><td>Melody Accuracy</td><td>618</td></tr>
+                    <tr><td>Performance Technique Classification</td><td>Guzheng-99</td><td>Micro-F1, Macro-F1</td><td>94</td></tr>
+                    <tr><td>Structure Analysis</td><td>SongFormBench</td><td>Accuracy, HR.5F, HR3F</td><td>300</td></tr>
+                    <tr><td>Greek Folk Music Understanding</td><td>Lyra-Instrument / Genre / Place / Dance</td><td>Micro-F1, Macro-F1, Exact Match / Accuracy</td><td>270 each</td></tr>
+                    <tr><td>Arab-Andalusian Music Understanding</td><td>Arab-Andalusian Nawba / Tab / Form / Mizan</td><td>Accuracy</td><td>847 each</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-card">
+              <h3>Table II / III: Dataset-adaptive sampling statistics</h3>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Dataset / Task</th>
+                      <th>Full Size</th>
+                      <th>Sample Size</th>
+                      <th>Preserve</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>GiantSteps Key</td><td>2406</td><td>500</td><td>20.8%</td></tr>
+                    <tr><td>MTT</td><td>5329</td><td>300</td><td>5.6%</td></tr>
+                    <tr><td>MTG-Instrument</td><td>5115</td><td>750</td><td>14.7%</td></tr>
+                    <tr><td>MTG-Genre</td><td>11479</td><td>750</td><td>6.5%</td></tr>
+                    <tr><td>MTG-Emotion</td><td>4231</td><td>2500</td><td>59.1%</td></tr>
+                    <tr><td>MTG-Top50</td><td>11356</td><td>500</td><td>4.4%</td></tr>
+                    <tr><td>NSynth-Instrument</td><td>4096</td><td>100</td><td>2.4%</td></tr>
+                    <tr><td>NSynth-Pitch</td><td>4096</td><td>2000</td><td>48.8%</td></tr>
+                    <tr><td>SDD</td><td>1106</td><td>100</td><td>9.0%</td></tr>
+                    <tr><td>MedleyDB</td><td>618</td><td>500</td><td>80.9%</td></tr>
+                    <tr><td>MusicCaps</td><td>2813</td><td>100</td><td>3.6%</td></tr>
+                    <tr><td>SongFormBench</td><td>300</td><td>300</td><td>100.0%</td></tr>
+                    <tr><td>Lyra-Instrument / Dance</td><td>270</td><td>200</td><td>74.1%</td></tr>
+                    <tr><td>Lyra-Genre</td><td>270</td><td>100</td><td>37.0%</td></tr>
+                    <tr><td>Lyra-Place</td><td>270</td><td>270</td><td>100.0%</td></tr>
+                    <tr><td>Arab-Andalusian tasks</td><td>847</td><td>200-300</td><td>23.6%-35.4%</td></tr>
+                    <tr class="total-row"><td>Total</td><td>61619</td><td>11289</td><td>18.3%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-card">
+              <h3>Table IV: Audio-language model comparison</h3>
+              <div class="table-scroll">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>#Params</th>
+                      <th>Sound</th>
+                      <th>Music</th>
+                      <th>Speech</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pengi</td><td>323M</td><td>✓</td><td>✓</td><td>✗</td></tr>
+                    <tr><td>Audio Flamingo</td><td>2.2B</td><td>✓</td><td>✓</td><td>✗</td></tr>
+                    <tr><td>LTU / LTU-AS</td><td>7B</td><td>✓</td><td>✓</td><td>✗ / ✓</td></tr>
+                    <tr><td>MusiLingo-long / MuLLaMA</td><td>7B</td><td>✗</td><td>✓</td><td>✗</td></tr>
+                    <tr><td>GAMA / GAMA-IT</td><td>7B</td><td>✓</td><td>✓</td><td>✗</td></tr>
+                    <tr><td>SALMONN</td><td>13B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>Qwen-Audio-Chat</td><td>8.4B</td><td>✓</td><td>✗</td><td>✓</td></tr>
+                    <tr><td>Qwen2-Audio-Instruct</td><td>8.4B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>Audio Flamingo 2 / 3</td><td>7B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>Audio-Reasoner / Music Flamingo</td><td>7B</td><td>✓ / ✗</td><td>✓</td><td>✓ / ✗</td></tr>
+                    <tr><td>Baichuan-Omni</td><td>11B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>Qwen2.5-Omni</td><td>7B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>Qwen3-Omni</td><td>30B-A3B</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                    <tr><td>GPT Audio / Gemini 3.1 Pro / Gemini 3.5 Flash</td><td>Undisclosed</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="table-card">
+              <h3>Table V: Performance leaderboard</h3>
+              <p class="table-note">Best completed scores are highlighted. Asterisks mark proprietary-model scores computed on sampled subsets.</p>
+              <div class="table-scroll">
+                <table class="data-table leaderboard-table">
+                  <thead>
+                    <tr>
+                      <th>Task</th>
+                      <th>Metric</th>
+                      <th>Qw2.5</th>
+                      <th>Qw3</th>
+                      <th>AF3</th>
+                      <th>MF</th>
+                      <th>MOSS</th>
+                      <th>AST</th>
+                      <th>GPT-A</th>
+                      <th>Gem. Pro</th>
+                      <th>Gem. Flash</th>
+                      <th>SOTA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>GS-K</td><td>GES ↑</td><td>49.91</td><td class="best">63.56</td><td>20.00</td><td>40.06</td><td>10.52</td><td>22.12</td><td>0.70*</td><td>24.60*</td><td>14.98*</td><td>74.3</td></tr>
+                    <tr><td>EMO</td><td>aR2 ↑</td><td>0.33</td><td>0.43</td><td>-0.31</td><td>-0.05</td><td>0.43</td><td>-0.18</td><td>0.08*</td><td>0.52*</td><td class="best">0.54*</td><td>0.62</td></tr>
+                    <tr><td>EMO</td><td>vR2 ↑</td><td>-0.31</td><td class="best">0.43</td><td>-0.65</td><td>0.03</td><td>0.10</td><td>-0.71</td><td>0.06*</td><td>0.34</td><td>0.31</td><td>0.76</td></tr>
+                    <tr><td>MTT</td><td>ROC ↑</td><td>67.72</td><td>78.72</td><td class="best">82.10</td><td>81.59</td><td>77.08</td><td>75.78</td><td>52.10*</td><td>55.45*</td><td>54.31*</td><td>92.0</td></tr>
+                    <tr><td>MTT</td><td>PR ↑</td><td>17.50</td><td>27.75</td><td class="best">34.53</td><td>32.91</td><td>25.65</td><td>23.70</td><td>9.71*</td><td>13.32*</td><td>11.01*</td><td>41.4</td></tr>
+                    <tr><td>GTZ.</td><td>Acc. ↑</td><td>78.62</td><td class="best">92.76</td><td>89.66</td><td>71.72</td><td>75.86</td><td>66.21</td><td>47.00*</td><td>88.00*</td><td>78.00*</td><td>83.9</td></tr>
+                    <tr><td>NI</td><td>Acc. ↑</td><td>18.41</td><td>15.23</td><td>44.60</td><td class="best">75.17</td><td>5.18</td><td>3.66</td><td>0.00*</td><td>20.00*</td><td>17.00*</td><td>78.2</td></tr>
+                    <tr><td>NP</td><td>Acc. ↑</td><td>3.27</td><td>2.83</td><td>18.58</td><td class="best">39.75</td><td>0.15</td><td>0.00</td><td>0.90*</td><td>10.75*</td><td>11.25*</td><td>89.2</td></tr>
+                    <tr><td>SDD</td><td>BLEU ↑</td><td class="best">20.24</td><td>11.37</td><td>16.94</td><td>16.07</td><td>7.50</td><td>3.87</td><td>7.19*</td><td>19.09*</td><td>15.29*</td><td>-</td></tr>
+                    <tr><td>MC</td><td>BLEU ↑</td><td>4.93</td><td>13.69</td><td>27.98</td><td class="best">31.56</td><td>21.67</td><td>8.49</td><td>6.21*</td><td>3.19*</td><td>8.14*</td><td>21.7</td></tr>
+                    <tr><td>DS</td><td>WER ↓</td><td>82.24</td><td class="best">13.85</td><td>21.29</td><td>100.34</td><td>121.24</td><td>5349.59</td><td>163.34*</td><td>51.10*</td><td>334.72*</td><td>12.99</td></tr>
+                    <tr><td>G-B</td><td>FM ↑</td><td>15.79</td><td>25.98</td><td>28.73</td><td>24.16</td><td>27.48</td><td>21.93</td><td>0.00*</td><td class="best">30.32*</td><td>25.93*</td><td>88.3</td></tr>
+                    <tr><td>MDB</td><td>Acc. ↑</td><td>1.83</td><td>3.48</td><td>1.80</td><td>2.76</td><td class="best">7.18</td><td>1.96</td><td>0.00*</td><td>1.16*</td><td>0.71*</td><td>72.3</td></tr>
+                    <tr><td>SFB</td><td>B-F1@3.0 ↑</td><td>28.61</td><td>47.35</td><td>9.21</td><td>26.17</td><td>55.10</td><td>23.66</td><td>26.78*</td><td class="best">69.63*</td><td>55.89*</td><td>78.4</td></tr>
+                    <tr><td>Lyra</td><td>Genre miF1 ↑</td><td>6.41</td><td>7.93</td><td>0.71</td><td>46.86</td><td>15.44</td><td>17.22</td><td>39.86*</td><td class="best">58.71*</td><td>52.33*</td><td>87.2</td></tr>
+                    <tr><td>Arab</td><td>Mizan Acc. ↑</td><td>20.53</td><td>9.88</td><td>7.00</td><td>5.31</td><td>13.63</td><td>27.86</td><td>9.62*</td><td>45.95*</td><td class="best">48.65*</td><td>-</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="bibtex" class="section muted-section">
+        <div class="container text-container">
+          <h2>BibTeX</h2>
+          <pre class="bibtex"><code>@misc{ma2025audioLLMsUnderstandMusic,
+  title={Can Audio LLMs Understand Music? Evidence from a Comprehensive MIR Benchmark},
+  author={Yinghao Ma and Weixiong Chen and Siyou Li and Juntao Yu and Emmanouil Benetos and Akira Maezawa},
+  year={2025},
+  eprint={2506.12285},
+  archivePrefix={arXiv},
+  primaryClass={eess.AS}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

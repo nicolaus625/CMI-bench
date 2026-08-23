@@ -3,15 +3,17 @@ import json
 import random
 import glob
 import tqdm
+from pathlib import Path
 
 import torch
 from torch.utils.data import Dataset, ConcatDataset
 from torch.nn.utils.rnn import pad_sequence
 import torchaudio
+import soundfile as sf
 
 
 RESAMPLE_RATE = 24000
-DATASET_ROOT = "/import/c4dm-datasets-ext/yinghao_tmp/CMI-bench/"
+DATASET_ROOT = str(Path(__file__).resolve().parent)
 
 
 def load_audio(
@@ -52,11 +54,14 @@ def load_audio(
     # print(file_path)
     try:
         waveform, sample_rate = torchaudio.load(file_path)
-    except Exception as e:
-        waveform, sample_rate = torchaudio.backend.soundfile_backend.load(file_path)
+    except Exception:
+        waveform_np, sample_rate = sf.read(file_path, always_2d=True)
+        waveform = torch.from_numpy(waveform_np.T).to(torch.float32)
     if waveform.shape[0] > 1:
         if is_mono:
             waveform = torch.mean(waveform, dim=0, keepdim=True)
+    else:
+        waveform = waveform.to(torch.float32)
     
     if is_normalize:
         waveform = waveform / waveform.abs().max()
