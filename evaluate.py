@@ -1,3 +1,5 @@
+import ast
+import functools
 import glob
 
 import re
@@ -12,7 +14,7 @@ import numpy as np
 from sklearn.metrics import roc_auc_score, average_precision_score
 
 from rouge_score import rouge_scorer
-from nltk.translate.bleu_score import sentence_bleu
+from nltk.translate.bleu_score import sentence_bleu, corpus_bleu
 from nltk.translate.meteor_score import meteor_score as meteor_scorer
 from nltk.tokenize import wordpunct_tokenize
 from bert_score import score
@@ -70,25 +72,65 @@ def extract_int(response: str) -> int:
     return int(numbers[0])  # Convert the first number to an integer
 
 
+def _tokens(text):
+    return re.findall(r"[a-z0-9]+", str(text).lower().replace("'", ""))
+
+
+def _label_spans(tokens, label):
+    # token spans whose concatenation spells the label, so "hip-hop", "hip hop" and
+    # "hiphop" all match "hiphop", but "trillo" does not match "trill"
+    target = "".join(_tokens(label))
+    spans = []
+    for i in range(len(tokens)):
+        joined = ""
+        for j in range(i, len(tokens)):
+            joined += tokens[j]
+            if joined in (target, target + "s", target + "es"):
+                spans.append((i, j))
+            if len(joined) >= len(target) + 2:
+                break
+    return spans
+
+
+def matched_labels(response, labels):
+    """Labels mentioned in the response; a label found only inside a longer
+    matched label (e.g. "trill" inside "lip_trill") does not count."""
+    tokens = _tokens(response)
+    spans = {label: _label_spans(tokens, label) for label in labels}
+    found = set()
+    for label, label_spans in spans.items():
+        for i, j in label_spans:
+            shadowed = any(a <= i and j <= b and b - a > j - i
+                           for other, other_spans in spans.items() if other != label
+                           for a, b in other_spans)
+            if not shadowed:
+                found.add(label)
+                break
+    return found
+
+
+def extract_midi_pitch(response):
+    """The single MIDI number in the response, or None if there is none or several."""
+    text = re.sub(r"Example \d", " ", str(response))
+    text = re.sub(r"\b[A-Ga-g][#b♯♭]?-?\d+\b", " ", text)  # note names such as C4, A#3
+    text = re.sub(r"\d+\.\d+", " ", text)  # decimals such as frequencies in Hz
+    numbers = {int(n) for n in re.findall(r"\d+", text) if int(n) <= 127}
+    return numbers.pop() if len(numbers) == 1 else None
+
+
 def get_multiclass_acc(result_list):
-    if type(result_list[0]["correct_answer"]) == list:
-        answer_list  = set(tmp["correct_answer"][0] for tmp in result_list)
-    else:
-        answer_list = set(str(tmp["correct_answer"]) for tmp in result_list)
-    # if type(data[0]["correct_answer"]) == str:
-    length = len(set(answer_list))
-    answer_list = [normalise(answer) for answer in answer_list]
-    assert length == len(set(answer_list))
-        
-    # print(f"{len(answer_list)}-class classification")
-    count = 0.0
-    for tmp in result_list:
-        reponse = normalise(tmp["response"])
-        correct_answer = str(tmp["correct_answer"])
-        if normalise(correct_answer) in reponse:
-            # Ensure no other answer is in the response
-            if all(answer not in reponse for answer in answer_list if answer != normalise(correct_answer)):
-                count += 1
+    golds = [tmp["correct_answer"][0] if type(tmp["correct_answer"]) == list else tmp["correct_answer"]
+             for tmp in result_list]
+    # numeric labels (Nsynth_pitch): substring matching cannot work, "9" occurs in "69"
+    if all(str(gold).strip().isdigit() for gold in golds):
+        return sum(extract_midi_pitch(tmp["response"]) == int(gold)
+                   for tmp, gold in zip(result_list, golds)) / len(result_list)
+
+    answer_list = sorted(set(str(gold) for gold in golds))
+    assert len(answer_list) == len(set("".join(_tokens(answer)) for answer in answer_list))
+    # credit an item when the gold label, and no other label, is in the response
+    count = sum(matched_labels(tmp["response"], answer_list) == {str(gold)}
+                for tmp, gold in zip(result_list, golds))
     return count / len(result_list)
     # elif type(data[0]["correct_answer"]) == int:
     #     # print(f"{len(answer_list)}-class classification")
@@ -157,28 +199,48 @@ def multi_label_classification(result_list, answer_list): # variable should not 
     return roc_auc, pr_auc
 
 
-def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"): 
+def gold_tags(correct_answer):
+    """The comma-separated gold tags as a set, so that "male" is not read out of
+    "female" or "vocal" out of "no vocal"."""
+    if type(correct_answer) == list:
+        correct_answer = ",".join(correct_answer)
+    return {tag.lower().strip() for tag in str(correct_answer).split(",") if tag.strip()}
+
+
+BGE_PATH = os.environ.get("CMI_BGE_PATH", "/map-vepfs/yinghao/huggingface/bge-large-en-v1.5")
+GTE_PATH = os.environ.get("CMI_GTE_PATH", "/map-vepfs/yinghao/huggingface/gte-Qwen2-7B-instruct")
+
+
+@functools.lru_cache(maxsize=None)
+def load_embedder(embed):
+    if embed == "bge":
+        return FlagAutoModel.from_finetuned(
+            BGE_PATH,
+            query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
+            devices="cuda:0",   # if not specified, will use all available gpus or cpu when no gpu available
+        )
+    if embed == "gte":
+        from sentence_transformers import SentenceTransformer
+        gte = SentenceTransformer(GTE_PATH, trust_remote_code=True)
+        gte.max_seq_length = 8192
+        return gte
+    return None
+
+
+def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"):
     # Normalize predefined answer list
     answer_list = sorted([ans.lower().strip() for ans in answer_list])
-    
+
     # Initialize lists to hold response vectors
     y_true = []
     y_pred = []
-    
-    model = FlagAutoModel.from_finetuned(
-        "/map-vepfs/yinghao/huggingface/bge-large-en-v1.5",
-        query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
-        devices="cuda:0",   # if not specified, will use all available gpus or cpu when no gpu available
-    )
-    
-    from sentence_transformers import SentenceTransformer
-    gte = SentenceTransformer("/map-vepfs/yinghao/huggingface/gte-Qwen2-7B-instruct", trust_remote_code=True)
-    gte.max_seq_length = 8192
-    
+
+    model = gte = load_embedder(embed)
+
     for tmp in tqdm(result_list):
         response = tmp["response"].lower().strip()
-        correct_answers = tmp["correct_answer"].lower().strip()
-        
+        correct_answers = gold_tags(tmp["correct_answer"])
+
         # Create binary vector for true labels
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
         y_true.append(true_vector)
@@ -231,6 +293,7 @@ def music_captioning(result_list):
     rouge_score, bleu_score, bleu4_score, meteor_score = 0, 0, 0, 0
     mult_reference = []
     candidates = []
+    ref_tokens, cand_tokens = [], []
     for tmp in result_list:
         cand = tmp["response"]
         ref = tmp["correct_answer"]
@@ -242,8 +305,11 @@ def music_captioning(result_list):
         rouge_score += scorer.score(ref, cand)['rougeL'].recall
         cand_split = wordpunct_tokenize(cand)
         ref_split = wordpunct_tokenize(ref)
-        bleu4_score += sentence_bleu([ref], cand, weights=(0.0, 0.0, 0.0, 1.0))
-        bleu_score += sentence_bleu([ref], cand)
+        # BLEU over words; passing the raw strings makes NLTK score characters
+        bleu4_score += sentence_bleu([ref_split], cand_split, weights=(0.0, 0.0, 0.0, 1.0))
+        bleu_score += sentence_bleu([ref_split], cand_split)
+        ref_tokens.append([ref_split])
+        cand_tokens.append(cand_split)
         meteor_score += meteor_scorer([ref_split], cand_split)
         # break
     rouge_score, bleu_score, bleu4_score, meteor_score = rouge_score / (len(candidates)), bleu_score / (len(candidates)), bleu4_score / (len(candidates)), meteor_score / (len(candidates))
@@ -251,6 +317,7 @@ def music_captioning(result_list):
     bert_score = R.mean().item()
     print(f"BLEU Score: {bleu_score}")
     print(f"BLEU-4 Score: {bleu4_score}")
+    print(f"Corpus BLEU Score: {corpus_bleu(ref_tokens, cand_tokens)}")
     print(f"METEOR Score: {meteor_score}")
     print(f"ROUGE Score: {rouge_score}")
     print(f"BERT Score: {bert_score}")
@@ -260,6 +327,9 @@ def key_ensamble_score(result_list):
         classes = """C major, Db major, D major, Eb major, E major, F major, Gb major, G major, Ab major, A major, Bb major, B major, C minor, Db minor, D minor, Eb minor, E minor, F minor, Gb minor, G minor, Ab minor, A minor, Bb minor, B minor""".split(", ")
         tmp = ''.join([i for i in tmp.lower().replace(" ","") 
                        if not i.isdigit()])
+        tmp = tmp.replace("♯", "#").replace("♭", "b").replace("-", "")
+        tmp = re.sub(r"([a-g])sharp", r"\1#", tmp)
+        tmp = re.sub(r"([a-g])flat", r"\1b", tmp)
         if len(tmp) <=3 and tmp.endswith("m"):
             tmp = tmp + "inor"
         elif len(tmp) <=2:
@@ -270,18 +340,13 @@ def key_ensamble_score(result_list):
             "f#": "gb",
             "g#": "ab",
             "a#": "bb",
-            "c♯": "db",
-            "d♯": "eb",
-            "f♯": "gb",
-            "g♯": "ab",
-            "a♯": "bb",
         }
-        if tmp[1] in ["♯", "#"]:
-            tmp = map[tmp[:2]] + tmp[2:]
-        for class_ in classes:
-            if class_.lower().strip().replace(" ","") in tmp:
-                return class_
-        return None
+        # sharps anywhere in the response, not only as its first two characters
+        tmp = re.sub(r"[cdfga]#", lambda m: map[m.group(0)], tmp)
+        # the key mentioned first, not the first one in the class list
+        found = [(tmp.find(class_.lower().replace(" ", "")), class_) for class_ in classes]
+        found = [(pos, class_) for pos, class_ in found if pos >= 0]
+        return min(found)[1] if found else None
     score_list = []
     for tmp in result_list:
         try:
@@ -305,13 +370,11 @@ def beat_tracking(result_list, task="beat_tracking"):
         #       "\n",
         #       beats.split("s")[:-1])
         tmp = []
-        for i in beats.split(","):
-            i = i.strip().replace("s", "")
-            if len(i) > 0 and i[0].isdigit():
-                if ":" not in i:
-                    tmp.append(float(i.replace(",", "").strip()))
-                elif i.split(":")[1] != "":
-                    tmp.append(int(i.split(":")[0]) * 60 + float(i.split(":")[1]))
+        # one unparseable token (e.g. "[0.5" or "1.0]") used to zero the whole item
+        for i in re.split(r"[,;\s\[\]()]+", beats):
+            match = re.fullmatch(r"(?:(\d+):)?(\d+(?:\.\d+)?)(?:s+|sec|secs|seconds)?", i.strip())
+            if match:
+                tmp.append(int(match.group(1) or 0) * 60 + float(match.group(2)))
         tmp.sort()
         return np.array(
                 tmp
@@ -418,13 +481,15 @@ def process_midi_sequence(input_string):
     
     input_string = input_string.replace("♯","#")
     input_string = input_string.replace("♭","b")
+    input_string = input_string.strip()
     if len(input_string) < 2:
         return None, None
         # raise ValueError("Empty input string")
     input_string = input_string[:-1] if input_string[-2]=="]" else input_string  #punctuation after "[]"
+    # literal_eval: never execute model output
     try:
-        midi_sequence = eval(input_string)
-    except (SyntaxError, NameError, TypeError) as e:
+        midi_sequence = ast.literal_eval(input_string)
+    except (SyntaxError, ValueError, TypeError, MemoryError, RecursionError) as e:
         if 'unterminated string literal' in str(e):
             last_paren = input_string.rfind(')')
             start_paren = input_string.find('[', 0, last_paren)
@@ -432,14 +497,14 @@ def process_midi_sequence(input_string):
                 return None, None
             fixed_string = input_string[start_paren:last_paren] + ")]"
             try:
-                midi_sequence = eval(fixed_string)
-            except Exception as inner_e:
-                raise ValueError(f"Failed to evaluate fixed string: {inner_e}")
+                midi_sequence = ast.literal_eval(fixed_string)
+            except Exception:
+                return None, None
         elif "'[' was never closed" in str(e):
             try:
-                midi_sequence = eval( input_string + "]")
-            except Exception as inner_e:
-                raise ValueError(f"Failed to evaluate fixed string: {inner_e}")
+                midi_sequence = ast.literal_eval(input_string + "]")
+            except Exception:
+                return None, None
         else:
             # input_str = '[(0.52, ), (0.67, 德音), (0.83, 음7), (1.00, C♯6), (1.14, D7), (1.30, F7)]'
             matches = re.findall(r'\(([^)]+)\)', input_string)
@@ -454,14 +519,14 @@ def process_midi_sequence(input_string):
         # raise ValueError("Invalid format after eval")
     
     for idx, item in enumerate(midi_sequence):
-        if isinstance(item[0], float):
+        if isinstance(item[0], (int, float)):
             continue
         # exception:2:43, '0.00'
-        if item[0].startswith("\'") and item[0].endswith("\'"):
-            midi_sequence[idx] = (item[1:-1], item[1])
-        if ":" in str(item[0]):
+        time_str = str(item[0]).strip().strip("\'\"")
+        midi_sequence[idx] = (time_str, item[1])
+        if ":" in time_str:
             try:
-                midi_sequence[idx] = (float(item[0].split(":")[1]) + float(item[0].split(":")[0]) * 60, item[1])
+                midi_sequence[idx] = (float(time_str.split(":")[1]) + float(time_str.split(":")[0]) * 60, item[1])
             except:
                 # print(midi_sequence)  "time:"
                 return None, None
@@ -489,19 +554,20 @@ def process_midi_sequence(input_string):
 
     # Step 4: Convert note names to MIDI numbers
     for i, note in enumerate(midi_array[:, 1]):
-        if note != '':  # If it's a note name, convert it
-            if isinstance(note, str):  # If it's a note name, convert it
+        if isinstance(note, str):  # If it's a note name, convert it
+            note = note.strip()
+            try:
+                note = float(note)
+            except ValueError:
                 try:
-                    midi_array[i, 1] = float(midi_array[i, 1])
-                except:
-                    try:
-                        midi_array[i, 1] = pretty_midi.note_name_to_number(note)
-                        # raise ValueError(f"Invalid MIDI note name '{note}': {e}")
-                    except:  # note might be a string with Chinese characters which is not a midi name
-                        midi_array[i, 1] = 0
-            midi_array[i, 1] = pretty_midi.note_number_to_hz(midi_array[i, 1])
-        else:  # 0Hz, not midi_num=0
-            midi_array[i, 1] = 0.0
+                    note = pretty_midi.note_name_to_number(note)
+                except:  # '' or a string with Chinese characters which is not a midi name
+                    note = 0
+        if not isinstance(note, (int, float)):
+            note = 0
+        # MIDI 0 marks unvoiced frames in the gold annotation: 0 Hz, not
+        # note_number_to_hz(0) = 8.18 Hz, which mir_eval would count as voiced
+        midi_array[i, 1] = pretty_midi.note_number_to_hz(note) if note > 0 else 0.0
 
     # Convert dtype to float after processing
     midi_array = midi_array.astype(float)
@@ -533,8 +599,9 @@ def melody_evaluation(result_list):
                 mir_eval.melody.evaluate(correct_time, correct_freq, 
                                         response_time, response_freq)['Overall Accuracy']
             )
-        except:
+        except Exception:
             print(tmp)
+            overall_accuracy.append(0)  # keep failures in the denominator
 
     return np.mean(overall_accuracy)
 
@@ -554,7 +621,8 @@ def convert_to_frame_labels(events, sr=100):
     Returns:
         frame_labels: np.ndarray of shape (num_frames, num_classes)
     """
-    start, end = events.find('['), events.find(')')
+    # the whole list: find(')') kept only the first event of every answer, gold included
+    start, end = events.find('['), events.rfind(')')
     if start == -1 or start >= end:
         events = [('0','10','No Tech')]
     else:
@@ -563,34 +631,36 @@ def convert_to_frame_labels(events, sr=100):
             events_string = events[start:end ] + ")]"
             if events_string.startswith("[\"["):
                 events_string = events_string[2:]
-            events = eval(events_string)
-        except:
+            events = ast.literal_eval(events_string)
+        except Exception:
             print(events)
-    if len(events) == 0:
-        events = [('0','10','No Tech')]
-    if isinstance(events, list) and isinstance(events[0], dict):
-        events = [(float(e['start']), float(e['end']), e['technique']) for e in events]
-    elif isinstance(events, list) and all(isinstance(e, tuple) and len(e) == 3 for e in events):
+            events = []
+    if not isinstance(events, (list, tuple)):
+        events = []
+    parsed = []
+    for e in events:
         try:
-            events = [(float(e[0]), float(e[1]), str(e[2])) for e in events if e[0][0].isdigit()]
-            events = [(0,10,'No Tech')] if len(events)==0 else events
-        except:
-            print(events)
-    try:
-        events = [(start %10, (end -1e-4) %10 + 1e-4, normalise(label)) for start, end, label in events]
-    except:
-        print(events)
+            if isinstance(e, dict):
+                e = (e['start'], e['end'], e['technique'])
+            parsed.append((float(e[0]), float(e[1]), normalise(str(e[2]))))
+        except (KeyError, IndexError, TypeError, ValueError):
+            continue
+    # times are absolute; a clip covers [10k, 10k + 10). Keep each event's duration
+    # instead of wrapping its end, which dropped events running past the clip end.
+    events = []
+    for event_start, event_end, label in parsed:
+        if label not in CLASSES or event_end <= event_start:
+            continue  # "No Tech", or a technique outside the list
+        clip_start = event_start % 10
+        events.append((clip_start, min(clip_start + event_end - event_start, 10), label))
 
     max_time = 10 #max(float(event[1]) for event in events) if events else 0
     num_frames = int(np.ceil(max_time * sr))
     frame_labels = np.zeros((num_frames, len(CLASSES)))
-    if len(events) == 1 and normalise(events[0][-1]) == "notech":
-        return frame_labels
-    
     for event in events:
         start_frame = int(float(event[0]) * sr)
         end_frame = int(float(event[1]) * sr)
-        label_idx = CLASSES.index(normalise(event[2]))
+        label_idx = CLASSES.index(event[2])
         frame_labels[start_frame:end_frame, label_idx] = 1
         
     return frame_labels
@@ -659,126 +729,128 @@ if __name__ == "__main__":
     args = parser.parse_args()
     model = args.model 
     task = args.task
-    results_json = glob.glob(f"model/results/{model}/{model}*.jsonl")
+    results_json = sorted(glob.glob(f"model/results/{model}/{model}_*.jsonl"))
     if task != "all":
-        results_json = [result for result in results_json if task in result]
-    result = results_json[0]
-    task = os.path.basename(result)[len(model)+1:-6]
-    # load jsonl
-    with open(result, "r") as f:
-        # data = [json.load(line.strip()) for line in f]
-        data = json.load(f)
-    f.close()
-    
-    for sample in data:
-        print("sample", sample)
-        break
-        # 'response', 'correct_answer'
-    
-    if task == 'GS_key':
-        gmean_score = key_ensamble_score(data)
-        print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
-    elif task == "MTT":
-        tags = list(np.load("data/MTT/tags.npy"))
-        # roc_auc, pr_auc = multi_label_classification(data, tags)
-        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        # value = multi_label_bert(data, tags)
-        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="gte")
-        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-    elif task == "EMO_valence":
-        r2 = cal_r2(data)
-        print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
-    elif task == "EMO_arousal":
-        r2 = cal_r2(data)
-        print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
-    elif task == "GTZAN":
-        acc = get_multiclass_acc(data)
-        print(f"{model}_{task} genre Acc: {acc:.4f}")
-    elif task == "VocalSet_tech":
-        acc = get_multiclass_acc(data)
-        print(f"{model}_{task} Acc: {acc:.4f}")
-    elif task == "Nsynth_instrument":
-        instrument_list = [tmp for tmp in data]
-        acc = get_multiclass_acc(instrument_list)
-        print(f"{model}_{task} Acc: {acc:.4f}")
-    elif task == "Nsynth_pitch":
-        acc = get_multiclass_acc(data)
-        print(f"{model}_{task} Acc: {acc:.4f}")
-    elif task == "ballroom_downbeat":
-        print(f"{model}_{task}")
-        beat_tracking(data, task="downbeat_tracking")
-    elif task == 'gtzan_beat':
-        beat_tracking(data)
-    elif task == "ballroom_beat":
-        print(f"{model}_{task}")
-        beat_tracking(data)
-    elif task == "gtzan_downbeat":
-        beat_tracking(data, task="downbeat_tracking")
-    elif task == "SDD":
-        music_captioning(data)
-    elif task == "MusicCaps":
-        music_captioning(data)
-    elif task == "DSing":
-        wer, cer = batch_wer_cer(data)
-        print(f"{model}_{task} WER: {wer*100:.2f}")
-        print(f"{model}_{task} CER: {cer*100:.2f}")
-    elif task == "Guzheng_Tech":
-        marco_f1, micro_f1 = calculate_frame_f1(data)
-        print(f"{model}_{task} Marco F1: {marco_f1*100:.2f}")
-        print(f"{model}_{task} Micro F1: {micro_f1*100:.2f}")
-    elif task == "MedleyDB":
-        accuracy = melody_evaluation(data)
-        print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
-    elif task == "MTG_instrument":
-        tags = list(instrument_set)
-        # roc_auc, pr_auc = multi_label_classification(data, tags)
-        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        # value = multi_label_bert(data, tags)
-        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="gte")
-        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
-    elif task == "MTG_genre":
-        tags = list(genre_set)
-        # roc_auc, pr_auc = multi_label_classification(data, tags)
-        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        # value = multi_label_bert(data, tags)
-        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="gte")
-        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
-    elif task == "MTG_emotion":
-        tags = list(emotion_set)
-        # roc_auc, pr_auc = multi_label_classification(data, tags)
-        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        value = multi_label_bert(data, tags, embed="gte")
-        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # value = multi_label_bert(data, tags)
-        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
-    elif task == "MTG_top50tags":
-        tags = ["alternative", "ambient", "atmospheric", "chillout", "classical", "dance", "downtempo", "easylistening", "electronic","experimental", "folk", "funk", "hiphop", "house", "indie", "instrumentalpop", "jazz", "lounge", "metal", "newage","orchestral", "pop", "popfolk", "poprock", "reggae", "rock", "soundtrack", 
-                "techno","trance", "triphop","world", "acousticguitar", "bass", "computer", "drummachine", "drums", "electricguitar", "electricpiano", "guitar", "keyboard", "piano", "strings", "synthesizer", "violin", "voice", "emotional", "energetic", "film", "happy", "relaxing"]
-        # roc_auc, pr_auc = multi_label_classification(data, tags)
-        # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
-        # value = multi_label_bert(data, tags)
-        # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="bert")
-        print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-        value = multi_label_bert(data, tags, embed="gte")
-        print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
-    else:
-        print(model, task)
-        print("Task not found")
+        # exact file name: a substring test can pick another task's file
+        results_json = [result for result in results_json if os.path.basename(result) == f"{model}_{task}.jsonl"]
+    if not results_json:
+        raise SystemExit(f"no results for --model {model} --task {task} in model/results/{model}/")
+    # --task all used to score only the first file
+    for result in results_json:
+        task = os.path.basename(result)[len(model)+1:-6]
+        # model/infer.py writes one JSON list despite the .jsonl suffix; accept JSON lines too
+        with open(result, "r") as f:
+            text = f.read()
+        try:
+            data = json.loads(text)
+        except json.JSONDecodeError:
+            data = [json.loads(line) for line in text.splitlines() if line.strip()]
+
+        print("sample", data[0])
+        if task == 'GS_key':
+            gmean_score = key_ensamble_score(data)
+            print(f"{model}_{task} G-Mean: {gmean_score:.4f}")
+        elif task == "MTT":
+            tags = list(np.load("data/MTT/tags.npy"))
+            # roc_auc, pr_auc = multi_label_classification(data, tags)
+            # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+            # value = multi_label_bert(data, tags)
+            # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="gte")
+            print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="bert")
+            print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        elif task == "EMO_valence":
+            r2 = cal_r2(data)
+            print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
+        elif task == "EMO_arousal":
+            r2 = cal_r2(data)
+            print(f"{model}_{task} R2: {r2.cpu().numpy():.4f}")
+        elif task == "GTZAN":
+            acc = get_multiclass_acc(data)
+            print(f"{model}_{task} genre Acc: {acc:.4f}")
+        elif task == "VocalSet_tech":
+            acc = get_multiclass_acc(data)
+            print(f"{model}_{task} Acc: {acc:.4f}")
+        elif task == "Nsynth_instrument":
+            instrument_list = [tmp for tmp in data]
+            acc = get_multiclass_acc(instrument_list)
+            print(f"{model}_{task} Acc: {acc:.4f}")
+        elif task == "Nsynth_pitch":
+            acc = get_multiclass_acc(data)
+            print(f"{model}_{task} Acc: {acc:.4f}")
+        elif task == "ballroom_downbeat":
+            print(f"{model}_{task}")
+            beat_tracking(data, task="downbeat_tracking")
+        elif task == 'gtzan_beat':
+            beat_tracking(data)
+        elif task == "ballroom_beat":
+            print(f"{model}_{task}")
+            beat_tracking(data)
+        elif task == "gtzan_downbeat":
+            beat_tracking(data, task="downbeat_tracking")
+        elif task == "SDD":
+            music_captioning(data)
+        elif task == "MusicCaps":
+            music_captioning(data)
+        elif task == "DSing":
+            wer, cer = batch_wer_cer(data)
+            print(f"{model}_{task} WER: {wer*100:.2f}")
+            print(f"{model}_{task} CER: {cer*100:.2f}")
+        elif task == "Guzheng_Tech":
+            micro_f1, marco_f1 = calculate_frame_f1(data)  # returns (micro, macro)
+            print(f"{model}_{task} Marco F1: {marco_f1*100:.2f}")
+            print(f"{model}_{task} Micro F1: {micro_f1*100:.2f}")
+        elif task == "MedleyDB":
+            accuracy = melody_evaluation(data)
+            print(f"{model}_{task} Accuracy: {accuracy:.4f}") 
+        elif task == "MTG_instrument":
+            tags = list(instrument_set)
+            # roc_auc, pr_auc = multi_label_classification(data, tags)
+            # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+            # value = multi_label_bert(data, tags)
+            # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="bert")
+            print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="gte")
+            print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            # tags = ["accordion", "acousticbassguitar", "acousticguitar", "bass", "beat", "bell", "bongo", "brass", "cello", "clarinet", "classicalguitar", "computer", "doublebass", "drummachine", "drums", "electricguitar", "electricpiano", "flute", "guitar", "harmonica", "harp", "horn", "keyboard", "oboe", "orchestra", "organ", "pad", "percussion", "piano", "pipeorgan", "rhodes", "sampler", "saxophone", "strings", "synthesizer", "trombone", "trumpet", "viola", "violin", "voice"]
+        elif task == "MTG_genre":
+            tags = list(genre_set)
+            # roc_auc, pr_auc = multi_label_classification(data, tags)
+            # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+            # value = multi_label_bert(data, tags)
+            # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="gte")
+            print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="bert")
+            print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            # tags = ["60s", "70s", "80s", "90s", "acidjazz", "alternative", "alternativerock", "ambient", "atmospheric", "blues", "bluesrock", "bossanova", "breakbeat", "celtic", "chanson", "chillout", "choir", "classical", "classicrock", "club", "contemporary", "country", "dance", "darkambient", "darkwave", "deephouse", "disco", "downtempo", "drumnbass", "dub", "dubstep", "easylistening", "edm", "electronic", "electronica", "electropop", "ethno", "eurodance", "experimental", "folk", "funk", "fusion", "groove", "grunge", "hard", "hardrock", "hiphop", "house", "idm", "improvisation", "indie", "industrial", "instrumentalpop", "instrumentalrock", "jazz", "jazzfusion", "latin", "lounge", "medieval", "metal", "minimal", "newage", "newwave", "orchestral", "pop", "popfolk", "poprock", "postrock", "progressive", "psychedelic", "punkrock", "rap", "reggae", "rnb", "rock", "rocknroll", "singersongwriter", "soul", "soundtrack", "swing", "symphonic", "synthpop", "techno", "trance", "triphop", "world", "worldfusion"]
+        elif task == "MTG_emotion":
+            tags = list(emotion_set)
+            # roc_auc, pr_auc = multi_label_classification(data, tags)
+            # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+            value = multi_label_bert(data, tags, embed="gte")
+            print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="bert")
+            print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            # value = multi_label_bert(data, tags)
+            # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            # tags = ["action", "adventure", "advertising", "background", "ballad", "calm", "children", "christmas", "commercial", "cool", "corporate", "dark", "deep", "documentary", "drama", "dramatic", "dream", "emotional", "energetic", "epic", "fast", "film", "fun", "funny", "game", "groovy", "happy", "heavy", "holiday", "hopeful", "inspiring", "love", "meditative", "melancholic", "melodic", "motivational", "movie", "nature", "party", "positive", "powerful", "relaxing", "retro", "romantic", "sad", "sexy", "slow", "soft", "soundscape", "space", "sport", "summer", "trailer", "travel", "upbeat", "uplifting"]
+        elif task == "MTG_top50tags":
+            tags = ["alternative", "ambient", "atmospheric", "chillout", "classical", "dance", "downtempo", "easylistening", "electronic","experimental", "folk", "funk", "hiphop", "house", "indie", "instrumentalpop", "jazz", "lounge", "metal", "newage","orchestral", "pop", "popfolk", "poprock", "reggae", "rock", "soundtrack", 
+                    "techno","trance", "triphop","world", "acousticguitar", "bass", "computer", "drummachine", "drums", "electricguitar", "electricpiano", "guitar", "keyboard", "piano", "strings", "synthesizer", "violin", "voice", "emotional", "energetic", "film", "happy", "relaxing"]
+            # roc_auc, pr_auc = multi_label_classification(data, tags)
+            # print(f"{model}_{task} Accurate\n ROC-AUC: {roc_auc:.4f}\n PR-AUC: {pr_auc:.4f}")
+            # value = multi_label_bert(data, tags)
+            # print(f"{model}_{task} BGE\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="bert")
+            print(f"{model}_{task} BERT\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+            value = multi_label_bert(data, tags, embed="gte")
+            print(f"{model}_{task} GTE-Qwen\n ROC-AUC: {value['ROC-AUC']:.4f}\n PR-AUC: {value['PR-AUC']:.4f}")
+        else:
+            print(model, task)
+            print("Task not found")
 
     
     

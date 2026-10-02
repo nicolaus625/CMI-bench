@@ -144,7 +144,8 @@ def multi_label_bert(result_list, answer_list, subset_tags, task="emotion", embe
     
     for tmp in tqdm(result_list):
         response = tmp["response"].lower().strip()
-        correct_answers = tmp["correct_answer"].lower().strip()
+        # exact comma-separated tags: a substring test reads "male" out of "female"
+        correct_answers = {tag.lower().strip() for tag in tmp["correct_answer"].split(",") if tag.strip()}
         
         # Create binary vector for true labels
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
