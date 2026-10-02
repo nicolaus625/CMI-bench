@@ -54,39 +54,41 @@ def extract_int(response: str) -> int:
     response = re.sub(r'\d/\d time signature', 'time signature', response) # delete r'\d-scale' in the response
     response = re.sub(r'\d/\d beat', 'time signature', response) # delete r'\d-scale' in the response
     response = re.sub(r'Example \d', '', response) # delete r'\d-scale' in the response
-    numbers = re.findall(r'\d+', response)  # Find all sequences of digits
+    # decimals as one number: "5.26" was read as 5 and 26, and 26 dropped, giving 5
+    numbers = re.findall(r'\d+(?:\.\d+)?', response)
 
-    numbers = [i for i in numbers if 0 < int(i) < 10]  # Filter out numbers outside the range 1-9, such as bpm
+    # the prompt asks for a number between 1 and 9; anything else (bpm, 0.8) is not an answer
+    numbers = [float(i) for i in numbers if 1 <= float(i) <= 9]
     if not numbers:
         # print("No integer found in the response:", response)
         # raise ValueError("No integer found in the response."
         return -0.5
-    elif len(numbers) > 1:
-        if len(numbers) == 2 and f"{numbers[0]}.{numbers[1]}" in response:  # typical for flamingo
-            return float(f"{numbers[0]}.{numbers[1]}")
-        # eg1, around 8 and 9 -> 8, eg2. 7, becase xxx, so 7 ->7.  eg3. score is 5.2 -> 5
-        if len(numbers) == 2 and numbers[0] == numbers[1]:
-            return int(numbers[0])
+    elif len(set(numbers)) > 1:
+        # eg1, around 8 and 9 -> 8, eg2. 7, becase xxx, so 7 ->7.
         print("multiple response:", response)
         # raise ValueError(f"Multiple integers found: {numbers}. Expected only one.")
-    return int(numbers[0])  # Convert the first number to an integer
+    return numbers[0]  # the first number
 
 
-def _tokens(text):
-    return re.findall(r"[a-z0-9]+", str(text).lower().replace("'", ""))
+def _tokens(text, keep_separators=False):
+    tokens = re.findall(r"[a-z0-9]+|[,;.:!?/|()\[\]\n]", str(text).lower().replace("'", ""))
+    return tokens if keep_separators else [t for t in tokens if t[0].isalnum()]
 
 
 def _label_spans(tokens, label):
     # token spans whose concatenation spells the label, so "hip-hop", "hip hop" and
     # "hiphop" all match "hiphop", but "trillo" does not match "trill"
+    # never across punctuation: "pop, rock" is not "poprock"
     target = "".join(_tokens(label))
     spans = []
     for i in range(len(tokens)):
         joined = ""
         for j in range(i, len(tokens)):
+            if not tokens[j][0].isalnum():
+                break
             joined += tokens[j]
             if joined in (target, target + "s", target + "es"):
-                spans.append((i, j))
+                spans.append((i, j, joined == target))
             if len(joined) >= len(target) + 2:
                 break
     return spans
@@ -94,15 +96,16 @@ def _label_spans(tokens, label):
 
 def matched_labels(response, labels):
     """Labels mentioned in the response; a label found only inside a longer
-    matched label (e.g. "trill" inside "lip_trill") does not count."""
-    tokens = _tokens(response)
+    matched label (e.g. "trill" inside "lip_trill"), or only as the plural of
+    another label (e.g. "vocal" in "vocals" when "vocals" is a label), does not count."""
+    tokens = _tokens(response, keep_separators=True)
     spans = {label: _label_spans(tokens, label) for label in labels}
     found = set()
     for label, label_spans in spans.items():
-        for i, j in label_spans:
-            shadowed = any(a <= i and j <= b and b - a > j - i
+        for i, j, exact in label_spans:
+            shadowed = any(a <= i and j <= b and (b - a > j - i or (a, b) == (i, j) and other_exact and not exact)
                            for other, other_spans in spans.items() if other != label
-                           for a, b in other_spans)
+                           for a, b, other_exact in other_spans)
             if not shadowed:
                 found.add(label)
                 break
@@ -154,8 +157,11 @@ def cal_r2(result_list):
     if std == 0:
         raise ValueError("Standard deviation is zero. Normalization not possible.")
     
-    a = 1 / std
-    b = -mean / std
+    # rescale to the gold's mean and spread on this sample, so that any increasing
+    # linear map of the gold (a perfect 1-9 answer) scores R2 = 1; the gold z-scores
+    # come from the whole dataset and are not standardised on the test split
+    a = np.std(answer_list) / std
+    b = np.mean(answer_list) - a * mean
     
     response_3 = [mean if x == -0.5 else x for x in response]
     normalised_response_3 = [(a * x + b) for x in response_3]
@@ -172,30 +178,28 @@ def multi_label_classification(result_list, answer_list): # variable should not 
     y_pred = []
 
     for tmp in result_list:
-        # Normalize responses and answers
-        response = tmp["response"].lower().strip()
-        # if task == "emotion":
-        try:
-            correct_answers = [normalise(ans) for ans in tmp["correct_answer"].split(",")]
-        except:
-            correct_answers = []
+        # exact gold tags; tags named in the response as whole words
+        correct_answers = gold_tags(tmp["correct_answer"])
+        predicted = matched_labels(tmp["response"], answer_list)
         
         # Create binary vectors for the true labels and predicted labels
         true_vector = [1 if answer in correct_answers else 0 for answer in answer_list]
-        pred_vector = [1 if answer in response else 0 for answer in answer_list]
+        pred_vector = [1 if answer in predicted else 0 for answer in answer_list]
         
         y_true.append(true_vector)
         y_pred.append(pred_vector)
 
-    y_true = np.array(y_true)
-    y_pred = np.array(y_pred)
-    # print(y_true.shape, y_pred.shape)
-    # print(y_true[:7])
+    return tag_auc(np.array(y_true), np.array(y_pred))
 
-    # Calculate ROC-AUC and PR-AUC for each label
-    roc_auc = roc_auc_score(y_true, y_pred, average='macro')
-    pr_auc = average_precision_score(y_true, y_pred, average='macro')
 
+def tag_auc(y_true, y_pred):
+    """Macro ROC-AUC and PR-AUC over the tags that have both positives and negatives
+    in this sample; the others are undefined and made the macro average nan."""
+    keep = (y_true.sum(axis=0) > 0) & (y_true.sum(axis=0) < len(y_true))
+    if not keep.all():
+        print(f"{(~keep).sum()} tags without both classes in this sample are left out")
+    roc_auc = roc_auc_score(y_true[:, keep], y_pred[:, keep], average='macro')
+    pr_auc = average_precision_score(y_true[:, keep], y_pred[:, keep], average='macro')
     return roc_auc, pr_auc
 
 
@@ -278,8 +282,7 @@ def multi_label_bert(result_list, answer_list, task="emotion", embed="bge"):
     y_pred = np.array(y_pred)
     
     # Compute standard ROC-AUC and PR-AUC
-    roc_auc = roc_auc_score(y_true, y_pred, average='macro')
-    pr_auc = average_precision_score(y_true, y_pred, average='macro')
+    roc_auc, pr_auc = tag_auc(y_true, y_pred)
     
     return {
         "ROC-AUC": roc_auc, 
@@ -703,6 +706,8 @@ def calculate_frame_f1(result_list, sr=100):
     # Macro-F1 calculation
     class_f1 = []
     for i in range(len(CLASSES)):
+        if tp_per_class[i] + fp_per_class[i] + fn_per_class[i] == 0:
+            continue  # absent from both gold and prediction (no Plucks in the test split): F1 undefined
         precision = tp_per_class[i] / (tp_per_class[i] + fp_per_class[i]) if (tp_per_class[i] + fp_per_class[i]) > 0 else 0
         recall = tp_per_class[i] / (tp_per_class[i] + fn_per_class[i]) if (tp_per_class[i] + fn_per_class[i]) > 0 else 0
         f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
